@@ -1,0 +1,41 @@
+/* Container */
+.whiteContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Thumbnail Grid */
+  .thumbnailContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Individual Thumbnail */
+  .thumb {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .thumb:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image */
+  .thumbImage {
+    border-radius: 8px;
+  }
+  
+  /* Label */
+  .label {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

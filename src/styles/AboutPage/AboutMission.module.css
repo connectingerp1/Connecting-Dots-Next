@@ -1,0 +1,65 @@
+.aboutSection {
+  padding: 70px 0;
+}
+
+.aboutContainer {
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  width: 97.5%;
+  max-width: 1400px;
+}
+
+.aboutRow {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.aboutCol {
+  width: 100%;
+}
+
+.aboutColText {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 35px 0;
+}
+
+.aboutContent p {
+  font-size: 22px;
+  color: #fffcfc;
+  line-height: 1.5;
+}
+
+.aboutColImage {
+  width: 50%;
+  min-height: 380px;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures images fit well */
+}
+
+.aboutCol h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  margin-bottom: -10px;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .aboutColText {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .aboutColImage {
+    width: 100%;
+  }
+
+  .aboutCol h1 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,159 @@
+.coursesContainer {
+  text-align: center;
+  max-width: 1800px;
+  width: 97.5%;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.courses {
+  background-color: #ffffff;
+}
+
+.coursesTitle h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgba(3, 163, 196, 1) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.coursesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.courseCard {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  transition: 0.5s;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 30%);
+  position: relative;
+  width: 220px;
+  height: auto;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.courseCard:hover {
+  background-color: #79ddf6;
+  cursor: pointer;
+}
+
+.courseCard:hover h3,
+.courseCard:hover p {
+  color: black;
+}
+
+.courseIcon {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  padding: 0;
+  margin: auto;
+}
+
+.courseIcon img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.courseCard h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.courseCard p {
+  font-size: 14px;
+  color: #666;
+}
+
+.outlineBtnn {
+  width: 180px;
+  height: 40px;
+  margin: 20px;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: 500;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 2px 2px 2px 0px rgb(98, 96, 96, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.outlineBtnn:hover {
+  background: transparent;
+  box-shadow: none;
+  color: #132e90;
+  font-weight: bold;
+}
+
+.courseCard:hover .outlineBtnn {
+  color: #ffffff;
+  background-color: #3464a2;
+}
+
+@media screen and (max-width: 1200px) {
+  .courseCard {
+    width: calc(25% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .courseCard {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .courseCard {
+    width: calc(50% - 20px);
+  }
+
+  .courseIcon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .courseCard h3 {
+    font-size: 16px;
+  }
+
+  .courseCard p {
+    font-size: 12px;
+  }
+
+  .outlineBtnn {
+    font-size: 12px;
+    width: 70%;
+  }
+
+  .coursesTitle h2 {
+    font-size: 19px;
+  }
+}
