@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 // Generate static params from file names
 export function generateStaticParams() {
-  const pagesDir = path.join(process.cwd(), "public/pages");
+  const pagesDir = path.join(process.cwd(), "src/pages");
   const filenames = fs.readdirSync(pagesDir);
 
   // Map to return slugs with course and city info
@@ -24,7 +24,7 @@ const CourseCityPage = async ({ params }) => {
   }
 
   const { slug } = params;
-  const filePath = path.join(process.cwd(), "public/pages", `${slug}.html`);
+  const filePath = path.join(process.cwd(), "src/pages", `${slug}.html`);
 
   let htmlContent = "";
   if (fs.existsSync(filePath)) {
@@ -49,9 +49,13 @@ const CourseCityPage = async ({ params }) => {
 
     // Use dynamic imports for specific courses
     if (formattedCourse === "SAP-FICO") {
-      CourseComponent = dynamic(() => import("@/app/(routes)/SAP-FICO/page.js"));
+      CourseComponent = dynamic(() =>
+        import("@/app/(routes)/SAP-FICO/page.js")
+      );
     } else if (formattedCourse === "SAP-BASIS") {
-      CourseComponent = dynamic(() => import("@/app/(routes)/SAP-BASIS/page.js"));
+      CourseComponent = dynamic(() =>
+        import("@/app/(routes)/SAP-BASIS/page.js")
+      );
     } else if (formattedCourse === "SAP-PM") {
       CourseComponent = dynamic(() => import("@/app/(routes)/SAP-PM/page.js"));
     } else {
@@ -69,7 +73,11 @@ const CourseCityPage = async ({ params }) => {
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
 
       {/* Render React Components */}
-      {CourseComponent ? <CourseComponent city={city} course={course} /> : <p>Loading...</p>}
+      {CourseComponent ? (
+        <CourseComponent city={city} course={course} />
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 };
