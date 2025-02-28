@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Element, scroller } from "react-scroll";
 
@@ -44,7 +45,7 @@ export default function DIGITALMARKETING() {
   }, [pathname, searchParams]);
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <DSHeader pageId="DIGIMHeader" pageType="digimheader" />
       <Why pageId="WhyDIGIM" pageType="Whydigim" />
       <SapModComponent pageId="DIGIM" />
@@ -75,6 +76,6 @@ export default function DIGITALMARKETING() {
 
       <FAQ pageId="DGMFAQ" pageType="dgmfaq" />
       <CoursesRelated pageId="DGMrelated" />
-    </>
+    </Suspense>
   );
 }
