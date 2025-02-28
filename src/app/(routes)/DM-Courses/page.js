@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { Suspense } from "react";
+import { useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Element, scroller } from "react-scroll";
 
@@ -17,7 +16,8 @@ import Program from "@/components/CoursesComponents/ProgramHighlights";
 import Description from "@/components/CoursesComponents/Description";
 import SapModComponent from "@/components/CoursesComponents/sapmod";
 
-export default function DIGITALMARKETING() {
+// 🟢 Create a separate child component for logic
+function DigitalMarketingContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -34,10 +34,7 @@ export default function DIGITALMARKETING() {
       }
     };
 
-    // Scroll on first load
     handleScroll();
-
-    // Listen for hash changes
     window.addEventListener("hashchange", handleScroll);
     return () => {
       window.removeEventListener("hashchange", handleScroll);
@@ -45,7 +42,7 @@ export default function DIGITALMARKETING() {
   }, [pathname, searchParams]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <DSHeader pageId="DIGIMHeader" pageType="digimheader" />
       <Why pageId="WhyDIGIM" pageType="Whydigim" />
       <SapModComponent pageId="DIGIM" />
@@ -76,6 +73,15 @@ export default function DIGITALMARKETING() {
 
       <FAQ pageId="DGMFAQ" pageType="dgmfaq" />
       <CoursesRelated pageId="DGMrelated" />
+    </>
+  );
+}
+
+// 🟢 Wrap the component inside Suspense
+export default function DIGITALMARKETING() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <DigitalMarketingContent />
     </Suspense>
   );
 }
