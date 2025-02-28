@@ -1,0 +1,42 @@
+.sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebarItem:hover {
+  background-color: #e0e0e0;
+}
+
+.active {
+  background-color: #d1e8ff;
+  font-weight: bold;
+}
+
+.progressBar {
+  width: 4px;
+  height: 100%;
+  background: #007bff;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.active .progressBar {
+  opacity: 1;
+}

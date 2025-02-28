@@ -1,0 +1,32 @@
+/* styles/AboutPage.module.css */
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: sticky;
+    top: 20px; /* Adjust the top offset as needed */
+    width: 200px;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    height: fit-content;
+  }
+  
+  /* Content area styles */
+  .content {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  /* Spacing for each section */
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  /* Optional: Enable smooth scrolling behavior */
+  /* html {
+    scroll-behavior: smooth;
+  }
+   */

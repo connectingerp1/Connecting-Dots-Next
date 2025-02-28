@@ -1,0 +1,84 @@
+.dashboardContainer {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .dashboardContainer h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .dashboardTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .tableResponsive {
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .paginationControls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .paginationButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .paginationButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .paginationButton:not(:disabled):hover {
+    background-color: #45a049;
+  }
+  
+  .loadingSpinner {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .errorMessage {
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+  }
+  

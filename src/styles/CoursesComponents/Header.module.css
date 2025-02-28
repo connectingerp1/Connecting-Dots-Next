@@ -1,0 +1,368 @@
+.containerItDsHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 70px;
+  background-blend-mode: overlay;
+  background-color: rgba(249, 249, 249, 0.75);
+  width: 100%;
+  max-width: 1800px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.leftSectionItDs {
+  max-width: 30%;
+}
+
+.leftSectionItDs h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.leftSectionItDs h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+.leftSectionItDs h2 span {
+  color: #1f2937;
+}
+
+.leftSectionItDs p {
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.featuresItDs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.featuresItDs li {
+  font-size: 1rem;
+  color: #f85757;
+  font-weight: bolder;
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-left: -20px;
+}
+.featuresItDs li::before {
+  content: "• ";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the marker */
+  width: 10px; /* Adjust marker size */
+  height: 10px; /* Adjust marker size */
+  /* Adjust marker color */
+  border-radius: 50%;
+}
+
+.alumniItDs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 30px;
+}
+
+.alumniLogosItDs {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 30px;
+  width: 10%;
+  aspect-ratio: 3/1;
+  object-fit: contain;
+  mix-blend-mode: color-dodge #c8c4c4;
+}
+
+.ButtonItDs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.submitButtonItDs {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  margin-top: 1.2rem;
+}
+
+.batchButtonItDs {
+  background-color: #2563eb;
+  color: #fdfdfd;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.batchButtonItDs:hover {
+  background-color: white;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+.buttons {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.buttonStyle1 {
+  background-color: #2563eb;
+  color: #fdfdfd;
+  padding: 0.3rem;
+  border-radius: 9999px;
+  font-size: 0.83rem;
+}
+.buttonStyle2 {
+  background-color: #fff;
+  color: #2563eb;
+  /* border-color: #2563eb; */
+  border: 1px solid #2563eb;
+  padding: 0.3rem;
+  border-radius: 9999px;
+  font-size: 0.83rem;
+}
+.buttonStyle2:hover {
+  background-color: #2563eb;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+.phoneInputItDs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.1rem;
+  width: 100%;
+  height: 3vw;
+}
+.phoneInputItDs select,
+.phoneInputItDs input {
+  flex: 1 1 0%;
+  padding: 3px;
+  height: 2vw;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: grey;
+}
+
+.phoneInputItDs select {
+  max-width: 76px;
+  flex: 0 0 10px;
+  padding: 0.01rem;
+  height: 2vw;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.375rem;
+}
+.error {
+  color: red;
+}
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgb(45, 46, 49);
+  border-radius: 0.375rem;
+}
+
+.brochureButtonItDs {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #2563eb;
+  font-size: 0.875rem;
+}
+.brochureButtonItDs {
+  padding: 0.1rem 1rem;
+  border-radius: 9px;
+  width: 40%;
+}
+.brochureButtonItDs:hover {
+  color: white;
+} 
+
+.rightSectionItDs {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 65%;
+  max-height: 380px;
+}
+
+.rightSectionItDs h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.rightSectionItDs h3 span {
+  color: #dc2626;
+}
+
+.accountInfoItDs {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.accountInfoItDs a {
+  color: #2563eb;
+}
+
+.termsInfoItDs {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.termsInfoItDs a {
+  color: #2563eb;
+}
+.dsHeaderSpan {
+  color: #ff3300;
+}
+.dsHeaderSpan2 {
+  color: #000000;
+}
+.dsHeaderSpan3 {
+  color: #1e3a8a;
+  font-weight: 800;
+}
+
+.selectCountryCode {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 80px; /* Adjust width as needed */
+  margin-right: 10px; /* Space between the country code and phone number input */
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .containerItDsHeader {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .alumniLogosItDs {
+    width: 100%;
+    height: 1rem;
+  }
+
+  .leftSectionItDs,
+  .rightSectionItDs {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .leftSectionItDs h1 {
+    font-size: 1.5rem;
+  }
+
+  .leftSectionItDs h2 {
+    font-size: 1rem;
+  }
+
+  .leftSectionItDs p {
+    font-size: 0.6rem;
+  }
+  .featuresItDs li,
+  .alumniItDs span,
+  .batchButtonItDs,
+  .brochureButtonItDs {
+    font-size: 0.5rem;
+  }
+  .rightSectionItDs h3 {
+    font-size: 1.2rem;
+  }
+
+  .rightSectionItDs {
+    padding: 1rem;
+    box-shadow: none;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .form input {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .phoneInputItDs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.1rem;
+    width: 85.9vw;
+    height: 35px;
+  }
+  .phoneInputItDs select,
+  .phoneInputItDs input {
+    flex: 1 1 0%;
+    padding: 17px 10px;
+    height: 10vw;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    color: grey;
+  }
+
+  .phoneInputItDs select {
+    max-width: 49px;
+    flex: 0 0 10px;
+    padding: 0.01rem;
+    height: 10vw;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.375rem;
+  }
+}

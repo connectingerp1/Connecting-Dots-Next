@@ -1,0 +1,151 @@
+/* Blog Page Container */
+.blogContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Blog Details Section */
+.blogDetails {
+  flex: 3;
+  background: #28282a;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.metaInfo {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.subcategory {
+  font-size: 1rem;
+  background: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.blogImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.blogContent {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ece2e2;
+}
+
+.blogContent p {
+  margin-bottom: 20px;
+}
+
+.blogContent a {
+  color: #4caf50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blogContent a:hover {
+  text-decoration: underline;
+}
+
+/* Share Bar */
+.shareBar {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+  height: max-content;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.shareBar h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.shareButton {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.shareButton:nth-child(2) {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.shareButton:nth-child(3) {
+  background: #0077b5;
+  color: #fff;
+}
+
+.shareButton:nth-child(4) {
+  background: #1877f2;
+  color: #fff;
+}
+
+.shareButton:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blogContainer {
+    flex-direction: column;
+  }
+
+  .shareBar {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogDetails {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .blogImage {
+    height: 300px;
+  }
+
+  .blogContent {
+    font-size: 1rem;
+  }
+
+  .shareButton {
+    font-size: 0.9rem;
+  }
+}

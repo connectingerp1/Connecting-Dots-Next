@@ -1,0 +1,75 @@
+.missionReversed {
+  padding: 70px 0;
+}
+
+.missionContainer {
+  margin: 0 auto;
+  width: 97.5%;
+  max-width: 1400px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.missionRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.missionCol12 {
+  width: 100%;
+}
+
+.missionColLg6 {
+  width: 50%;
+}
+
+.missionContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 35px 0;
+}
+
+.missionContent p {
+  font-size: 22px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.missionImg {
+  min-height: 380px;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.missionRow .missionCol12.missionColLg6 {
+  padding: 15px;
+}
+
+.missionCol12 h1 {
+  font-size: 56px;
+  font-weight: bold;
+  width: 600px;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-left: 850px;
+}
+
+@media (max-width: 768px) {
+  .missionColLg6 {
+    width: 100%;
+  }
+
+  .missionContent {
+    padding: 15px;
+  }
+
+  .missionCol12 h1 {
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+}

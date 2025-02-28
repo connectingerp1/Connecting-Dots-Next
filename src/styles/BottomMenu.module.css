@@ -1,0 +1,76 @@
+.bottomMenu {
+    z-index: 1050; /* Lower than .customLauncher */
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;  /* Spread items evenly */
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+
+/* Ensure equal spacing between menu items */
+.menu-item {
+    flex: 1;  /* Makes all menu items take equal width */
+    text-align: center;
+}
+
+/* Adjust floating buttons */
+.floatingWhatsappContainer, .floatingContactContainer {
+    width: 45px;
+    height: 45px;
+}
+
+/* Ensure icons & labels have space */
+.menu-item span {
+    display: block;
+    font-size: 12px;
+}
+
+/* 📱 Responsive Media Queries */
+@media (max-width: 414px) { /* For screens ≤ 414px width */
+    .bottomMenu {
+        padding: 8px 0;
+    }
+    .menu-item {
+        margin: 0 8px; /* Reduce spacing */
+    }
+    .menu-item span {
+        font-size: 10px; /* Smaller text */
+    }
+    .floatingWhatsappContainer, .floatingContactContainer {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 360px) { /* For screens ≤ 360px width */
+    .menu-item {
+        margin: 0 5px; /* Further reduce spacing */
+    }
+    .menu-item span {
+        font-size: 9px; /* Smaller text */
+    }
+    .floatingWhatsappContainer, .floatingContactContainer {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 320px) { /* For very small screens */
+    .menu-item {
+        margin: 0 3px;
+    }
+    .menu-item span {
+        font-size: 8px;
+    }
+    .floatingWhatsappContainer, .floatingContactContainer {
+        width: 30px;
+        height: 30px;
+    }
+}
