@@ -3,7 +3,6 @@
 import { useState, useContext } from "react";
 import { FaPhone, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import Btnform from "@/components/HomePage/Btnform";
 import { CityContext } from "@/context/CityContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/ContactUs.module.css";
@@ -22,7 +21,7 @@ const ContactPage = ({
     googleMapsApiKey: "AIzaSyDBGFl3pJw6rBm6R0eX5vPZNLVkZgfcvh8",
   });
 
-  const containerStyle = {
+  const mapContainerStyle = {
     width: "100%",
     height: "200px",
   };
@@ -31,7 +30,7 @@ const ContactPage = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionError, setSubmissionError] = useState(null);
 
-  // Country code
+  // Initialize form data
   const [localFormData, setLocalFormData] = useState(
     formData || {
       name: "",
@@ -116,7 +115,7 @@ const ContactPage = ({
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(localFormData.contact)) {
       setSubmissionError(
-        "Phone number must start with +91 and be followed by exactly 10 digits"
+        "Phone number must be exactly 10 digits"
       );
       setIsSubmitting(false);
       return;
@@ -149,144 +148,165 @@ const ContactPage = ({
   };
 
   return (
-    <div style={{ backgroundColor: "#F0F2F5", padding: "40px 0" }}>
+    <div className={styles.pageContainer}>
       <div className="container my-4">
         <h2 className={styles.branchesTitle}>
-          EXPLORE OUR EXPERT TECH TRANING SOLUTIONS
+          EXPLORE OUR EXPERT TECH TRAINING SOLUTIONS
         </h2>
-        <div className="row">
-          <div className="col-md-8">
+        
+        <div className="row gx-4 gy-4">
+          {/* Contact Info Section */}
+          <div className="col-lg-8 col-md-7">
             {branches.map((branch, index) => (
               <div
                 key={index}
-                className="row border-bottom pb-4 mb-4 align-items-center"
+                className={`row border-bottom pb-4 mb-4 ${styles.branchInfo}`}
               >
                 {/* Branch Name */}
-                <h5 className="fw-bold text-uppercase text-left mb-3">
+                <h5 className={`fw-bold text-uppercase mb-3 ${styles.branchName}`}>
                   {branch.name}
                 </h5>
-
-                {/* Phone Section */}
-                <div className="col-md-4 text-center d-flex justify-content-center">
-                  <div
-                    className="d-flex flex-column align-items-center p-3 border rounded shadow-sm h-100 w-100"
-                    style={{ minWidth: "220px", minHeight: "220px" }}
-                  >
-                    <FaPhone
-                      size={30}
-                      className="text-primary mb-2 m-6"
-                      style={{ transform: "rotate(90deg)" }}
-                    />
-                    <h6 className="text-secondary mb-2">Phone</h6>
-                    {branch.phone.map((num, i) => (
-                      <p key={i} className="text-primary m-0">
-                        {num}
-                      </p>
-                    ))}
+                
+                <div className="row g-3">
+                  {/* Phone Section */}
+                  <div className="col-md-4 col-sm-6">
+                    <div className={styles.contactCard}>
+                      <FaPhone
+                        size={30}
+                        className={styles.phoneIcon}
+                      />
+                      <h6 className={styles.cardSubtitle}>Phone</h6>
+                      <div className={styles.contactDetails}>
+                        {branch.phone.map((num, i) => (
+                          <a href={`tel:${num.replace(/\s/g, '')}`} key={i} className={styles.contactLink}>
+                            {num}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                {/* WhatsApp Section */}
-                <div className="col-md-4 text-center d-flex justify-content-center">
-                  <div
-                    className="d-flex flex-column align-items-center p-3 border rounded shadow-sm h-100 w-100"
-                    style={{ minWidth: "220px", minHeight: "220px" }}
-                  >
-                    <FaWhatsapp size={30} className="text-success mb-2 m-6" />
-                    <h6 className="text-secondary mb-2">WhatsApp</h6>
-                    <a href={branch.whatsapp} className="btn btn-success">
-                      Chat Now
-                    </a>
+                  {/* WhatsApp Section */}
+                  <div className="col-md-4 col-sm-6">
+                    <div className={styles.contactCard}>
+                      <FaWhatsapp size={30} className={styles.whatsappIcon} />
+                      <h6 className={styles.cardSubtitle}>WhatsApp</h6>
+                      <div className={styles.contactDetails}>
+                        <a href={branch.whatsapp} className={styles.whatsappBtn}>
+                          Chat Now
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                {/* Address Section */}
-                <div className="col-md-4 text-center d-flex justify-content-center">
-                  <div
-                    className="d-flex flex-column align-items-center p-3 border rounded shadow-sm h-100 w-100"
-                    style={{ minWidth: "220px", minHeight: "220px" }}
-                  >
-                    <FaMapMarkerAlt size={30} className="text-warning mb-2" />
-                    <h6 className="text-secondary mb-2">Address</h6>
-                    <a href={branch.address} className="text-primary m-0">
-                      {branch.addresstext}
-                    </a>
+                  {/* Address Section */}
+                  <div className="col-md-4 col-sm-12">
+                    <div className={styles.contactCard}>
+                      <FaMapMarkerAlt size={30} className={styles.addressIcon} />
+                      <h6 className={styles.cardSubtitle}>Address</h6>
+                      <div className={styles.contactDetails}>
+                        <a
+                          href={branch.address}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.addressLink}
+                        >
+                          {branch.addresstext}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className={styles.rightSectionItDs}>
-            <h3>Contact Form</h3>
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                value={localFormData.name || ""}
-                onChange={handleChange}
-                className={styles.inputField}
-                required
-              />
-              <div className={styles.phoneInputItDs}>
-                <select
-                  id="countryCode"
-                  name="countryCode"
-                  value={localFormData.countryCode || "+91"} // Default to "+91" if undefined
-                  onChange={handleChange}
-                  className={styles.selectCountryCode}
+          {/* Contact Form Section */}
+          <div className="col-lg-4 col-md-5">
+            <div className={styles.rightSectionItDs}>
+              <h3>Contact Form</h3>
+              <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.formGroup}>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    value={localFormData.name || ""}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                    required
+                  />
+                </div>
+                
+                <div className={styles.phoneInputItDs}>
+                  <select
+                    id="countryCode"
+                    name="countryCode"
+                    value={localFormData.countryCode || "+91"}
+                    onChange={handleChange}
+                    className={styles.selectCountryCode}
+                  >
+                    {countryCodes.map(({ code }) => (
+                      <option key={code} value={code}>
+                        {code}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="Enter your phone number"
+                    value={localFormData.contact || ""}
+                    onChange={handleChange}
+                    maxLength="10"
+                    className={styles.contactInput}
+                    required
+                  />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    value={localFormData.email || ""}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                    required
+                  />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <input
+                    type="text"
+                    name="course"
+                    placeholder="Enter course name"
+                    value={localFormData.course || ""}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                    required
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  className={styles.submitButtonItDs}
+                  disabled={isSubmitting}
                 >
-                  {countryCodes.map(({ code }) => (
-                    <option key={code} value={code}>
-                      {code}
-                    </option>
-                  ))}
-                </select>
-                <input
-                  type="tel"
-                  id="contact"
-                  name="contact"
-                  placeholder="Enter your phone number"
-                  value={localFormData.contact || ""}
-                  onChange={handleChange}
-                  maxLength="10"
-                  required
-                />
-              </div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                value={localFormData.email || ""}
-                onChange={handleChange}
-                className={styles.inputField}
-                required
-              />
-              <input
-                type="text"
-                name="course"
-                placeholder="Enter course name"
-                value={localFormData.course || ""}
-                onChange={handleChange}
-                className={styles.inputField}
-                required
-              />
-              <button
-                type="submit"
-                className={styles.submitButtonItDs}
-                disabled={isSubmitting}
-              >
-                Submit
-              </button>
-              {submissionError && (
-                <p className={styles.error}>{submissionError}</p>
-              )}
-            </form>
+                  {isSubmitting ? "Submitting..." : "Submit"}
+                </button>
+                
+                {submissionError && (
+                  <p className={styles.error}>{submissionError}</p>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      {/* branches */}
+
+      {/* Map Section */}
       <div className={styles.branchesSection}>
         <h2 className={styles.branchesTitle}>OUR BRANCHES</h2>
 
@@ -294,19 +314,19 @@ const ContactPage = ({
           {branches.map((branch, index) => (
             <div className={styles.branchCard} key={index}>
               <h3>{branch.name}</h3>
-              {isLoaded ? (
-                <div className={styles.mapContainer}>
+              <div className={styles.mapContainer}>
+                {isLoaded ? (
                   <GoogleMap
-                    mapContainerStyle={containerStyle}
+                    mapContainerStyle={mapContainerStyle}
                     center={branch.position}
                     zoom={13}
                   >
                     <Marker position={branch.position} />
                   </GoogleMap>
-                </div>
-              ) : (
-                <div>Loading Map...</div>
-              )}
+                ) : (
+                  <div className={styles.loadingMap}>Loading Map...</div>
+                )}
+              </div>
               <div className={styles.add2}>
                 <a
                   href={branch.address}

@@ -33,7 +33,7 @@ const Marquee = ({ reverse = false }) => (
 
 const OurClients = () => (
   <section className={styles.ourClientsSection}>
-    <h2 className={styles.sectionTitleC}>Our Clients</h2>
+    <h2 className={styles.sectionTitle}>Our Clients</h2>
     <div className={styles.titleUnderline}></div>
     <div className={styles.marqueeContainer}>
       <Marquee /> {/* Normal direction */}

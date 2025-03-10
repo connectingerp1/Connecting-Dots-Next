@@ -810,6 +810,10 @@
     width: 100%;
     margin-top: 0;
   }
+  .btn3 span{
+    font-size: 10px;
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1004,12 +1008,17 @@
     align-items: center;
   }
   .slide2Btn {
-    width: 25%;
+    width: 40%;
     height: 8%;
     font-size: 0.8rem;
     bottom: 40px;
     text-align: center;
   }
+
+  .slide2Btn span {
+    font-size: 18px;
+  }
+
   .carouselText2 {
     margin-bottom: 0px;
     gap: 0;
@@ -1044,12 +1053,11 @@
     justify-content: center;
     align-items: center;
   }
-  .slide2Btn {
-    width: 30%;
-    height: 8%;
-    font-size: 0.5rem;
-    bottom: 40px;
-    text-align: center;
+
+  .slide2Btn span {
+    position: relative;
+    top: -8px;
+    font-size: 10px;
   }
   .carouselText2 {
     margin-bottom: 0px;

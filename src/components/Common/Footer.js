@@ -206,13 +206,13 @@ const Footer = () => {
               </div>
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                  <Link href="/aboutus">About Us</Link>
+                  <Link href="/aboutus">ABOUT US</Link>
                 </li>
                 <li className={styles.menuItem}>
-                  <Link href="/blogs">Blog</Link>
+                  <Link href="/blogs">BLOG</Link>
                 </li>
                 <li className={styles.menuItem}>
-                  <Link href="/contactus">Contact Us</Link>
+                  <Link href="/contactus">CONTACT US</Link>
                 </li>
               </ul>
             </div>

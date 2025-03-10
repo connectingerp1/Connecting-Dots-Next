@@ -26,7 +26,7 @@ const images = [
 const Achievement = () => {
   return (
     <section id="achievements" className={styles.achievements}>
-      <h1 className="">Our Achievements</h1>
+      <h2>Our Achievements</h2>
       <div className={styles.titleUnderline}></div>
       <ParallaxScroll images={images} />
     </section>

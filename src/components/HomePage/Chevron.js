@@ -4,7 +4,7 @@ import styles from '@/styles/HomePage/Chevron.module.css';
 const Phases = () => {
   return (
     <div className={styles.containerCH}>
-      <h1>Training To Placement Approach</h1>
+      <h1 className={styles.sectionTitle}>Training To Placement Approach</h1>
       <div className={styles.titleUnderline}></div>
       <div className={styles.phases}>
         <ul>

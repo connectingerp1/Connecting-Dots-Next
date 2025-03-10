@@ -800,11 +800,19 @@ const Header = () => {
             <Nav className={styles.sidebarNav}>
               <Link
                 className={styles.navLink}
+                href="/contactus"
+                onClick={() => handleNavClick("link1")}
+              >
+                Contact us
+              </Link>
+                            <Link
+                className={styles.navLink}
                 href="/aboutus"
                 onClick={() => handleNavClick("link1")}
               >
                 About us
               </Link>
+              
               {renderDropdownSAP(true)}
               {renderDropdownITCourses(true)}
               {renderDropdownDataVisualisation(true)}

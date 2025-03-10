@@ -12,10 +12,11 @@
   margin-bottom: 6rem;
   font-size: 2.5rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.05em;
   position: relative;
   padding-bottom: 1rem;
+  
 }
 
 .title:after {

@@ -11,9 +11,9 @@
 }
 
 .certificateTitle {
-  letter-spacing: 2px;
   font-size: 2.5rem;
   font-weight: 700;
+  letter-spacing: 2px;
   background: rgb(1, 1, 98);
   background: linear-gradient(
     90deg,
@@ -89,6 +89,7 @@
 .certificateText p {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .outlineBtn {
@@ -115,7 +116,7 @@
   }
 
   .certificateTitle {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     margin-top: 20px;
   }
 
@@ -148,6 +149,7 @@
 
   .certificateText p {
     font-size: 0.9rem;
+    text-align: justify;
   }
 
   
@@ -170,5 +172,50 @@
   border: 2px solid #fafbfd;
   transform: scale(1.05);
 }
+}
 
+@media (max-width: 576px) {
+  .certificateTitle {
+    font-size: 2rem;
+  }
+
+  .certificateText {
+    font-size: 0.9rem;
+  }
+
+  .certificateText h2 {
+    font-size: 1.2rem;
+  }
+
+  .certificateText p {
+    font-size: 0.85rem;
+  }
+
+  .outlineBtn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificateTitle {
+    font-size: 1.8rem;
+  }
+
+  .certificateText {
+    font-size: 0.85rem;
+  }
+
+  .certificateText h2 {
+    font-size: 1rem;
+  }
+
+  .certificateText p {
+    font-size: 0.8rem;
+  }
+
+  .outlineBtn {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
 }

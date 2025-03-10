@@ -37,6 +37,7 @@
   background-clip: text;
   color: transparent;
   margin-bottom: 0.5rem;
+  position:relative;
 }
 
 .titleUnderline {
@@ -181,7 +182,7 @@
 
 @media (max-width: 768px) {
   .t2pTitle h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .cardsT2pWrapper {
@@ -208,7 +209,7 @@
   }
 
   .t2pTitle h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .cardsT2pWrapper {
@@ -230,6 +231,11 @@
 
   .cardT2pLogo {
     width: 60px;
+  }
+}
+@media (max-width: 576){
+  .t2pTitle h1{
+    font-size: 2 rem;
   }
 }
 

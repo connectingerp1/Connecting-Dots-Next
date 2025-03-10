@@ -7,25 +7,32 @@ import Marquee from "@/components/Common/Marquee";
 import Stickyform from "@/components/Stickyform";
 import WaveComponent from "@/components/Wave";
 import PopupForm from "@/components/PopupForm";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Chatbot from "@/components/Chatbot";
 import Whatsapp from "@/components/Whatsapp";
 import Floatingcontact from "@/components/Floatingcontact";
 import BottomMenu from "@/components/BottomMenu";
-import Script from "next/script"; // Import Next.js Script
+import Script from "next/script";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export const metadata = {
-  title: "Software Training in Pune with placement support",
-  description: "Connecting Dots ERP",
-};
 
-// Your Google Tag Manager & Search Console verification
-const GTM_ID = "GTM-MB68QM2V"; // Replace with your GTM ID
+const GTM_ID = "GTM-MB68QM2V";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Metadata */}
+        <title>Connecting Dots ERP | SAP Training Institute In Pune</title>
+        <meta
+          name="description"
+          content="We offer Expert-led training in SAP, Software Development, Digital Marketing, and HR Courses with strong placement support for your career."
+        />
+        <meta
+          name="keywords"
+          content="SAP Certification Courses, SAP Course, Data Science Course, Power Bi Course, Digital Marketing Course, HR Training Institute, SAP Training Institute, Python Course, Software Course, Training, Education"
+        />
+        <meta name="author" content="Connecting Dots ERP | Software and SAP Training Institute" />
+
         {/* Google Tag Manager - HEAD */}
         <Script
           id="gtm-script"
@@ -40,9 +47,8 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-
       </head>
-      <body className="body" cz-shortcut-listen="true">
+      <body className="body">
         {/* Google Tag Manager - BODY (noscript fallback) */}
         <noscript
           dangerouslySetInnerHTML={{
@@ -53,12 +59,15 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        {/* Background Animation */}
         <div className="background-animation">
           <div className="starsec"></div>
           <div className="starthird"></div>
           <div className="starfourth"></div>
           <div className="starfifth"></div>
         </div>
+
+        {/* UI Components */}
         <CallAdvisorsStrip />
         <Marquee />
         <Navbar />

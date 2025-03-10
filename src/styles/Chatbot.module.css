@@ -57,3 +57,9 @@
     max-height: 80vh !important;
   }
 }
+
+@media (max-width: 768px) {
+  .customLauncher {
+    display: none;
+  }
+}

@@ -1,4 +1,4 @@
-.key-courses-container {
+.keyCoursesContainer {
   padding: 30px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   overflow: hidden;
@@ -8,7 +8,7 @@
   margin: auto;
 }
 
-.key-courses-container:before {
+.keyCoursesContainer:before {
   content: "";
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@
   z-index: 0;
 }
 
-.keypoints-title {
+.keypointsTitle h1 {
   font-size: 2.5rem;
   font-weight: 700;
   background: rgb(1, 1, 98);
@@ -31,11 +31,11 @@
     rgba(2, 2, 85, 1) 62%
   );
   -webkit-background-clip: text;
-  color: transparent;  margin-bottom: 0.5rem;
+  color: transparent;
+  margin-bottom: 0.5rem;
   position: relative;
   z-index: 1;
 }
-
 
 .titleUnderline {
   width: 80px;
@@ -44,7 +44,6 @@
   margin: 15px auto 25px;
   border-radius: 2px;
 }
-
 
 .keypoints {
   display: flex;
@@ -92,7 +91,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.center-feature {
+.centerFeature {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,14 +106,14 @@
   transform: translate(-50%, -50%);
 }
 
-.centre-feature:hover {
+.centerFeature:hover {
   background-color: #13136c;
   color: white;
   border-color: #13136c;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.center-text {
+.centerText {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
@@ -168,7 +167,7 @@
   animation-delay: 16.66s;
 }
 
-.key-notes {
+.keyNotes {
   margin-top: 20px;
   text-align: left;
   margin-left: 830px;
@@ -177,7 +176,7 @@
   gap: 50px;
 }
 
-.key-notes h2 {
+.keyNotes h2 {
   margin-bottom: 50px;
   margin-top: -50px;
   margin-left: 30px;
@@ -241,13 +240,13 @@
   margin-right: 12px;
 }
 
-.key-text-container {
+.keyTextContainer {
   max-width: 400px;
   text-align: justify;
 }
 
 @media (max-width: 1024px) {
-  .key-courses-container {
+  .keyCoursesContainer {
     background-color: #ffffff;
     width: 97.5%;
     height: auto;
@@ -260,12 +259,10 @@
     padding-top: 30px;
   }
 
-  .keypoints-title {
-    font-size: 3rem;
-    font-weight: bold;
+  .keypointsTitle h1 {
+    font-size: 2.5rem;
     margin-bottom: 0px;
     font-family: "Lato", sans-serif;
-    letter-spacing: 8px;
     background: rgb(1, 1, 98);
     background: linear-gradient(
       90deg,
@@ -311,20 +308,12 @@
     border: 3px solid #13136c;
     text-align: center;
     font-size: 1.1rem;
-    /* Start completely behind the keypoints circle */
-    transform: translate(-50%, -50%) scale(0); /* Scale down initially */
-    opacity: 2; /* Make the circles invisible initially */
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 2;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
 
-  .feature:hover {
-    background-color: #13136c;
-    color: white;
-    border-color: #13136c;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .center-feature {
+  .centerFeature {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -339,14 +328,7 @@
     transform: translate(-50%, -50%);
   }
 
-  .centre-feature:hover {
-    background-color: #13136c;
-    color: white;
-    border-color: #13136c;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .center-text {
+  .centerText {
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -376,31 +358,7 @@
     }
   }
 
-  .feature0 {
-    animation: spiral 20s linear infinite;
-  }
-  .feature1 {
-    animation: spiral 20s linear infinite;
-    animation-delay: 3.33s;
-  }
-  .feature2 {
-    animation: spiral 20s linear infinite;
-    animation-delay: 6.66s;
-  }
-  .feature3 {
-    animation: spiral 20s linear infinite;
-    animation-delay: 10s;
-  }
-  .feature4 {
-    animation: spiral 20s linear infinite;
-    animation-delay: 13.33s;
-  }
-  .feature5 {
-    animation: spiral 20s linear infinite;
-    animation-delay: 16.66s;
-  }
-
-  .key-notes {
+  .keyNotes {
     margin-top: 20px;
     text-align: left;
     margin-left: 430px;
@@ -409,7 +367,7 @@
     gap: 50px;
   }
 
-  .key-notes h2 {
+  .keyNotes h2 {
     margin-bottom: 50px;
     margin-top: -50px;
     margin-left: 30px;
@@ -425,62 +383,10 @@
   .note .img {
     margin-right: 20px;
   }
-
-  .note img {
-    object-fit: contain;
-  }
-
-  .logo1 {
-    width: 70px;
-    height: 80px;
-    margin-left: 5px;
-    margin-bottom: 20px;
-    margin-right: 5px;
-  }
-
-  .logo2 {
-    width: 100px;
-    height: 120px;
-    margin-left: -15px;
-    margin-right: -8px;
-  }
-
-  .logo3 {
-    width: 55px;
-    height: 75px;
-    margin-left: 8px;
-    margin-right: 17px;
-  }
-
-  .logo4 {
-    width: 110px;
-    height: 110px;
-    margin-left: -15px;
-    margin-right: -12px;
-  }
-
-  .logo5 {
-    width: 60px;
-    height: 80px;
-    margin-left: 10px;
-    margin-right: 15px;
-  }
-
-  .logo6 {
-    width: 65px;
-    height: 85px;
-    margin-left: 10px;
-    margin-right: 12px;
-  }
-
-  .key-text-container {
-    max-width: 400px;
-    text-align: justify;
-  }
 }
 
 @media (max-width: 768px) {
-  .key-courses-container {
+  .keyCoursesContainer {
     padding-bottom: 0px;
   }
   .circle {
@@ -489,8 +395,8 @@
     margin-left: 0;
     margin-bottom: 80px;
   }
-  .keypoints-title {
-    font-size: 2.2rem;
+  .keypointsTitle h1 {
+    font-size: 2rem;
     padding-top: 10px;
   }
 
@@ -527,16 +433,16 @@
     font-size: 0.7rem;
   }
 
-  .center-feature {
+  .centerFeature {
     width: 100px;
     height: 100px;
   }
 
-  .center-text {
+  .centerText {
     font-size: 1.2rem;
   }
 
-  .key-notes {
+  .keyNotes {
     margin-left: 0;
     margin-top: 10px;
     text-align: center;
@@ -545,7 +451,7 @@
     gap: 20px;
   }
 
-  .key-notes h2 {
+  .keyNotes h2 {
     margin-left: 0;
     font-size: 2rem;
   }
@@ -564,7 +470,7 @@
     height: 80px;
   }
 
-  .key-text-container {
+  .keyTextContainer {
     max-width: 80%;
     text-align: left;
     font-size: 0.8rem;
@@ -584,9 +490,8 @@
   }
 }
 
-/* responsive */
 @media (max-width: 576px) {
-  .key-courses-container {
+  .keyCoursesContainer {
     padding-bottom: 0px;
   }
   .circle {
@@ -595,8 +500,8 @@
     margin-left: 0;
     margin-bottom: 80px;
   }
-  .keypoints-title {
-    font-size: 1.2rem;
+  .keypointsTitle h1 {
+    font-size: 2rem;
     padding-top: 10px;
   }
 
@@ -633,16 +538,16 @@
     font-size: 0.7rem;
   }
 
-  .center-feature {
+  .centerFeature {
     width: 100px;
     height: 100px;
   }
 
-  .center-text {
+  .centerText {
     font-size: 1.2rem;
   }
 
-  .key-notes {
+  .keyNotes {
     margin-left: 0;
     margin-top: 10px;
     text-align: center;
@@ -651,7 +556,7 @@
     gap: 20px;
   }
 
-  .key-notes h2 {
+  .keyNotes h2 {
     margin-left: 0;
     font-size: 2rem;
   }
@@ -670,7 +575,7 @@
     height: 80px;
   }
 
-  .key-text-container {
+  .keyTextContainer {
     max-width: 80%;
     text-align: left;
     font-size: 0.8rem;
@@ -687,5 +592,11 @@
     height: 100px;
     width: 100px;
     margin-top: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .keypointsTitle h1 {
+    font-size: 1.8rem;
   }
 }
