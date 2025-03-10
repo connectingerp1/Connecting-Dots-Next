@@ -1,0 +1,53 @@
+.mainContainerMarquee {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  min-height: 2rem;
+  overflow-x: hidden;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(to right, #9260fc, #739fd2, #5099bb);
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.mainContainerMarqueeTrack {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.mainContainerMarqueeItems {
+  flex-shrink: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: marquee 36s linear infinite;
+}
+
+.mainContainerMarqueeItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: auto;
+  transition: all 0.1s ease-in-out;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
