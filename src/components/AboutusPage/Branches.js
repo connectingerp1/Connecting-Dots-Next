@@ -12,7 +12,7 @@ const BRANCH_DATA = [
       "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad, Maharashtra 411027",
     position: { lat: 18.588048051275003, lng: 73.78119014757031 },
     mapLink: "https://maps.app.goo.gl/DNwzKa2Yt1WB6zUB7",
-    labelAltitude: 0.01, 
+    labelAltitude: 0.01,
     labelOffset: { lat: 0.1, lng: 0.1 },
   },
   {
@@ -68,6 +68,9 @@ const Branches = () => {
   const [globeSize, setGlobeSize] = useState({ width: 1000, height: 1000 });
 
   useEffect(() => {
+    // Ensure this code only runs in the browser
+    if (typeof window === "undefined") return;
+
     // Responsive globe size calculation
     const handleResize = () => {
       const windowWidth = window.innerWidth;

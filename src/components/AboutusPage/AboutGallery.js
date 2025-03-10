@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -9,8 +9,8 @@ const AboutGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
-  
-  // Fixed images array - removed the duplicate
+
+  // Fixed images array
   const images = [
     "/Acheivements/ach1.avif",
     "/Acheivements/ach2.avif",
@@ -21,19 +21,22 @@ const AboutGallery = () => {
   ];
 
   useEffect(() => {
+    // Ensure this code only runs in the browser
+    if (typeof window === "undefined") return;
+
     // Check if mobile on component mount and window resize
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     handleResize(); // Initial check
     window.addEventListener('resize', handleResize);
-    
+
     // Auto-rotate gallery images every 3 seconds on desktop
     const interval = !isMobile && setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
     }, 3000);
-    
+
     return () => {
       window.removeEventListener('resize', handleResize);
       interval && clearInterval(interval);

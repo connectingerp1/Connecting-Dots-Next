@@ -229,6 +229,9 @@ const StickyScrollReveal = () => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    // Ensure this code only runs in the browser
+    if (typeof window === "undefined") return;
+
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 992); // 992px is the breakpoint for lg screens in Bootstrap
     };
