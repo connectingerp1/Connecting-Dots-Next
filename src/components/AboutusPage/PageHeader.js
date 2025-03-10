@@ -64,6 +64,9 @@ const PageHeader = ({
   }, [isVisible]);
 
   useEffect(() => {
+    // Ensure this code only runs in the browser
+    if (typeof window === "undefined") return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
