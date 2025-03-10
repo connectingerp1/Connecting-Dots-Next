@@ -30,7 +30,13 @@ const PageHeader = ({
   const [isInteractiveElement, setIsInteractiveElement] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [trustedByCount, setTrustedByCount] = useState(0);
+  const [isBrowser, setIsBrowser] = useState(false);
   const targetCount = 5000;
+
+  // Set isBrowser to true once component is mounted
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
 
   // Animation for entrance effects
   useEffect(() => {
@@ -63,9 +69,10 @@ const PageHeader = ({
     }
   }, [isVisible]);
 
+  // Canvas and grid animation
   useEffect(() => {
-    // Ensure this code only runs in the browser
-    if (typeof window === "undefined") return;
+    // Only run this effect on the client side
+    if (!isBrowser) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -196,7 +203,7 @@ const PageHeader = ({
       canvas.removeEventListener("mousemove", handleCanvasMouseMove);
       canvas.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [speed, borderColor, colors, squareSize, slant, isInteractiveElement]);
+  }, [speed, borderColor, colors, squareSize, slant, isInteractiveElement, isBrowser]);
 
   const handleButtonClick = () => setShowForm(true);
   const handleCloseForm = () => setShowForm(false);

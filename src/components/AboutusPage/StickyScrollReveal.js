@@ -226,12 +226,11 @@ const MobileCards = () => {
 };
 
 const StickyScrollReveal = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
+  // Initialize with null instead of false to handle SSR properly
+  const [isDesktop, setIsDesktop] = useState(null);
 
   useEffect(() => {
-    // Ensure this code only runs in the browser
-    if (typeof window === "undefined") return;
-
+    // This will only run on the client side after component mounts
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 992); // 992px is the breakpoint for lg screens in Bootstrap
     };
@@ -245,6 +244,12 @@ const StickyScrollReveal = () => {
     // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Return a safe fallback during SSR, then the correct component on client
+  if (isDesktop === null) {
+    // Return a simple fallback during SSR
+    return <div className="sticky-scroll-reveal loading"></div>;
+  }
 
   return (
     <div className="sticky-scroll-reveal">

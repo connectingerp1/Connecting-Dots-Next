@@ -1,8 +1,13 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Globe from "react-globe.gl";
 import styles from "@/styles/AboutPage/Branches.module.css";
 import { MapPin, Globe as GlobeIcon } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Dynamic import with SSR disabled
+const Globe = dynamic(() => import("react-globe.gl"), {
+  ssr: false,
+});
 
 const BRANCH_DATA = [
   {
@@ -65,12 +70,14 @@ const Branches = () => {
   const globeRef = useRef(null);
   const [activeBranch, setActiveBranch] = useState(null);
   const [globeRotation, setGlobeRotation] = useState(true);
-  const [globeSize, setGlobeSize] = useState({ width: 1000, height: 1000 });
+  const [globeSize, setGlobeSize] = useState({ width: 500, height: 500 });
+  const [isClient, setIsClient] = useState(false);
 
+  // Set initial default values for SSR that won't cause issues
   useEffect(() => {
-    // Ensure this code only runs in the browser
-    if (typeof window === "undefined") return;
-
+    // Mark that we're now on the client
+    setIsClient(true);
+    
     // Responsive globe size calculation
     const handleResize = () => {
       const windowWidth = window.innerWidth;
@@ -104,6 +111,8 @@ const Branches = () => {
   }, []);
 
   useEffect(() => {
+    if (!isClient) return;
+    
     const configureGlobe = () => {
       if (globeRef.current) {
         globeRef.current.controls().autoRotate = globeRotation;
@@ -113,10 +122,12 @@ const Branches = () => {
     };
 
     configureGlobe();
-  }, [globeRotation]);
+  }, [globeRotation, isClient]);
 
   const handleBranchHover = (branchId) => {
     setActiveBranch(branchId);
+    
+    if (!isClient) return;
     
     if (branchId && globeRef.current) {
       // Stop rotation when a branch is hovered
@@ -141,7 +152,10 @@ const Branches = () => {
     }
   };
 
+  // Move DOM manipulation to a client-side only function
   const createCustomMarker = (color = "#FF6B6B", isActive = false) => {
+    if (!isClient) return null;
+    
     const el = document.createElement("div");
     el.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${color}" width="24" height="24">
@@ -162,31 +176,33 @@ const Branches = () => {
       <div className={styles.branchesWrapper}>
         <div className={styles.globeSection}>
           <div className={styles.globeWrapper}>
-            <Globe
-              ref={globeRef}
-              width={globeSize.width}
-              height={globeSize.height}
-              globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-              backgroundColor="rgba(0,0,0,0)"
-              labelsData={BRANCH_DATA}
-              labelLat={(d) => d.position.lat + (d.labelOffset?.lat || 0)}
-              labelLng={(d) => d.position.lng + (d.labelOffset?.lng || 0)}
-              labelText={(d) => d.city}
-              labelSize={1.5}
-              labelColor={() => "white"}
-              labelAltitude={(d) => d.labelAltitude}
-              labelDotRadius={0}
-              labelResolution={2}
-              htmlElementsData={BRANCH_DATA}
-              htmlElement={(d) =>
-                createCustomMarker(
-                  d.id === activeBranch ? "#FF6B6B" : "#4CAF50",
-                  d.id === activeBranch
-                )
-              }
-              htmlLat={(d) => d.position.lat}
-              htmlLng={(d) => d.position.lng}
-            />
+            {isClient && (
+              <Globe
+                ref={globeRef}
+                width={globeSize.width}
+                height={globeSize.height}
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+                backgroundColor="rgba(0,0,0,0)"
+                labelsData={BRANCH_DATA}
+                labelLat={(d) => d.position.lat + (d.labelOffset?.lat || 0)}
+                labelLng={(d) => d.position.lng + (d.labelOffset?.lng || 0)}
+                labelText={(d) => d.city}
+                labelSize={1.5}
+                labelColor={() => "white"}
+                labelAltitude={(d) => d.labelAltitude}
+                labelDotRadius={0}
+                labelResolution={2}
+                htmlElementsData={BRANCH_DATA}
+                htmlElement={(d) =>
+                  createCustomMarker(
+                    d.id === activeBranch ? "#FF6B6B" : "#4CAF50",
+                    d.id === activeBranch
+                  )
+                }
+                htmlLat={(d) => d.position.lat}
+                htmlLng={(d) => d.position.lng}
+              />
+            )}
           </div>
         </div>
 

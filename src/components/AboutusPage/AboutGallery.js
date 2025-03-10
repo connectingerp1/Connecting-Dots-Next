@@ -9,6 +9,7 @@ const AboutGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isBrowser, setIsBrowser] = useState(false);
 
   // Fixed images array
   const images = [
@@ -20,9 +21,14 @@ const AboutGallery = () => {
     "/Acheivements/ach6.avif",
   ];
 
+  // Check if we're in the browser environment
   useEffect(() => {
-    // Ensure this code only runs in the browser
-    if (typeof window === "undefined") return;
+    setIsBrowser(true);
+  }, []);
+
+  useEffect(() => {
+    // Only run browser-specific code if we're in the browser
+    if (!isBrowser) return;
 
     // Check if mobile on component mount and window resize
     const handleResize = () => {
@@ -41,7 +47,7 @@ const AboutGallery = () => {
       window.removeEventListener('resize', handleResize);
       interval && clearInterval(interval);
     };
-  }, [images.length, isMobile]);
+  }, [images.length, isMobile, isBrowser]);
 
   const handleImageClick = (index) => {
     setActiveIndex(index);
