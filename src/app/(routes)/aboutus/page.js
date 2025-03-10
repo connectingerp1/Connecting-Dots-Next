@@ -2,11 +2,11 @@
 
 import React from "react";
 import PageHeader from "@/components/AboutusPage/PageHeader";
+import StickyScrollReveal from "@/components/AboutusPage/StickyScrollReveal";
 import ProgressBars from "@/components/AboutusPage/ProgressBars";
 import AboutGallery from "@/components/AboutusPage/AboutGallery";
-import styles from "@/styles/AboutPage.module.css";
 import Branches from "@/components/AboutusPage/Branches";
-import StickyScrollReveal from "@/components/AboutusPage/StickyScrollReveal";
+import styles from "@/styles/AboutPage.module.css";
 
 const AboutPage = () => {
   return (
