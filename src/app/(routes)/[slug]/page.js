@@ -4,22 +4,8 @@ import { notFound } from "next/navigation";
 import CourseComponentLoader from "@/components/CourseComponentLoader";
 import ClientOnly from "@/context/ClientOnly";
 
-// ✅ Server-side function to generate static paths
-export async function generateStaticParams() {
-  const pagesDir = path.join(process.cwd(), "src/pages");
+export const dynamic = "force-dynamic"; // ✅ Forces the page to always fetch fresh data
 
-  try {
-    const filenames = await fs.readdir(pagesDir);
-    return filenames.map((file) => ({
-      slug: file.replace(".html", ""),
-    }));
-  } catch (err) {
-    console.error("Error reading pages directory:", err);
-    return [];
-  }
-}
-
-// ✅ Fetch HTML content on the server
 async function getPageHtml(slug) {
   const filePath = path.join(process.cwd(), "src/pages", `${slug}.html`);
   try {
@@ -31,7 +17,6 @@ async function getPageHtml(slug) {
 }
 
 const CourseCityPage = async ({ params }) => {
-  // ✅ Use optional chaining to avoid errors
   const slug = params?.slug;
   if (!slug) {
     console.error("Missing slug parameter.");

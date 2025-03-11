@@ -28,19 +28,39 @@ const CallAdvisorsStrip = () => {
         <div>
           <div className={styles.socialIconsStrip}>
             <Link href="https://www.facebook.com/sapinstallation.pune.9">
-              <FontAwesomeIcon icon={faFacebookF} className="hover:text-blue-600 transition duration-300" />
+              <FontAwesomeIcon 
+                icon={faFacebookF} 
+                className="hover:text-blue-600 transition duration-300" 
+                alt="Facebook"
+              />
             </Link>
             <Link href="https://wa.me/919004002941">
-              <FontAwesomeIcon icon={faWhatsapp} className="hover:text-green-500 transition duration-300" />
+              <FontAwesomeIcon 
+                icon={faWhatsapp} 
+                className="hover:text-green-500 transition duration-300" 
+                alt="WhatsApp"
+              />
             </Link>
             <Link href="https://youtube.com/@connectingdotserp?si=hSKEiEg3MdytdEe_">
-              <FontAwesomeIcon icon={faYoutube} className="hover:text-red-600 transition duration-300" />
+              <FontAwesomeIcon 
+                icon={faYoutube} 
+                className="hover:text-red-600 transition duration-300" 
+                alt="YouTube"
+              />
             </Link>
             <Link href="https://in.linkedin.com/in/connecting-dots-erp-043039171">
-              <FontAwesomeIcon icon={faLinkedinIn} className="hover:text-blue-700 transition duration-300" />
+              <FontAwesomeIcon 
+                icon={faLinkedinIn} 
+                className="hover:text-blue-700 transition duration-300" 
+                alt="LinkedIn"
+              />
             </Link>
             <Link href="https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-              <FontAwesomeIcon icon={faInstagram} className="hover:text-pink-500 transition duration-300" />
+              <FontAwesomeIcon 
+                icon={faInstagram} 
+                className="hover:text-pink-500 transition duration-300" 
+                alt="Instagram"
+              />
             </Link>
           </div>
         </div>
@@ -49,7 +69,7 @@ const CallAdvisorsStrip = () => {
       {/* Left side content (Call Advisors) */}
       <div className={styles.leftStripContent}>
         <span className={styles.phoneIcon}>
-          <FontAwesomeIcon icon={faPhone} />
+          <FontAwesomeIcon icon={faPhone} alt="Phone" />
         </span>
         <span className={styles.advisorText}>
           Get Free Career Counselling:{" "}

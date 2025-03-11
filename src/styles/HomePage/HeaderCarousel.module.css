@@ -38,7 +38,6 @@
 .logoStrip img {
   height: 130px;
   width: 800px;
-  margin-top: 70px;
   margin-left: 10px;
 }
 
@@ -423,7 +422,7 @@
 .carouselSlide3 {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 580px;
   padding: 50px;
   padding-top: 10px;
@@ -448,7 +447,7 @@
 }
 
 .leftSideH3 h2 {
-  font-size: 18px;
+  font-size: 42px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -460,7 +459,7 @@
 }
 
 .cardBox3 {
-  width: 700px;
+  width: 500px;
   height: 500px;
   margin-top: 40px;
   position: relative;
@@ -828,7 +827,7 @@
     width: 100%;
     text-align: center;
     padding-right: 0;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .carouselImage img,
   .carouselImage3 img,
@@ -838,7 +837,6 @@
   .logoStrip img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
   }
   .carouselText h2 {
     font-size: 22px;
