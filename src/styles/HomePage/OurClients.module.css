@@ -15,7 +15,6 @@
   margin: 0 auto;
   padding-bottom: 30px;
   margin: 2rem 0;
-
 }
 
 .marquee {
@@ -26,20 +25,20 @@
   position: relative;
 }
 
-/* Ensure the animation smoothly loops infinitely */
+/* Animation for infinite scrolling */
 .marqueeContent {
   display: flex;
   align-items: center;
   gap: 30px;
   height: 120px;
   padding-top: 20px;
-  animation: marqueeScroll 72s linear infinite;
+  animation: marqueeScroll 40s linear infinite;
   will-change: transform;
 }
 
 /* Reverse animation for the middle marquee */
 .marqueeReverse .marqueeContent {
-  animation: marqueeScrollReverse 72s linear infinite;
+  animation: marqueeScrollReverse 40s linear infinite;
 }
 
 .clientLogoContainer {
@@ -56,31 +55,30 @@
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* Normal infinite scrolling animation */
+/* Normal infinite scrolling animation - exactly one loop of logos */
 @keyframes marqueeScroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 2));
   }
 }
 
-/* Reverse infinite scrolling animation */
+/* Reverse infinite scrolling animation - exactly one loop of logos */
 @keyframes marqueeScrollReverse {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 2));
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 
 /* Section Title Styling */
 .sectionTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
-  /* font-family: "Lato", sans-serif; */
+  font-size: 2.5rem;
+  font-weight: 700;
   letter-spacing: 4px;
   text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182e4a,
     0 0 20px #182e4a, 0 0 30px #182e4a, 0 0 30px #182e4a;
@@ -114,7 +112,6 @@
     height: 90px;
     width: 90px;
   }
-
   .marqueeContainer {
     gap: 0;
   }
@@ -132,7 +129,8 @@
     gap: 0;
   }
 }
-@media (max-width: 576px)  {
+
+@media (max-width: 576px) {
   .sectionTitle {
     font-size: 2rem;
   }
