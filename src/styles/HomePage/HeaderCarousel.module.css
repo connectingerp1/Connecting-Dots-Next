@@ -812,7 +812,6 @@
   }
   .btn3 span{
     font-size: 10px;
-    margin-top: 8px;
   }
 }
 
@@ -1056,7 +1055,6 @@
 
   .slide2Btn span {
     position: relative;
-    top: -8px;
     font-size: 10px;
   }
   .carouselText2 {
