@@ -88,7 +88,7 @@ export async function GET() {
   ];
 
   let urls = courses.flatMap((course) =>
-    cities.map((city) => `<url><loc>${baseUrl}/${course}/${city}</loc></url>`)
+    cities.map((city) => `<url><loc>${baseUrl}/${course}-${city}</loc></url>`)
   );
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
