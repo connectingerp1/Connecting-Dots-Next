@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "@/styles/adminlogin/adminLogin.module.css";
+import styles from "@/styles/adminlogin/AdminLogin.module.css";
 
 const AdminLogin = () => {
   const [email, set_email] = useState("");
