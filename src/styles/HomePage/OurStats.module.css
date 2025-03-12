@@ -173,6 +173,13 @@
   z-index: 0;
 }
 
+/* Desktop and larger */
+@media (min-width: 1024px) {
+  .cardsT2pWrapper {
+      gap: 20px;
+  }
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
   .cardsT2pWrapper {

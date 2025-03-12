@@ -27,7 +27,7 @@
 
 
 .leftSectionItDs {
-  max-width: 30%;
+  max-width: 50%;
 }
 
 .leftSectionItDs h1 {
@@ -284,6 +284,12 @@
   border: 1px solid #ccc;
   width: 80px; /* Adjust width as needed */
   margin-right: 10px; /* Space between the country code and phone number input */
+}
+
+@media (min-width: 1024px) {
+  .leftSectionItDs {
+    max-width: 40%;
+  }
 }
 
 /* Responsive styles for mobile screens */

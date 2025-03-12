@@ -143,6 +143,17 @@ text-align: center;
   border-left-color: #182e4a;
 }
 
+/* Desktop and larger */
+@media (min-width: 1024px) {
+  .phases ul li:first-child a {
+    width: 150px;
+  }
+  .phases ul li a {
+    width: 190px;
+  }
+  
+}
+
 /* Responsive styles for mobile screens */
 @media (max-width: 768px) {
   .containerCH h1 {

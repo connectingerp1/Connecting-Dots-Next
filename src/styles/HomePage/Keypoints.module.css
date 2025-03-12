@@ -40,7 +40,7 @@
 .titleUnderline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #182848, #4776E6);
+  background: linear-gradient(90deg, #182848, #4776e6);
   margin: 15px auto 25px;
   border-radius: 2px;
 }
@@ -243,6 +243,12 @@
 .keyTextContainer {
   max-width: 400px;
   text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  .keyNotes {
+    margin-left: 630px;
+  }
 }
 
 @media (max-width: 1024px) {

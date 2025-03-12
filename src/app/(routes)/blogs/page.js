@@ -9,7 +9,7 @@ const BASE_URL = "https://blog-page-panel.onrender.com";
 
 const BlogsPage = () => {
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("all");  
 
   useEffect(() => {
     fetchCategories();

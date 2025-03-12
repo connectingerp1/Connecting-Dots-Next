@@ -52,7 +52,7 @@ const content = [
       continuous learning becomes second nature, enabling individuals to adapt, evolve, and excel in 
       an ever-changing professional landscape.
     `,
-    image: "/Aboutus/Our Vision.png",
+    image: "/Aboutus/Our vision.png",
     icon: "🔭",
   },
 ];

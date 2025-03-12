@@ -110,6 +110,12 @@
   color: #f1f1f1;
 }
 
+@media (min-width: 1024px) {
+  .certificateText p {
+      font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .certificateSection {
     padding: 10px;
