@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "@/styles/admin-login/admin-login.module.css";
+import styles from "@/styles/adminlogin/adminLogin.module.css";
 
-const AdminLogin = ({ on_login }) => {
+const AdminLogin = () => {
   const [email, set_email] = useState("");
   const [password, set_password] = useState("");
   const router = useRouter();
@@ -25,7 +25,8 @@ const AdminLogin = ({ on_login }) => {
 
     if (user_index !== -1) {
       if (ADMIN_PASSWORDS[user_index] === password) {
-        on_login();
+        // Set authentication in localStorage
+        localStorage.setItem("isAdminLoggedIn", "true");
         router.push(target_page);
       } else {
         alert("Incorrect password!");
@@ -38,7 +39,7 @@ const AdminLogin = ({ on_login }) => {
   return (
     <section className={styles.admin_login_section}>
       <div className={styles.form_box}>
-        <form onSubmit={handle_submit}>
+        <form onSubmit={(e) => handle_submit(e, "/dashboard")}>
           <h2>Admin Log-In</h2>
           <div className={styles.input_box}>
             <ion-icon name="person-outline"></ion-icon>
@@ -72,13 +73,6 @@ const AdminLogin = ({ on_login }) => {
               onClick={(e) => handle_submit(e, "/dashboard")}
             >
               Log In
-            </button>
-            <button
-              type="button"
-              className={styles.admin_btn}
-              onClick={(e) => handle_submit(e, "/blogsadmin")}
-            >
-              Blog Log In
             </button>
           </div>
         </form>
