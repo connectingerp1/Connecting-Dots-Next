@@ -18,7 +18,7 @@ export default function HomePage() {
     <main className="flex-col justify-center">
       <HeaderCarousel />
       <Marquee />
-      {/* <Chevron /> */}
+      <Chevron />
       <Keypoints />
       <OurClients />
       <Courses />
