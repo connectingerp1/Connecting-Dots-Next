@@ -17,26 +17,26 @@ const DSHeader = ({ pageId, pageType }) => {
   const [showForm, setShowForm] = useState(false);
 
   const countryCodes = [
-    { code: "+91", country: "India" },
-    { code: "+1", country: "USA" },
-    { code: "+44", country: "UK" },
-    { code: "+61", country: "Australia" },
-    { code: "+81", country: "Japan" },
-    { code: "+49", country: "Germany" },
-    { code: "+33", country: "France" },
-    { code: "+86", country: "China" },
-    { code: "+7", country: "Russia" },
-    { code: "+39", country: "Italy" },
-    { code: "+55", country: "Brazil" },
-    { code: "+34", country: "Spain" },
-    { code: "+27", country: "South Africa" },
-    { code: "+971", country: "UAE" },
-    { code: "+62", country: "Indonesia" },
-    { code: "+90", country: "Turkey" },
-    { code: "+82", country: "South Korea" },
-    { code: "+60", country: "Malaysia" },
-    { code: "+31", country: "Netherlands" },
-    { code: "+52", country: "Mexico" },
+    { code: "+91", country: "India", minLength: 10, maxLength: 10 },
+    { code: "+1", country: "USA", minLength: 10, maxLength: 10 },
+    { code: "+44", country: "UK", minLength: 10, maxLength: 11 },
+    { code: "+61", country: "Australia", minLength: 9, maxLength: 9 },
+    { code: "+81", country: "Japan", minLength: 10, maxLength: 10 },
+    { code: "+49", country: "Germany", minLength: 10, maxLength: 11 },
+    { code: "+33", country: "France", minLength: 9, maxLength: 9 },
+    { code: "+86", country: "China", minLength: 11, maxLength: 11 },
+    { code: "+7", country: "Russia", minLength: 10, maxLength: 10 },
+    { code: "+39", country: "Italy", minLength: 10, maxLength: 10 },
+    { code: "+55", country: "Brazil", minLength: 10, maxLength: 11 },
+    { code: "+34", country: "Spain", minLength: 9, maxLength: 9 },
+    { code: "+27", country: "South Africa", minLength: 9, maxLength: 9 },
+    { code: "+971", country: "UAE", minLength: 9, maxLength: 9 },
+    { code: "+62", country: "Indonesia", minLength: 10, maxLength: 12 },
+    { code: "+90", country: "Turkey", minLength: 10, maxLength: 10 },
+    { code: "+82", country: "South Korea", minLength: 9, maxLength: 10 },
+    { code: "+60", country: "Malaysia", minLength: 9, maxLength: 10 },
+    { code: "+31", country: "Netherlands", minLength: 9, maxLength: 9 },
+    { code: "+52", country: "Mexico", minLength: 10, maxLength: 10 },
   ];
 
   useEffect(() => {
@@ -112,11 +112,35 @@ const DSHeader = ({ pageId, pageType }) => {
       return;
     }
 
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(formData.contact)) {
+    // Get the selected country code details
+    const selectedCountry = countryCodes.find(
+      country => country.code === formData.countryCode
+    );
+    
+    if (!selectedCountry) {
+      setSubmissionError("Invalid country code");
+      setIsSubmitting(false);
+      return;
+    }
+
+    const { minLength, maxLength } = selectedCountry;
+    
+    // Check if phone number length is valid for the selected country
+    if (
+      formData.contact.length < minLength ||
+      formData.contact.length > maxLength
+    ) {
       setSubmissionError(
-        "Phone number must start with +91 and be followed by exactly 10 digits"
+        `Phone number for ${selectedCountry.country} must be between ${minLength} and ${maxLength} digits`
       );
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Check if phone number contains only digits
+    const phoneRegex = /^\d+$/;
+    if (!phoneRegex.test(formData.contact)) {
+      setSubmissionError("Phone number must contain only digits");
       setIsSubmitting(false);
       return;
     }
@@ -139,7 +163,7 @@ const DSHeader = ({ pageId, pageType }) => {
       );
       if (!response.ok) throw new Error("Submission failed");
       alert("Form submitted successfully!");
-      setFormData({ contact: "" });
+      setFormData({ countryCode: "+91", contact: "" });
     } catch (error) {
       setSubmissionError(error.message);
     } finally {
@@ -152,44 +176,55 @@ const DSHeader = ({ pageId, pageType }) => {
       if (!data || !data.form?.inputs) return null;
 
       return data.form.inputs.map((input, index) => {
-        return input.countryCode ? (
-          <div key={index} className={styles.phoneInputItDs}>
-            <div className={styles.countryCodeWrapper}>
-              {countryCodes.map(({ code }) => (
+        if (input.countryCode) {
+          // Find the selected country to get its maxLength
+          const selectedCountry = countryCodes.find(
+            country => country.code === formData.countryCode
+          );
+          const maxLength = selectedCountry?.maxLength || 10;
+          
+          return (
+            <div key={index} className={styles.phoneInputItDs}>
+              <div className={styles.countryCodeWrapper}>
                 <select
-                  key={code}
                   id="countryCode"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={handleChange}
-                  className={styles.selectCountryCode} // Ensure this class is styled
+                  className={styles.selectCountryCode}
                 >
-                  <option value={code}>{code}</option>
+                  {countryCodes.map(({ code, country }) => (
+                    <option key={code} value={code}>
+                      {code} ({country})
+                    </option>
+                  ))}
                 </select>
-              ))}
+              </div>
+              <input
+                type="tel"
+                id="contact"
+                name="contact"
+                placeholder="Enter your phone number"
+                value={formData.contact}
+                onChange={handleChange}
+                maxLength={maxLength}
+                required
+              />
             </div>
+          );
+        } else {
+          return (
             <input
-              type="tel"
-              id="contact"
-              name="contact"
-              placeholder="Enter your phone number"
-              value={formData.contact}
+              key={index}
+              type={input.type}
+              name={input.name}
+              placeholder={input.placeholder}
+              className={styles.input}
+              value={formData[input.name] || ""}
               onChange={handleChange}
-              maxLength="10"
-              required
             />
-          </div>
-        ) : (
-          <input
-            key={index}
-            type={input.type}
-            name={input.name}
-            placeholder={input.placeholder}
-            className={styles.input}
-            value={formData[input.name] || ""}
-            onChange={handleChange}
-          />
-        );
+          );
+        }
       });
     }, [data, formData]);
   };
@@ -270,46 +305,56 @@ const DSHeader = ({ pageId, pageType }) => {
       <div className={styles.rightSectionItDs}>
         <h3>{data.form.title}</h3>
         <form onSubmit={handleSubmit} className={styles.form}>
-          {data.form.inputs.map((input, index) =>
-            input.countryCode ? (
-              <div key={index} className={styles.phoneInputItDs}>
-                <select
-                  id="countryCode"
-                  name="countryCode"
-                  value={formData.countryCode}
-                  onChange={handleChange}
-                  className={styles.selectCountryCode}
-                >
-                  {countryCodes.map(({ code }) => (
-                    <option key={code} value={code}>
-                      {code}
-                    </option>
-                  ))}
-                </select>
+          {data.form.inputs.map((input, index) => {
+            if (input.countryCode) {
+              // Find the selected country to get its maxLength
+              const selectedCountry = countryCodes.find(
+                country => country.code === formData.countryCode
+              );
+              const maxLength = selectedCountry?.maxLength || 10;
+              
+              return (
+                <div key={index} className={styles.phoneInputItDs}>
+                  <select
+                    id="countryCode"
+                    name="countryCode"
+                    value={formData.countryCode}
+                    onChange={handleChange}
+                    className={styles.selectCountryCode}
+                  >
+                    {countryCodes.map(({ code, country }) => (
+                      <option key={code} value={code}>
+                        {code} ({country})
+                      </option>
+                    ))}
+                  </select>
 
+                  <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="Enter your phone number"
+                    value={formData.contact || ""}
+                    onChange={handleChange}
+                    maxLength={maxLength}
+                    required
+                  />
+                </div>
+              );
+            } else {
+              return (
                 <input
-                  type="tel"
-                  id="contact"
-                  name="contact"
-                  placeholder="Enter your phone number"
-                  value={formData.contact || ""}
+                  key={index}
+                  type={input.type}
+                  name={input.name}
+                  placeholder={input.placeholder}
+                  value={formData[input.name] || ""}
                   onChange={handleChange}
-                  maxLength="10"
-                  required
+                  className={styles.inputField}
                 />
-              </div>
-            ) : (
-              <input
-                key={index}
-                type={input.type}
-                name={input.name}
-                placeholder={input.placeholder}
-                value={formData[input.name] || ""}
-                onChange={handleChange}
-                className={styles.inputField}
-              />
-            )
-          )}
+              );
+            }
+          })}
 
           <button
             type="submit"

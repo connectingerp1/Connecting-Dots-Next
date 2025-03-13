@@ -6,28 +6,28 @@ import axios from "axios";
 import { IonIcon } from "@ionic/react";
 import { personOutline, mailOutline, callOutline } from "ionicons/icons";
 
-// Define countryCodes array
+// Define countryCodes array with phone number length requirements
 const countryCodes = [
-  { code: "+1", country: "USA" },
-  { code: "+91", country: "India" },
-  { code: "+44", country: "UK" },
-  { code: "+61", country: "Australia" },
-  { code: "+81", country: "Japan" },
-  { code: "+49", country: "Germany" },
-  { code: "+33", country: "France" },
-  { code: "+86", country: "China" },
-  { code: "+7", country: "Russia" },
-  { code: "+39", country: "Italy" },
-  { code: "+55", country: "Brazil" },
-  { code: "+34", country: "Spain" },
-  { code: "+27", country: "South Africa" },
-  { code: "+971", country: "UAE" },
-  { code: "+62", country: "Indonesia" },
-  { code: "+90", country: "Turkey" },
-  { code: "+82", country: "South Korea" },
-  { code: "+60", country: "Malaysia" },
-  { code: "+31", country: "Netherlands" },
-  { code: "+52", country: "Mexico" },
+  { code: "+1", country: "USA", minLength: 10, maxLength: 10 },
+  { code: "+91", country: "India", minLength: 10, maxLength: 10 },
+  { code: "+44", country: "UK", minLength: 10, maxLength: 11 },
+  { code: "+61", country: "Australia", minLength: 9, maxLength: 9 },
+  { code: "+81", country: "Japan", minLength: 10, maxLength: 11 },
+  { code: "+49", country: "Germany", minLength: 10, maxLength: 11 },
+  { code: "+33", country: "France", minLength: 9, maxLength: 9 },
+  { code: "+86", country: "China", minLength: 11, maxLength: 11 },
+  { code: "+7", country: "Russia", minLength: 10, maxLength: 10 },
+  { code: "+39", country: "Italy", minLength: 9, maxLength: 10 },
+  { code: "+55", country: "Brazil", minLength: 10, maxLength: 11 },
+  { code: "+34", country: "Spain", minLength: 9, maxLength: 9 },
+  { code: "+27", country: "South Africa", minLength: 9, maxLength: 9 },
+  { code: "+971", country: "UAE", minLength: 9, maxLength: 9 },
+  { code: "+62", country: "Indonesia", minLength: 10, maxLength: 12 },
+  { code: "+90", country: "Turkey", minLength: 10, maxLength: 10 },
+  { code: "+82", country: "South Korea", minLength: 9, maxLength: 10 },
+  { code: "+60", country: "Malaysia", minLength: 9, maxLength: 10 },
+  { code: "+31", country: "Netherlands", minLength: 9, maxLength: 9 },
+  { code: "+52", country: "Mexico", minLength: 10, maxLength: 10 },
 ];
 
 const ContactForm = ({ course, formData, onClose }) => {
@@ -37,6 +37,7 @@ const ContactForm = ({ course, formData, onClose }) => {
     contact: "",
     countryCode: "+91", // Default country code
   });
+  const [errors, setErrors] = useState({});
   const [isThankYouVisible, setThankYouVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false); // Loading state
   const formRef = useRef(null);
@@ -48,7 +49,7 @@ const ContactForm = ({ course, formData, onClose }) => {
         acc[field.name] = "";
         return acc;
       }, {});
-      setFormValues(initialFormValues);
+      setFormValues({ ...initialFormValues, countryCode: "+91" }); // Ensure countryCode is set
     }
   }, [formData]);
 
@@ -70,11 +71,62 @@ const ContactForm = ({ course, formData, onClose }) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormValues({ ...formValues, [name]: value });
+    
+    if (name === "contact") {
+      // Allow only digits for phone numbers
+      const digitsOnly = value.replace(/\D/g, '');
+      setFormValues({ ...formValues, [name]: digitsOnly });
+    } else {
+      setFormValues({ ...formValues, [name]: value });
+    }
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: undefined });
+    }
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    
+    if (!formValues.name || !formValues.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formValues.email || !emailPattern.test(formValues.email)) {
+      newErrors.email = "Please enter a valid email";
+    }
+
+    // Get the selected country's phone number requirements
+    const selectedCountry = countryCodes.find(country => country.code === formValues.countryCode);
+    const { minLength, maxLength } = selectedCountry;
+    
+    // Check if the phone number length is within the valid range for the selected country
+    if (!formValues.contact || formValues.contact.length < minLength || formValues.contact.length > maxLength) {
+      newErrors.contact = `Please enter a valid ${minLength === maxLength ? minLength : `${minLength}-${maxLength}`}-digit number for ${selectedCountry.country}`;
+    }
+
+    // Check if the contact contains only digits
+    if (formValues.contact && !/^\d+$/.test(formValues.contact)) {
+      newErrors.contact = "Phone number should contain only digits";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    
+    // Validate form before submission
+    if (!validate()) {
+      // Display first error
+      const firstError = Object.values(errors)[0];
+      alert(firstError);
+      return;
+    }
+    
     setIsLoading(true); // Start loading
 
     try {
@@ -101,9 +153,17 @@ const ContactForm = ({ course, formData, onClose }) => {
 
   if (!formData) return null;
 
-  const buttonText = formData.submitButton.includes("Demo")
+  // Find the selected country to display length requirements in placeholder
+  const selectedCountry = countryCodes.find(country => country.code === formValues.countryCode);
+  const contactPlaceholder = selectedCountry 
+    ? `${selectedCountry.minLength === selectedCountry.maxLength 
+        ? selectedCountry.minLength 
+        : `${selectedCountry.minLength}-${selectedCountry.maxLength}`} digit number`
+    : "Contact Number";
+
+  const buttonText = formData.submitButton?.includes("Demo")
     ? formData.submitButton.replace(/Demo\s*Demo/, "Demo")
-    : formData.submitButton;
+    : formData.submitButton || "Submit";
 
   return (
     <div className={styles.modalOverlay}>
@@ -123,10 +183,12 @@ const ContactForm = ({ course, formData, onClose }) => {
                 value={formValues["name"] || ""}
                 onChange={handleChange}
                 placeholder="Your Name"
+                className={errors.name ? styles.inputError : ""}
                 required
               />
               <IonIcon icon={personOutline} />
             </div>
+            {errors.name && <span className={styles.errorText}>{errors.name}</span>}
           </div>
 
           {/* Email Field */}
@@ -139,10 +201,12 @@ const ContactForm = ({ course, formData, onClose }) => {
                 value={formValues["email"] || ""}
                 onChange={handleChange}
                 placeholder="Your Email"
+                className={errors.email ? styles.inputError : ""}
                 required
               />
               <IonIcon icon={mailOutline} />
             </div>
+            {errors.email && <span className={styles.errorText}>{errors.email}</span>}
           </div>
 
           {/* Country Code and Contact Number Field */}
@@ -169,11 +233,14 @@ const ContactForm = ({ course, formData, onClose }) => {
                 name="contact"
                 value={formValues["contact"] || ""}
                 onChange={handleChange}
-                placeholder="Contact Number"
+                placeholder={contactPlaceholder}
+                className={errors.contact ? styles.inputError : ""}
+                maxLength={selectedCountry?.maxLength || 15}
                 required
               />
               <IonIcon icon={callOutline} />
             </div>
+            {errors.contact && <span className={styles.errorText}>{errors.contact}</span>}
           </div>
 
           {/* Submit Button */}
@@ -185,7 +252,7 @@ const ContactForm = ({ course, formData, onClose }) => {
         {/* Thank You Popup */}
         {isThankYouVisible && (
           <div className={styles.thankYouPopup}>
-            <p>🎉 Thank you for submitting! We’ll get back to you soon.</p>
+            <p>🎉 Thank you for submitting! We'll get back to you soon.</p>
           </div>
         )}
       </div>

@@ -2,39 +2,32 @@
 
 import React, { useState } from "react";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/HomePage/Btnform.module.css";
-import { 
-  User, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  X, 
-  CheckCircle 
-} from "lucide-react";
+import { User, Mail, Phone, MapPin, X, CheckCircle } from "lucide-react";
 
-// Country codes with flags (Unicode)
+// Country codes with flags (Unicode) and phone number lengths
 const countryCodes = [
-  { code: "+1", country: "USA" },
-  { code: "+91", country: "India" },
-  { code: "+44", country: "UK" },
-  { code: "+61",  country: "Australia" },
-  { code: "+81", country: "Japan" },
-  { code: "+49", country: "Germany" },
-  { code: "+33", country: "France" },
-  { code: "+86", country: "China" },
-  { code: "+7", country: "Russia" },
-  { code: "+39", country: "Italy" },
-  { code: "+55", country: "Brazil" },
-  { code: "+34", country: "Spain" },
-  { code: "+27", country: "South Africa" },
-  { code: "+971", country: "UAE" },
-  { code: "+62", country: "Indonesia" },
-  { code: "+90", country: "Turkey" },
-  { code: "+82", country: "South Korea" },
-  { code: "+60", country: "Malaysia" },
-  { code: "+31", country: "Netherlands" },
-  { code: "+52", country: "Mexico" },
+  { code: "+1", country: "USA", minLength: 10, maxLength: 10 },
+  { code: "+91", country: "India", minLength: 10, maxLength: 10 },
+  { code: "+44", country: "UK", minLength: 10, maxLength: 11 },
+  { code: "+61", country: "Australia", minLength: 9, maxLength: 9 },
+  { code: "+81", country: "Japan", minLength: 10, maxLength: 11 },
+  { code: "+49", country: "Germany", minLength: 10, maxLength: 11 },
+  { code: "+33", country: "France", minLength: 9, maxLength: 9 },
+  { code: "+86", country: "China", minLength: 11, maxLength: 11 },
+  { code: "+7", country: "Russia", minLength: 10, maxLength: 10 },
+  { code: "+39", country: "Italy", minLength: 9, maxLength: 10 },
+  { code: "+55", country: "Brazil", minLength: 10, maxLength: 11 },
+  { code: "+34", country: "Spain", minLength: 9, maxLength: 9 },
+  { code: "+27", country: "South Africa", minLength: 9, maxLength: 9 },
+  { code: "+971", country: "UAE", minLength: 9, maxLength: 9 },
+  { code: "+62", country: "Indonesia", minLength: 10, maxLength: 12 },
+  { code: "+90", country: "Turkey", minLength: 10, maxLength: 10 },
+  { code: "+82", country: "South Korea", minLength: 9, maxLength: 10 },
+  { code: "+60", country: "Malaysia", minLength: 9, maxLength: 10 },
+  { code: "+31", country: "Netherlands", minLength: 9, maxLength: 9 },
+  { code: "+52", country: "Mexico", minLength: 10, maxLength: 10 },
 ];
 
 const Btnform = ({ onClose }) => {
@@ -52,7 +45,7 @@ const Btnform = ({ onClose }) => {
 
   const validate = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     }
@@ -62,9 +55,26 @@ const Btnform = ({ onClose }) => {
       newErrors.email = "Please enter a valid email";
     }
 
-    const contactPattern = /^[0-9]{10}$/;
-    if (!formData.contact || !contactPattern.test(formData.contact)) {
-      newErrors.contact = "Please enter a valid 10-digit mobile number";
+    // Get the selected country's phone number requirements
+    const selectedCountry = countryCodes.find(
+      (country) => country.code === formData.countryCode
+    );
+    const { minLength, maxLength } = selectedCountry;
+
+    // Check if the phone number length is within the valid range for the selected country
+    if (
+      !formData.contact ||
+      formData.contact.length < minLength ||
+      formData.contact.length > maxLength
+    ) {
+      newErrors.contact = `Please enter a valid ${
+        minLength === maxLength ? minLength : `${minLength}-${maxLength}`
+      }-digit number for ${selectedCountry.country}`;
+    }
+
+    // Check if the contact contains only digits
+    if (formData.contact && !/^\d+$/.test(formData.contact)) {
+      newErrors.contact = "Phone number should contain only digits";
     }
 
     if (!formData.location.trim()) {
@@ -77,23 +87,33 @@ const Btnform = ({ onClose }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    
+
+    if (name === "contact") {
+      // Allow only digits for phone numbers
+      const digitsOnly = value.replace(/\D/g, "");
+      setFormData((prev) => ({
+        ...prev,
+        [name]: digitsOnly,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
+
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: undefined
+        [name]: undefined,
       }));
     }
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     if (!validate()) return;
 
     setIsSubmitting(true);
@@ -102,20 +122,20 @@ const Btnform = ({ onClose }) => {
         "https://serverbackend-0nvg.onrender.com/api/submit",
         formData
       );
-      
+
       setShowThankYou(true);
       setTimeout(() => {
         setShowThankYou(false);
         onClose();
       }, 3000);
-      
+
       // Reset form
       setFormData({
         name: "",
         email: "",
         contact: "",
         location: "",
-        countryCode: "+91"
+        countryCode: "+91",
       });
     } catch (error) {
       alert("An error occurred while submitting the form.");
@@ -124,11 +144,23 @@ const Btnform = ({ onClose }) => {
     }
   };
 
+  // Find the selected country to display length requirements
+  const selectedCountry = countryCodes.find(
+    (country) => country.code === formData.countryCode
+  );
+  const placeholderText = selectedCountry
+    ? `Enter ${
+        selectedCountry.minLength === selectedCountry.maxLength
+          ? selectedCountry.minLength
+          : `${selectedCountry.minLength}-${selectedCountry.maxLength}`
+      } digit number`
+    : "Enter phone number";
+
   return (
     <div className={styles.formModal}>
       <div className={styles.formContainer}>
-        <button 
-          onClick={onClose} 
+        <button
+          onClick={onClose}
           className={styles.closeButton}
           aria-label="Close form"
         >
@@ -136,7 +168,7 @@ const Btnform = ({ onClose }) => {
         </button>
 
         <div className={styles.formHeader}>
-          <img 
+          <img
             src="https://mlir9digcwm2.i.optimole.com/cb:X1mK.5e5cf/w:620/h:191/q:mauto/https://connectingdotserp.in/wp-content/uploads/2024/07/Original-Logo.png"
             alt="Company Logo"
             className={styles.logo}
@@ -157,10 +189,14 @@ const Btnform = ({ onClose }) => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter your full name"
-                className={`${styles.formInput} ${errors.name ? styles.inputError : ''}`}
+                className={`${styles.formInput} ${
+                  errors.name ? styles.inputError : ""
+                }`}
               />
             </div>
-            {errors.name && <span className={styles.errorText}>{errors.name}</span>}
+            {errors.name && (
+              <span className={styles.errorText}>{errors.name}</span>
+            )}
           </div>
 
           <div className={styles.formGroup}>
@@ -174,10 +210,14 @@ const Btnform = ({ onClose }) => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className={`${styles.formInput} ${errors.email ? styles.inputError : ''}`}
+                className={`${styles.formInput} ${
+                  errors.email ? styles.inputError : ""
+                }`}
               />
             </div>
-            {errors.email && <span className={styles.errorText}>{errors.email}</span>}
+            {errors.email && (
+              <span className={styles.errorText}>{errors.email}</span>
+            )}
           </div>
 
           <div className={styles.formGroup}>
@@ -203,12 +243,17 @@ const Btnform = ({ onClose }) => {
                   name="contact"
                   value={formData.contact}
                   onChange={handleChange}
-                  placeholder="Enter phone number"
-                  className={`${styles.phoneNumberInput} ${errors.contact ? styles.inputError : ''}`}
+                  placeholder={placeholderText}
+                  className={`${styles.phoneNumberInput} ${
+                    errors.contact ? styles.inputError : ""
+                  }`}
+                  maxLength={selectedCountry?.maxLength || 15}
                 />
               </div>
             </div>
-            {errors.contact && <span className={styles.errorText}>{errors.contact}</span>}
+            {errors.contact && (
+              <span className={styles.errorText}>{errors.contact}</span>
+            )}
           </div>
 
           <div className={styles.formGroup}>
@@ -222,30 +267,36 @@ const Btnform = ({ onClose }) => {
                 value={formData.location}
                 onChange={handleChange}
                 placeholder="Enter your location"
-                className={`${styles.formInput} ${errors.location ? styles.inputError : ''}`}
+                className={`${styles.formInput} ${
+                  errors.location ? styles.inputError : ""
+                }`}
               />
             </div>
-            {errors.location && <span className={styles.errorText}>{errors.location}</span>}
+            {errors.location && (
+              <span className={styles.errorText}>{errors.location}</span>
+            )}
           </div>
 
           <div className={styles.formActions}>
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className={styles.submitButton}
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
-            <button 
-              type="reset" 
+            <button
+              type="reset"
               className={styles.resetButton}
-              onClick={() => setFormData({
-                name: "",
-                email: "",
-                contact: "",
-                location: "",
-                countryCode: "+91"
-              })}
+              onClick={() =>
+                setFormData({
+                  name: "",
+                  email: "",
+                  contact: "",
+                  location: "",
+                  countryCode: "+91",
+                })
+              }
             >
               Clear Form
             </button>

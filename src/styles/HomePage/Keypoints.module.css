@@ -476,6 +476,17 @@
     height: 80px;
   }
 
+  .note:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .note:last-child .img {
+    margin-bottom: 5px; /* Adjust as needed */
+    margin-top: 10px;
+  }
+
   .keyTextContainer {
     max-width: 80%;
     text-align: left;
