@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
         <Whatsapp phoneNumber="+919004002958" />
         <Chatbot />
         <Stickyform />
-        <PopupForm />
+        {/* <PopupForm /> */}
         <WaveComponent />
         <Footer />
         <BottomMenu />
