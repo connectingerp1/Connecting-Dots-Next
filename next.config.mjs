@@ -23,11 +23,11 @@ const nextConfig = {
     return [
       {
         source: "/sitemap.xml",
-        destination: "/sitemap.xml/route.js",
+        destination: "/api/sitemap.xml",
       },
       {
         source: "/robots.txt",
-        destination: "/robots.txt/route.js",
+        destination: "/api/robots.txt",
       },
     ];
   },

@@ -1,14 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml",
-      "statusCode": 200
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/robots.txt",
-      "statusCode": 200
-    }
-  ]
-}
+    "redirects": []
+  }
+  
