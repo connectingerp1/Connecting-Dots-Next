@@ -18,7 +18,7 @@ export default function PAYROLL() {
         <DSHeader  pageId="PAYROLLHeader" pageType="payrollmanpage" />
         <Why pageId="WhyPAY" pageType="Whypay" />
         <Counselor />
-        <Modules pageId="PAYCurriculum" />
+        <Modules pageId="HRTrainModule" />
         <TrustUs />
         <Program />
         <Certificate pageId="HRPayrollCERT" />

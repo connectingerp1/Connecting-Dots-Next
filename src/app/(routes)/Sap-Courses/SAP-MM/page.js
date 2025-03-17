@@ -4,7 +4,6 @@ import DSHeader from "@/components/CoursesComponents/Header";
 import Why from "@/components/CoursesComponents/Why";
 import SapModComponent from "@/components/CoursesComponents/sapmod";
 import Counselor from "@/components/CoursesComponents/Councelor";
-import Modules from "@/components/CoursesComponents/Modules"
 import TrustUs from "@/components/CoursesComponents/Trustus";
 import Certificate from "@/components/HomePage/Certificate";
 import Program from "@/components/CoursesComponents/ProgramHighlights";
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Why pageId="WhyMM" pageType="Whymm" />
       <SapModComponent pageId="SAPMM" />
       <Counselor />
-      <Modules pageId="MMmodule" />
       <TrustUs /> 
       <Certificate pageId="sap-mmCERT" />
       <Program />

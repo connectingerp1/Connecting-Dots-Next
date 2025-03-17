@@ -21,9 +21,8 @@ export default function Mern() {
       <TrustUs />
       <Certificate pageId="mernstackCERT" />
       <Program />
-      {/* <Projects pageId="GPTinduspro" pageType="gptinduspro" /> */}
       <Description pageId="mern-stack" />
-      <FAQ pageType="MERNFAQ" pageId="mernfaq" />  
+      <FAQ pageId="MernFAQ" pageType="mernfaq" />  
       <CoursesRelated pageId="Mernrelcourses" />
     </>
   );

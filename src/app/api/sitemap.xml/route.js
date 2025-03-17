@@ -47,7 +47,7 @@ export async function GET() {
   const courses = [
     "sap-course-in",
     "it-course-in",
-    "hr-course-in",
+    "hr-training-course-in",
     "data-visualisation-course-in",
     "data-science-course-in",
     "data-analytics-course-in",

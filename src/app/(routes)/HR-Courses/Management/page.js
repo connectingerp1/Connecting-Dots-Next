@@ -18,7 +18,7 @@ export default function MANAGE() {
         <DSHeader  pageId="MANHeader" pageType="manpage" />
         <Why pageId="WhyMAN" pageType="Whyman" />
         <Counselor />
-        <Modules pageId="MANCurriculum" />
+        <Modules pageId="HRTrainModule" />
         <TrustUs />
         <Program />
         <Certificate pageId="HRManCERT" />

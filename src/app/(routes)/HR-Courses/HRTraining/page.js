@@ -18,7 +18,7 @@ export default function HRTraining() {
         <DSHeader pageId="HRTrainingHeader" pageType="hrtraining" />
         <Why pageId="WhyHRTRAIN" pageType="Whyhrtrain" />
         <Counselor />
-        <Modules pageId="SalesCurriculumPage" />
+        <Modules pageId="HRTrainModule" />
         <TrustUs />
         <HRCard />
         <Program />

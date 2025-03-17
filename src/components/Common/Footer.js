@@ -78,7 +78,7 @@ const Footer = () => {
           {/* SAP COURSES */}
           <div className={styles.widget}>
             <div className={styles.headline}>
-              <h3>SAP COURSES</h3>
+              <h3>SAP S/4 HANA COURSES</h3>
             </div>
             <div
               className={`${styles.footerDropdown} ${
@@ -303,7 +303,7 @@ const Footer = () => {
             >
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                  <Link href="/powerbi-course-in-pune">POWER BI</Link>
+                  <Link href="/power-bi-course-in-pune">POWER BI</Link>
                 </li>
                 <li className={styles.menuItem}>
                   <Link href="/tableau-training-in-pune">TABLEAU</Link>

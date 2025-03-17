@@ -18,7 +18,7 @@ export default function CORE() {
         <DSHeader  pageId="GENHeader" pageType="genpage" />
         <Why pageId="WhyGEN" pageType="Whygen" />
         <Counselor />
-        <Modules pageId="HCMCurriculum" />
+        <Modules pageId="HRTrainModule" />
         <TrustUs />
         <Program />
         <Certificate pageId="HRHCMCERT" />

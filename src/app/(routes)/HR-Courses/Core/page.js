@@ -18,7 +18,7 @@ export default function CORE() {
         <DSHeader pageId="COREHeader" pageType="corepage" />
         <Why pageId="WhyCORE" pageType="Whycore" />
         <Counselor />
-        <Modules pageId="CORECurriculum" />
+        <Modules pageId="HRTrainModule" />
         <TrustUs />
         <Program />
         <Certificate pageId="HRCoreCERT" />

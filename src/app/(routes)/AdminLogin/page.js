@@ -27,7 +27,13 @@ const AdminLogin = () => {
       if (ADMIN_PASSWORDS[user_index] === password) {
         // Set authentication in localStorage
         localStorage.setItem("isAdminLoggedIn", "true");
-        router.push(target_page);
+        
+        // Redirect to the specified page or external URL
+        if (target_page.startsWith("http")) {
+          window.location.href = target_page;
+        } else {
+          router.push(target_page);
+        }
       } else {
         alert("Incorrect password!");
       }
@@ -72,7 +78,14 @@ const AdminLogin = () => {
               className={styles.admin_btn}
               onClick={(e) => handle_submit(e, "/dashboard")}
             >
-              Log In
+              Login In to Dashboard
+            </button>
+            <button
+              type="button"
+              className={styles.admin_btn}
+              onClick={(e) => handle_submit(e, "https://blog-frontend-psi-bay.vercel.app/")}
+            >
+              Login In to Blogs
             </button>
           </div>
         </form>

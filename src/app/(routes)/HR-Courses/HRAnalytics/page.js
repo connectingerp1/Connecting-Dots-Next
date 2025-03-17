@@ -18,7 +18,7 @@ export default function HRANALYTIC() {
         <DSHeader pageId="ANAHeader" pageType="anapage" />
         <Why pageId="WhyANA" pageType="Whyana" />
         <Counselor />
-        <Modules pageId="ANACurriculum" />
+        <Modules pageId="HRTrainModule" />
         <TrustUs />
         <Program />
         <Certificate pageId="HRAnalyticsCERT" />

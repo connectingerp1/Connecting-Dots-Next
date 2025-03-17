@@ -261,7 +261,7 @@ const Header = () => {
               : "false"
           }
         >
-          SAP
+          SAP S/4 HANA
           {!isMobile && <span className={styles.desktopDropdownArrow}>▼</span>}
         </Link>
         {isMobile && (

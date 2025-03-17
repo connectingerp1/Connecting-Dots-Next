@@ -53,7 +53,7 @@ const Keypoints = () => {
     {
       cover: "/Keypoints/exp alt.avif",
       title: "Experience Alteration",
-      desc: "After Training Completion, we provide Job Assistance, Scheduled Interview for every Individual.",
+      desc: "Our unique offering helps you apply for jobs with relevant experience, enhancing your resume and boosting hiring chances.",
       className: styles.logo5,
     },
     {
