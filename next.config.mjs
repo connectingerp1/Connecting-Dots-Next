@@ -6,20 +6,28 @@ const nextConfig = {
         protocol: "http",
         hostname: "blog-page-panel.onrender.com",
       },
-    ],
-    domains: ["i.imgur.com", "imgur.com", "blog-page-panel.onrender.com", "images.unsplash.com", "plus.unsplash.com"], // Allow external images
-    remotePatterns: [
       {
         protocol: "https",
         hostname: "imgur.com",
       },
+    ],
+    domains: [
+      "i.imgur.com",
+      "imgur.com",
+      "blog-page-panel.onrender.com",
+      "images.unsplash.com",
+      "plus.unsplash.com",
     ],
   },
   async rewrites() {
     return [
       {
         source: "/sitemap.xml",
-        destination: "/api/sitemap",
+        destination: "/sitemap.xml/route.js",
+      },
+      {
+        source: "/robots.txt",
+        destination: "/robots.txt/route.js",
       },
     ];
   },

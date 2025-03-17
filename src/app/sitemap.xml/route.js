@@ -87,8 +87,17 @@ export async function GET() {
     "hr-generalist-course-in",
   ];
 
-  let urls = courses.flatMap((course) =>
-    cities.map((city) => `<url><loc>${baseUrl}/${course}-${city}</loc></url>`)
+  const urls = courses.flatMap((course) =>
+    cities.map(
+      (city) => `
+      <url>
+        <loc>${baseUrl}/${course}-${city}</loc>
+        <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    `
+    )
   );
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -99,6 +108,7 @@ export async function GET() {
   return new Response(sitemap, {
     headers: {
       "Content-Type": "application/xml",
+      "Cache-Control": "public, max-age=86400",
     },
   });
 }
