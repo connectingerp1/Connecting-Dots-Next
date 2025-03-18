@@ -294,7 +294,7 @@ const Header = () => {
                 { name: "SAP Ariba", link: "/sap-ariba-course-in-pune" },
                 { name: "SAP MM", link: "/sap-mm-course-in-pune" },
                 { name: "SAP SD", link: "/sap-sd-course-in-pune" },
-                { name: "SAP HR/HCM", link: "/sap-hcm-course-in-pune" },
+                { name: "SAP HR/HCM", link: "/sap-hr-hcm-course-in-pune" },
                 { name: "SAP PP", link: "/sap-pp-course-in-pune" },
                 { name: "SAP QM", link: "/sap-qm-course-in-pune" },
                 { name: "SAP PM", link: "/sap-pm-course-in-pune" },

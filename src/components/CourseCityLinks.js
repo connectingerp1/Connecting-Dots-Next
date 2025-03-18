@@ -67,7 +67,7 @@ const CourseCityLinks = () => {
     'sap-bwbi-course-in',
     'sap-fico-course-in',
     'sap-s4-hana-course-in',
-    'sap-hcm-course-in',
+    'sap-hr-hcm-course-in',
     'sap-mm-course-in',
     'sap-pm-course-in',
     'sap-pp-course-in',

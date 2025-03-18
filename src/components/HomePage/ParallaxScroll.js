@@ -2,7 +2,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import styles from "@/styles/HomePage/ParallaxScroll.module.css"; // Import the CSS file
+import styles from "@/styles/HomePage/ParallaxScroll.module.css";
 
 
 const ParallaxScroll = ({ images }) => {

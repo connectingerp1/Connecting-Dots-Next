@@ -42,7 +42,7 @@ const CourseComponentLoader = ({ formattedCourse, city, course }) => {
         () => import("@/app/(routes)/Sap-Courses/SAP-HANA/page.js"),
         { ssr: false }
       );
-    } else if (formattedCourse === "SAP-HCM") {
+    } else if (formattedCourse === "SAP-HR") {
       CourseComponent = dynamic(
         () => import("@/app/(routes)/Sap-Courses/SAP-HRHCM/page.js"),
         { ssr: false }
