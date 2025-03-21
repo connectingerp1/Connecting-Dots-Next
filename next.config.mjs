@@ -17,6 +17,7 @@ const nextConfig = {
       "blog-page-panel.onrender.com",
       "images.unsplash.com",
       "plus.unsplash.com",
+      "res.cloudinary.com",
     ],
   },
   async rewrites() {

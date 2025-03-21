@@ -12,12 +12,15 @@ const BlogCard = ({ blog, BASE_URL }) => {
             src={blog.image?.startsWith("http") ? blog.image : `${BASE_URL}${blog.image}`}
             alt={blog.title}
             className={styles.blogImage}
+            loading="lazy"
           />
         </div>
-        <div className={styles.content}>
-          <h2 className={styles.title}>{blog.title}</h2>
+        <div className={styles.overlay}>
+          <h3 className={styles.blogTitle}>{blog.title}</h3>
+          <p className={styles.blogCategory}>
+            {blog.category} • {blog.subcategory}
+          </p>
           <p className={styles.blogAuthor}>By {blog.author}</p>
-          <div className={styles.blogDescription} dangerouslySetInnerHTML={{ __html: blog.content.slice(0, 150) }}></div>
           <span className={styles.readMore}>Read More →</span>
         </div>
       </Link>

@@ -1,84 +1,196 @@
 .dashboardContainer {
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .dashboardContainer h2 {
-    text-align: center;
-    font-weight: bold;
-  }
-  
+  padding: 20px;
+  background-color: #f4f4f4;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dashboardTitle {
+  font-size: 24px;
+  margin: 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+.logoutButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}
+
+.downloadContainer {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Prevents too much squishing */
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #4caf50;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pageIndicator {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.paginationButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.paginationButton:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.paginationButton:not(:disabled):hover {
+  background-color: #45a049;
+}
+
+.loadingSpinner {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.errorMessage {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 767px) {
   .dashboardTitle {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .tableResponsive {
-    margin-top: 20px;
-  }
-  
-  .table {
+    font-size: 20px;
+    text-align: center;
     width: 100%;
-    border-collapse: collapse;
   }
-  
-  .table th,
-  .table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .table th {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .table tbody tr:hover {
-    background-color: #ddd;
-  }
-  
-  .paginationControls {
-    display: flex;
+
+  .dashboardHeader {
     justify-content: center;
-    margin-top: 20px;
   }
-  
-  .paginationButton {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
+
+  .downloadContainer {
+    justify-content: center;
+  }
+
+  .table {
+    border: 0;
+    min-width: unset;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    display: block;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    overflow: hidden;
   }
-  
-  .paginationButton:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+    border-right: 0;
+    border-left: 0;
   }
-  
-  .paginationButton:not(:disabled):hover {
-    background-color: #45a049;
+
+  .table td:last-child {
+    border-bottom: 0;
   }
-  
-  .loadingSpinner {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #007bff;
-  }
-  
-  .errorMessage {
-    text-align: center;
-    margin-top: 20px;
-    color: red;
+
+  .table td::before {
+    content: attr(data-label);
     font-weight: bold;
+    text-align: left;
+    margin-right: 10px;
   }
-  
+
+  .paginationButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboardContainer {
+    padding: 10px;
+  }
+
+  .paginationControls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -34,9 +34,7 @@ const Dashboard = () => {
   const fetchLeads = async () => {
     try {
       setLoading(true);
-      const response = await fetch(
-        "https://serverbackend-0nvg.onrender.com/api/leads"
-      );
+      const response = await fetch("https://serverbackend-0nvg.onrender.com/api/leads");
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -48,6 +46,24 @@ const Dashboard = () => {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+  // Delete a lead
+  const deleteLead = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this lead?")) return;
+
+    try {
+      const response = await fetch(`http://localhost:5001/api/leads/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+
+      setLeads((prevLeads) => prevLeads.filter((lead) => lead._id !== id));
+    } catch (error) {
+      console.error("Error deleting lead:", error.message);
     }
   };
 
@@ -97,7 +113,10 @@ const Dashboard = () => {
       new Date(lead.createdAt).toLocaleDateString("en-US", { timeZone: "UTC" }),
     ]);
 
-    const csvContent = [headers.join(","), ...csvRows.map((row) => row.join(","))].join("\n");
+    const csvContent = [
+      headers.join(","),
+      ...csvRows.map((row) => row.join(",")),
+    ].join("\n");
     const blob = new Blob([csvContent], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -116,7 +135,9 @@ const Dashboard = () => {
 
   // If not authenticated, render nothing (the redirect will happen)
   if (!isAuthenticated) {
-    return <div className={styles.loadingSpinner}>Checking authentication...</div>;
+    return (
+      <div className={styles.loadingSpinner}>Checking authentication...</div>
+    );
   }
 
   return (
@@ -127,7 +148,7 @@ const Dashboard = () => {
           Logout
         </button>
       </div>
-      <div className="mt-4">
+      <div className={styles.downloadContainer}>
         <button onClick={downloadCSV} className={styles.paginationButton}>
           Download All Contact Leads Data
         </button>
@@ -155,17 +176,19 @@ const Dashboard = () => {
                 {currentLeads.length > 0 ? (
                   currentLeads.map((lead, index) => (
                     <tr key={lead.id || index}>
-                      <td>{indexOfFirstLead + index + 1}</td>
-                      <td>{lead.name}</td>
-                      <td>{lead.contact}</td>
-                      <td>{lead.coursename}</td>
-                      <td>{lead.email}</td>
-                      <td>
+                      <td data-label="Sr. No.">
+                        {indexOfFirstLead + index + 1}
+                      </td>
+                      <td data-label="Name">{lead.name}</td>
+                      <td data-label="Mobile Number">{lead.contact}</td>
+                      <td data-label="Course Name">{lead.coursename}</td>
+                      <td data-label="Email ID">{lead.email}</td>
+                      <td data-label="Date">
                         {new Date(lead.createdAt).toLocaleDateString("en-US", {
                           timeZone: "UTC",
                         })}
                       </td>
-                      <td>{lead.location}</td>
+                      <td data-label="Location">{lead.location}</td>
                     </tr>
                   ))
                 ) : (
@@ -186,6 +209,9 @@ const Dashboard = () => {
             >
               Previous
             </button>
+            <span className={styles.pageIndicator}>
+              Page {currentPage} of {totalPages}
+            </span>
             <button
               onClick={nextPage}
               disabled={currentPage === totalPages}
