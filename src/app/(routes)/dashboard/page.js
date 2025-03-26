@@ -18,7 +18,7 @@ const Dashboard = () => {
       const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
       if (!isLoggedIn || isLoggedIn !== "true") {
         // Redirect to login if not authenticated
-        router.push("/adminlogin");
+        router.push("/AdminLogin");
         return false;
       }
       return true;
