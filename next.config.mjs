@@ -23,7 +23,7 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   experimental: {
-    optimizeCss: true, // Enable CSS optimization
+    optimizeCss: false, // Enable CSS optimization
     optimizeServerReact: true, // Optimize server-side React rendering
     scrollRestoration: true, // Better scroll handling
   },

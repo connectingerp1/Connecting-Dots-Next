@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           rel="preload"
           href="/Headercarousel/logo strip.avif"
           as="image"
-          fetchpriority="high"
+          fetchPriority="high"
         />
 
         {/* Preload critical fonts */}
