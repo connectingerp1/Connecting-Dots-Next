@@ -1,4 +1,3 @@
-/* Carousel Controls */
 .carouselWrapper :global(.carousel-control-prev),
 .carouselWrapper :global(.carousel-control-next) {
   display: none !important;
@@ -11,21 +10,6 @@
   justify-content: center;
   align-items: center;
   z-index: 10;
-}
-
-/* Logo Strip - Critical for LCP */
-.logoStrip img {
-  height: 130px;
-  width: 800px;
-  margin-left: 10px;
-  display: block;
-  content-visibility: auto;
-  will-change: transform;
-  opacity: 1;
-}
-
-.logoStrip img {
-  max-width: unset !important;
 }
 
 /* slide1 */
@@ -49,6 +33,16 @@
   object-fit: cover;
   height: 630px;
   width: auto;
+}
+
+.logoStrip img {
+  height: 130px;
+  width: 800px;
+  margin-left: 10px;
+}
+
+.logoStrip img {
+  max-width: unset !important;
 }
 
 .carouselText {
@@ -123,7 +117,7 @@
   font-weight: 500;
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; 
   position: relative;
   display: inline-flex;
   line-height: 50%;
@@ -816,7 +810,7 @@
     width: 100%;
     margin-top: 0;
   }
-  .btn3 span {
+  .btn3 span{
     font-size: 10px;
   }
 }
