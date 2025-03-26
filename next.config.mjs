@@ -19,6 +19,13 @@ const nextConfig = {
       "plus.unsplash.com",
       "res.cloudinary.com",
     ],
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 60,
+  },
+  experimental: {
+    optimizeCss: true, // Enable CSS optimization
+    optimizeServerReact: true, // Optimize server-side React rendering
+    scrollRestoration: true, // Better scroll handling
   },
   async rewrites() {
     return [

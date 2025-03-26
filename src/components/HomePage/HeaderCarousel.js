@@ -44,9 +44,10 @@ const CompanyLogos = memo(() => (
     <Image 
       src="/Headercarousel/logo strip.avif" 
       alt="Partner companies logos including IBM, TCS, and other corporate partners"
-      width={400}
-      height={100}
+      width={800}
+      height={130}
       priority={true}
+      fetchPriority="high"
     />
   </div>
 ));
@@ -128,6 +129,7 @@ const AISlide = ({ index, onClick }) => (
           alt={`Training in ${TEXTS[index].split("with ")[1] || "Professional Skills"}`}
           width={500}
           height={400}
+          unoptimized={true} // Add this to ensure the image is visible
         />
       </div>
     </div>
@@ -154,6 +156,7 @@ const ExpertsSlide = () => (
           className={styles.assuredPlacementImage}
           width={80}
           height={80}
+          unoptimized={true}
         />
         <h3>Assured Placement Opportunity*</h3>
       </div>
@@ -184,7 +187,7 @@ const ExpertsSlide = () => (
                 className={company.className}
                 width={80}
                 height={40}
-                loading={idx < 6 ? "eager" : "lazy"}
+                unoptimized={true}
               />
             ))}
           </div>
@@ -221,6 +224,7 @@ const QuizSlide = ({ question, setQuestion }) => (
         width={500}
         height={400}
         className="plants-image"
+        unoptimized={true}
       />
       <Link href="/" className={styles.goButton}>
         <span>Quiz→</span>
@@ -249,6 +253,13 @@ const HeaderCarousel = () => {
     // Setup event listener
     window.addEventListener("resize", checkMobileView);
     
+    // Preload critical logo image
+    const preloadLink = document.createElement("link");
+    preloadLink.href = "/Headercarousel/logo strip.avif";
+    preloadLink.rel = "preload";
+    preloadLink.as = "image";
+    document.head.appendChild(preloadLink);
+    
     // Load fonts
     const link = document.createElement("link");
     link.href = "https://fonts.googleapis.com/css2?family=Lato&display=swap";
@@ -256,7 +267,10 @@ const HeaderCarousel = () => {
     document.head.appendChild(link);
     
     // Cleanup
-    return () => window.removeEventListener("resize", checkMobileView);
+    return () => {
+      window.removeEventListener("resize", checkMobileView);
+      if (preloadLink.parentNode) document.head.removeChild(preloadLink);
+    }
   }, []);
 
   // Text rotation effect with optimized interval management
@@ -285,6 +299,16 @@ const HeaderCarousel = () => {
 
   return (
     <section aria-label="Featured Programs and Training Information" className={styles.carouselWrapper}>
+      {/* Hidden image preload for LCP optimization */}
+      <div style={{ display: "none" }}>
+        <img 
+          src="/Headercarousel/logo strip.avif" 
+          alt=""
+          width="800"
+          height="130"
+        />
+      </div>
+      
       <Carousel className={styles.carousel} indicators={true} controls={true}>
         {/* First Slide - Career Potential */}
         <Carousel.Item>

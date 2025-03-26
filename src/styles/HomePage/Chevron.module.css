@@ -1,3 +1,4 @@
+/* Critical CSS for LCP optimization */
 .containerCH {
   padding: 20px;
   margin: 20px auto;
@@ -6,25 +7,30 @@
   align-items: center;
   max-width: 1800px;
   width: 97.5%;
-  padding-bottom: 50px;
+  contain: layout style;
+  content-visibility: auto;
 }
 
-.containerCH h1 {
+.sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
-/* font-family: "Lato", sans-serif; */
-letter-spacing: 4px;
-text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182e4a,
-  0 0 20px #182e4a, 0 0 30px #182e4a, 0 0 30px #182e4a;
-background: linear-gradient(
-  90deg,
-  #fff 35%,
-  rgba(3, 163, 196, 1) 49%,
-  #fff 62%
-);
--webkit-background-clip: text;
-color: transparent;
-text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182e4a,
+    0 0 20px #182e4a, 0 0 30px #182e4a, 0 0 30px #182e4a;
+  background: linear-gradient(
+    90deg,
+    #fff 35%,
+    rgba(3, 163, 196, 1) 49%,
+    #fff 62%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-rendering: optimizeSpeed;
+  will-change: transform;
 }
 
 .titleUnderline {
@@ -33,23 +39,16 @@ text-align: center;
   background: linear-gradient(90deg, #a76b2e, #f18436);
   margin: 15px auto 25px;
   border-radius: 2px;
-  margin-bottom: 2rem;
 }
 
 .phases {
   text-align: center;
   margin-top: 10px;
   background-color: #ffffff;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-left: 8px;
+  padding: 10px 8px 8px;
   border-radius: 20px;
-  box-shadow: 7px 5px 5px #000000;
-}
-.phases h4 {
-  font-size: 18px;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  contain: content;
 }
 
 .phases ul {
@@ -79,16 +78,7 @@ text-align: center;
   box-sizing: border-box;
 }
 
-/* colour of current phase */
-.phases ul li.current-phase a {
-  background: #e41d24;
-}
-
-.phases ul li.current-phase a:after {
-  border-left: 40px solid #e41d24 !important;
-}
-
-/* set sizing of front pointers */
+/* Optimize chevron shape rendering */
 .phases ul li a:after {
   content: "";
   border-top: 40px solid transparent;
@@ -100,7 +90,6 @@ text-align: center;
   z-index: 1;
 }
 
-/* set sizing of rear pointers */
 .phases ul li a:before {
   content: "";
   border-top: 40px solid transparent;
@@ -115,6 +104,9 @@ text-align: center;
 .phases ul li:first-child a {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* hide pointer on end of last item */
@@ -143,6 +135,17 @@ text-align: center;
   border-left-color: #182e4a;
 }
 
+.chevronItem a h4 {
+  font-size: 1.1rem;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Visibility class for intersection observer */
+.visible {
+  visibility: visible !important;
+}
+
 /* Desktop and larger */
 @media (min-width: 1024px) {
   .phases ul li:first-child a {
@@ -151,7 +154,6 @@ text-align: center;
   .phases ul li a {
     width: 190px;
   }
-  
 }
 
 /* Responsive styles for mobile screens */
@@ -159,7 +161,6 @@ text-align: center;
   .containerCH h1 {
     font-size: 2.2rem;
     letter-spacing: 2px;
-    /* text-align: center; */
   }
 
   .phases ul li:first-child a {
@@ -177,18 +178,18 @@ text-align: center;
   .phases {
     width: 100%;
     max-width: 320px;
-    margin: 0 auto; /* Center the phases container */
+    margin: 0 auto;
   }
 
   .phases h4 {
     margin-left: 0px;
-    padding-top: 60px;
+    padding-top: 40px;
   }
 
   .phases ul {
     display: block;
     padding: 0;
-    margin: 0 auto; /* Center the phases list */
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,11 +201,11 @@ text-align: center;
 
   .phases ul li {
     display: flex;
-    justify-content: center; /* Center each list item */
+    justify-content: center;
     margin-bottom: -10px;
     position: relative;
     width: 100%;
-    max-width: 140px; /* Adjust the width of each list item */
+    max-width: 140px;
   }
 
   .phases ul li a {
@@ -214,15 +215,15 @@ text-align: center;
     margin-top: 20px;
   }
 
-  /* ✅ All chevrons pointing right (left to right) */
+  /* Optimize mobile chevrons */
   .phases ul li a:after {
     content: "";
     border-top: 65px solid transparent;
     border-bottom: 65px solid transparent;
-    border-left: 40px solid #5aadd3; /* Keep chevron direction consistent */
+    border-left: 40px solid #5aadd3;
     position: absolute;
     right: 45px;
-    transform:rotate(90deg); /* Rotated 90 degrees */
+    transform: rotate(90deg);
     top: 108px;
     z-index: 1;
   }
@@ -231,14 +232,16 @@ text-align: center;
     content: "";
     border-top: 65px solid transparent;
     border-bottom: 65px solid transparent;
-    border-left: 40px solid white; /* White separator */
+    border-left: 40px solid white;
     position: absolute;
-    transform:rotate(90deg); /* Rotated 90 degrees */
+    transform: rotate(90deg);
     left: 45px;
     top: -46px;
   }
+  .chevronItem a h4 {
+    padding-left: 0px;
+  }
 }
-
 
 @media (max-width: 576px) {
   .containerCH h1 {
@@ -251,7 +254,7 @@ text-align: center;
     padding: 8px 10px;
   }
 }
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .containerCH h1 {
     font-size: 1.8rem;
     margin-top: 0;

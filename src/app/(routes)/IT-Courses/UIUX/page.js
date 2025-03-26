@@ -21,7 +21,6 @@ export default function UIUX() {
       <TrustUs />
       <Certificate pageId="UiuxCERT" />
       <Program />
-      {/* <Projects pageId="GPTinduspro" pageType="gptinduspro" /> */}
       <Description pageId="uiux" />
       <FAQ pageId="UIUXFAQ" pageType="uiuxfaq" />
       <CoursesRelated pageId="UIUXrelcourses" />

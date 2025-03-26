@@ -12,8 +12,9 @@ import Whatsapp from "@/components/Whatsapp";
 import Floatingcontact from "@/components/Floatingcontact";
 import BottomMenu from "@/components/BottomMenu";
 import Script from "next/script";
-import "bootstrap/dist/css/bootstrap.min.css";
 
+// Bootstrap CSS will be loaded with a lower priority
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const GTM_ID = "GTM-MB68QM2V";
 
@@ -31,9 +32,104 @@ export default function RootLayout({ children }) {
           name="keywords"
           content="SAP Certification Courses, SAP Course, Data Science Course, Power Bi Course, Digital Marketing Course, HR Training Institute, SAP Training Institute, Python Course, Software Course, Training, Education"
         />
-        <meta name="author" content="Connecting Dots ERP | Software and SAP Training Institute" />
+        <meta
+          name="author"
+          content="Connecting Dots ERP | Software and SAP Training Institute"
+        />
 
-        {/* Google Tag Manager - HEAD */}
+        {/* Preload critical resources - including new Chevron CSS */}
+        <link
+          rel="preload"
+          href="/Headercarousel/logo strip.avif"
+          as="image"
+          fetchpriority="high"
+        />
+
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+          as="style"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+        />
+
+        {/* Load Bootstrap CSS with lower priority */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          media="print"
+          onLoad="this.media='all'"
+        />
+
+        {/* Critical CSS for key elements for better LCP */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Logo strip styles */
+              .logoStrip img {
+                height: 130px;
+                width: 800px;
+                margin-left: 10px;
+                display: block;
+                content-visibility: auto;
+                will-change: transform;
+                opacity: 1;
+              }
+              
+              /* Critical Chevron styles for LCP */
+              .Chevron_containerCH__pkYku {
+                padding: 20px;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 1800px;
+                width: 97.5%;
+                contain: layout style;
+              }
+              
+              .Chevron_containerCH__pkYku h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                letter-spacing: 4px;
+                background: linear-gradient(90deg, #fff 35%, rgba(3, 163, 196, 1) 49%, #fff 62%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-align: center;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                text-rendering: optimizeSpeed;
+              }
+              
+              .Chevron_titleUnderline__uIc_R {
+                width: 80px;
+                height: 4px;
+                background: linear-gradient(90deg, #a76b2e, #f18436);
+                margin: 15px auto 25px;
+                border-radius: 2px;
+              }
+              
+              /* Responsive styles */
+              @media (max-width: 768px) {
+                .logoStrip img {
+                  width: 100%;
+                  height: auto;
+                  margin-left: 0;
+                }
+                .Chevron_containerCH__pkYku h1 {
+                  font-size: 2rem;
+                  letter-spacing: 2px;
+                }
+              }
+            `,
+          }}
+        />
+
+        {/* Google Tag Manager - HEAD - with lower priority */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
