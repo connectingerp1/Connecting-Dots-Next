@@ -544,6 +544,7 @@
       "Flexible learning options to accommodate your schedule",
       "Job placement assistance to help you land your dream job"
     ],
+    
     "secondTitle": "What Will You Learn in the SAP Training Program?",
     "secondParagraphs":[
       "SAP Module Overview: In the SAP training in {city}, you will gain in-depth knowledge of key SAP modules, including SAP FICO, SAP MM, and SAP SD. This course will equip you with the skills to configure, implement, and support SAP systems, ensuring that you can optimize business processes and add value to organizations using SAP solutions.",
@@ -568,7 +569,6 @@
        "Best Practices and Industry Standards:",
        "SAP Certification and Placement Support:"]
   },   
-  
   {
     "pageId": "itcourses-landing",
     "title": "Why Choose Connecting Dots ERP for HR Training in {city}?",

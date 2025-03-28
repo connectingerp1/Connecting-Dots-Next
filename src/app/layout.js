@@ -14,29 +14,27 @@ import BottomMenu from "@/components/BottomMenu";
 import Script from "next/script";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 const GTM_ID = "GTM-MB68QM2V";
+
+// Default metadata for all pages (can be overridden by individual pages)
+// export const metadata = {
+//   title: {
+//     default: 'Connecting Dots ERP | SAP Training Institute In Pune',
+//     template: '%s | Connecting Dots ERP'
+//   },
+//   description: 'We offer Expert-led training in SAP, Software Development, Digital Marketing, and HR Courses with strong placement support for your career.',
+//   keywords: 'SAP Certification Courses, SAP Course, Data Science Course, Power Bi Course, Digital Marketing Course, HR Training Institute, SAP Training Institute, Python Course, Software Course, Training, Education',
+//   author: 'Connecting Dots ERP | Software and SAP Training Institute'
+// }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Metadata */}
-        <title>Connecting Dots ERP | SAP Training Institute In Pune</title>
-        <meta
-          name="description"
-          content="We offer Expert-led training in SAP, Software Development, Digital Marketing, and HR Courses with strong placement support for your career."
-        />
-        <meta
-          name="keywords"
-          content="SAP Certification Courses, SAP Course, Data Science Course, Power Bi Course, Digital Marketing Course, HR Training Institute, SAP Training Institute, Python Course, Software Course, Training, Education"
-        />
-        <meta name="author" content="Connecting Dots ERP | Software and SAP Training Institute" />
-
         {/* Google Tag Manager - HEAD */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -45,6 +43,17 @@ export default function RootLayout({ children }) {
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','${GTM_ID}');
             `,
+          }}
+        />
+        
+        {/* Additional scripts if needed */}
+        <Script 
+          id="gtm-dataLayer-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+            `
           }}
         />
       </head>
