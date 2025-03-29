@@ -1,9 +1,9 @@
 export async function GET() {
   const robotsTxt = `User-agent: *
+Disallow: /AdminLogin
+Disallow: /dashboard
 Disallow: /919004002941
 Disallow: /wa.me/919004002941
-Disallow: https://connectingdotserp.com/AdminLogin
-Disallow: https://connectingdotserp.com/dashboard
 Sitemap: https://www.connectingdotserp.com/sitemap.xml`;
 
   return new Response(robotsTxt, {

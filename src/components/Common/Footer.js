@@ -109,7 +109,7 @@ const Footer = () => {
                       <Link href="/sap-pp-course-in-pune">SAP PP COURSE</Link>
                     </li>
                     <li className={styles.menuItem}>
-                      <Link href="/sap-hcm-course-in-pune">
+                      <Link href="/sap-hr-hcm-course-in-pune">
                         SAP HR/HCM COURSE
                       </Link>
                     </li>
@@ -270,12 +270,12 @@ const Footer = () => {
             >
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                  <Link href="/data-science-course-in-pune">
+                  <Link href="/data-analytics-course-in-pune">
                     MASTERS IN DATA ANALYTICS
                   </Link>
                 </li>
                 <li className={styles.menuItem}>
-                  <Link href="/data-analytics-course-in-pune">
+                  <Link href="/data-science-course-in-pune">
                     MASTERS IN DATA SCIENCE
                   </Link>
                 </li>
