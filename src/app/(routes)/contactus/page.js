@@ -30,11 +30,11 @@ const ContactPage = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState({ text: "", type: "" });
 
-  // Initialize form data
+  // Initialize form data with consistent field names
   const [localFormData, setLocalFormData] = useState(
     formData || {
       name: "",
-      phone: "",
+      contact: "", // Changed from phone to contact for consistency
       email: "",
       course: "",
       countryCode: "+91",
@@ -210,11 +210,10 @@ const ContactPage = ({
       
       setLocalFormData({ 
         name: "",
-        phone: "",
+        contact: "", // Consistent field name
         email: "",
         course: "",
         countryCode: "+91",
-        contact: "" 
       });
       
     } catch (error) {

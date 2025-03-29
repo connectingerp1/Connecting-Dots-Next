@@ -292,13 +292,13 @@ const SContactForm = () => {
               </div>
               <div className={styles.formGroup}>
                 <button 
-                  className={`btn btn-primary ${isSubmitting ? styles.loading : ""}`} 
+                  className="btn btn-primary"
                   type="submit" 
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      <span className={styles.spinnerText}>Submitting</span>
+                      Submitting
                       <span className={styles.spinner}></span>
                     </>
                   ) : (

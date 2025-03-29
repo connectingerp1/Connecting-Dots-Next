@@ -112,9 +112,9 @@ const DSHeader = ({ pageId, pageType }) => {
     // If it's the contact field, remove non-digit characters
     if (name === "contact") {
       const digitsOnly = value.replace(/\D/g, '');
-      setFormData({ ...formData, [name]: digitsOnly });
+      setFormData(prevData => ({ ...prevData, [name]: digitsOnly }));
     } else {
-      setFormData({ ...formData, [name]: value });
+      setFormData(prevData => ({ ...prevData, [name]: value }));
     }
   };
 
@@ -227,67 +227,6 @@ const DSHeader = ({ pageId, pageType }) => {
     }
   };
 
-  const RenderFormInputs = ({ data, formData, handleChange, isSubmitting }) => {
-    return useMemo(() => {
-      if (!data || !data.form?.inputs) return null;
-
-      return data.form.inputs.map((input, index) => {
-        if (input.countryCode) {
-          // Find the selected country to get its maxLength
-          const selectedCountry = countryCodes.find(
-            country => country.code === formData.countryCode
-          );
-          const maxLength = selectedCountry?.maxLength || 10;
-          
-          return (
-            <div key={index} className={styles.phoneInputItDs}>
-              <div className={styles.countryCodeWrapper}>
-                <select
-                  id="countryCode"
-                  name="countryCode"
-                  value={formData.countryCode}
-                  onChange={handleChange}
-                  className={styles.selectCountryCode}
-                  disabled={isSubmitting}
-                >
-                  {countryCodes.map(({ code, country }) => (
-                    <option key={code} value={code}>
-                      {code} ({country})
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <input
-                type="tel"
-                id="contact"
-                name="contact"
-                placeholder="Enter your phone number"
-                value={formData.contact}
-                onChange={handleChange}
-                maxLength={maxLength}
-                required
-                disabled={isSubmitting}
-              />
-            </div>
-          );
-        } else {
-          return (
-            <input
-              key={index}
-              type={input.type}
-              name={input.name}
-              placeholder={input.placeholder}
-              className={styles.input}
-              value={formData[input.name] || ""}
-              onChange={handleChange}
-              disabled={isSubmitting}
-            />
-          );
-        }
-      });
-    }, [data, formData, isSubmitting]);
-  };
-
   const handleButtonClick = () => setShowForm(true);
   const handleCloseForm = () => setShowForm(false);
 
@@ -371,12 +310,61 @@ const DSHeader = ({ pageId, pageType }) => {
         )}
         
         <form onSubmit={handleSubmit} className={styles.form}>
-          <RenderFormInputs 
-            data={data} 
-            formData={formData} 
-            handleChange={handleChange} 
-            isSubmitting={isSubmitting}
-          />
+          {data.form?.inputs?.map((input, index) => {
+            if (input.countryCode) {
+              // Find the selected country to get its maxLength
+              const selectedCountry = countryCodes.find(
+                country => country.code === formData.countryCode
+              );
+              const maxLength = selectedCountry?.maxLength || 10;
+              
+              return (
+                <div key={index} className={styles.phoneInputItDs}>
+                  <div className={styles.countryCodeWrapper}>
+                    <select
+                      id="countryCode"
+                      name="countryCode"
+                      value={formData.countryCode}
+                      onChange={handleChange}
+                      className={styles.selectCountryCode}
+                      disabled={isSubmitting}
+                    >
+                      {countryCodes.map(({ code, country }) => (
+                        <option key={code} value={code}>
+                          {code} ({country})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="Enter your phone number"
+                    value={formData.contact}
+                    onChange={handleChange}
+                    maxLength={maxLength}
+                    required
+                    disabled={isSubmitting}
+                  />
+                </div>
+              );
+            } else {
+              return (
+                <input
+                  key={index}
+                  type={input.type}
+                  name={input.name}
+                  placeholder={input.placeholder}
+                  className={styles.input}
+                  value={formData[input.name] || ""}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  required
+                />
+              );
+            }
+          })}
 
           <button
             type="submit"
