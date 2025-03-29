@@ -1,6 +1,6 @@
 /* Main Container Styles */
 .pageContainer {
-  background-color: #F0F2F5;
+  background-color: #f0f2f5;
   padding: 40px 0;
 }
 
@@ -42,7 +42,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100%;
   min-height: 220px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .contactCard:hover {
@@ -57,7 +59,7 @@
 }
 
 .whatsappIcon {
-  color: #25D366;
+  color: #25d366;
   margin-bottom: 10px;
 }
 
@@ -69,7 +71,7 @@
 .cardSubtitle {
   font-size: 1rem;
   font-weight: 600;
-  color: #6B7280;
+  color: #6b7280;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -94,7 +96,7 @@
 
 .whatsappBtn {
   display: inline-block;
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
   padding: 8px 16px;
   border-radius: 5px;
@@ -103,19 +105,19 @@
 }
 
 .whatsappBtn:hover {
-  background-color: #128C7E;
+  background-color: #128c7e;
   color: white;
 }
 
 .addressLink {
   font-size: 0.9rem;
-  color: #4B5563;
+  color: #4b5563;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .addressLink:hover {
-  color: #1F2937;
+  color: #1f2937;
 }
 
 /* Form Styles - Keeping original class names but enhancing */
@@ -156,7 +158,7 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 0.95rem;
-  color: #4B5563;
+  color: #4b5563;
   transition: border-color 0.2s;
   height: auto;
 }
@@ -179,7 +181,7 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #d1d5db;
-  color: #4B5563;
+  color: #4b5563;
   width: 80px;
   font-size: 0.95rem;
 }
@@ -190,7 +192,7 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 0.95rem;
-  color: #4B5563;
+  color: #4b5563;
 }
 
 .submitButtonItDs {
@@ -251,7 +253,9 @@
   position: relative;
   z-index: 1;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .branchCard:hover {
@@ -310,7 +314,7 @@
   .branchesTitle {
     font-size: 1.75rem;
   }
-  
+
   .rightSectionItDs {
     margin-top: 20px;
   }
@@ -321,22 +325,24 @@
     font-size: 1.5rem;
     letter-spacing: 2px;
   }
-  
+
   .contactCard {
     margin-bottom: 15px;
   }
-  
+
   .rightSectionItDs {
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
   }
-  
-  .inputField, .selectCountryCode, .contactInput {
+
+  .inputField,
+  .selectCountryCode,
+  .contactInput {
     padding: 10px;
     font-size: 0.9rem;
   }
-  
+
   .branchesContainer {
     justify-content: center;
   }
@@ -347,36 +353,36 @@
     font-size: 1.3rem;
     letter-spacing: 1px;
   }
-  
+
   .branchName {
     text-align: center;
   }
-  
+
   .contactCard {
     min-height: 180px;
     padding: 15px;
   }
-  
+
   .rightSectionItDs {
     padding: 15px;
   }
-  
+
   .phoneInputItDs {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: auto;
   }
-  
+
   .selectCountryCode {
     width: 65px;
     padding: 8px 5px;
   }
-  
+
   .contactInput {
     padding: 8px 10px;
   }
-  
+
   .branchCard {
     width: 100%;
     max-width: 320px;
@@ -390,35 +396,119 @@
     padding: 15px;
     margin: 20px auto;
   }
-  
+
   .form {
     gap: 10px;
   }
-  
-  .inputField, .contactInput {
+
+  .inputField,
+  .contactInput {
     height: 40px;
     padding: 8px 10px;
   }
-  
+
   .phoneInputItDs {
     height: 40px;
   }
-  
+
   .selectCountryCode {
     height: 40px;
     padding: 0 5px;
   }
-  
+
   .submitButtonItDs {
     margin-top: 10px;
     padding: 8px;
   }
-  
+
   .branchCard {
     padding: 15px;
   }
-  
+
   .mapContainer {
     height: 180px;
   }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Status message styling */
+.statusMessage {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #d32f2f;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button loading state */
+.loading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.buttonText {
+  margin-right: 10px;
+}
+
+.buttonLoader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled form elements */
+.inputField:disabled,
+.contactInput:disabled,
+.selectCountryCode:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Focus styles for better accessibility */
+.inputField:focus,
+.contactInput:focus,
+.selectCountryCode:focus {
+  border-color: #2277d3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 119, 211, 0.2);
 }

@@ -39,7 +39,7 @@ const SContactForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ text: "", type: "" });
   const [isMobileView, setIsMobileView] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(true);
   const [wasFormVisible, setWasFormVisible] = useState(true);
@@ -82,6 +82,16 @@ const SContactForm = () => {
       }
     };
   }, [wasFormVisible]);
+
+  // Clear status message after 5 seconds
+  useEffect(() => {
+    if (statusMessage.text) {
+      const timer = setTimeout(() => {
+        setStatusMessage({ text: "", type: "" });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [statusMessage]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -142,8 +152,11 @@ const SContactForm = () => {
     e.preventDefault();
     
     if (!validate()) {
-      // Show the first error
-      alert(Object.values(errors)[0]);
+      // Show the first error as a status message
+      setStatusMessage({ 
+        text: Object.values(errors)[0], 
+        type: "error" 
+      });
       return;
     }
     
@@ -161,17 +174,24 @@ const SContactForm = () => {
       const response = await axios.post("https://serverbackend-0nvg.onrender.com/api/submit", submissionData);
 
       if (response.status === 200) {
-        setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000);
+        setStatusMessage({ 
+          text: "Thank You! Form successfully submitted.", 
+          type: "success" 
+        });
         setFormData({ name: "", contact: "", course: "", email: "", countryCode: "+91" });
-        setIsFormVisible(false);
-        alert("Thank You! Form successfully submitted.");
+        setTimeout(() => setIsFormVisible(false), 3000);
       } else {
-        alert("Failed to submit the form. Please try again.");
+        setStatusMessage({ 
+          text: "Failed to submit the form. Please try again.", 
+          type: "error" 
+        });
       }
     } catch (error) {
       console.error("Submission error:", error);
-      alert("An error occurred while submitting the form.");
+      setStatusMessage({ 
+        text: "An error occurred while submitting the form.", 
+        type: "error" 
+      });
     }
     setIsSubmitting(false);
   };
@@ -271,8 +291,19 @@ const SContactForm = () => {
                 {errors.course && <span className={styles.errorText}>{errors.course}</span>}
               </div>
               <div className={styles.formGroup}>
-                <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : "Submit"}
+                <button 
+                  className={`btn btn-primary ${isSubmitting ? styles.loading : ""}`} 
+                  type="submit" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span className={styles.spinnerText}>Submitting</span>
+                      <span className={styles.spinner}></span>
+                    </>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </div>
             </div>
@@ -280,7 +311,11 @@ const SContactForm = () => {
         </div>
       )}
 
-      {showPopup && <div className={styles.popup}>Thank you for submitting!</div>}
+      {statusMessage.text && (
+        <div className={`${styles.statusMessage} ${styles[statusMessage.type]}`}>
+          {statusMessage.text}
+        </div>
+      )}
 
       <footer ref={footerRef}></footer>
     </>

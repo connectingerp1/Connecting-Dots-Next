@@ -12,7 +12,7 @@ const DSHeader = ({ pageId, pageType }) => {
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({ countryCode: "+91", contact: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionError, setSubmissionError] = useState(null);
+  const [statusMessage, setStatusMessage] = useState({ text: "", type: "" });
   const { city } = useContext(CityContext);
   const [showForm, setShowForm] = useState(false);
 
@@ -38,6 +38,16 @@ const DSHeader = ({ pageId, pageType }) => {
     { code: "+31", country: "Netherlands", minLength: 9, maxLength: 9 },
     { code: "+52", country: "Mexico", minLength: 10, maxLength: 10 },
   ];
+
+  // Clear status message after 5 seconds
+  useEffect(() => {
+    if (statusMessage.text) {
+      const timer = setTimeout(() => {
+        setStatusMessage({ text: "", type: "" });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [statusMessage]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -98,18 +108,24 @@ const DSHeader = ({ pageId, pageType }) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    
+    // If it's the contact field, remove non-digit characters
+    if (name === "contact") {
+      const digitsOnly = value.replace(/\D/g, '');
+      setFormData({ ...formData, [name]: digitsOnly });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-    setSubmissionError(null);
-
+  const validateForm = () => {
+    // Check if required fields are filled
     if (!formData.name || !formData.email || !formData.contact) {
-      setSubmissionError("Fill all required fields");
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: "Please fill all required fields",
+        type: "error",
+      });
+      return false;
     }
 
     // Get the selected country code details
@@ -118,9 +134,11 @@ const DSHeader = ({ pageId, pageType }) => {
     );
     
     if (!selectedCountry) {
-      setSubmissionError("Invalid country code");
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: "Invalid country code",
+        type: "error",
+      });
+      return false;
     }
 
     const { minLength, maxLength } = selectedCountry;
@@ -130,27 +148,46 @@ const DSHeader = ({ pageId, pageType }) => {
       formData.contact.length < minLength ||
       formData.contact.length > maxLength
     ) {
-      setSubmissionError(
-        `Phone number for ${selectedCountry.country} must be between ${minLength} and ${maxLength} digits`
-      );
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: `Phone number for ${selectedCountry.country} must be between ${minLength} and ${maxLength} digits`,
+        type: "error",
+      });
+      return false;
     }
 
     // Check if phone number contains only digits
     const phoneRegex = /^\d+$/;
     if (!phoneRegex.test(formData.contact)) {
-      setSubmissionError("Phone number must contain only digits");
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: "Phone number must contain only digits",
+        type: "error",
+      });
+      return false;
     }
 
+    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setSubmissionError("Enter a valid email address");
-      setIsSubmitting(false);
+      setStatusMessage({
+        text: "Please enter a valid email address",
+        type: "error",
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+    // Validate form first
+    if (!validateForm()) {
       return;
     }
+    
+    setIsSubmitting(true);
+    setStatusMessage({ text: "", type: "" });
 
     try {
       const response = await fetch(
@@ -161,17 +198,36 @@ const DSHeader = ({ pageId, pageType }) => {
           body: JSON.stringify(formData),
         }
       );
-      if (!response.ok) throw new Error("Submission failed");
-      alert("Form submitted successfully!");
-      setFormData({ countryCode: "+91", contact: "" });
+      
+      if (!response.ok) {
+        throw new Error("Submission failed. Please try again.");
+      }
+      
+      setStatusMessage({
+        text: "Form submitted successfully!",
+        type: "success",
+      });
+      
+      // Reset form fields after successful submission
+      setFormData({ 
+        name: "",
+        email: "",
+        course: "",
+        countryCode: "+91",
+        contact: "" 
+      });
+      
     } catch (error) {
-      setSubmissionError(error.message);
+      setStatusMessage({
+        text: error.message || "An error occurred. Please try again.",
+        type: "error",
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const RenderFormInputs = ({ data, formData, handleChange }) => {
+  const RenderFormInputs = ({ data, formData, handleChange, isSubmitting }) => {
     return useMemo(() => {
       if (!data || !data.form?.inputs) return null;
 
@@ -192,6 +248,7 @@ const DSHeader = ({ pageId, pageType }) => {
                   value={formData.countryCode}
                   onChange={handleChange}
                   className={styles.selectCountryCode}
+                  disabled={isSubmitting}
                 >
                   {countryCodes.map(({ code, country }) => (
                     <option key={code} value={code}>
@@ -209,6 +266,7 @@ const DSHeader = ({ pageId, pageType }) => {
                 onChange={handleChange}
                 maxLength={maxLength}
                 required
+                disabled={isSubmitting}
               />
             </div>
           );
@@ -222,11 +280,12 @@ const DSHeader = ({ pageId, pageType }) => {
               className={styles.input}
               value={formData[input.name] || ""}
               onChange={handleChange}
+              disabled={isSubmitting}
             />
           );
         }
       });
-    }, [data, formData]);
+    }, [data, formData, isSubmitting]);
   };
 
   const handleButtonClick = () => setShowForm(true);
@@ -304,67 +363,35 @@ const DSHeader = ({ pageId, pageType }) => {
 
       <div className={styles.rightSectionItDs}>
         <h3>{data.form.title}</h3>
+        
+        {statusMessage.text && (
+          <div className={`${styles.statusMessage} ${styles[statusMessage.type]}`}>
+            {statusMessage.text}
+          </div>
+        )}
+        
         <form onSubmit={handleSubmit} className={styles.form}>
-          {data.form.inputs.map((input, index) => {
-            if (input.countryCode) {
-              // Find the selected country to get its maxLength
-              const selectedCountry = countryCodes.find(
-                country => country.code === formData.countryCode
-              );
-              const maxLength = selectedCountry?.maxLength || 10;
-              
-              return (
-                <div key={index} className={styles.phoneInputItDs}>
-                  <select
-                    id="countryCode"
-                    name="countryCode"
-                    value={formData.countryCode}
-                    onChange={handleChange}
-                    className={styles.selectCountryCode}
-                  >
-                    {countryCodes.map(({ code, country }) => (
-                      <option key={code} value={code}>
-                        {code} ({country})
-                      </option>
-                    ))}
-                  </select>
-
-                  <input
-                    type="tel"
-                    id="contact"
-                    name="contact"
-                    placeholder="Enter your phone number"
-                    value={formData.contact || ""}
-                    onChange={handleChange}
-                    maxLength={maxLength}
-                    required
-                  />
-                </div>
-              );
-            } else {
-              return (
-                <input
-                  key={index}
-                  type={input.type}
-                  name={input.name}
-                  placeholder={input.placeholder}
-                  value={formData[input.name] || ""}
-                  onChange={handleChange}
-                  className={styles.inputField}
-                />
-              );
-            }
-          })}
+          <RenderFormInputs 
+            data={data} 
+            formData={formData} 
+            handleChange={handleChange} 
+            isSubmitting={isSubmitting}
+          />
 
           <button
             type="submit"
-            className={styles.submitButtonItDs}
+            className={`${styles.submitButtonItDs} ${isSubmitting ? styles.loading : ''}`}
             disabled={isSubmitting}
           >
-            {data.form.submitText}
+            {isSubmitting ? (
+              <>
+                <span className={styles.buttonText}>Submitting</span>
+                <span className={styles.buttonLoader}></span>
+              </>
+            ) : (
+              data.form.submitText
+            )}
           </button>
-
-          {submissionError && <p className={styles.error}>{submissionError}</p>}
         </form>
       </div>
 

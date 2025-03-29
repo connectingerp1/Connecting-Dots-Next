@@ -13,6 +13,8 @@ const PopupForm = ({ onSubmitData }) => {
   const [course, setCourse] = useState("");
   const [location, setLocation] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ text: "", type: "" });
 
   const pathname = usePathname();
 
@@ -44,19 +46,53 @@ const PopupForm = ({ onSubmitData }) => {
     };
   }, [isVisible]);
 
+  // Clear status message after 5 seconds
+  useEffect(() => {
+    if (statusMessage.text) {
+      const timer = setTimeout(() => {
+        setStatusMessage({ text: "", type: "" });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [statusMessage]);
+
+  const validateForm = () => {
+    if (name.length > 50) {
+      setStatusMessage({ text: "Name should be less than 50 characters", type: "error" });
+      return false;
+    }
+    
+    if (!/^\d{10}$/.test(mobile)) {
+      setStatusMessage({ text: "Please enter a valid 10-digit mobile number", type: "error" });
+      return false;
+    }
+    
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      setStatusMessage({ text: "Please enter a valid email address", type: "error" });
+      return false;
+    }
+    
+    if (course.length > 50) {
+      setStatusMessage({ text: "Course name should be less than 50 characters", type: "error" });
+      return false;
+    }
+    
+    if (!isChecked) {
+      setStatusMessage({ text: "Please accept the terms and conditions", type: "error" });
+      return false;
+    }
+    
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (
-      name.length > 50 ||
-      !/^\d{10}$/.test(mobile) ||
-      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) ||
-      course.length > 50 ||
-      !isChecked
-    ) {
-      alert("Please check your input");
+    if (!validateForm()) {
       return;
     }
+
+    setIsSubmitting(true);
 
     const formData = {
       name,
@@ -72,24 +108,33 @@ const PopupForm = ({ onSubmitData }) => {
         "https://serverbackend-0nvg.onrender.com/api/submit",
         formData
       );
-      alert("Registration complete!");
+      
+      setStatusMessage({ text: "Registration complete!", type: "success" });
 
       // Only call onSubmitData if it's provided
       if (typeof onSubmitData === "function") {
         onSubmitData(formData);
       }
 
-      // Reset form fields
-      setName("");
-      setMobile("");
-      setEmail("");
-      setCourse("");
-      setLocation("");
-      setIsChecked(false);
-      setIsVisible(false);
+      // Reset form fields after successful submission
+      setTimeout(() => {
+        setName("");
+        setMobile("");
+        setEmail("");
+        setCourse("");
+        setLocation("");
+        setIsChecked(false);
+        setIsVisible(false);
+      }, 2000); // Delay closing to allow user to see success message
+      
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred while submitting the form.");
+      setStatusMessage({ 
+        text: "An error occurred while submitting the form.", 
+        type: "error" 
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -101,6 +146,7 @@ const PopupForm = ({ onSubmitData }) => {
         <button
           className={styles.closeButton}
           onClick={() => setIsVisible(false)}
+          disabled={isSubmitting}
         >
           X
         </button>
@@ -112,6 +158,13 @@ const PopupForm = ({ onSubmitData }) => {
           />
           <h2>Register now</h2>
         </div>
+        
+        {statusMessage.text && (
+          <div className={`${styles.statusMessage} ${styles[statusMessage.type]}`}>
+            {statusMessage.text}
+          </div>
+        )}
+        
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -120,6 +173,7 @@ const PopupForm = ({ onSubmitData }) => {
             onChange={(e) => setName(e.target.value)}
             required
             maxLength="50"
+            disabled={isSubmitting}
           />
           <input
             type="email"
@@ -127,14 +181,20 @@ const PopupForm = ({ onSubmitData }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            disabled={isSubmitting}
           />
           <input
             type="tel"
             placeholder="Mobile Number*"
             value={mobile}
-            onChange={(e) => setMobile(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value.replace(/\D/g, '');
+              setMobile(value);
+            }}
             required
             pattern="\d{10}"
+            maxLength="10"
+            disabled={isSubmitting}
           />
           <input
             type="text"
@@ -143,6 +203,7 @@ const PopupForm = ({ onSubmitData }) => {
             onChange={(e) => setCourse(e.target.value)}
             required
             maxLength="50"
+            disabled={isSubmitting}
           />
           <input
             type="text"
@@ -151,6 +212,7 @@ const PopupForm = ({ onSubmitData }) => {
             onChange={(e) => setLocation(e.target.value)}
             required
             maxLength="20"
+            disabled={isSubmitting}
           />
           <div className={styles.termsCheckbox}>
             <span>
@@ -160,6 +222,7 @@ const PopupForm = ({ onSubmitData }) => {
                 checked={isChecked}
                 onChange={(e) => setIsChecked(e.target.checked)}
                 required
+                disabled={isSubmitting}
               />
             </span>
             <label htmlFor="terms">
@@ -175,7 +238,20 @@ const PopupForm = ({ onSubmitData }) => {
               of Connecting Dots ERP.
             </label>
           </div>
-          <button type="submit">Register</button>
+          <button 
+            type="submit" 
+            disabled={isSubmitting}
+            className={isSubmitting ? styles.submitting : ""}
+          >
+            {isSubmitting ? (
+              <>
+                <span className={styles.buttonText}>Registering</span>
+                <span className={styles.buttonLoader}></span>
+              </>
+            ) : (
+              "Register"
+            )}
+          </button>
         </form>
       </div>
     </div>

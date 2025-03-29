@@ -5,7 +5,7 @@
   max-width: 1800px;
   height: auto;
   width: 100%;
-  background: transparent; 
+  background: transparent;
   backdrop-filter: blur(10px);
   padding: 10px 30px;
   border-radius: 10px;
@@ -98,7 +98,9 @@
   font-weight: bold;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .thankYouPopup.show {
@@ -160,7 +162,6 @@
   font-size: 14px;
 }
 
-
 @media screen and (max-width: 1200px) {
   .contactFormS {
     padding: 10px;
@@ -187,7 +188,7 @@
   .contactField select {
     width: 90px;
   }
-  
+
   .button {
     width: auto;
     margin-top: auto;
@@ -198,7 +199,6 @@
     font-size: 18px;
   }
 }
-
 
 @media (max-width: 768px) {
   .contactFormS {
@@ -223,4 +223,83 @@
     width: 100%;
     margin-top: 10px;
   }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Status message styling */
+.statusMessage {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  z-index: 1100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease-out forwards;
+  max-width: 80%;
+  text-align: center;
+}
+
+.success {
+  background-color: #4caf50;
+}
+
+.error {
+  background-color: #f44336;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Button loading state */
+.loading {
+  position: relative;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerText {
+  margin-right: 10px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add styles for input error state if not already defined */
+.inputError {
+  border-color: #f44336 !important;
+  box-shadow: 0 0 0 1px #f44336 !important;
+}
+
+.errorText {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 4px;
 }

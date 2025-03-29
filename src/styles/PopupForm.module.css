@@ -61,7 +61,10 @@
   font-weight: bold;
   color: #2277d3;
   margin: 0;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+  text-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 30px #ffffff;
   transition: text-shadow 0.3sease-in-out;
 }
 
@@ -181,4 +184,93 @@
     font-size: 18px;
     margin: 0;
   }
+}
+
+/* Add these styles to your existing PopupForm.module.css file */
+
+/* Status message styling */
+.statusMessage {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #d32f2f;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button loading state */
+.submitting {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.buttonText {
+  margin-right: 10px;
+}
+
+.buttonLoader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disable form during submission */
+.popupFormContainer form input:disabled,
+.popupFormContainer form button:disabled:not(.submitting) {
+  background-color: #f9f9f9;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Keep the submitting button styled nicely */
+.popupFormContainer form button.submitting {
+  background-color: #1e68be;
+}
+
+/* Form validation visual cues */
+.popupFormContainer form input:focus:invalid {
+  border-color: #f44336;
+  box-shadow: 0 0 0 1px #f44336;
+}
+
+.popupFormContainer form input:focus:valid {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 1px #4caf50;
 }

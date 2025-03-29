@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { FaPhone, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { CityContext } from "@/context/CityContext";
@@ -28,7 +28,7 @@ const ContactPage = ({
 
   // Local state for form submission
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionError, setSubmissionError] = useState(null);
+  const [statusMessage, setStatusMessage] = useState({ text: "", type: "" });
 
   // Initialize form data
   const [localFormData, setLocalFormData] = useState(
@@ -40,6 +40,16 @@ const ContactPage = ({
       countryCode: "+91",
     }
   );
+
+  // Clear status message after 5 seconds
+  useEffect(() => {
+    if (statusMessage.text) {
+      const timer = setTimeout(() => {
+        setStatusMessage({ text: "", type: "" });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [statusMessage]);
 
   const countryCodes = [
     { code: "+91", country: "India", minLength: 10, maxLength: 10 },
@@ -97,19 +107,25 @@ const ContactPage = ({
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setLocalFormData((prev) => ({ ...prev, [name]: value }));
-    setFormData && setFormData((prev) => ({ ...prev, [name]: value })); // Update parent state if provided
+    // If it's the contact field, remove non-digit characters
+    if (name === "contact") {
+      const digitsOnly = value.replace(/\D/g, '');
+      setLocalFormData((prev) => ({ ...prev, [name]: digitsOnly }));
+      setFormData && setFormData((prev) => ({ ...prev, [name]: digitsOnly }));
+    } else {
+      setLocalFormData((prev) => ({ ...prev, [name]: value }));
+      setFormData && setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-    setSubmissionError(null);
-
+  const validateForm = () => {
+    // Check if required fields are filled
     if (!localFormData.name || !localFormData.email || !localFormData.contact) {
-      setSubmissionError("Fill all required fields");
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: "Please fill all required fields",
+        type: "error",
+      });
+      return false;
     }
 
     // Get the selected country code details
@@ -118,9 +134,11 @@ const ContactPage = ({
     );
     
     if (!selectedCountry) {
-      setSubmissionError("Invalid country code");
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: "Invalid country code",
+        type: "error",
+      });
+      return false;
     }
 
     const { minLength, maxLength } = selectedCountry;
@@ -130,27 +148,46 @@ const ContactPage = ({
       localFormData.contact.length < minLength ||
       localFormData.contact.length > maxLength
     ) {
-      setSubmissionError(
-        `Phone number for ${selectedCountry.country} must be between ${minLength} and ${maxLength} digits`
-      );
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: `Phone number for ${selectedCountry.country} must be between ${minLength} and ${maxLength} digits`,
+        type: "error",
+      });
+      return false;
     }
 
     // Check if phone number contains only digits
     const phoneRegex = /^\d+$/;
     if (!phoneRegex.test(localFormData.contact)) {
-      setSubmissionError("Phone number must contain only digits");
-      setIsSubmitting(false);
-      return;
+      setStatusMessage({
+        text: "Phone number must contain only digits",
+        type: "error",
+      });
+      return false;
     }
 
+    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(localFormData.email)) {
-      setSubmissionError("Enter a valid email address");
-      setIsSubmitting(false);
+      setStatusMessage({
+        text: "Please enter a valid email address",
+        type: "error",
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+    // Validate form first
+    if (!validateForm()) {
       return;
     }
+    
+    setIsSubmitting(true);
+    setStatusMessage({ text: "", type: "" });
 
     try {
       const response = await fetch(
@@ -161,11 +198,30 @@ const ContactPage = ({
           body: JSON.stringify(localFormData),
         }
       );
-      if (!response.ok) throw new Error("Submission failed");
-      alert("Form submitted successfully!");
-      setLocalFormData({ countryCode: "+91", contact: "" });
+      
+      if (!response.ok) {
+        throw new Error("Submission failed. Please try again.");
+      }
+      
+      setStatusMessage({
+        text: "Form submitted successfully!",
+        type: "success",
+      });
+      
+      setLocalFormData({ 
+        name: "",
+        phone: "",
+        email: "",
+        course: "",
+        countryCode: "+91",
+        contact: "" 
+      });
+      
     } catch (error) {
-      setSubmissionError(error.message);
+      setStatusMessage({
+        text: error.message || "An error occurred. Please try again.",
+        type: "error",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -257,6 +313,13 @@ const ContactPage = ({
           <div className="col-lg-4 col-md-5">
             <div className={styles.rightSectionItDs}>
               <h3>Contact Form</h3>
+              
+              {statusMessage.text && (
+                <div className={`${styles.statusMessage} ${styles[statusMessage.type]}`}>
+                  {statusMessage.text}
+                </div>
+              )}
+              
               <form onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.formGroup}>
                   <input
@@ -267,6 +330,7 @@ const ContactPage = ({
                     onChange={handleChange}
                     className={styles.inputField}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -277,6 +341,7 @@ const ContactPage = ({
                     value={localFormData.countryCode || "+91"}
                     onChange={handleChange}
                     className={styles.selectCountryCode}
+                    disabled={isSubmitting}
                   >
                     {countryCodes.map(({ code, country }) => (
                       <option key={code} value={code}>
@@ -294,6 +359,7 @@ const ContactPage = ({
                     maxLength={getSelectedCountryMaxLength()}
                     className={styles.contactInput}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -306,6 +372,7 @@ const ContactPage = ({
                     onChange={handleChange}
                     className={styles.inputField}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -318,20 +385,24 @@ const ContactPage = ({
                     onChange={handleChange}
                     className={styles.inputField}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className={styles.submitButtonItDs}
+                  className={`${styles.submitButtonItDs} ${isSubmitting ? styles.loading : ''}`}
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Submit"}
+                  {isSubmitting ? (
+                    <>
+                      <span className={styles.buttonText}>Submitting</span>
+                      <span className={styles.buttonLoader}></span>
+                    </>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
-                
-                {submissionError && (
-                  <p className={styles.error}>{submissionError}</p>
-                )}
               </form>
             </div>
           </div>
