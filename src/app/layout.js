@@ -32,7 +32,7 @@ const rubik = Rubik({
 // --- Constants ---
 const GTM_ID = "GTM-MB68QM2V";
 const FB_PIXEL_ID = "3414178115554916";
-const AHREFS_KEY = "h5nofTpYPf65FI8/61ypeA";
+const AHREFS_KEY = "pUfORHA6uR+7KBt+fOIy2g";
 
 // --- SITE-WIDE METADATA ---
 export const metadata = {
