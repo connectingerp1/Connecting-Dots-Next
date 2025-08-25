@@ -89,7 +89,7 @@ export default function FloatingFlag() {
         }}
       >
         <Image
-          src="/HeaderCarousel/Discount.avif" // Replace with your actual image path
+          src="/Headercarousel/Discount.avif" // Replace with your actual image path
           alt="Book For DEMO - Flat 5000 Rs. OFF"
           width={140}
           height={100}
