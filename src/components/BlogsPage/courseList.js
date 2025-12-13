@@ -158,7 +158,7 @@ const CoursesList = ({ initialCategory = 'all' }) => {
               const cardContent = (
                 <div
                   key={topic.name}
-                  className="group relative flex w-full items-start sm:items-center gap-3 rounded-xl border bg-white/5 border-white/10 p-3 sm:px-5 sm:py-1 shadow-sm hover:shadow-md transition-all duration-200 sm:hover:scale-105 sm:bg-white sm:border-gray-200"
+                  className="group relative flex w-full items-start sm:items-center gap-3 rounded-xl border bg-white/5 border-white/10 p-2 sm:px-5 sm:py-1 shadow-sm hover:shadow-md transition-all duration-200 sm:hover:scale-105 sm:bg-white sm:border-gray-200"
                 >
                   {/* Icon */}
                   <div className="w-9 h-9 sm:w-7 sm:h-7 rounded-lg bg-white/10 sm:bg-transparent flex items-center justify-center shrink-0">
@@ -166,7 +166,7 @@ const CoursesList = ({ initialCategory = 'all' }) => {
                   </div>
                   {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-white sm:text-gray-800 text-sm sm:text-base truncate">{topic.name}</div>
+                    <div className=" text-gray-800 sm:text-gray-800 text-sm sm:text-base truncate">{topic.name}</div>
                   </div>
                   {/* CTA chevron mobile only */}
                   <button aria-hidden className="ml-2 inline-flex sm:hidden items-center justify-center w-7 h-7 rounded-full bg-blue-500 text-white">

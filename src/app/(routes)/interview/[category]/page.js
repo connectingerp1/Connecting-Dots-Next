@@ -152,8 +152,8 @@ const InterviewCategoryPage = () => {
   }
 
   return (
-    <div className="relative w-8xl max-w-[1800px] mx-auto overflow-hidden p-6 bg-white">
-      <div className="mb-8 text-center">
+    <div className="relative w-8xl max-w-[1800px] mx-auto p-6 bg-white">
+      <div className="mb-8 text-center max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
           {interviewData.heading}
         </h1>
@@ -164,32 +164,51 @@ const InterviewCategoryPage = () => {
 
       <div ref={questionsRef} className="flex flex-col lg:flex-row gap-8">
         {interviewData.resources?.length > 0 && (
-          <div className="lg:w-1/4 order-2 lg:order-1">
-            <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 sticky top-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Trending Questions
-              </h3>
-              <div className="space-y-3 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-                {interviewData.resources.map((resource, index) => (
-                  <div key={index} className="group">
-                    <button
-                      onClick={() => handleResourceSelect(resource)}
-                      className={`block w-full text-left text-sm leading-relaxed transition-colors duration-200 hover:text-blue-600 ${
-                        resource === selectedResource
-                          ? "text-orange-600 font-medium bg-orange-50 px-3 py-2 rounded-lg"
-                          : "text-gray-700 hover:bg-gray-50 px-3 py-2 rounded-lg"
-                      }`}
-                    >
-                      {resource}
-                    </button>
-                  </div>
-                ))}
+          <div className="lg:w-1/4">
+            {/* STICKY CONTAINER WRAPPER: Holds both Image and Table */}
+            {/* 1. SEPARATE IMAGE COMPONENT (Above the table) */}
+              {(interviewData.initialImage || interviewData.image) && (
+                <div className="w-full rounded-lg overflow-hidden shadow-sm bg-white border border-gray-100">
+                  <img
+                    src={interviewData.initialImage || interviewData.image}
+                    alt={interviewData.heading}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              )}
+
+            <div className="sticky top-4 space-y-4">
+              
+              
+              {/* 2. TABLE COMPONENT (The White Box) */}
+              <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 h-fit">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Trending Questions
+                </h3>
+                {/* Reduced max-height to 60vh to account for the image space above it */}
+                <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+                  {interviewData.resources.map((resource, index) => (
+                    <div key={index} className="group">
+                      <button
+                        onClick={() => handleResourceSelect(resource)}
+                        className={`block w-full text-left text-sm leading-relaxed transition-colors duration-200 hover:text-blue-600 ${
+                          resource === selectedResource
+                            ? "text-orange-600 font-medium bg-orange-50 px-3 py-2 rounded-lg"
+                            : "text-gray-700 hover:bg-gray-50 px-3 py-2 rounded-lg"
+                        }`}
+                      >
+                        {resource}
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </div>
+
             </div>
           </div>
         )}
 
-        <div className={`${interviewData.resources?.length ? 'lg:w-3/4' : 'w-full'} order-1 lg:order-2`}>
+        <div className={`${interviewData.resources?.length ? 'lg:w-3/4' : 'w-full'}`}>
           {interviewData.qaData?.length > 0 ? (
             <div className="space-y-6">
               {getReorderedQuestions().map((item, idx) => (

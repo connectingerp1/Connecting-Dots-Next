@@ -10,9 +10,9 @@ export default function CourseCard({
   className = ""
 }) {
   const content = (
-    <div className={`bg-white rounded-2xl p-3 w-full flex items-center space-x-4 hover:scale-105 hover:shadow-xl transition-transform duration-200 cursor-pointer ${className}`}>
+    <div className={`bg-white rounded-2xl p-2 w-full flex items-center space-x-4 hover:scale-105 hover:shadow-xl transition-transform duration-200 cursor-pointer ${className}`}>
       <Icon className={`w-6 h-6 ${iconColor}`} />
-      <span className="text-gray-800 font-medium text-lg">{title}</span>
+      <span className="text-gray-800 font-medium text-sm">{title}</span>
     </div>
   );
 
