@@ -69,7 +69,8 @@ export default function RootLayout({ children }) {
 
         {/* Preconnect for Tawk */}
         <link rel="preconnect" href="https://embed.tawk.to" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//embed.tawk.to" />
+
+
 
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#1a365d" />
