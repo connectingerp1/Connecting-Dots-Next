@@ -7,7 +7,7 @@ import Breadcrumb from "@/components/CitySitemap/Breadcrumb";
 export const metadata = {
   title: "City Course Sitemap | Connecting Dots ERP Training Institute",
   description:
-    "Browse our comprehensive range of professional courses available in cities across India including Pune, Mumbai, Bangalore, Delhi, and more. Find SAP, IT, HR, and Digital Marketing training programs near you.",
+    "Browse professional courses across India in Pune, Mumbai, Bangalore, Delhi & more. Find SAP, IT, HR, and Digital Marketing training near you.",
   keywords: [
     "course sitemap",
     "city courses",
@@ -158,7 +158,7 @@ const jsonLd = {
       url: "https://connectingdotserp.com/sitemap",
       name: "City Course Sitemap | Connecting Dots ERP Training Institute",
       description:
-        "Browse our comprehensive range of professional courses available in cities across India including Pune, Mumbai, Bangalore, Delhi, and more. Find SAP, IT, HR, and Digital Marketing training programs near you.",
+        "Browse professional courses across India in Pune, Mumbai, Bangalore, Delhi & more. Find SAP, IT, HR, and Digital Marketing training near you.",
       inLanguage: "en-US",
       isPartOf: {
         "@id": "https://connectingdotserp.com/#website",

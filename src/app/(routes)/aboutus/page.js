@@ -3,7 +3,7 @@ import AboutClient from "./AboutClient";
 
 // Server-side metadata (appears in server HTML/head)
 export const metadata = {
-  title: "About Us | Connecting Dots ERP - SAP Training Institute in Pune, Mumbai & Raipur",
+  title: "About Us | Connecting Dots ERP - SAP Training Institute",
   description:
     "Discover our story, expert trainers, and commitment to SAP, IT, and HR training with 100% placement support across multiple locations.",
   alternates: { canonical: "https://connectingdotserp.com/aboutus" },

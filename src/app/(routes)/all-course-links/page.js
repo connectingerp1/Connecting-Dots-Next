@@ -155,7 +155,7 @@ const allCourseLinks = generateCourseLinks();
 export const metadata = {
   title: "All Courses | SAP, IT & HR Training | Connecting Dots ERP",
   description:
-    "Browse all SAP, IT, and HR courses offered by Connecting Dots ERP. Find detailed information and links to specific training programs with placement support in Pune, Mumbai, Raipur and more.",
+    "Browse SAP, IT, and HR courses at Connecting Dots ERP. Explore detailed program info and placement-supported training in Pune, Mumbai, Raipur, and more.",
   keywords: [
     "all courses",
     "course list",
@@ -250,7 +250,7 @@ const jsonLd = {
       url: "https://connectingdotserp.com/all-course-links",
       name: "All Courses | SAP, IT & HR Training | Connecting Dots ERP",
       description:
-        "Browse all SAP, IT, and HR courses offered by Connecting Dots ERP. Find detailed information and links to specific training programs with placement support in Pune, Mumbai, Raipur and more.",
+        "Browse SAP, IT, and HR courses at Connecting Dots ERP. Explore detailed program info and placement-supported training in Pune, Mumbai, Raipur, and more.",
       inLanguage: "en-US",
       isPartOf: {
         "@id": "https://connectingdotserp.com/#website",

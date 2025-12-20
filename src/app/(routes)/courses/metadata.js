@@ -10,6 +10,14 @@ export const metadata = {
     url: 'https://connectingdotserp.com/courses',
     siteName: 'Connecting Dots ERP',
     locale: 'en_US',
+    images: [
+      {
+        url: "https://connectingdotserp.com/images/quiz-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Interactive Quizzes - Connecting Dots ERP",
+      },
+    ],
     type: 'website',
   },
   twitter: {

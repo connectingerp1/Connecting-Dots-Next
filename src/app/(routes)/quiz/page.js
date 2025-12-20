@@ -4,13 +4,13 @@ import QuizClientContent from './QuizClientContent';
 export const metadata = {
   title: "Interactive Quizzes | Test Your Knowledge - Connecting Dots ERP",
   description:
-    "Challenge yourself with our comprehensive interactive quizzes covering SAP, Software Development, Digital Marketing, and HR topics. Test your skills and track your progress.",
+    "Challenge yourself with interactive quizzes on SAP, Software Development, Digital Marketing, and HR to test skills, learn faster, and track progress!",
 
   // Open Graph Tags
   openGraph: {
     title: "Interactive Quizzes | Test Your Knowledge - Connecting Dots ERP",
     description:
-      "Challenge yourself with our comprehensive interactive quizzes covering SAP, Software Development, Digital Marketing, and HR topics. Test your skills and track your progress.",
+      "Challenge yourself with interactive quizzes on SAP, Software Development, Digital Marketing, and HR to test skills, learn faster, and track progress.!",
     url: "https://connectingdotserp.com/quiz",
     siteName: "Connecting Dots ERP",
     images: [

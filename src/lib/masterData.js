@@ -15351,7 +15351,7 @@ export const coursesData = {
       "Core HR Course in {city} | Best Core HR Training & Certification", // Used in: <title> tag, OpenGraph
     // Used in: <meta description>, OpenGraph, Twitter Cards
     metaDescription:
-      "Master Core HR in {city}. Expert-led training in recruitment, payroll, compliance, employee relations. Real projects, certification & 100% placement. Launch your HR career now!",
+      "Master Core HR in {city}. Expert-led training in recruitment, payroll, compliance, employee relations. Real projects, certification & 100% placement.",
 
     // === COURSE DETAILS ===
     duration: "2-4 months", // Used in: Course summary section, page content

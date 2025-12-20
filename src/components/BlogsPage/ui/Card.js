@@ -58,13 +58,24 @@ const Card = ({
             alt={title || 'Card image'}
             className="w-full h-full object-cover transition-all duration-700 group-hover/card:scale-105"
             onError={(e) => {
+              console.log('Image load error:', e);
               if (onImageError) {
                 onImageError(e);
               } else {
                 // Default behavior if no onImageError handler is provided
                 e.target.onerror = null;
-                e.target.src = '/placeholder-blog.jpg';
+                // Use a placeholder image from a public CDN that doesn't require authentication
+                e.target.src = 'https://placehold.co/600x400/1e40af/ffffff?text=Image+Not+Available';
+                e.target.alt = title || 'Image not available';
+                e.target.className = e.target.className.replace('object-cover', 'object-contain p-4');
               }
+            }}
+            onLoadStart={(e) => {
+              // Show a loading state if needed
+              e.target.classList.add('opacity-0');
+            }}
+            onLoad={(e) => {
+              e.target.classList.remove('opacity-0');
             }}
           />
         ) : (

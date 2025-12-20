@@ -496,7 +496,7 @@ export async function generateMetadata({ params }) {
 
   const cityInfo = cityData[city];
   const title = `Courses in ${cityInfo.name} | Connecting Dots ERP Training Institute`;
-  const description = `${cityInfo.description} Find SAP, IT, HR, Data Science, and Digital Marketing courses with placement support.`;
+  const description = `${cityInfo.description}`;
   const url = `https://connectingdotserp.com/sitemap/${city}`;
   const imageUrl = `https://connectingdotserp.com/images/courses-${city}.jpg`;
 
@@ -625,7 +625,7 @@ function generateCityJsonLd(city, cityInfo) {
         "@id": `${cityUrl}#webpage`,
         url: cityUrl,
         name: `Courses in ${cityInfo.name} | Connecting Dots ERP Training Institute`,
-        description: `${cityInfo.description} Find SAP, IT, HR, Data Science, and Digital Marketing courses with placement support.`,
+        description: `${cityInfo.description}`,
         inLanguage: "en-US",
         isPartOf: {
           "@id": "https://connectingdotserp.com/#website",

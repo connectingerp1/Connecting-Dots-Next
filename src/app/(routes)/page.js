@@ -4,7 +4,7 @@ import HomeClient from "./HomeClient"; // client UI component
 export const metadata = {
   title: "Connecting Dots ERP | SAP Training, HR Courses & IT Skill Development",
   description:
-    "Join Connecting Dots ERP – Pune & Mumbai's leading institute for SAP training, HR certification programs, IT courses, placement support, and hands-on learning from industry experts.",
+    "Join Connecting Dots ERP, a leading institute in Pune and Mumbai offering SAP, HR, and IT training with expert guidance and strong placement support!",
   keywords: [
     "SAP Certification Courses",
     "SAP Course",

@@ -76,7 +76,7 @@ export async function GET() {
     "data-analytics-course-in",
     "business-analytics-course-in",
     "chatgpt-course-in",
-    "full-stack-developer-course-in",
+    "full-stack-course-in",
     "java-course-in",
     "mern-stack-course-in",
     "python-course-in",

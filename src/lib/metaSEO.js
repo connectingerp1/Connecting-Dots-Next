@@ -639,7 +639,7 @@ export const citySpecificMeta = {
     "pune": {
       title: "Master SAP MM in Pune | Career-Boosting Course",
       description:
-        "Master SAP MM course in Pune by learning material planning, procurement, inventory control, purchase order processing, and MRP for efficient supply chain operations",
+        "Master SAP MM in Pune with in-depth training on material planning, procurement, inventory control, purchase orders, and MRP for efficient supply chain management.",
     },
     "mumbai": {
       title: "SAP MM Training in Mumbai | Hands-On Learning",
@@ -689,7 +689,7 @@ export const citySpecificMeta = {
     "kanpur": {
       title: "SAP MM Course in Kanpur | Master Material Management",
       description:
-        "Master material master setup, purchase requisitions, inventory movements, and MRP processes in SAP MM to optimize procurement in Kanpur, Inventory & Procurement.",
+        "Master material master setup, purchase requisitions, inventory movements, and MRP processes in SAP MM to optimize procurement in Kanpur.",
     },
     "nagpur": {
       title: "SAP MM Training in Nagpur | Inventory & Procurement",
@@ -1006,7 +1006,7 @@ export const citySpecificMeta = {
     "kanpur": {
       title: "SAP ABAP Course in Kanpur | Advanced ERP Coding & Reports",
       description:
-        "SAP ABAP course in Kanpur teaches coding, ALV reports, modularization, enhancements, BDC, user exits, and data dictionary handling for professional ERP solutions",
+        "SAP ABAP course in Kanpur covers coding, ALV reports, modularization, enhancements, BDC, user exits, and data dictionary handling for ERP expertise.",
     },
     "nagpur": {
       title: "SAP ABAP Course in Nagpur | Developer & Reports Mastery",
@@ -1269,7 +1269,7 @@ export const citySpecificMeta = {
         "Learn SAP ABAP Course in Matunga with a focus on debugging, internal tables, BDC programming, and business data processing for real ERP solutions.",
     },
   },
-  "sap-hcm": {
+  "sap-hr-hcm": {
     "pune": {
       title: "SAP HCM Course in Pune | Learn Core HR Concepts",
       description: 
@@ -1931,7 +1931,7 @@ export const citySpecificMeta = {
     },
     "kerala": {
       title: "SAP PP Training in Kerala | Master Production Control",
-      description: "Master SAP PP Course in Kerala and learn efficient production planning. Get skilled in MRP, capacity management, and process alignment for manufacturing success.",
+      description: "Master the SAP PP course in Kerala and gain expertise in production planning, MRP, capacity management, and process alignment for manufacturing excellence.",
     },
     "surat": {
       title: "SAP PP Course in Surat | Learn Production Management",
@@ -2217,7 +2217,7 @@ export const citySpecificMeta = {
     },
     "chandigarh": {
       title: "SAP Basis Course in Chandigarh | Master SAP Administration",
-      description: "Gain expertise in SAP Basis Course in Chandigarh with training on system administration, configuration, performance optimization, and troubleshooting techniques.",
+      description: "Gain expertise in SAP Basis in Chandigarh with training on system administration, configuration, performance optimization, and troubleshooting skills.",
     },
     "bhubaneswar": {
       title: "SAP Basis Training in Bhubaneswar | Career-Ready SAP Skills",
@@ -2277,7 +2277,7 @@ export const citySpecificMeta = {
     },
     "pimple-saudagar": {
       title: "SAP Basis Training Pimple Saudagar | System Admin Skills",
-      description: "Enhance your knowledge SAP Basis Course in Pimple Saudagar with hands-on Basis training covering system administration, configuration, monitoring, troubleshooting.",
+      description: "Enhance your SAP Basis skills in Pimple Saudagar with hands-on training in system administration, configuration, monitoring, and troubleshooting effectively.",
     },
     "baner": {
       title: "SAP Basis Course Baner | Master SAP Administration",
@@ -4642,7 +4642,7 @@ export const citySpecificMeta = {
     },
     "mumbai": {
       title: "Business Analytics Course in Mumbai with Placement",
-      description: "Learn with the best Business Analytics Course in Mumbai. Get hands-on training in Excel, Python, and data insights to enhance your career growth and job success.",
+      description: "Learn with best Business Analytics Course in Mumbai. Get hands-on training in Excel, Python, and data insights to enhance your career growth and job success.",
     },
     "delhi": {
       title: "Business Analytics Course in Delhi for Future Growth",
@@ -5424,7 +5424,7 @@ export const citySpecificMeta = {
     },
     "hyderabad": {
       title: "Java Course in Hyderabad – Learn to Code & Get Hired",
-      description: "Enroll in Java Course in Hyderabad to master backend coding, Core Java, and frameworks. Gain skills for IT jobs and build a strong career in software development.",
+      description: "Enroll in the Java course in Hyderabad to master Core Java, backend coding, and frameworks. Gain in-demand skills for IT jobs and a successful software career.",
     },
     "ahmedabad": {
       title: "Java Course in Ahmedabad – Build Developer Careers",
@@ -6798,7 +6798,7 @@ export const citySpecificMeta = {
     },
     "bhubaneswar": {
       "title": "HR Analytics Training Bhubaneswar | ROI",
-      "description": "Learn to calculate HR ROI in Bhubaneswar and master the financial side of HR analytics, proving the value of training efforts and recruitment investments accurately now."
+      "description": "Learn to calculate HR ROI in Bhubaneswar and master HR analytics, measuring training and recruitment investments to prove their true business value effectively."
     },
     "tirupati": {
       "title": "HR Analytics Certification Tirupati | Jobs",
@@ -9061,7 +9061,7 @@ export const citySpecificMeta = {
     },
     "surat": {
       "title": "Digital Marketing Course Surat | Online Marketing",
-      "description": "Professional digital marketing training in Surat focusing on podcast marketing, audio content, and distribution strategies. Build audio marketing presence effectively."
+      "description": "Digital marketing training in Surat focuses on podcast marketing, audio content, and distribution strategies to build an effective audio marketing presence."
     },
     "dehradun": {
       "title": "Digital Marketing Training Dehradun | SEO Course",
@@ -9097,7 +9097,7 @@ export const citySpecificMeta = {
     },
     "tirupati": {
       "title": "Digital Marketing Training Tirupati | Developer",
-      "description": "Professional digital marketing training in Tirupati covering attribution modeling, multi-touch analysis, and ROI calculation. Measure marketing effectiveness accurately."
+      "description": "Digital marketing training in Tirupati covers attribution modeling, multi-touch analysis, and ROI calculation to measure marketing effectiveness accurately."
     },
     "vizag": {
       "title": "Digital Marketing Course Vizag | Expert Training",
@@ -9734,258 +9734,511 @@ export const citySpecificMeta = {
   "core-hr": {
     "pune": {
       "title": "Core HR Course in Pune | Boost Your HR Skills",
-      "metaDescription": "Learn Core HR course concepts in Pune, covering payroll, labor laws, and recruitment processes to advance your HR career with real business applications."
+      "description": "Learn Core HR course concepts in Pune, covering payroll, labor laws, and recruitment processes to advance your HR career with real business applications."
     },
     "mumbai": {
       "title": "Core HR Course in Mumbai | Advance Your Career",
-      "metaDescription": "Master human resource functions with Core HR course in Mumbai and gain expertise in statutory compliance, talent management, and payroll operations."
+      "description": "Master human resource functions with Core HR course in Mumbai and gain expertise in statutory compliance, talent management, and payroll operations."
     },
     "delhi": {
       "title": "Core HR Course in Delhi | Learn Advanced HR",
-      "metaDescription": "Build your HR expertise through Core HR course in Delhi and understand employee lifecycle, compensation rules, and HR analytics for corporate success."
+      "description": "Build your HR expertise through Core HR course in Delhi and understand employee lifecycle, compensation rules, and HR analytics for corporate success."
     },
     "kolkata": {
       "title": "Core HR Course in Kolkata | HR Skills Training",
-      "metaDescription": "Experience hands-on HR training with Core HR course in Kolkata focusing on payroll, PF, ESIC, and attendance systems for job-ready human resource skills."
+      "description": "Experience hands-on HR training with Core HR course in Kolkata focusing on payroll, PF, ESIC, and attendance systems for job-ready human resource skills."
     },
     "chennai": {
       "title": "Core HR Course in Chennai | Practical HR Training",
-      "metaDescription": "Gain practical understanding of HR operations with Core HR course in Chennai covering onboarding, salary structure design, and statutory compliance."
+      "description": "Gain practical understanding of HR operations with Core HR course in Chennai covering onboarding, salary structure design, and statutory compliance."
     },
     "bangalore": {
       "title": "Core HR Course in Bangalore | HR Career Guide",
-      "metaDescription": "Develop full-cycle HR knowledge through Core HR course in Bangalore and prepare for professional roles in payroll processing and compliance handling."
+      "description": "Develop full-cycle HR knowledge through Core HR course in Bangalore and prepare for professional roles in payroll processing and compliance handling."
     },
     "hyderabad": {
       "title": "Core HR Course in Hyderabad | HR Process Learning",
-      "metaDescription": "Learn the detailed HR process with Core HR course in Hyderabad including payroll setup, statutory deductions, and essential HR documentation skills."
+      "description": "Learn the detailed HR process with Core HR course in Hyderabad including payroll setup, statutory deductions, and essential HR documentation skills."
     },
     "ahmedabad": {
       "title": "Core HR Course in Ahmedabad | Build HR Expertise",
-      "metaDescription": "Strengthen your HR foundation with Core HR course in Ahmedabad covering recruitment, payroll, and compliance management to build strong HR capabilities."
+      "description": "Strengthen your HR foundation with Core HR course in Ahmedabad covering recruitment, payroll, and compliance management to build strong HR capabilities."
     },
     "jaipur": {
       "title": "Core HR Course in Jaipur | Upgrade HR Knowledge",
-      "metaDescription": "Discover HR fundamentals through Core HR course in Jaipur covering employee management, attendance control, payroll processes and key statutory obligations."
+      "description": "Discover HR fundamentals through Core HR course in Jaipur covering employee management, attendance control, payroll processes and key statutory obligations."
     },
     "lucknow": {
       "title": "Core HR Course in Lucknow | Learn HR Operations",
-      "metaDescription": "Master practical HR operations with a Core HR course in Lucknow covering compliance management, payroll processes, and effective performance evaluation."
+      "description": "Master practical HR operations with a Core HR course in Lucknow covering compliance management, payroll processes, and effective performance evaluation."
     },
     "kanpur": {
       "title": "Core HR Course in Kanpur | Master HR Functions",
-      "metaDescription": "Learn crucial HR functions through a Core HR course in Kanpur focusing on payroll formulation, recruitment processes, and key organizational HR systems."
+      "description": "Learn crucial HR functions through a Core HR course in Kanpur focusing on payroll formulation, recruitment processes, and key organizational HR systems."
     },
     "nagpur": {
       "title": "Core HR Course in Nagpur | Advance HR Skills",
-      "metaDescription": "Excel in HR operations with Core HR course in Nagpur gaining real-time understanding of employee management, payroll, and compliance procedures as well."
+      "description": "Excel in HR operations with Core HR course in Nagpur gaining real-time understanding of employee management, payroll, and compliance procedures as well."
     },
     "patna": {
       "title": "Core HR Course in Patna | Professional HR Learning",
-      "metaDescription": "Build an HR career foundation with Core HR course in Patna covering practical aspects of payroll, HR policies, attendance tracking, and documentation."
+      "description": "Build an HR career foundation with Core HR course in Patna covering practical aspects of payroll, HR policies, attendance tracking, and documentation."
     },
     "indore": {
       "title": "Core HR Course in Indore | Complete HR Training",
-      "metaDescription": "Learn advanced HR techniques through Core HR course in Indore including hands-on modules in payroll systems, performance, and compliance handling."
+      "description": "Learn advanced HR techniques through Core HR course in Indore including hands-on modules in payroll systems, performance, and compliance handling."
     },
     "bhopal": {
       "title": "Core HR Course in Bhopal | Boost HR Knowledge",
-      "metaDescription": "Get real-world HR understanding with Core HR course in Bhopal focusing on payroll inputs, labor law compliance, and employee data administration."
+      "description": "Get real-world HR understanding with Core HR course in Bhopal focusing on payroll inputs, labor law compliance, and employee data administration."
     },
     "visakhapatnam": {
       "title": "Core HR Course in Visakhapatnam | Pro HR Learning",
-      "metaDescription": "Explore complete HR lifecycle concepts via Core HR course in Visakhapatnam and gain practical expertise in payroll, leave policy, and HR compliance."
+      "description": "Explore complete HR lifecycle concepts via Core HR course in Visakhapatnam and gain practical expertise in payroll, leave policy, and HR compliance."
     },
     "vadodara": {
       "title": "Core HR Course in Vadodara | HR Career Training",
-      "metaDescription": "Join Core HR course in Vadodara to master HR essentials including statutory compliance, onboarding process, salary breakup, and effective HR reporting."
+      "description": "Join Core HR course in Vadodara to master HR essentials including statutory compliance, onboarding process, salary breakup, and effective HR reporting."
     },
     "ludhiana": {
       "title": "Core HR Course in Ludhiana | Learn HR Processes",
-      "metaDescription": "Strengthen your HR job-readiness with a Core HR course in Ludhiana covering payroll creation, recruitment handling, and essential labor law compliance."
+      "description": "Strengthen your HR job-readiness with a Core HR course in Ludhiana covering payroll creation, recruitment handling, and essential labor law compliance."
     },
     "agra": {
       "title": "Core HR Course in Agra | Start HR Learning",
-      "metaDescription": "Build career-ready HR knowledge through Core HR course in Agra with modules on payroll setup, PF, leave regularization, and HR policies for good growth."
+      "description": "Build career-ready HR knowledge through Core HR course in Agra with modules on payroll setup, PF, leave regularization, and HR policies for good growth."
     },
     "nashik": {
       "title": "Core HR Course in Nashik | Comprehensive HR Skill",
-      "metaDescription": "Advance your HR competency with Core HR course in Nashik covering employee management, payroll processing, compliance reporting, and HR software."
+      "description": "Advance your HR competency with Core HR course in Nashik covering employee management, payroll processing, compliance reporting, and HR software."
     },
     "rajkot": {
       "title": "Core HR Course in Rajkot | Learn Payroll & HR",
-      "metaDescription": "Obtain HR functional knowledge with Core HR course in Rajkot focusing on employee records, payroll calculation, performance tracking, and core HR tasks."
+      "description": "Obtain HR functional knowledge with Core HR course in Rajkot focusing on employee records, payroll calculation, performance tracking, and core HR tasks."
     },
     "varanasi": {
       "title": "Core HR Course in Varanasi | Learn Modern HR",
-      "metaDescription": "Strengthen professional HR skills with a Core HR course in Varanasi focusing on modern HR operations, payroll structures, and practical analytics in HR."
+      "description": "Strengthen professional HR skills with a Core HR course in Varanasi focusing on modern HR operations, payroll structures, and practical analytics in HR."
     },
     "kerala": {
       "title": "Core HR Course in Kerala | HR Excellence Guide",
-      "metaDescription": "Master HR principles through Core HR course in Kerala emphasizing payroll management, compliance laws, recruitment, and workforce administration well."
+      "description": "Master HR principles through Core HR course in Kerala emphasizing payroll management, compliance laws, recruitment, and workforce administration well."
     },
     "surat": {
       "title": "Core HR Course in Surat | Complete HR Training",
-      "metaDescription": "Build essential HR capabilities with Core HR course in Surat exploring payroll management, leave systems, statutory returns, and key HR frameworks well."
+      "description": "Build essential HR capabilities with Core HR course in Surat exploring payroll management, leave systems, statutory returns, and key HR frameworks well."
     },
     "dehradun": {
       "title": "Core HR Course in Dehradun | Learn HR Basics",
-      "metaDescription": "Understand end-to-end HR operations through a Core HR course in Dehradun covering payroll design, recruitment flow, and strong compliance integration."
+      "description": "Understand end-to-end HR operations through a Core HR course in Dehradun covering payroll design, recruitment flow, and strong compliance integration."
     },
     "madurai": {
       "title": "Core HR Course in Madurai | HR Job Readiness",
-      "metaDescription": "Learn HR handling through Core HR course in Madurai focusing on compliance automation, onboarding, payroll execution, and handling HR records properly."
+      "description": "Learn HR handling through Core HR course in Madurai focusing on compliance automation, onboarding, payroll execution, and handling HR records properly."
     },
     "mysore": {
       "title": "Core HR Course in Mysore | HR Skill Growth",
-      "metaDescription": "Enhance HR understanding with a Core HR course in Mysore teaching statutory laws, payroll calculations, attendance systems, and performance appraisals."
+      "description": "Enhance HR understanding with a Core HR course in Mysore teaching statutory laws, payroll calculations, attendance systems, and performance appraisals."
     },
     "pondicherry": {
       "title": "Core HR Course in Pondicherry | HR Career Boost",
-      "metaDescription": "Start your HR professional journey with Core HR course in Pondicherry focusing on payroll, HR metrics, and compliance practices for workplace success."
+      "description": "Start your HR professional journey with Core HR course in Pondicherry focusing on payroll, HR metrics, and compliance practices for workplace success."
     },
     "ranchi": {
       "title": "Core HR Course in Ranchi | Learn HR Operations",
-      "metaDescription": "Build HR proficiency through Core HR course in Ranchi offering hands-on learning in payroll reporting, HR software, and statutory documentation."
+      "description": "Build HR proficiency through Core HR course in Ranchi offering hands-on learning in payroll reporting, HR software, and statutory documentation."
     },
     "coimbatore": {
       "title": "Core HR Course in Coimbatore | Professional HR",
-      "metaDescription": "Elevate your HR career through Core HR course in Coimbatore with modules on compensation, employee management, and compliance tools for solid HR growth."
+      "description": "Elevate your HR career through Core HR course in Coimbatore with modules on compensation, employee management, and compliance tools for solid HR growth."
     },
     "chandigarh": {
       "title": "Core HR Course in Chandigarh | Learn HR Tools",
-      "metaDescription": "Develop HR skills with Core HR course in Chandigarh focused on statutory compliance, payroll accuracy, employee lifecycle management, and core HR tasks."
+      "description": "Develop HR skills with Core HR course in Chandigarh focused on statutory compliance, payroll accuracy, employee lifecycle management, and core HR tasks."
     },
     "bhubaneswar": {
       "title": "Core HR Course in Bhubaneswar | HR Training Hub",
-      "metaDescription": "Get hands-on HR experience through a Core HR course in Bhubaneswar covering payroll management, attendance control, and essential compliance analysis."
+      "description": "Get hands-on HR experience through a Core HR course in Bhubaneswar covering payroll management, attendance control, and essential compliance analysis."
     },
     "tirupati": {
       "title": "Core HR Course in Tirupati | Learn Payroll & HR",
-      "metaDescription": "Learn corporate HR process with Core HR course in Tirupati covering employee welfare, payroll cycles, and statutory regulations for solid HR growth too."
+      "description": "Learn corporate HR process with Core HR course in Tirupati covering employee welfare, payroll cycles, and statutory regulations for solid HR growth too."
     },
     "vizag": {
       "title": "Core HR Course in Vizag | Practical HR Concepts",
-      "metaDescription": "Upgrade HR knowledge with a Core HR course in Vizag covering operational areas like payroll, statutory setups, documentation, and HR filing procedures."
+      "description": "Upgrade HR knowledge with a Core HR course in Vizag covering operational areas like payroll, statutory setups, documentation, and HR filing procedures."
     },
     "trivandrum": {
       "title": "Core HR Course in Trivandrum | Learn HR Careers",
-      "metaDescription": "Build HR mastery via Core HR course in Trivandrum covering compliance processes, employee benefits, and recruitment cycle management modules well now."
+      "description": "Build HR mastery via Core HR course in Trivandrum covering compliance processes, employee benefits, and recruitment cycle management modules well now."
     },
     "jalandhar": {
       "title": "Core HR Course in Jalandhar | HR Learning Path",
-      "metaDescription": "Understand fundamental HR operations with a Core HR course in Jalandhar focusing on key HR systems, payroll processes, and policy compliance tracking."
+      "description": "Understand fundamental HR operations with a Core HR course in Jalandhar focusing on key HR systems, payroll processes, and policy compliance tracking."
     },
     "mohali": {
       "title": "Core HR Course in Mohali | Corporate HR Training",
-      "metaDescription": "Learn to manage workforce systems effectively with Core HR course in Mohali covering payroll process, policy creation, and HR recordkeeping."
+      "description": "Learn to manage workforce systems effectively with Core HR course in Mohali covering payroll process, policy creation, and HR recordkeeping."
     },
     "raipur": {
       "title": "Core HR Course in Raipur | Learn HR Functions",
-      "metaDescription": "Master human resource management with Core HR course in Raipur focusing on payroll preparation, compliance, performance tracking, and essential HR setup work."
+      "description": "Master human resource management with Core HR course in Raipur focusing on payroll preparation, compliance, performance tracking, and essential HR setup work."
     },
     "cochin": {
       "title": "Core HR Course in Cochin | HR System Learning",
-      "metaDescription": "Gain corporate HR expertise via a Core HR course in Cochin that covers payroll testing, attendance management, and practical statutory laws compliance."
+      "description": "Gain corporate HR expertise via a Core HR course in Cochin that covers payroll testing, attendance management, and practical statutory laws compliance."
     },
     "mangalore": {
       "title": "Core HR Course in Mangalore | Build HR Skills",
-      "metaDescription": "Enhance HR operational skills with Core HR course in Mangalore covering payroll handling, employee records, statutory compliance, and HR system usage."
+      "description": "Enhance HR operational skills with Core HR course in Mangalore covering payroll handling, employee records, statutory compliance, and HR system usage."
     },
     "katraj": {
       "title": "Core HR Course in Katraj | HR Operations Training",
-      "metaDescription": "Learn complete HR operations through a Core HR course in Katraj focusing on practical payroll, records management, and essential compliance awareness."
+      "description": "Learn complete HR operations through a Core HR course in Katraj focusing on practical payroll, records management, and essential compliance awareness."
     },
     "pimpri-chinchwad": {
       "title": "Core HR Course in Pimpri Chinchwad | Learn HR",
-      "metaDescription": "Upgrade professional HR skills via Core HR course in Pimpri Chinchwad including payroll, statutory structure, and strong performance management skills."
+      "description": "Upgrade professional HR skills via Core HR course in Pimpri Chinchwad including payroll, statutory structure, and strong performance management skills."
     },
     "shivaji-nagar": {
       "title": "Core HR Course in Shivaji Nagar | Complete HR",
-      "metaDescription": "Learn end-to-end HR practices with Core HR course in Shivaji Nagar including onboarding, salary slips, policy structure, and performance tracking."
+      "description": "Learn end-to-end HR practices with Core HR course in Shivaji Nagar including onboarding, salary slips, policy structure, and performance tracking."
     },
     "koregaon-park": {
       "title": "Core HR Course in Koregaon Park | Learn HR Tools",
-      "metaDescription": "Build HR expertise through Core HR course in Koregaon Park covering payroll modules, performance metrics, and compliance documentation."
+      "description": "Build HR expertise through Core HR course in Koregaon Park covering payroll modules, performance metrics, and compliance documentation."
     },
     "viman-nagar": {
       "title": "Core HR Course in Viman Nagar | HR Mastery Path",
-      "metaDescription": "Learn essential HR processes through a Core HR course in Viman Nagar with focused modules on payroll, HR reporting, and effective employee engagement."
+      "description": "Learn essential HR processes through a Core HR course in Viman Nagar with focused modules on payroll, HR reporting, and effective employee engagement."
     },
     "pimple-saudagar": {
       "title": "Core HR Course in Pimple Saudagar | HR Training",
-      "metaDescription": "Understand HR functionality with Core HR course in Pimple Saudagar covering payroll cycles, compliance updates, employee coordination, and core tasks."
+      "description": "Understand HR functionality with Core HR course in Pimple Saudagar covering payroll cycles, compliance updates, employee coordination, and core tasks."
     },
     "baner": {
       "title": "Core HR Course in Baner | Learn HR Analytics",
-      "metaDescription": "Grow HR capabilities via Core HR course in Baner focusing on payroll skills, statutory validation, HR data control, and streamlined workflow management."
+      "description": "Grow HR capabilities via Core HR course in Baner focusing on payroll skills, statutory validation, HR data control, and streamlined workflow management."
     },
     "hinjewadi": {
       "title": "Core HR Course in Hinjewadi | HR Process Guide",
-      "metaDescription": "Advance HR skills with Core HR course in Hinjewadi focusing on payroll documentation, compliance structure, and practical insights into HR operations."
+      "description": "Advance HR skills with Core HR course in Hinjewadi focusing on payroll documentation, compliance structure, and practical insights into HR operations."
     },
     "wakad": {
       "title": "Core HR Course in Wakad | Learn HR Lifecycle",
-      "metaDescription": "Build professional HR knowledge through Core HR course in Wakad including payroll data management, compliance updates, and strong HR systems training."
+      "description": "Build professional HR knowledge through Core HR course in Wakad including payroll data management, compliance updates, and strong HR systems training."
     },
     "kothrud": {
       "title": "Core HR Course in Kothrud | Master HR Skills",
-      "metaDescription": "Achieve comprehensive HR understanding through Core HR course in Kothrud highlighting payroll, labor compliance, employee administration, and key HR duties."
+      "description": "Achieve comprehensive HR understanding through Core HR course in Kothrud highlighting payroll, labor compliance, employee administration, and key HR duties."
     },
     "hadapsar": {
       "title": "Core HR Course in Hadapsar | Practical HR Training",
-      "metaDescription": "Learn effective HR methodologies in Core HR course in Hadapsar covering payroll utility, statutory files handling, and recruitment coordination tasks."
+      "description": "Learn effective HR methodologies in Core HR course in Hadapsar covering payroll utility, statutory files handling, and recruitment coordination tasks."
     },
     "aundh": {
       "title": "Core HR Course in Aundh | HR Career Starter",
-      "metaDescription": "Start your HR skill development with Core HR course in Aundh covering payroll fundamentals, compliance essentials, and performance management reporting."
+      "description": "Start your HR skill development with Core HR course in Aundh covering payroll fundamentals, compliance essentials, and performance management reporting."
     },
     "navi-mumbai": {
       "title": "Core HR Course in Navi Mumbai | Learn HR Modules",
-      "metaDescription": "Study full human resource functions via Core HR course in Navi Mumbai with training in payroll control, PF handling, and employee engagement practices."
+      "description": "Study full human resource functions via Core HR course in Navi Mumbai with training in payroll control, PF handling, and employee engagement practices."
     },
     "thane": {
       "title": "Core HR Course in Thane | Payroll & HR Skills",
-      "metaDescription": "Learn essential payroll and HR practices through Core HR course in Thane emphasizing legal frameworks, employee tracking, and HR data processes too now."
+      "description": "Learn essential payroll and HR practices through Core HR course in Thane emphasizing legal frameworks, employee tracking, and HR data processes too now."
     },
     "kalyan": {
       "title": "Core HR Course in Kalyan | Learn Real HR Work",
-      "metaDescription": "Develop work-ready HR mastery with Core HR course in Kalyan focusing on compensation plans payroll processes HR filing and key HR regulatory compliance."
+      "description": "Develop work-ready HR mastery with Core HR course in Kalyan focusing on compensation plans payroll processes HR filing and key HR regulatory compliance."
     },
     "bandra": {
       "title": "Core HR Course in Bandra | Corporate HR Skills",
-      "metaDescription": "Gain applied HR experience through Core HR course in Bandra focusing on payroll management, personnel records, and essential compliance reporting tasks."
+      "description": "Gain applied HR experience through Core HR course in Bandra focusing on payroll management, personnel records, and essential compliance reporting tasks."
     },
     "andheri": {
       "title": "Core HR Course in Andheri | HR Learning Path",
-      "metaDescription": "Advance HR career readiness through Core HR course in Andheri including salary structuring, attendance process, employee relations, and core HR skills."
+      "description": "Advance HR career readiness through Core HR course in Andheri including salary structuring, attendance process, employee relations, and core HR skills."
     },
     "powai": {
       "title": "Core HR Course in Powai | Build HR Foundation",
-      "metaDescription": "Learn essential HR concepts through the Core HR course in Powai focusing on performance tracking, compliance form filling, and HR administration tasks."
+      "description": "Learn essential HR concepts through the Core HR course in Powai focusing on performance tracking, compliance form filling, and HR administration tasks."
     },
     "worli": {
       "title": "Core HR Course in Worli | Learn HR Compliance",
-      "metaDescription": "Master statutory and HR techniques with Core HR course in Worli covering payroll setup policy creation labor documentation and essential HR management."
+      "description": "Master statutory and HR techniques with Core HR course in Worli covering payroll setup policy creation labor documentation and essential HR management."
     },
     "chembur": {
       "title": "Core HR Course in Chembur | Practical HR Modules",
-      "metaDescription": "Understand workforce management with Core HR course in Chembur teaching payroll processing, attendance reconciliation, and essential HR documentation."
+      "description": "Understand workforce management with Core HR course in Chembur teaching payroll processing, attendance reconciliation, and essential HR documentation."
     },
     "malad": {
       "title": "Core HR Course in Malad | Complete HR Knowledge",
-      "metaDescription": "Build HR domain expertise through Core HR course in Malad focusing on payroll handling, employee records, and performance policy formation."
+      "description": "Build HR domain expertise through Core HR course in Malad focusing on payroll handling, employee records, and performance policy formation."
     },
     "vile-parle": {
       "title": "Core HR Course in Vile Parle | HR Career Upgrade",
-      "metaDescription": "Strengthen human resource operations skills through Core HR course in Vile Parle with modules on payroll setup, compliance monitoring, and key HR tasks."
+      "description": "Strengthen human resource operations skills through Core HR course in Vile Parle with modules on payroll setup, compliance monitoring, and key HR tasks."
     },
     "matunga": {
       "title": "Core HR Course in Matunga | Learn Core HR Fast",
-      "metaDescription": "Develop sound HR understanding with Core HR course in Matunga focused on payroll accuracy, HR frameworks, statutory compliance tracking and core HR duties."
+      "description": "Develop sound HR understanding with Core HR course in Matunga focused on payroll accuracy, HR frameworks, statutory compliance tracking and core HR duties."
     }
   },
-
+  "sap-s4-hana": {
+  "pune": {
+    "title": "SAP S/4HANA Course in Pune – Skills for ERP Careers",
+    "description": "Learn SAP S/4HANA concepts, real-time ERP processes, finance, logistics, and analytics with industry-focused training designed for modern enterprise needs."
+  },
+  "mumbai": {
+    "title": "SAP S/4HANA Training in Mumbai for ERP Professionals",
+    "description": "Master SAP S/4HANA architecture, business processes, reporting, and migration skills to build strong ERP expertise for global enterprises."
+  },
+  "delhi": {
+    "title": "SAP S/4HANA Course in Delhi – Modern ERP Learning",
+    "description": "Gain in-depth knowledge of SAP S/4HANA modules, real-time data processing, analytics, and intelligent ERP workflows to drive digital transformation AI."
+  },
+  "kolkata": {
+    "title": "SAP S/4HANA Training in Kolkata – ERP Mastery",
+    "description": "Explore SAP S/4HANA finance, logistics, analytics, and system integration concepts to build strong, practical ERP skills for modern businesses."
+  },
+  "chennai": {
+    "title": "SAP S/4HANA Course in Chennai for Digital ERP",
+    "description": "Understand SAP S/4HANA modules, simplified data models, and real-time reporting to improve enterprise efficiency and smarter decision-making."
+  },
+  "bangalore": {
+    "title": "SAP S/4HANA Training in Bangalore – ERP Skills",
+    "description": "Learn SAP S/4HANA business processes, embedded analytics, and system conversion concepts for next-generation ERP solutions."
+  },
+  "hyderabad": {
+    "title": "SAP S/4HANA Course in Hyderabad – ERP Excellence",
+    "description": "Build expertise in SAP S/4HANA finance, supply chain, and real-time analytics to meet evolving enterprise requirements."
+  },
+  "ahmedabad": {
+    "title": "SAP S/4HANA Training in Ahmedabad – ERP Growth",
+    "description": "Develop practical SAP S/4HANA knowledge across core modules, data simplification, and intelligent process automation."
+  },
+  "jaipur": {
+    "title": "SAP S/4HANA Course in Jaipur for ERP Careers",
+    "description": "Learn SAP S/4HANA fundamentals, advanced ERP workflows, and reporting features for enterprise technology roles."
+  },
+  "lucknow": {
+    "title": "SAP S/4HANA Training in Lucknow – ERP Skills",
+    "description": "Gain understanding of SAP S/4HANA modules, finance processes, and real-time system integration."
+  },
+  "kanpur": {
+    "title": "SAP S/4HANA Course in Kanpur – Modern ERP",
+    "description": "Study SAP S/4HANA architecture, business processes, analytics, and integrations for future-ready ERP skills."
+  },
+  "nagpur": {
+    "title": "SAP S/4HANA Training in Nagpur – ERP Learning",
+    "description": "Learn SAP S/4HANA finance, logistics, reporting, and migration concepts for digital ERP systems."
+  },
+  "patna": {
+    "title": "SAP S/4HANA Course in Patna – ERP Foundations",
+    "description": "Understand SAP S/4HANA core modules, simplified data structures, and real-time insights."
+  },
+  "indore": {
+    "title": "SAP S/4HANA Training in Indore – ERP Expertise",
+    "description": "Gain hands-on SAP S/4HANA knowledge covering business processes and intelligent ERP operations."
+  },
+  "bhopal": {
+    "title": "SAP S/4HANA Course in Bhopal – ERP Skills",
+    "description": "Learn SAP S/4HANA finance, logistics, and reporting features for enterprise efficiency."
+  },
+  "visakhapatnam": {
+    "title": "SAP S/4HANA Training in Visakhapatnam",
+    "description": "Build SAP S/4HANA expertise in real-time processing, ERP modules, and business workflows."
+  },
+  "vadodara": {
+    "title": "SAP S/4HANA Course in Vadodara – ERP Growth",
+    "description": "Explore SAP S/4HANA architecture, modules, and analytics for efficient ERP planning."
+  },
+  "ludhiana": {
+    "title": "SAP S/4HANA Training in Ludhiana – ERP Focus",
+    "description": "Learn SAP S/4HANA business processes, finance integration, and real-time reporting."
+  },
+  "agra": {
+    "title": "SAP S/4HANA Course in Agra – ERP Learning",
+    "description": "Understand SAP S/4HANA modules, intelligent workflows, and enterprise analytics."
+  },
+  "nashik": {
+    "title": "SAP S/4HANA Training in Nashik – ERP Skills",
+    "description": "Gain SAP S/4HANA knowledge in finance, logistics, and system integration."
+  },
+  "rajkot": {
+    "title": "SAP S/4HANA Course in Rajkot – ERP Systems",
+    "description": "Learn SAP S/4HANA fundamentals, advanced ERP processes, and reporting tools."
+  },
+  "varanasi": {
+    "title": "SAP S/4HANA Training in Varanasi – ERP Career",
+    "description": "Build SAP S/4HANA expertise in real-time data handling and intelligent ERP systems."
+  },
+  "kerala": {
+    "title": "SAP S/4HANA Course in Kerala – ERP Learning",
+    "description": "Study SAP S/4HANA modules, analytics, and enterprise workflows."
+  },
+  "surat": {
+    "title": "SAP S/4HANA Training in Surat – ERP Skills",
+    "description": "Learn SAP S/4HANA core concepts, finance integration, and real-time reporting."
+  },
+  "dehradun": {
+    "title": "SAP S/4HANA Course in Dehradun – ERP Growth",
+    "description": "Learn SAP S/4HANA finance integration and reporting for data-driven decisions."
+  },
+  "madurai": {
+    "title": "SAP S/4HANA Training in Madurai – ERP Focus",
+    "description": "Gain practical SAP S/4HANA knowledge in analytics and enterprise processes."
+  },
+  "mysore": {
+    "title": "SAP S/4HANA Course in Mysore – ERP Learning",
+    "description": "Learn SAP S/4HANA workflows, finance, and reporting features."
+  },
+  "pondicherry": {
+    "title": "SAP S/4HANA Training in Pondicherry",
+    "description": "Build SAP S/4HANA skills in ERP modules and analytics."
+  },
+  "ranchi": {
+    "title": "SAP S/4HANA Course in Ranchi – ERP Skills",
+    "description": "Understand SAP S/4HANA finance, logistics, and real-time reporting."
+  },
+  "coimbatore": {
+    "title": "SAP S/4HANA Training in Coimbatore – ERP",
+    "description": "Learn SAP S/4HANA architecture, modules, and analytics."
+  },
+  "chandigarh": {
+    "title": "SAP S/4HANA Course in Chandigarh – ERP",
+    "description": "Gain SAP S/4HANA expertise in business processes and real-time data handling."
+  },
+  "bhubaneswar": {
+    "title": "SAP S/4HANA Training in Bhubaneswar",
+    "description": "Study SAP S/4HANA modules, finance integration, and analytics."
+  },
+  "tirupati": {
+    "title": "SAP S/4HANA Course in Tirupati – ERP Skills",
+    "description": "Learn SAP S/4HANA fundamentals and reporting for enterprise systems."
+  },
+  "vizag": {
+    "title": "SAP S/4HANA Training in Vizag – ERP Growth",
+    "description": "Build SAP S/4HANA knowledge in analytics and ERP workflows."
+  },
+  "trivandrum": {
+    "title": "SAP S/4HANA Course in Trivandrum – ERP",
+    "description": "Understand SAP S/4HANA architecture and analytics for digital enterprises."
+  },
+  "jalandhar": {
+    "title": "SAP S/4HANA Training in Jalandhar – ERP",
+    "description": "Learn SAP S/4HANA finance, logistics, and real-time data processing."
+  },
+  "mohali": {
+    "title": "SAP S/4HANA Course in Mohali – ERP Skills",
+    "description": "Gain SAP S/4HANA expertise in enterprise workflows and analytics."
+  },
+  "raipur": {
+    "title": "SAP S/4HANA Training in Raipur – ERP Focus",
+    "description": "Learn SAP S/4HANA modules, reporting, and process integration."
+  },
+  "cochin": {
+    "title": "SAP S/4HANA Course in Cochin – ERP Learning",
+    "description": "Build SAP S/4HANA knowledge in finance, analytics, and operations."
+  },
+  "mangalore": {
+    "title": "SAP S/4HANA Training in Mangalore – ERP",
+    "description": "Understand SAP S/4HANA architecture, modules, and analytics."
+  },
+  "katraj": {
+    "title": "SAP S/4HANA Course in Katraj – ERP Skills",
+    "description": "Learn SAP S/4HANA workflows and real-time reporting."
+  },
+  "pimpri-chinchwad": {
+    "title": "SAP S/4HANA Training in Pimpri Chinchwad",
+    "description": "Gain SAP S/4HANA expertise in ERP analytics and business processes."
+  },
+  "shivaji-nagar": {
+    "title": "SAP S/4HANA Course in Shivaji Nagar",
+    "description": "Learn SAP S/4HANA finance, logistics, and real-time analytics."
+  },
+  "koregaon-park": {
+    "title": "SAP S/4HANA Training in Koregaon Park",
+    "description": "Build SAP S/4HANA knowledge in workflows, analytics, and reporting."
+  },
+  "viman-nagar": {
+    "title": "SAP S/4HANA Course in Viman Nagar – ERP",
+    "description": "Understand SAP S/4HANA architecture, modules, and analytics."
+  },
+  "pimple-saudagar": {
+    "title": "SAP S/4HANA Training in Pimple Saudagar",
+    "description": "Learn SAP S/4HANA fundamentals and ERP business workflows."
+  },
+  "baner": {
+    "title": "SAP S/4HANA Course in Baner – ERP Skills",
+    "description": "Gain SAP S/4HANA expertise in finance and enterprise optimization."
+  },
+  "hinjewadi": {
+    "title": "SAP S/4HANA Training in Hinjewadi – ERP",
+    "description": "Learn SAP S/4HANA modules, analytics, and intelligent ERP processes."
+  },
+  "wakad": {
+    "title": "SAP S/4HANA Course in Wakad – ERP Growth",
+    "description": "Build SAP S/4HANA knowledge in business processes and analytics."
+  },
+  "kothrud": {
+    "title": "SAP S/4HANA Training in Kothrud – ERP",
+    "description": "Understand SAP S/4HANA architecture and enterprise workflows."
+  },
+  "hadapsar": {
+    "title": "SAP S/4HANA Course in Hadapsar – ERP",
+    "description": "Learn SAP S/4HANA finance modules and real-time reporting."
+  },
+  "aundh": {
+    "title": "SAP S/4HANA Training in Aundh – ERP",
+    "description": "Gain SAP S/4HANA expertise in analytics and ERP integration."
+  },
+  "navi-mumbai": {
+    "title": "SAP S/4HANA Course in Navi Mumbai – ERP",
+    "description": "Learn SAP S/4HANA modules, data processing, and workflows."
+  },
+  "thane": {
+    "title": "SAP S/4HANA Training in Thane – ERP Skills",
+    "description": "Build SAP S/4HANA knowledge in finance, logistics, and analytics."
+  },
+  "kalyan": {
+    "title": "SAP S/4HANA Course in Kalyan – ERP Learning",
+    "description": "Build SAP S/4HANA knowledge in finance, logistics, and analytics."
+  },
+  "bandra": {
+    "title": "SAP S/4HANA Training in Bandra – ERP",
+    "description": "Learn SAP S/4HANA processes, analytics, and ERP workflows."
+  },
+  "andheri": {
+    "title": "SAP S/4HANA Course in Andheri – ERP Skills",
+    "description": "Gain SAP S/4HANA expertise in finance and real-time analytics."
+  },
+  "powai": {
+    "title": "SAP S/4HANA Training in Powai – ERP",
+    "description": "Build SAP S/4HANA knowledge in modules and digital workflows."
+  },
+  "worli": {
+    "title": "SAP S/4HANA Course in Worli – ERP Learning",
+    "description": "Learn SAP S/4HANA fundamentals and enterprise integration."
+  },
+  "chembur": {
+    "title": "SAP S/4HANA Training in Chembur – ERP",
+    "description": "Understand SAP S/4HANA modules and real-time processes."
+  },
+  "malad": {
+    "title": "SAP S/4HANA Course in Malad – ERP Skills",
+    "description": "Gain SAP S/4HANA expertise in workflows and analytics."
+  },
+  "vile-parle": {
+    "title": "SAP S/4HANA Training in Vile Parle – ERP",
+    "description": "Learn SAP S/4HANA architecture, modules, and reporting."
+  },
+  "matunga": {
+    "title": "SAP S/4HANA Course in Matunga – ERP Growth",
+    "description": "Build SAP S/4HANA knowledge in finance, analytics, and ERP processes."
+  }
+},
 
 };
 
