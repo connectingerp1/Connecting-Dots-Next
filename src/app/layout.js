@@ -39,7 +39,7 @@ export const metadata = {
     google: "KRKFsO9AAW2a8qImif8Wj4uzzjmWGA0R6o7IZFJcmPo",
     other: {
       "ahrefs-site-verification":
-        "bd85164586efc81f600cca95d7265fdd022e26443eb85ab8a428bcf17b6b4c3a",
+        "61e8327be7878b001e67d79b48fa239923e438edb85df759becf82090ac89a7c",
     },
   },
   manifest: "/site.webmanifest",
