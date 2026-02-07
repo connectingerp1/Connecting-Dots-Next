@@ -11,7 +11,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 const CallAdvisorsStrip = () => {
   // --- Use the hardcoded number as the initial/default state ---
   // If you uncomment the fetch, this will be overridden when the data loads.
-  const [advisorsContact, setAdvisorsContact] = useState("9004008253");
+  const [advisorsContact, setAdvisorsContact] = useState("9004001938");
   const [location, setLocation] = useState("default");
 
 

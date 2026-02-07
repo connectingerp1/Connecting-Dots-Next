@@ -279,9 +279,31 @@ const Footer = () => {
                           alt="Mumbai Office"
                           className="text-base font-semibold text-[#3498db] m-0 mb-1.5 block text-decoration-none"
                         >
-                          Mumbai Office
+                          Mumbai Office 1
                         </a>
-                        <p className="m-0 text-sm leading-normal">
+                          <p className="m-0 text-sm leading-normal">
+                          Paradise Tower, next to MCDonalds, Thane West, Thane,
+                          Maharashtra 400601
+                        </p>
+                        <a
+                        href="tel:+919004001938"
+                        className="text-[#ecf0f1] no-underline text-sm transition-colors hover:text-[#3498db]"
+                      >
+                        +91 9004001938
+                      </a>
+
+                      <div className="my-3 border-b border-dashed border-white/10"></div>
+
+                      <a
+                          href="https://maps.app.goo.gl/i7W3baVVS1mDLmTJ9"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          alt="Mumbai Office"
+                          className="text-base font-semibold text-[#3498db] m-0 mb-1.5 block text-decoration-none"
+                        >
+                          Mumbai Office 2
+                        </a>
+                        <p className="m-0 text-sm leading-normal mt-2">
                           4th Floor, Ram Niwas, B-404, Gokhale Rd, near
                           McDonald's, Dada Patil Wadi, Naupada, Thane West, Thane,
                           Maharashtra 400602
