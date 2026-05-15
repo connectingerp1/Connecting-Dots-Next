@@ -5,6 +5,8 @@
     linear-gradient(180deg, #ffffff 0%, #f7faff 48%, #ffffff 100%),
     radial-gradient(circle at 12% 20%, rgba(0, 86, 210, 0.08), transparent 34%);
   overflow: hidden;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .tickerSection::before {

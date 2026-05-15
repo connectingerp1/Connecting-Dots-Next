@@ -3873,7 +3873,1027 @@ export const citySpecificMeta = {
       description: "Master SAP SuccessFactors Course in Matunga to gain knowledge in HR analytics, payroll automation, and employee management systems.",
     },
   },
-  "sap-ps": {
+
+
+  "sap-btp": {
+    "pune": {
+      title: "SAP BTP Course in Pune | Business Technology Platform",
+      description: "Join SAP BTP course in Pune covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "SAP BTP Training in Mumbai | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Mumbai. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best SAP BTP Course in Delhi | Practical Training",
+      description: "Master SAP BTP training in Delhi with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "SAP BTP Certification in Kolkata | Expert Classes",
+      description: "Enroll in SAP BTP classes in Kolkata and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "SAP BTP Course in Chennai | Business Technology Platform",
+      description: "Join SAP BTP course in Chennai covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "SAP BTP Training in Bangalore | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Bangalore. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best SAP BTP Course in Hyderabad | Practical Training",
+      description: "Master SAP BTP training in Hyderabad with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "SAP BTP Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in SAP BTP classes in Ahmedabad and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "SAP BTP Course in Jaipur | Business Technology Platform",
+      description: "Join SAP BTP course in Jaipur covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "SAP BTP Training in Lucknow | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Lucknow. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best SAP BTP Course in Kanpur | Practical Training",
+      description: "Master SAP BTP training in Kanpur with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "SAP BTP Certification in Nagpur | Expert Classes",
+      description: "Enroll in SAP BTP classes in Nagpur and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "SAP BTP Course in Patna | Business Technology Platform",
+      description: "Join SAP BTP course in Patna covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "SAP BTP Training in Indore | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Indore. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best SAP BTP Course in Bhopal | Practical Training",
+      description: "Master SAP BTP training in Bhopal with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "SAP BTP Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in SAP BTP classes in Visakhapatnam and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "SAP BTP Course in Vadodara | Business Technology Platform",
+      description: "Join SAP BTP course in Vadodara covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "SAP BTP Training in Ludhiana | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Ludhiana. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "agra": {
+      title: "Best SAP BTP Course in Agra | Practical Training",
+      description: "Master SAP BTP training in Agra with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "SAP BTP Certification in Nashik | Expert Classes",
+      description: "Enroll in SAP BTP classes in Nashik and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "SAP BTP Course in Rajkot | Business Technology Platform",
+      description: "Join SAP BTP course in Rajkot covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "SAP BTP Training in Varanasi | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Varanasi. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best SAP BTP Course in Kerala | Practical Training",
+      description: "Master SAP BTP training in Kerala with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "surat": {
+      title: "SAP BTP Certification in Surat | Expert Classes",
+      description: "Enroll in SAP BTP classes in Surat and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "SAP BTP Course in Dehradun | Business Technology Platform",
+      description: "Join SAP BTP course in Dehradun covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "SAP BTP Training in Madurai | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Madurai. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best SAP BTP Course in Mysore | Practical Training",
+      description: "Master SAP BTP training in Mysore with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "SAP BTP Certification in Pondicherry | Expert Classes",
+      description: "Enroll in SAP BTP classes in Pondicherry and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "SAP BTP Course in Ranchi | Business Technology Platform",
+      description: "Join SAP BTP course in Ranchi covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "SAP BTP Training in Coimbatore | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Coimbatore. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best SAP BTP Course in Chandigarh | Practical Training",
+      description: "Master SAP BTP training in Chandigarh with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "SAP BTP Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in SAP BTP classes in Bhubaneswar and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "SAP BTP Course in Tirupati | Business Technology Platform",
+      description: "Join SAP BTP course in Tirupati covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "SAP BTP Training in Vizag | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Vizag. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best SAP BTP Course in Trivandrum | Practical Training",
+      description: "Master SAP BTP training in Trivandrum with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "SAP BTP Certification in Jalandhar | Expert Classes",
+      description: "Enroll in SAP BTP classes in Jalandhar and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "SAP BTP Course in Mohali | Business Technology Platform",
+      description: "Join SAP BTP course in Mohali covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "SAP BTP Training in Raipur | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Raipur. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best SAP BTP Course in Cochin | Practical Training",
+      description: "Master SAP BTP training in Cochin with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "SAP BTP Certification in Mangalore | Expert Classes",
+      description: "Enroll in SAP BTP classes in Mangalore and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "SAP BTP Course in Katraj | Business Technology Platform",
+      description: "Join SAP BTP course in Katraj covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "SAP BTP Training in Pimpri Chinchwad | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Pimpri Chinchwad. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best SAP BTP Course in Shivaji Nagar | Practical Training",
+      description: "Master SAP BTP training in Shivaji Nagar with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "SAP BTP Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in SAP BTP classes in Koregaon Park and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "SAP BTP Course in Viman Nagar | Business Technology Platform",
+      description: "Join SAP BTP course in Viman Nagar covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "SAP BTP Training in Pimple Saudagar | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Pimple Saudagar. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "baner": {
+      title: "Best SAP BTP Course in Baner | Practical Training",
+      description: "Master SAP BTP training in Baner with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "SAP BTP Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in SAP BTP classes in Hinjewadi and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "SAP BTP Course in Wakad | Business Technology Platform",
+      description: "Join SAP BTP course in Wakad covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "SAP BTP Training in Kothrud | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Kothrud. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best SAP BTP Course in Hadapsar | Practical Training",
+      description: "Master SAP BTP training in Hadapsar with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "SAP BTP Certification in Aundh | Expert Classes",
+      description: "Enroll in SAP BTP classes in Aundh and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "SAP BTP Course in Navi Mumbai | Business Technology Platform",
+      description: "Join SAP BTP course in Navi Mumbai covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "SAP BTP Training in Thane | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Thane. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best SAP BTP Course in Kalyan | Practical Training",
+      description: "Master SAP BTP training in Kalyan with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "SAP BTP Certification in Bandra | Expert Classes",
+      description: "Enroll in SAP BTP classes in Bandra and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "SAP BTP Course in Andheri | Business Technology Platform",
+      description: "Join SAP BTP course in Andheri covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "SAP BTP Training in Powai | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Powai. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "worli": {
+      title: "Best SAP BTP Course in Worli | Practical Training",
+      description: "Master SAP BTP training in Worli with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "SAP BTP Certification in Chembur | Expert Classes",
+      description: "Enroll in SAP BTP classes in Chembur and prepare for SAP BTP Consultant roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "SAP BTP Course in Malad | Business Technology Platform",
+      description: "Join SAP BTP course in Malad covering BTP Foundation, Integration Suite, Extension Suite. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "SAP BTP Training in Vile Parle | Integration Suite Training",
+      description: "Learn SAP Business Technology Platform in Vile Parle. Master Integration Suite, Extension Suite, and cloud integration with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best SAP BTP Course in Matunga | Practical Training",
+      description: "Master SAP BTP training in Matunga with hands-on modules in BTP Foundation, Integration Suite, and app extensions. Build career-ready skills.",
+    },
+  },
+
+  "sap-ehs": {
+    "pune": {
+      title: "SAP EHS Course in Pune | Environment Health Safety",
+      description: "Join SAP EHS course in Pune covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "SAP EHS Training in Mumbai | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Mumbai. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best SAP EHS Course in Delhi | Practical Training",
+      description: "Master SAP EHS training in Delhi with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "SAP EHS Certification in Kolkata | Expert Classes",
+      description: "Enroll in SAP EHS classes in Kolkata and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "SAP EHS Course in Chennai | Environment Health Safety",
+      description: "Join SAP EHS course in Chennai covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "SAP EHS Training in Bangalore | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Bangalore. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best SAP EHS Course in Hyderabad | Practical Training",
+      description: "Master SAP EHS training in Hyderabad with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "SAP EHS Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in SAP EHS classes in Ahmedabad and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "SAP EHS Course in Jaipur | Environment Health Safety",
+      description: "Join SAP EHS course in Jaipur covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "SAP EHS Training in Lucknow | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Lucknow. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best SAP EHS Course in Kanpur | Practical Training",
+      description: "Master SAP EHS training in Kanpur with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "SAP EHS Certification in Nagpur | Expert Classes",
+      description: "Enroll in SAP EHS classes in Nagpur and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "SAP EHS Course in Patna | Environment Health Safety",
+      description: "Join SAP EHS course in Patna covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "SAP EHS Training in Indore | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Indore. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best SAP EHS Course in Bhopal | Practical Training",
+      description: "Master SAP EHS training in Bhopal with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "SAP EHS Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in SAP EHS classes in Visakhapatnam and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "SAP EHS Course in Vadodara | Environment Health Safety",
+      description: "Join SAP EHS course in Vadodara covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "SAP EHS Training in Ludhiana | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Ludhiana. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "agra": {
+      title: "Best SAP EHS Course in Agra | Practical Training",
+      description: "Master SAP EHS training in Agra with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "SAP EHS Certification in Nashik | Expert Classes",
+      description: "Enroll in SAP EHS classes in Nashik and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "SAP EHS Course in Rajkot | Environment Health Safety",
+      description: "Join SAP EHS course in Rajkot covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "SAP EHS Training in Varanasi | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Varanasi. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best SAP EHS Course in Kerala | Practical Training",
+      description: "Master SAP EHS training in Kerala with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "surat": {
+      title: "SAP EHS Certification in Surat | Expert Classes",
+      description: "Enroll in SAP EHS classes in Surat and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "SAP EHS Course in Dehradun | Environment Health Safety",
+      description: "Join SAP EHS course in Dehradun covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "SAP EHS Training in Madurai | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Madurai. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best SAP EHS Course in Mysore | Practical Training",
+      description: "Master SAP EHS training in Mysore with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "SAP EHS Certification in Pondicherry | Expert Classes",
+      description: "Enroll in SAP EHS classes in Pondicherry and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "SAP EHS Course in Ranchi | Environment Health Safety",
+      description: "Join SAP EHS course in Ranchi covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "SAP EHS Training in Coimbatore | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Coimbatore. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best SAP EHS Course in Chandigarh | Practical Training",
+      description: "Master SAP EHS training in Chandigarh with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "SAP EHS Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in SAP EHS classes in Bhubaneswar and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "SAP EHS Course in Tirupati | Environment Health Safety",
+      description: "Join SAP EHS course in Tirupati covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "SAP EHS Training in Vizag | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Vizag. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best SAP EHS Course in Trivandrum | Practical Training",
+      description: "Master SAP EHS training in Trivandrum with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "SAP EHS Certification in Jalandhar | Expert Classes",
+      description: "Enroll in SAP EHS classes in Jalandhar and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "SAP EHS Course in Mohali | Environment Health Safety",
+      description: "Join SAP EHS course in Mohali covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "SAP EHS Training in Raipur | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Raipur. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best SAP EHS Course in Cochin | Practical Training",
+      description: "Master SAP EHS training in Cochin with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "SAP EHS Certification in Mangalore | Expert Classes",
+      description: "Enroll in SAP EHS classes in Mangalore and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "SAP EHS Course in Katraj | Environment Health Safety",
+      description: "Join SAP EHS course in Katraj covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "SAP EHS Training in Pimpri Chinchwad | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Pimpri Chinchwad. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best SAP EHS Course in Shivaji Nagar | Practical Training",
+      description: "Master SAP EHS training in Shivaji Nagar with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "SAP EHS Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in SAP EHS classes in Koregaon Park and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "SAP EHS Course in Viman Nagar | Environment Health Safety",
+      description: "Join SAP EHS course in Viman Nagar covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "SAP EHS Training in Pimple Saudagar | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Pimple Saudagar. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "baner": {
+      title: "Best SAP EHS Course in Baner | Practical Training",
+      description: "Master SAP EHS training in Baner with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "SAP EHS Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in SAP EHS classes in Hinjewadi and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "SAP EHS Course in Wakad | Environment Health Safety",
+      description: "Join SAP EHS course in Wakad covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "SAP EHS Training in Kothrud | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Kothrud. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best SAP EHS Course in Hadapsar | Practical Training",
+      description: "Master SAP EHS training in Hadapsar with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "SAP EHS Certification in Aundh | Expert Classes",
+      description: "Enroll in SAP EHS classes in Aundh and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "SAP EHS Course in Navi Mumbai | Environment Health Safety",
+      description: "Join SAP EHS course in Navi Mumbai covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "SAP EHS Training in Thane | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Thane. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best SAP EHS Course in Kalyan | Practical Training",
+      description: "Master SAP EHS training in Kalyan with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "SAP EHS Certification in Bandra | Expert Classes",
+      description: "Enroll in SAP EHS classes in Bandra and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "SAP EHS Course in Andheri | Environment Health Safety",
+      description: "Join SAP EHS course in Andheri covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "SAP EHS Training in Powai | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Powai. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "worli": {
+      title: "Best SAP EHS Course in Worli | Practical Training",
+      description: "Master SAP EHS training in Worli with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "SAP EHS Certification in Chembur | Expert Classes",
+      description: "Enroll in SAP EHS classes in Chembur and prepare for SAP EHS Consultant roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "SAP EHS Course in Malad | Environment Health Safety",
+      description: "Join SAP EHS course in Malad covering Product Safety, Dangerous Goods, Incident Management. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "SAP EHS Training in Vile Parle | Compliance Training",
+      description: "Learn SAP Environment, Health and Safety in Vile Parle. Master Dangerous Goods, Incident Management, and compliance reporting with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best SAP EHS Course in Matunga | Practical Training",
+      description: "Master SAP EHS training in Matunga with hands-on modules in Product Safety, Dangerous Goods, and safety workflows. Build career-ready skills.",
+    },
+  },
+
+  "sap-grc": {
+    "pune": {
+      title: "SAP GRC Course in Pune | Governance Risk Compliance",
+      description: "Join SAP GRC course in Pune covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "SAP GRC Training in Mumbai | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Mumbai. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best SAP GRC Course in Delhi | Practical Training",
+      description: "Master SAP GRC training in Delhi with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "SAP GRC Certification in Kolkata | Expert Classes",
+      description: "Enroll in SAP GRC classes in Kolkata and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "SAP GRC Course in Chennai | Governance Risk Compliance",
+      description: "Join SAP GRC course in Chennai covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "SAP GRC Training in Bangalore | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Bangalore. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best SAP GRC Course in Hyderabad | Practical Training",
+      description: "Master SAP GRC training in Hyderabad with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "SAP GRC Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in SAP GRC classes in Ahmedabad and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "SAP GRC Course in Jaipur | Governance Risk Compliance",
+      description: "Join SAP GRC course in Jaipur covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "SAP GRC Training in Lucknow | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Lucknow. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best SAP GRC Course in Kanpur | Practical Training",
+      description: "Master SAP GRC training in Kanpur with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "SAP GRC Certification in Nagpur | Expert Classes",
+      description: "Enroll in SAP GRC classes in Nagpur and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "SAP GRC Course in Patna | Governance Risk Compliance",
+      description: "Join SAP GRC course in Patna covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "SAP GRC Training in Indore | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Indore. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best SAP GRC Course in Bhopal | Practical Training",
+      description: "Master SAP GRC training in Bhopal with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "SAP GRC Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in SAP GRC classes in Visakhapatnam and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "SAP GRC Course in Vadodara | Governance Risk Compliance",
+      description: "Join SAP GRC course in Vadodara covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "SAP GRC Training in Ludhiana | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Ludhiana. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "agra": {
+      title: "Best SAP GRC Course in Agra | Practical Training",
+      description: "Master SAP GRC training in Agra with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "SAP GRC Certification in Nashik | Expert Classes",
+      description: "Enroll in SAP GRC classes in Nashik and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "SAP GRC Course in Rajkot | Governance Risk Compliance",
+      description: "Join SAP GRC course in Rajkot covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "SAP GRC Training in Varanasi | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Varanasi. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best SAP GRC Course in Kerala | Practical Training",
+      description: "Master SAP GRC training in Kerala with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "surat": {
+      title: "SAP GRC Certification in Surat | Expert Classes",
+      description: "Enroll in SAP GRC classes in Surat and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "SAP GRC Course in Dehradun | Governance Risk Compliance",
+      description: "Join SAP GRC course in Dehradun covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "SAP GRC Training in Madurai | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Madurai. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best SAP GRC Course in Mysore | Practical Training",
+      description: "Master SAP GRC training in Mysore with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "SAP GRC Certification in Pondicherry | Expert Classes",
+      description: "Enroll in SAP GRC classes in Pondicherry and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "SAP GRC Course in Ranchi | Governance Risk Compliance",
+      description: "Join SAP GRC course in Ranchi covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "SAP GRC Training in Coimbatore | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Coimbatore. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best SAP GRC Course in Chandigarh | Practical Training",
+      description: "Master SAP GRC training in Chandigarh with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "SAP GRC Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in SAP GRC classes in Bhubaneswar and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "SAP GRC Course in Tirupati | Governance Risk Compliance",
+      description: "Join SAP GRC course in Tirupati covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "SAP GRC Training in Vizag | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Vizag. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best SAP GRC Course in Trivandrum | Practical Training",
+      description: "Master SAP GRC training in Trivandrum with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "SAP GRC Certification in Jalandhar | Expert Classes",
+      description: "Enroll in SAP GRC classes in Jalandhar and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "SAP GRC Course in Mohali | Governance Risk Compliance",
+      description: "Join SAP GRC course in Mohali covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "SAP GRC Training in Raipur | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Raipur. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best SAP GRC Course in Cochin | Practical Training",
+      description: "Master SAP GRC training in Cochin with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "SAP GRC Certification in Mangalore | Expert Classes",
+      description: "Enroll in SAP GRC classes in Mangalore and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "SAP GRC Course in Katraj | Governance Risk Compliance",
+      description: "Join SAP GRC course in Katraj covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "SAP GRC Training in Pimpri Chinchwad | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Pimpri Chinchwad. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best SAP GRC Course in Shivaji Nagar | Practical Training",
+      description: "Master SAP GRC training in Shivaji Nagar with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "SAP GRC Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in SAP GRC classes in Koregaon Park and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "SAP GRC Course in Viman Nagar | Governance Risk Compliance",
+      description: "Join SAP GRC course in Viman Nagar covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "SAP GRC Training in Pimple Saudagar | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Pimple Saudagar. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "baner": {
+      title: "Best SAP GRC Course in Baner | Practical Training",
+      description: "Master SAP GRC training in Baner with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "SAP GRC Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in SAP GRC classes in Hinjewadi and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "SAP GRC Course in Wakad | Governance Risk Compliance",
+      description: "Join SAP GRC course in Wakad covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "SAP GRC Training in Kothrud | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Kothrud. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best SAP GRC Course in Hadapsar | Practical Training",
+      description: "Master SAP GRC training in Hadapsar with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "SAP GRC Certification in Aundh | Expert Classes",
+      description: "Enroll in SAP GRC classes in Aundh and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "SAP GRC Course in Navi Mumbai | Governance Risk Compliance",
+      description: "Join SAP GRC course in Navi Mumbai covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "SAP GRC Training in Thane | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Thane. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best SAP GRC Course in Kalyan | Practical Training",
+      description: "Master SAP GRC training in Kalyan with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "SAP GRC Certification in Bandra | Expert Classes",
+      description: "Enroll in SAP GRC classes in Bandra and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "SAP GRC Course in Andheri | Governance Risk Compliance",
+      description: "Join SAP GRC course in Andheri covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "SAP GRC Training in Powai | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Powai. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "worli": {
+      title: "Best SAP GRC Course in Worli | Practical Training",
+      description: "Master SAP GRC training in Worli with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "SAP GRC Certification in Chembur | Expert Classes",
+      description: "Enroll in SAP GRC classes in Chembur and prepare for SAP GRC Consultant roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "SAP GRC Course in Malad | Governance Risk Compliance",
+      description: "Join SAP GRC course in Malad covering Access Control, Risk Analysis, EAM. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "SAP GRC Training in Vile Parle | Access Control Training",
+      description: "Learn SAP Governance, Risk and Compliance in Vile Parle. Master Risk Analysis, EAM, and audit reporting with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best SAP GRC Course in Matunga | Practical Training",
+      description: "Master SAP GRC training in Matunga with hands-on modules in Access Control, Risk Analysis, and risk controls. Build career-ready skills.",
+    },
+  },
+
+  "sap-ibp": {
+    "pune": {
+      title: "SAP IBP Course in Pune | Integrated Business Planning",
+      description: "Join SAP IBP course in Pune covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "SAP IBP Training in Mumbai | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Mumbai. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best SAP IBP Course in Delhi | Practical Training",
+      description: "Master SAP IBP training in Delhi with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "SAP IBP Certification in Kolkata | Expert Classes",
+      description: "Enroll in SAP IBP classes in Kolkata and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "SAP IBP Course in Chennai | Integrated Business Planning",
+      description: "Join SAP IBP course in Chennai covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "SAP IBP Training in Bangalore | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Bangalore. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best SAP IBP Course in Hyderabad | Practical Training",
+      description: "Master SAP IBP training in Hyderabad with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "SAP IBP Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in SAP IBP classes in Ahmedabad and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "SAP IBP Course in Jaipur | Integrated Business Planning",
+      description: "Join SAP IBP course in Jaipur covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "SAP IBP Training in Lucknow | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Lucknow. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best SAP IBP Course in Kanpur | Practical Training",
+      description: "Master SAP IBP training in Kanpur with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "SAP IBP Certification in Nagpur | Expert Classes",
+      description: "Enroll in SAP IBP classes in Nagpur and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "SAP IBP Course in Patna | Integrated Business Planning",
+      description: "Join SAP IBP course in Patna covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "SAP IBP Training in Indore | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Indore. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best SAP IBP Course in Bhopal | Practical Training",
+      description: "Master SAP IBP training in Bhopal with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "SAP IBP Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in SAP IBP classes in Visakhapatnam and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "SAP IBP Course in Vadodara | Integrated Business Planning",
+      description: "Join SAP IBP course in Vadodara covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "SAP IBP Training in Ludhiana | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Ludhiana. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "agra": {
+      title: "Best SAP IBP Course in Agra | Practical Training",
+      description: "Master SAP IBP training in Agra with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "SAP IBP Certification in Nashik | Expert Classes",
+      description: "Enroll in SAP IBP classes in Nashik and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "SAP IBP Course in Rajkot | Integrated Business Planning",
+      description: "Join SAP IBP course in Rajkot covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "SAP IBP Training in Varanasi | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Varanasi. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best SAP IBP Course in Kerala | Practical Training",
+      description: "Master SAP IBP training in Kerala with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "surat": {
+      title: "SAP IBP Certification in Surat | Expert Classes",
+      description: "Enroll in SAP IBP classes in Surat and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "SAP IBP Course in Dehradun | Integrated Business Planning",
+      description: "Join SAP IBP course in Dehradun covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "SAP IBP Training in Madurai | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Madurai. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best SAP IBP Course in Mysore | Practical Training",
+      description: "Master SAP IBP training in Mysore with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "SAP IBP Certification in Pondicherry | Expert Classes",
+      description: "Enroll in SAP IBP classes in Pondicherry and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "SAP IBP Course in Ranchi | Integrated Business Planning",
+      description: "Join SAP IBP course in Ranchi covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "SAP IBP Training in Coimbatore | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Coimbatore. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best SAP IBP Course in Chandigarh | Practical Training",
+      description: "Master SAP IBP training in Chandigarh with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "SAP IBP Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in SAP IBP classes in Bhubaneswar and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "SAP IBP Course in Tirupati | Integrated Business Planning",
+      description: "Join SAP IBP course in Tirupati covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "SAP IBP Training in Vizag | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Vizag. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best SAP IBP Course in Trivandrum | Practical Training",
+      description: "Master SAP IBP training in Trivandrum with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "SAP IBP Certification in Jalandhar | Expert Classes",
+      description: "Enroll in SAP IBP classes in Jalandhar and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "SAP IBP Course in Mohali | Integrated Business Planning",
+      description: "Join SAP IBP course in Mohali covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "SAP IBP Training in Raipur | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Raipur. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best SAP IBP Course in Cochin | Practical Training",
+      description: "Master SAP IBP training in Cochin with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "SAP IBP Certification in Mangalore | Expert Classes",
+      description: "Enroll in SAP IBP classes in Mangalore and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "SAP IBP Course in Katraj | Integrated Business Planning",
+      description: "Join SAP IBP course in Katraj covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "SAP IBP Training in Pimpri Chinchwad | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Pimpri Chinchwad. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best SAP IBP Course in Shivaji Nagar | Practical Training",
+      description: "Master SAP IBP training in Shivaji Nagar with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "SAP IBP Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in SAP IBP classes in Koregaon Park and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "SAP IBP Course in Viman Nagar | Integrated Business Planning",
+      description: "Join SAP IBP course in Viman Nagar covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "SAP IBP Training in Pimple Saudagar | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Pimple Saudagar. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "baner": {
+      title: "Best SAP IBP Course in Baner | Practical Training",
+      description: "Master SAP IBP training in Baner with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "SAP IBP Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in SAP IBP classes in Hinjewadi and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "SAP IBP Course in Wakad | Integrated Business Planning",
+      description: "Join SAP IBP course in Wakad covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "SAP IBP Training in Kothrud | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Kothrud. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best SAP IBP Course in Hadapsar | Practical Training",
+      description: "Master SAP IBP training in Hadapsar with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "SAP IBP Certification in Aundh | Expert Classes",
+      description: "Enroll in SAP IBP classes in Aundh and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "SAP IBP Course in Navi Mumbai | Integrated Business Planning",
+      description: "Join SAP IBP course in Navi Mumbai covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "SAP IBP Training in Thane | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Thane. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best SAP IBP Course in Kalyan | Practical Training",
+      description: "Master SAP IBP training in Kalyan with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "SAP IBP Certification in Bandra | Expert Classes",
+      description: "Enroll in SAP IBP classes in Bandra and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "SAP IBP Course in Andheri | Integrated Business Planning",
+      description: "Join SAP IBP course in Andheri covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "SAP IBP Training in Powai | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Powai. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "worli": {
+      title: "Best SAP IBP Course in Worli | Practical Training",
+      description: "Master SAP IBP training in Worli with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "SAP IBP Certification in Chembur | Expert Classes",
+      description: "Enroll in SAP IBP classes in Chembur and prepare for SAP IBP Consultant roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "SAP IBP Course in Malad | Integrated Business Planning",
+      description: "Join SAP IBP course in Malad covering Demand Planning, Supply Planning, S&OP. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "SAP IBP Training in Vile Parle | Demand Planning Training",
+      description: "Learn SAP Integrated Business Planning in Vile Parle. Master Supply Planning, S&OP, and forecasting with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best SAP IBP Course in Matunga | Practical Training",
+      description: "Master SAP IBP training in Matunga with hands-on modules in Demand Planning, Supply Planning, and planning models. Build career-ready skills.",
+    },
+  },  "sap-ps": {
     "pune": {
       title: "SAP PS Course in Pune | Learn Project Systems Skills",
       description: "Master SAP Project System Course in Pune to plan, monitor, and control projects effectively using SAP PS modules and integrated management tools.",
@@ -7181,7 +8201,1027 @@ export const citySpecificMeta = {
     }
   },
 
-  "salesforce": {
+
+
+  "aws": {
+    "pune": {
+      title: "AWS Course in Pune | Cloud Computing",
+      description: "Join AWS course in Pune covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "AWS Training in Mumbai | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Mumbai. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best AWS Course in Delhi | Practical Training",
+      description: "Master AWS training in Delhi with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "AWS Certification in Kolkata | Expert Classes",
+      description: "Enroll in AWS classes in Kolkata and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "AWS Course in Chennai | Cloud Computing",
+      description: "Join AWS course in Chennai covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "AWS Training in Bangalore | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Bangalore. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best AWS Course in Hyderabad | Practical Training",
+      description: "Master AWS training in Hyderabad with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "AWS Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in AWS classes in Ahmedabad and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "AWS Course in Jaipur | Cloud Computing",
+      description: "Join AWS course in Jaipur covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "AWS Training in Lucknow | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Lucknow. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best AWS Course in Kanpur | Practical Training",
+      description: "Master AWS training in Kanpur with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "AWS Certification in Nagpur | Expert Classes",
+      description: "Enroll in AWS classes in Nagpur and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "AWS Course in Patna | Cloud Computing",
+      description: "Join AWS course in Patna covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "AWS Training in Indore | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Indore. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best AWS Course in Bhopal | Practical Training",
+      description: "Master AWS training in Bhopal with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "AWS Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in AWS classes in Visakhapatnam and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "AWS Course in Vadodara | Cloud Computing",
+      description: "Join AWS course in Vadodara covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "AWS Training in Ludhiana | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Ludhiana. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "agra": {
+      title: "Best AWS Course in Agra | Practical Training",
+      description: "Master AWS training in Agra with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "AWS Certification in Nashik | Expert Classes",
+      description: "Enroll in AWS classes in Nashik and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "AWS Course in Rajkot | Cloud Computing",
+      description: "Join AWS course in Rajkot covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "AWS Training in Varanasi | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Varanasi. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best AWS Course in Kerala | Practical Training",
+      description: "Master AWS training in Kerala with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "surat": {
+      title: "AWS Certification in Surat | Expert Classes",
+      description: "Enroll in AWS classes in Surat and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "AWS Course in Dehradun | Cloud Computing",
+      description: "Join AWS course in Dehradun covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "AWS Training in Madurai | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Madurai. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best AWS Course in Mysore | Practical Training",
+      description: "Master AWS training in Mysore with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "AWS Certification in Pondicherry | Expert Classes",
+      description: "Enroll in AWS classes in Pondicherry and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "AWS Course in Ranchi | Cloud Computing",
+      description: "Join AWS course in Ranchi covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "AWS Training in Coimbatore | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Coimbatore. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best AWS Course in Chandigarh | Practical Training",
+      description: "Master AWS training in Chandigarh with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "AWS Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in AWS classes in Bhubaneswar and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "AWS Course in Tirupati | Cloud Computing",
+      description: "Join AWS course in Tirupati covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "AWS Training in Vizag | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Vizag. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best AWS Course in Trivandrum | Practical Training",
+      description: "Master AWS training in Trivandrum with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "AWS Certification in Jalandhar | Expert Classes",
+      description: "Enroll in AWS classes in Jalandhar and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "AWS Course in Mohali | Cloud Computing",
+      description: "Join AWS course in Mohali covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "AWS Training in Raipur | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Raipur. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best AWS Course in Cochin | Practical Training",
+      description: "Master AWS training in Cochin with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "AWS Certification in Mangalore | Expert Classes",
+      description: "Enroll in AWS classes in Mangalore and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "AWS Course in Katraj | Cloud Computing",
+      description: "Join AWS course in Katraj covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "AWS Training in Pimpri Chinchwad | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Pimpri Chinchwad. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best AWS Course in Shivaji Nagar | Practical Training",
+      description: "Master AWS training in Shivaji Nagar with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "AWS Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in AWS classes in Koregaon Park and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "AWS Course in Viman Nagar | Cloud Computing",
+      description: "Join AWS course in Viman Nagar covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "AWS Training in Pimple Saudagar | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Pimple Saudagar. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "baner": {
+      title: "Best AWS Course in Baner | Practical Training",
+      description: "Master AWS training in Baner with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "AWS Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in AWS classes in Hinjewadi and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "AWS Course in Wakad | Cloud Computing",
+      description: "Join AWS course in Wakad covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "AWS Training in Kothrud | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Kothrud. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best AWS Course in Hadapsar | Practical Training",
+      description: "Master AWS training in Hadapsar with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "AWS Certification in Aundh | Expert Classes",
+      description: "Enroll in AWS classes in Aundh and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "AWS Course in Navi Mumbai | Cloud Computing",
+      description: "Join AWS course in Navi Mumbai covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "AWS Training in Thane | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Thane. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best AWS Course in Kalyan | Practical Training",
+      description: "Master AWS training in Kalyan with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "AWS Certification in Bandra | Expert Classes",
+      description: "Enroll in AWS classes in Bandra and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "AWS Course in Andheri | Cloud Computing",
+      description: "Join AWS course in Andheri covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "AWS Training in Powai | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Powai. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "worli": {
+      title: "Best AWS Course in Worli | Practical Training",
+      description: "Master AWS training in Worli with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "AWS Certification in Chembur | Expert Classes",
+      description: "Enroll in AWS classes in Chembur and prepare for AWS Cloud Engineer roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "AWS Course in Malad | Cloud Computing",
+      description: "Join AWS course in Malad covering Cloud Foundations, EC2, S3. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "AWS Training in Vile Parle | Solutions Architect Training",
+      description: "Learn Amazon Web Services Cloud Computing in Vile Parle. Master EC2, S3, and IAM with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best AWS Course in Matunga | Practical Training",
+      description: "Master AWS training in Matunga with hands-on modules in Cloud Foundations, EC2, and RDS. Build career-ready skills.",
+    },
+  },
+
+  "azure": {
+    "pune": {
+      title: "Azure Course in Pune | Cloud Computing",
+      description: "Join Azure course in Pune covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "Azure Training in Mumbai | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Mumbai. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best Azure Course in Delhi | Practical Training",
+      description: "Master Azure training in Delhi with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "Azure Certification in Kolkata | Expert Classes",
+      description: "Enroll in Azure classes in Kolkata and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "Azure Course in Chennai | Cloud Computing",
+      description: "Join Azure course in Chennai covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "Azure Training in Bangalore | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Bangalore. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best Azure Course in Hyderabad | Practical Training",
+      description: "Master Azure training in Hyderabad with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "Azure Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in Azure classes in Ahmedabad and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "Azure Course in Jaipur | Cloud Computing",
+      description: "Join Azure course in Jaipur covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "Azure Training in Lucknow | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Lucknow. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best Azure Course in Kanpur | Practical Training",
+      description: "Master Azure training in Kanpur with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "Azure Certification in Nagpur | Expert Classes",
+      description: "Enroll in Azure classes in Nagpur and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "Azure Course in Patna | Cloud Computing",
+      description: "Join Azure course in Patna covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "Azure Training in Indore | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Indore. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best Azure Course in Bhopal | Practical Training",
+      description: "Master Azure training in Bhopal with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "Azure Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in Azure classes in Visakhapatnam and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "Azure Course in Vadodara | Cloud Computing",
+      description: "Join Azure course in Vadodara covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "Azure Training in Ludhiana | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Ludhiana. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "agra": {
+      title: "Best Azure Course in Agra | Practical Training",
+      description: "Master Azure training in Agra with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "Azure Certification in Nashik | Expert Classes",
+      description: "Enroll in Azure classes in Nashik and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "Azure Course in Rajkot | Cloud Computing",
+      description: "Join Azure course in Rajkot covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "Azure Training in Varanasi | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Varanasi. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best Azure Course in Kerala | Practical Training",
+      description: "Master Azure training in Kerala with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "surat": {
+      title: "Azure Certification in Surat | Expert Classes",
+      description: "Enroll in Azure classes in Surat and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "Azure Course in Dehradun | Cloud Computing",
+      description: "Join Azure course in Dehradun covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "Azure Training in Madurai | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Madurai. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best Azure Course in Mysore | Practical Training",
+      description: "Master Azure training in Mysore with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "Azure Certification in Pondicherry | Expert Classes",
+      description: "Enroll in Azure classes in Pondicherry and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "Azure Course in Ranchi | Cloud Computing",
+      description: "Join Azure course in Ranchi covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "Azure Training in Coimbatore | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Coimbatore. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best Azure Course in Chandigarh | Practical Training",
+      description: "Master Azure training in Chandigarh with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "Azure Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in Azure classes in Bhubaneswar and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "Azure Course in Tirupati | Cloud Computing",
+      description: "Join Azure course in Tirupati covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "Azure Training in Vizag | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Vizag. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best Azure Course in Trivandrum | Practical Training",
+      description: "Master Azure training in Trivandrum with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "Azure Certification in Jalandhar | Expert Classes",
+      description: "Enroll in Azure classes in Jalandhar and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "Azure Course in Mohali | Cloud Computing",
+      description: "Join Azure course in Mohali covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "Azure Training in Raipur | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Raipur. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best Azure Course in Cochin | Practical Training",
+      description: "Master Azure training in Cochin with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "Azure Certification in Mangalore | Expert Classes",
+      description: "Enroll in Azure classes in Mangalore and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "Azure Course in Katraj | Cloud Computing",
+      description: "Join Azure course in Katraj covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "Azure Training in Pimpri Chinchwad | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Pimpri Chinchwad. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best Azure Course in Shivaji Nagar | Practical Training",
+      description: "Master Azure training in Shivaji Nagar with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "Azure Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in Azure classes in Koregaon Park and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "Azure Course in Viman Nagar | Cloud Computing",
+      description: "Join Azure course in Viman Nagar covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "Azure Training in Pimple Saudagar | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Pimple Saudagar. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "baner": {
+      title: "Best Azure Course in Baner | Practical Training",
+      description: "Master Azure training in Baner with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "Azure Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in Azure classes in Hinjewadi and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "Azure Course in Wakad | Cloud Computing",
+      description: "Join Azure course in Wakad covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "Azure Training in Kothrud | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Kothrud. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best Azure Course in Hadapsar | Practical Training",
+      description: "Master Azure training in Hadapsar with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "Azure Certification in Aundh | Expert Classes",
+      description: "Enroll in Azure classes in Aundh and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "Azure Course in Navi Mumbai | Cloud Computing",
+      description: "Join Azure course in Navi Mumbai covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "Azure Training in Thane | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Thane. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best Azure Course in Kalyan | Practical Training",
+      description: "Master Azure training in Kalyan with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "Azure Certification in Bandra | Expert Classes",
+      description: "Enroll in Azure classes in Bandra and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "Azure Course in Andheri | Cloud Computing",
+      description: "Join Azure course in Andheri covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "Azure Training in Powai | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Powai. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "worli": {
+      title: "Best Azure Course in Worli | Practical Training",
+      description: "Master Azure training in Worli with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "Azure Certification in Chembur | Expert Classes",
+      description: "Enroll in Azure classes in Chembur and prepare for Azure Administrator roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "Azure Course in Malad | Cloud Computing",
+      description: "Join Azure course in Malad covering Azure Fundamentals, Virtual Machines, Storage Accounts. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "Azure Training in Vile Parle | Administrator Training",
+      description: "Learn Microsoft Azure Cloud Computing in Vile Parle. Master Virtual Machines, Storage Accounts, and Entra ID with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best Azure Course in Matunga | Practical Training",
+      description: "Master Azure training in Matunga with hands-on modules in Azure Fundamentals, Virtual Machines, and Azure Monitor. Build career-ready skills.",
+    },
+  },
+
+  "devops": {
+    "pune": {
+      title: "DevOps Course in Pune | CI/CD Training",
+      description: "Join DevOps course in Pune covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "DevOps Training in Mumbai | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Mumbai. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best DevOps Course in Delhi | Practical Training",
+      description: "Master DevOps training in Delhi with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "DevOps Certification in Kolkata | Expert Classes",
+      description: "Enroll in DevOps classes in Kolkata and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "DevOps Course in Chennai | CI/CD Training",
+      description: "Join DevOps course in Chennai covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "DevOps Training in Bangalore | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Bangalore. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best DevOps Course in Hyderabad | Practical Training",
+      description: "Master DevOps training in Hyderabad with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "DevOps Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in DevOps classes in Ahmedabad and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "DevOps Course in Jaipur | CI/CD Training",
+      description: "Join DevOps course in Jaipur covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "DevOps Training in Lucknow | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Lucknow. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best DevOps Course in Kanpur | Practical Training",
+      description: "Master DevOps training in Kanpur with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "DevOps Certification in Nagpur | Expert Classes",
+      description: "Enroll in DevOps classes in Nagpur and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "DevOps Course in Patna | CI/CD Training",
+      description: "Join DevOps course in Patna covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "DevOps Training in Indore | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Indore. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best DevOps Course in Bhopal | Practical Training",
+      description: "Master DevOps training in Bhopal with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "DevOps Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in DevOps classes in Visakhapatnam and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "DevOps Course in Vadodara | CI/CD Training",
+      description: "Join DevOps course in Vadodara covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "DevOps Training in Ludhiana | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Ludhiana. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "agra": {
+      title: "Best DevOps Course in Agra | Practical Training",
+      description: "Master DevOps training in Agra with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "DevOps Certification in Nashik | Expert Classes",
+      description: "Enroll in DevOps classes in Nashik and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "DevOps Course in Rajkot | CI/CD Training",
+      description: "Join DevOps course in Rajkot covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "DevOps Training in Varanasi | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Varanasi. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best DevOps Course in Kerala | Practical Training",
+      description: "Master DevOps training in Kerala with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "surat": {
+      title: "DevOps Certification in Surat | Expert Classes",
+      description: "Enroll in DevOps classes in Surat and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "DevOps Course in Dehradun | CI/CD Training",
+      description: "Join DevOps course in Dehradun covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "DevOps Training in Madurai | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Madurai. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best DevOps Course in Mysore | Practical Training",
+      description: "Master DevOps training in Mysore with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "DevOps Certification in Pondicherry | Expert Classes",
+      description: "Enroll in DevOps classes in Pondicherry and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "DevOps Course in Ranchi | CI/CD Training",
+      description: "Join DevOps course in Ranchi covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "DevOps Training in Coimbatore | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Coimbatore. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best DevOps Course in Chandigarh | Practical Training",
+      description: "Master DevOps training in Chandigarh with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "DevOps Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in DevOps classes in Bhubaneswar and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "DevOps Course in Tirupati | CI/CD Training",
+      description: "Join DevOps course in Tirupati covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "DevOps Training in Vizag | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Vizag. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best DevOps Course in Trivandrum | Practical Training",
+      description: "Master DevOps training in Trivandrum with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "DevOps Certification in Jalandhar | Expert Classes",
+      description: "Enroll in DevOps classes in Jalandhar and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "DevOps Course in Mohali | CI/CD Training",
+      description: "Join DevOps course in Mohali covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "DevOps Training in Raipur | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Raipur. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best DevOps Course in Cochin | Practical Training",
+      description: "Master DevOps training in Cochin with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "DevOps Certification in Mangalore | Expert Classes",
+      description: "Enroll in DevOps classes in Mangalore and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "DevOps Course in Katraj | CI/CD Training",
+      description: "Join DevOps course in Katraj covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "DevOps Training in Pimpri Chinchwad | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Pimpri Chinchwad. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best DevOps Course in Shivaji Nagar | Practical Training",
+      description: "Master DevOps training in Shivaji Nagar with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "DevOps Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in DevOps classes in Koregaon Park and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "DevOps Course in Viman Nagar | CI/CD Training",
+      description: "Join DevOps course in Viman Nagar covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "DevOps Training in Pimple Saudagar | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Pimple Saudagar. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "baner": {
+      title: "Best DevOps Course in Baner | Practical Training",
+      description: "Master DevOps training in Baner with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "DevOps Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in DevOps classes in Hinjewadi and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "DevOps Course in Wakad | CI/CD Training",
+      description: "Join DevOps course in Wakad covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "DevOps Training in Kothrud | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Kothrud. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best DevOps Course in Hadapsar | Practical Training",
+      description: "Master DevOps training in Hadapsar with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "DevOps Certification in Aundh | Expert Classes",
+      description: "Enroll in DevOps classes in Aundh and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "DevOps Course in Navi Mumbai | CI/CD Training",
+      description: "Join DevOps course in Navi Mumbai covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "DevOps Training in Thane | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Thane. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best DevOps Course in Kalyan | Practical Training",
+      description: "Master DevOps training in Kalyan with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "DevOps Certification in Bandra | Expert Classes",
+      description: "Enroll in DevOps classes in Bandra and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "DevOps Course in Andheri | CI/CD Training",
+      description: "Join DevOps course in Andheri covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "DevOps Training in Powai | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Powai. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "worli": {
+      title: "Best DevOps Course in Worli | Practical Training",
+      description: "Master DevOps training in Worli with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "DevOps Certification in Chembur | Expert Classes",
+      description: "Enroll in DevOps classes in Chembur and prepare for DevOps Engineer roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "DevOps Course in Malad | CI/CD Training",
+      description: "Join DevOps course in Malad covering Linux and Git, Docker, Kubernetes. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "DevOps Training in Vile Parle | Engineering Course",
+      description: "Learn DevOps Engineering and CI/CD in Vile Parle. Master Docker, Kubernetes, and Terraform with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best DevOps Course in Matunga | Practical Training",
+      description: "Master DevOps training in Matunga with hands-on modules in Linux and Git, Docker, and CI/CD. Build career-ready skills.",
+    },
+  },
+
+  "ai-ml": {
+    "pune": {
+      title: "AIML Course in Pune | AI ML Course",
+      description: "Join AIML course in Pune covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "mumbai": {
+      title: "AIML Training in Mumbai | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Mumbai. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "delhi": {
+      title: "Best AIML Course in Delhi | Practical Training",
+      description: "Master AIML training in Delhi with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "kolkata": {
+      title: "AIML Certification in Kolkata | Expert Classes",
+      description: "Enroll in AIML classes in Kolkata and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "chennai": {
+      title: "AIML Course in Chennai | AI ML Course",
+      description: "Join AIML course in Chennai covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "bangalore": {
+      title: "AIML Training in Bangalore | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Bangalore. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "hyderabad": {
+      title: "Best AIML Course in Hyderabad | Practical Training",
+      description: "Master AIML training in Hyderabad with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "ahmedabad": {
+      title: "AIML Certification in Ahmedabad | Expert Classes",
+      description: "Enroll in AIML classes in Ahmedabad and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "jaipur": {
+      title: "AIML Course in Jaipur | AI ML Course",
+      description: "Join AIML course in Jaipur covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "lucknow": {
+      title: "AIML Training in Lucknow | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Lucknow. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "kanpur": {
+      title: "Best AIML Course in Kanpur | Practical Training",
+      description: "Master AIML training in Kanpur with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "nagpur": {
+      title: "AIML Certification in Nagpur | Expert Classes",
+      description: "Enroll in AIML classes in Nagpur and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "patna": {
+      title: "AIML Course in Patna | AI ML Course",
+      description: "Join AIML course in Patna covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "indore": {
+      title: "AIML Training in Indore | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Indore. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "bhopal": {
+      title: "Best AIML Course in Bhopal | Practical Training",
+      description: "Master AIML training in Bhopal with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "visakhapatnam": {
+      title: "AIML Certification in Visakhapatnam | Expert Classes",
+      description: "Enroll in AIML classes in Visakhapatnam and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "vadodara": {
+      title: "AIML Course in Vadodara | AI ML Course",
+      description: "Join AIML course in Vadodara covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "ludhiana": {
+      title: "AIML Training in Ludhiana | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Ludhiana. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "agra": {
+      title: "Best AIML Course in Agra | Practical Training",
+      description: "Master AIML training in Agra with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "nashik": {
+      title: "AIML Certification in Nashik | Expert Classes",
+      description: "Enroll in AIML classes in Nashik and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "rajkot": {
+      title: "AIML Course in Rajkot | AI ML Course",
+      description: "Join AIML course in Rajkot covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "varanasi": {
+      title: "AIML Training in Varanasi | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Varanasi. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "kerala": {
+      title: "Best AIML Course in Kerala | Practical Training",
+      description: "Master AIML training in Kerala with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "surat": {
+      title: "AIML Certification in Surat | Expert Classes",
+      description: "Enroll in AIML classes in Surat and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "dehradun": {
+      title: "AIML Course in Dehradun | AI ML Course",
+      description: "Join AIML course in Dehradun covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "madurai": {
+      title: "AIML Training in Madurai | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Madurai. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "mysore": {
+      title: "Best AIML Course in Mysore | Practical Training",
+      description: "Master AIML training in Mysore with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "pondicherry": {
+      title: "AIML Certification in Pondicherry | Expert Classes",
+      description: "Enroll in AIML classes in Pondicherry and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "ranchi": {
+      title: "AIML Course in Ranchi | AI ML Course",
+      description: "Join AIML course in Ranchi covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "coimbatore": {
+      title: "AIML Training in Coimbatore | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Coimbatore. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "chandigarh": {
+      title: "Best AIML Course in Chandigarh | Practical Training",
+      description: "Master AIML training in Chandigarh with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "bhubaneswar": {
+      title: "AIML Certification in Bhubaneswar | Expert Classes",
+      description: "Enroll in AIML classes in Bhubaneswar and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "tirupati": {
+      title: "AIML Course in Tirupati | AI ML Course",
+      description: "Join AIML course in Tirupati covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "vizag": {
+      title: "AIML Training in Vizag | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Vizag. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "trivandrum": {
+      title: "Best AIML Course in Trivandrum | Practical Training",
+      description: "Master AIML training in Trivandrum with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "jalandhar": {
+      title: "AIML Certification in Jalandhar | Expert Classes",
+      description: "Enroll in AIML classes in Jalandhar and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "mohali": {
+      title: "AIML Course in Mohali | AI ML Course",
+      description: "Join AIML course in Mohali covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "raipur": {
+      title: "AIML Training in Raipur | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Raipur. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "cochin": {
+      title: "Best AIML Course in Cochin | Practical Training",
+      description: "Master AIML training in Cochin with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "mangalore": {
+      title: "AIML Certification in Mangalore | Expert Classes",
+      description: "Enroll in AIML classes in Mangalore and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "katraj": {
+      title: "AIML Course in Katraj | AI ML Course",
+      description: "Join AIML course in Katraj covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "pimpri-chinchwad": {
+      title: "AIML Training in Pimpri Chinchwad | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Pimpri Chinchwad. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "shivaji-nagar": {
+      title: "Best AIML Course in Shivaji Nagar | Practical Training",
+      description: "Master AIML training in Shivaji Nagar with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "koregaon-park": {
+      title: "AIML Certification in Koregaon Park | Expert Classes",
+      description: "Enroll in AIML classes in Koregaon Park and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "viman-nagar": {
+      title: "AIML Course in Viman Nagar | AI ML Course",
+      description: "Join AIML course in Viman Nagar covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "pimple-saudagar": {
+      title: "AIML Training in Pimple Saudagar | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Pimple Saudagar. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "baner": {
+      title: "Best AIML Course in Baner | Practical Training",
+      description: "Master AIML training in Baner with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "hinjewadi": {
+      title: "AIML Certification in Hinjewadi | Expert Classes",
+      description: "Enroll in AIML classes in Hinjewadi and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "wakad": {
+      title: "AIML Course in Wakad | AI ML Course",
+      description: "Join AIML course in Wakad covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "kothrud": {
+      title: "AIML Training in Kothrud | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Kothrud. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "hadapsar": {
+      title: "Best AIML Course in Hadapsar | Practical Training",
+      description: "Master AIML training in Hadapsar with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "aundh": {
+      title: "AIML Certification in Aundh | Expert Classes",
+      description: "Enroll in AIML classes in Aundh and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "navi-mumbai": {
+      title: "AIML Course in Navi Mumbai | AI ML Course",
+      description: "Join AIML course in Navi Mumbai covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "thane": {
+      title: "AIML Training in Thane | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Thane. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "kalyan": {
+      title: "Best AIML Course in Kalyan | Practical Training",
+      description: "Master AIML training in Kalyan with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "bandra": {
+      title: "AIML Certification in Bandra | Expert Classes",
+      description: "Enroll in AIML classes in Bandra and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "andheri": {
+      title: "AIML Course in Andheri | AI ML Course",
+      description: "Join AIML course in Andheri covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "powai": {
+      title: "AIML Training in Powai | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Powai. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "worli": {
+      title: "Best AIML Course in Worli | Practical Training",
+      description: "Master AIML training in Worli with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+    "chembur": {
+      title: "AIML Certification in Chembur | Expert Classes",
+      description: "Enroll in AIML classes in Chembur and prepare for AI ML Engineer roles with certification guidance and interview support.",
+    },
+    "malad": {
+      title: "AIML Course in Malad | AI ML Course",
+      description: "Join AIML course in Malad covering Python for AI, Statistics, Machine Learning. Get practical training, projects, and placement support.",
+    },
+    "vile-parle": {
+      title: "AIML Training in Vile Parle | Machine Learning Training",
+      description: "Learn Artificial Intelligence and Machine Learning in Vile Parle. Master Statistics, Machine Learning, and NLP with expert-led classes.",
+    },
+    "matunga": {
+      title: "Best AIML Course in Matunga | Practical Training",
+      description: "Master AIML training in Matunga with hands-on modules in Python for AI, Statistics, and model evaluation. Build career-ready skills.",
+    },
+  },  "salesforce": {
     "pune": {
       "title": "Salesforce Training in Pune | CRM Certification",
       "description": "Master Salesforce CRM with hands on training in Pune. Learn admin development, and integration skills. Industry recognized certification included and more."

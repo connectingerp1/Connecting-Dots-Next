@@ -3,10 +3,12 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
   width: 100%;
-  max-width: 100%;          /* let it fill viewport edge to edge */
+  max-width: 1800px;
   margin: auto;
   text-align: center;
   overflow: hidden;
+  isolation: isolate;        /* creates new stacking context */
+  z-index: 1;                /* sits above any bleed from neighbors */
 }
 
 .t2p > div {              /* the "container mx-auto px-4" div */
