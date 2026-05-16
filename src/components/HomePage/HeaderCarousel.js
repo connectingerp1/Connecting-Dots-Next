@@ -1,15 +1,24 @@
 "use client";
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import dynamic from 'next/dynamic';
-import CareerHeroSlide from './HeaderCarousel1';
 import HeaderCarousel3 from "./HeaderCarousel2";
-import QuizComponent from "./HeaderCarousel3";
+
+const CareerHeroSlide = dynamic(() => import("./HeaderCarousel1"), {
+  ssr: false,
+  loading: () => null,
+});
+
+const QuizComponent = dynamic(() => import("./HeaderCarousel3"), {
+  ssr: false,
+  loading: () => null,
+});
 
 // Dynamically import Btnform with SSR disabled
 const Btnform = dynamic(() => import('./Btnform'), { ssr: false });
 
 const HeaderCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mountedSlides, setMountedSlides] = useState(() => new Set([0]));
   const [quizReady, setQuizReady] = useState(false);
   const [showForm, setShowForm] = useState(false);
 
@@ -24,6 +33,13 @@ const HeaderCarousel = () => {
   const SLIDE_COUNT = 3;
  
   useEffect(() => {
+    setMountedSlides((prev) => {
+      if (prev.has(currentSlide)) return prev;
+      const next = new Set(prev);
+      next.add(currentSlide);
+      return next;
+    });
+
     const currentTiming = currentSlide === 2 ? 40000 : 20000;
  
     if (currentSlide === 2 && !quizReady) {
@@ -67,9 +83,11 @@ const HeaderCarousel = () => {
             currentSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
           }`}
         >
-          <div className="w-full h-full">
-            <CareerHeroSlide onOpenForm={toggleForm} onReady={handleReady} />
-          </div>
+          {mountedSlides.has(1) && (
+            <div className="w-full h-full">
+              <CareerHeroSlide onOpenForm={toggleForm} onReady={handleReady} />
+            </div>
+          )}
         </div>
 
         <div
@@ -77,9 +95,11 @@ const HeaderCarousel = () => {
             currentSlide === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
           }`}
         >
-          <div className="w-full h-full">
-            <QuizComponent onReady={handleReady} />
-          </div>
+          {mountedSlides.has(2) && (
+            <div className="w-full h-full">
+              <QuizComponent onReady={handleReady} />
+            </div>
+          )}
         </div>
         
         {/* ✅ FIXED: Better positioned dots for mobile */}

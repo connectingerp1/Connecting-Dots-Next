@@ -66,7 +66,7 @@ const nextConfig = {
   // ✅ PERFORMANCE: Enable compression and hide X-Powered-By header
   compress: true,
   poweredByHeader: false,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
 
   // ✅ PERFORMANCE: Headers for optimal caching and security
   async headers() {

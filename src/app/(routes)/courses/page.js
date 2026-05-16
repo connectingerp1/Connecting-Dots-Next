@@ -474,7 +474,7 @@ const BlogPage = () => {
                 {filteredBlogs.map((blog, index) => (
                   <div 
                     key={`${blog.id}-${index}`}
-                    className="relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[0.96]"
+                    className="relative transition-all duration-300 ease-in-out hover:scale-[0.96]"
                   >
                     <Card
                       href={`/blogs/${blog.category.toLowerCase()}/${blog.slug}`}
