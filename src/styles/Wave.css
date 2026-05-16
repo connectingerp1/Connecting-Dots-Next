@@ -1,35 +1,51 @@
+/* Wave.css */
+
 .wave12-section {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 70px; /* Adjust the height as needed */
-  overflow: hidden; /* Ensure no overflow */
+  height: 80px;
+  overflow: hidden;
   max-width: 1800px;
   margin: 0 auto;
   width: 100%;
+  background-color: white;
 }
 
 .wave-container {
   position: absolute;
-  bottom: 0; /* Position at the bottom */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Adjust the height to fill the container */
+  height: 100%;
   overflow: hidden;
-  max-width: 1800px;
-  margin: 0 auto;
   z-index: 0;
-  /* background: linear-gradient(to right, #DFF9FE, #DFF9FE,#DFF9FE); /* Set the background color to match the desired color */
   background-color: white;
 }
 
 .static-wave {
   display: block;
-  width: 100%;
+  width: 200%;
   height: 100%;
+  animation: waveLoop 10s linear infinite;
+  transform-origin: left center;
+  will-change: transform;
 }
+
+@keyframes waveLoop {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .static-wave {
+    animation: none;
+  }
+}
+
+/* ── Stat overlay styles ── */
 
 .stats-content {
   position: relative;
