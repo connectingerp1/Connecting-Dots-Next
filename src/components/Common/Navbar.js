@@ -893,7 +893,7 @@ const Header = () => {
                 >
                   <AnimatedLogo className={styles.sidebarLogo} />
                   <Image
-                    src="/Navbar/logo.webp"
+                    src="https://res.cloudinary.com/df65lfym1/image/upload/v1778307259/logo_rju9sa.webp"
                     alt="Connecting Dots ERP Logo"
                     width={130}
                     height={100}

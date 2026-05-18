@@ -29,7 +29,7 @@ const rubik = Rubik({
 });
 
 // --- Constants ---
-const GTM_ID = "GTM-MB68QM2V";
+const GTM_ID = "GTM-TRMNSXVG";
 const FB_PIXEL_ID = "3414178115554916";
 const AHREFS_KEY = "4r3vxTcyxECWaXnhKBGH5g";
 

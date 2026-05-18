@@ -5,6 +5,24 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import styles from "@/styles/PopupForm.module.css";
 
+const popupCourseImage =
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_480,h_600/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp";
+const popupCourseImageSrcSet = [
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_320,h_400/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp 320w",
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_480,h_600/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp 480w",
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_640,h_800/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp 640w",
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_880,h_1100/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp 880w",
+].join(", ");
+
+const popupLogo =
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_42,h_42/v1778307122/Connecting_Logo_cxqagq.avif";
+const popupLogoSrcSet = [
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_28,h_28/v1778307122/Connecting_Logo_cxqagq.avif 28w",
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_42,h_42/v1778307122/Connecting_Logo_cxqagq.avif 42w",
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_64,h_64/v1778307122/Connecting_Logo_cxqagq.avif 64w",
+  "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_84,h_84/v1778307122/Connecting_Logo_cxqagq.avif 84w",
+].join(", ");
+
 const PopupForm = ({
   onSubmitData,
   open,
@@ -826,9 +844,15 @@ const PopupForm = ({
             {/* LEFT SIDE — Decorative Image Panel */}
             <div className={styles.imageContainer}>
               <img
-                src="https://res.cloudinary.com/df65lfym1/image/upload/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp"
+                src={popupCourseImage}
+                srcSet={popupCourseImageSrcSet}
+                sizes="(max-width: 480px) calc(100vw - 32px), (max-width: 1024px) 326px, 434px"
+                width="434"
+                height="542"
                 alt="Connecting Dots ERP Courses"
                 className={styles.popupImage}
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -870,9 +894,15 @@ const PopupForm = ({
 
               <div className={styles.headerContainer}>
                 <img
-                  src="https://res.cloudinary.com/df65lfym1/image/upload/v1778307122/Connecting_Logo_cxqagq.avif"
+                  src={popupLogo}
+                  srcSet={popupLogoSrcSet}
+                  sizes="(max-width: 480px) 28px, (max-width: 1024px) 30px, (min-width: 1280px) 42px, 36px"
+                  width="42"
+                  height="42"
                   alt="Connecting Dots ERP Logo"
                   className={styles.logo}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <h2>Register Now!</h2>
               </div>
