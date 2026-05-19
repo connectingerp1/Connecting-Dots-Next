@@ -13,3 +13,19 @@ Partytown lib copied to: D:\Project\Connecting-dots\frontend\public\~partytown
 
  ✓ Starting...
  ✓ Ready in 2.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 7.1s (2161 modules)
+ ○ Compiling /_error ...
+ GET / 500 in 12888ms
+ ✓ Compiled /_error in 8.6s (2525 modules)
+ GET / 500 in 3082ms
+ GET / 500 in 453ms
+ GET / 500 in 2251ms
+ GET / 500 in 456ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1238ms (1379 modules)
+ GET /favicon.ico 500 in 2038ms
+ GET / 500 in 433ms
+ GET / 500 in 145ms
+ GET /favicon.ico 500 in 125ms
+[?25h
