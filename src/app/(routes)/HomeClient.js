@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import HeaderCarousel from "@/components/HomePage/HeaderCarousel";
+import Achievements from "@/components/HomePage/Achievements";
 
 const Marquee = dynamic(() => import("@/components/HomePage/Marquee2"), {
   ssr: false,
@@ -46,14 +47,6 @@ const OurStats = dynamic(() => import("@/components/HomePage/OurStats"), {
   ssr: false,
   loading: () => <div style={{ minHeight: "250px" }} />,
 });
-
-const Achievements = dynamic(
-  () => import("@/components/HomePage/Achievements"),
-  {
-    ssr: false,
-    loading: () => <div style={{ minHeight: "300px" }} />,
-  }
-);
 
 const FeedbackAndReviews = dynamic(
   () => import("@/components/HomePage/FeedbackandReviews"),
@@ -157,14 +150,12 @@ export default function HomeClient() {
         <LazySection fallback={<div style={{ height: "190px", background: "#f8f9fb" }} />}>
           <PlacedTicker />
         </LazySection>
-        <LazySection fallback={<div style={{ minHeight: "300px" }} />}>
-          <Achievements
-            grayscale={false}
-            overlayBlurColor="transparent"
-            segments={24}
-            fit={0.5}
-          />
-        </LazySection>
+        <Achievements
+          grayscale={false}
+          overlayBlurColor="transparent"
+          segments={24}
+          fit={0.5}
+        />
         <LazySection fallback={<div style={{ minHeight: "400px" }} />}>
           <FeedbackAndReviews />
         </LazySection>

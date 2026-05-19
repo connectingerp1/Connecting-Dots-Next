@@ -1,34 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 export default function Achievement() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [view, setView] = useState('3d');
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (containerRef.current && view === '3d') {
-        const rect = containerRef.current.getBoundingClientRect();
-        setMousePosition({ 
-          x: e.clientX - rect.left - rect.width / 2, 
-          y: e.clientY - rect.top - rect.height / 2 
-        });
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    const timer = setTimeout(() => {
-      setView('scroll');
-    }, 5000);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      clearTimeout(timer);
-    };
-  }, [view]);
-
   const cards = [
     {
       id: 1,
@@ -119,22 +92,6 @@ export default function Achievement() {
     }
   ];
 
-  const getCardTransform = (card) => {
-    const parallaxX = (mousePosition.x / 30) * card.depth;
-    const parallaxY = (mousePosition.y / 30) * card.depth;
-    const rotateY = (mousePosition.x / 50) * card.depth;
-    const rotateX = -(mousePosition.y / 50) * card.depth;
-
-    return {
-      transform: `
-        translate3d(calc(-50% + ${card.baseX}% + ${parallaxX}px), calc(-50% + ${card.baseY}% + ${parallaxY}px), ${card.depth * 30}px)
-        rotateZ(${card.baseRotation}deg)
-        rotateY(${rotateY}deg)
-        rotateX(${rotateX}deg)
-      `
-    };
-  };
-
   const CardComponent = ({ card, isScrolling = false, imageClass = 'object-contain', imageStyle = {}, highlightBottom = false }) => {
     const cardWidth = card.width || 145;
     const cardHeight = card.height || 185;
@@ -151,6 +108,8 @@ export default function Achievement() {
             sizes="(max-width: 768px) 150px, 200px"
             className={`absolute inset-0 w-full h-full ${imageClass}`}
             style={imageStyle}
+            priority={card.id <= 4}
+            loading={card.id <= 4 ? undefined : "lazy"}
           />
 
           {highlightBottom && (
@@ -271,7 +230,7 @@ export default function Achievement() {
   };
 
   return (
-    <div className="w-full max-w-full bg-black relative overflow-hidden" ref={containerRef}>
+    <div className="w-full max-w-full bg-black relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-950/50 via-black to-green-950/40"></div>
@@ -301,31 +260,7 @@ export default function Achievement() {
         <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto"></div>
       </div>
 
-      {/* 3D View */}
-      {view === '3d' && (
-        <div className="relative z-10 h-[500px] flex items-center justify-center transition-opacity duration-1000 max-w-8xl mx-auto" style={{ perspective: '1200px', perspectiveOrigin: '50% 50%' }}>
-          <div className="relative w-full h-full" style={{ transformStyle: 'preserve-3d' }}>
-            {cards.map((card) => (
-              <div
-                key={card.id}
-                className="absolute top-1/2 left-1/2 transition-all duration-100 ease-out cursor-pointer"
-                style={{
-                  width: `${card.width}px`,
-                  height: `${card.height}px`,
-                  transformStyle: 'preserve-3d',
-                  ...getCardTransform(card)
-                }}
-              >
-                <CardComponent card={card} />
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Scrolling View */}
-      {view === 'scroll' && (
-        <div className="relative z-10 py-6 w-full overflow-hidden mx-auto" style={{ maxWidth: '112rem' }}>
+      <div className="relative z-10 py-6 w-full overflow-hidden mx-auto" style={{ maxWidth: '112rem' }}>
 
           <div className="w-full space-y-6">
             {/* Row 1 */}
@@ -355,8 +290,7 @@ export default function Achievement() {
               ))}
             </div>
           </div>
-        </div>
-      )}
+      </div>
 
       <style jsx>{`
         @keyframes pulse {
