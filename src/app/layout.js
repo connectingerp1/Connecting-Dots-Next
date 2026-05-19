@@ -68,11 +68,6 @@ export default function RootLayout({ children }) {
           lib="/~partytown/"
         />
 
-        {/* Preconnect for Tawk */}
-        <link rel="preconnect" href="https://embed.tawk.to" crossOrigin="anonymous" />
-
-
-
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#1a365d" />
         <meta name="mobile-web-app-capable" content="yes" />

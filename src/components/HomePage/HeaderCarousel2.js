@@ -8,9 +8,9 @@ const CareerMentorsComponent = () => {
   const [animationState, setAnimationState] = useState('stacked');
   
   const [windowSize, setWindowSize] = useState({ width: 1280, height: 800 });
-  const [mounted, setMounted] = useState(false);
   
   const containerRef = useRef(null);
+  const containerRectRef = useRef({ left: 0, top: 0, width: 1, height: 1 });
   const rafRef = useRef(null);
 
   // Memoized companies data with optimized Cloudinary URLs
@@ -96,7 +96,6 @@ const CareerMentorsComponent = () => {
 
   // Handle window resize with debouncing
   useEffect(() => {
-    setMounted(true);
     let timeoutId;
     const handleResize = () => {
       clearTimeout(timeoutId);
@@ -119,6 +118,32 @@ const CareerMentorsComponent = () => {
       clearTimeout(timeoutId);
     };
   }, []);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const updateContainerRect = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      containerRectRef.current = {
+        left: rect.left,
+        top: rect.top,
+        width: rect.width || 1,
+        height: rect.height || 1,
+      };
+    };
+
+    updateContainerRect();
+
+    const resizeObserver = new ResizeObserver(updateContainerRect);
+    resizeObserver.observe(containerRef.current);
+    window.addEventListener('scroll', updateContainerRect, { passive: true });
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('scroll', updateContainerRect);
+    };
+  }, [windowSize.width]);
 
   // Responsive breakpoints
   const isMobile = windowSize.width < 768;
@@ -143,8 +168,8 @@ const CareerMentorsComponent = () => {
 
   // Mouse move handler - only for desktop
   const handleMouseMove = useCallback((e) => {
-    if (containerRef.current && animationState === 'complete' && isDesktop) {
-      const rect = containerRef.current.getBoundingClientRect();
+    if (animationState === 'complete' && isDesktop) {
+      const rect = containerRectRef.current;
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
       
@@ -157,6 +182,9 @@ const CareerMentorsComponent = () => {
 
   // Smooth mouse move with RAF
   useEffect(() => {
+    const target = containerRef.current;
+    if (!target || animationState !== 'complete' || !isDesktop) return;
+
     const smoothMouseMove = (e) => {
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
@@ -164,15 +192,15 @@ const CareerMentorsComponent = () => {
       rafRef.current = requestAnimationFrame(() => handleMouseMove(e));
     };
     
-    window.addEventListener('mousemove', smoothMouseMove, { passive: true });
+    target.addEventListener('pointermove', smoothMouseMove, { passive: true });
     
     return () => {
-      window.removeEventListener('mousemove', smoothMouseMove);
+      target.removeEventListener('pointermove', smoothMouseMove);
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
       }
     };
-  }, [handleMouseMove]);
+  }, [animationState, handleMouseMove, isDesktop]);
 
   // Position calculations
   const getLogoPosition = useCallback((index, total) => {

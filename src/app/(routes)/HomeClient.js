@@ -1,6 +1,7 @@
 // app/HomeClient.jsx  (client component)
 'use client';
 
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import HeaderCarousel from "@/components/HomePage/HeaderCarousel";
 
@@ -85,6 +86,38 @@ const LatestBlogs = dynamic(() => import("@/components/HomePage/Blogs"), {
   loading: () => <div style={{ minHeight: "400px" }} />,
 });
 
+const LazySection = ({ children, fallback, rootMargin = "600px" }) => {
+  const ref = useRef(null);
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    if (shouldRender) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setShouldRender(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldRender(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [rootMargin, shouldRender]);
+
+  return <div ref={ref}>{shouldRender ? children : fallback}</div>;
+};
+
 export default function HomeClient() {
   return (
     <>
@@ -97,27 +130,53 @@ export default function HomeClient() {
         <HeaderCarousel />
 
         {/* Below the fold — lazy loaded */}
-        <Marquee />
-        <Chevron />
-        <OurClients />
-        <Keypoints />
-        <Courses />
-        <PlacementSection />
+        <LazySection fallback={<div style={{ height: "60px" }} />}>
+          <Marquee />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "100px" }} />}>
+          <Chevron />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "200px" }} />}>
+          <OurClients />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "300px" }} />}>
+          <Keypoints />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "400px" }} />}>
+          <Courses />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "400px" }} />}>
+          <PlacementSection />
+        </LazySection>
 
         {/* ── Placed students ticker (new) — sits right after PlacementSection ── */}
-        <OurStats />
+        <LazySection fallback={<div style={{ minHeight: "250px" }} />}>
+          <OurStats />
+        </LazySection>
 
-        <PlacedTicker />
-        <Achievements
-          grayscale={false}
-          overlayBlurColor="transparent"
-          segments={24}
-          fit={0.5}
-        />
-        <FeedbackAndReviews />
-        <DemoCertificate />
-        <LatestBlogs />
-        <Branches />
+        <LazySection fallback={<div style={{ height: "190px", background: "#f8f9fb" }} />}>
+          <PlacedTicker />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "300px" }} />}>
+          <Achievements
+            grayscale={false}
+            overlayBlurColor="transparent"
+            segments={24}
+            fit={0.5}
+          />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "400px" }} />}>
+          <FeedbackAndReviews />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "300px" }} />}>
+          <DemoCertificate />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "400px" }} />}>
+          <LatestBlogs />
+        </LazySection>
+        <LazySection fallback={<div style={{ minHeight: "350px" }} />}>
+          <Branches />
+        </LazySection>
       </main>
     </>
   );

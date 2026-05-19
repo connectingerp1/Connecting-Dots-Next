@@ -93,12 +93,19 @@
 .videoBackground {
   position: absolute;
   inset: 0;
-  background-image: url("https://res.cloudinary.com/duz9xipfm/image/upload/v1763383745/c6dadb2c42a8ead53b163c770a60c334_1_g1pufv.avif");
-  background-size: cover;
-  background-position: center;
   z-index: -1;
   opacity: 0.38;
   border-radius: 0 12px 12px 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.videoBackgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ============================================================

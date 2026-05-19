@@ -5,6 +5,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import styles from "@/styles/PopupForm.module.css";
 
+const MAX_VISIBLE_SUGGESTIONS = 10;
+const SUGGESTION_ROW_HEIGHT = 40;
+const SUGGESTION_SCROLL_OFFSET = 4;
+
 const popupCourseImage =
   "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fill,g_auto,w_480,h_600/v1777442392/1f2a952d-64f6-473e-9b9b-0f880f04fc7c_zw4hn5.webp";
 const popupCourseImageSrcSet = [
@@ -22,6 +26,9 @@ const popupLogoSrcSet = [
   "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_64,h_64/v1778307122/Connecting_Logo_cxqagq.avif 64w",
   "https://res.cloudinary.com/df65lfym1/image/upload/f_auto,q_auto:eco,c_fit,w_84,h_84/v1778307122/Connecting_Logo_cxqagq.avif 84w",
 ].join(", ");
+
+const popupBackgroundImage =
+  "https://res.cloudinary.com/duz9xipfm/image/upload/f_auto,q_auto:eco,w_520/v1763383745/c6dadb2c42a8ead53b163c770a60c334_1_g1pufv.avif";
 
 const PopupForm = ({
   onSubmitData,
@@ -55,6 +62,7 @@ const PopupForm = ({
   // Refs
   const locationInputRef = useRef(null);
   const suggestionsRef = useRef(null);
+  const suggestionScrollFrameRef = useRef(null);
 
   const pathname = usePathname();
 
@@ -308,31 +316,44 @@ const PopupForm = ({
     return () => clearTimeout(timer);
   }, [statusMessage]);
 
-  // Enhanced keyboard navigation with auto-scroll
+  useEffect(() => {
+    return () => {
+      if (suggestionScrollFrameRef.current) {
+        cancelAnimationFrame(suggestionScrollFrameRef.current);
+      }
+    };
+  }, []);
+
+  const scrollSuggestionsToIndex = (index) => {
+    if (suggestionScrollFrameRef.current) {
+      cancelAnimationFrame(suggestionScrollFrameRef.current);
+    }
+
+    suggestionScrollFrameRef.current = requestAnimationFrame(() => {
+      if (!suggestionsRef.current) return;
+      suggestionsRef.current.scrollTop =
+        index <= SUGGESTION_SCROLL_OFFSET
+          ? 0
+          : (index - SUGGESTION_SCROLL_OFFSET) * SUGGESTION_ROW_HEIGHT;
+    });
+  };
+
+  // Keyboard navigation avoids scrollIntoView layout reads.
   const handleLocationKeyDown = (e) => {
     if (!showSuggestions) return;
+
+    const suggestionCount = Math.min(
+      filteredSuggestions.length,
+      MAX_VISIBLE_SUGGESTIONS
+    );
+    if (suggestionCount === 0) return;
 
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
         setActiveSuggestion((prev) => {
-          const newIndex =
-            prev < filteredSuggestions.length - 1 ? prev + 1 : prev;
-
-          // Auto-scroll to keep active item visible
-          setTimeout(() => {
-            if (suggestionsRef.current) {
-              const activeItem = suggestionsRef.current.children[newIndex];
-              if (activeItem) {
-                activeItem.scrollIntoView({
-                  behavior: "smooth",
-                  block: "nearest",
-                  inline: "nearest",
-                });
-              }
-            }
-          }, 50);
-
+          const newIndex = prev < suggestionCount - 1 ? prev + 1 : prev;
+          scrollSuggestionsToIndex(newIndex);
           return newIndex;
         });
         break;
@@ -341,26 +362,7 @@ const PopupForm = ({
         e.preventDefault();
         setActiveSuggestion((prev) => {
           const newIndex = prev > 0 ? prev - 1 : -1;
-
-          // Auto-scroll to keep active item visible
-          setTimeout(() => {
-            if (suggestionsRef.current) {
-              if (newIndex === -1) {
-                // Scroll to top when no item is selected
-                suggestionsRef.current.scrollTop = 0;
-              } else {
-                const activeItem = suggestionsRef.current.children[newIndex];
-                if (activeItem) {
-                  activeItem.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest",
-                    inline: "nearest",
-                  });
-                }
-              }
-            }
-          }, 50);
-
+          scrollSuggestionsToIndex(newIndex);
           return newIndex;
         });
         break;
@@ -387,38 +389,23 @@ const PopupForm = ({
         // Jump to first suggestion
         e.preventDefault();
         setActiveSuggestion(0);
-        if (suggestionsRef.current) {
-          suggestionsRef.current.scrollTop = 0;
-        }
+        scrollSuggestionsToIndex(0);
         break;
 
       case "End":
         // Jump to last suggestion
         e.preventDefault();
-        const lastIndex = filteredSuggestions.length - 1;
+        const lastIndex = suggestionCount - 1;
         setActiveSuggestion(lastIndex);
-        if (suggestionsRef.current) {
-          suggestionsRef.current.scrollTop =
-            suggestionsRef.current.scrollHeight;
-        }
+        scrollSuggestionsToIndex(lastIndex);
         break;
 
       case "PageDown":
         // Jump down several items
         e.preventDefault();
         setActiveSuggestion((prev) => {
-          const newIndex = Math.min(prev + 5, filteredSuggestions.length - 1);
-          setTimeout(() => {
-            if (suggestionsRef.current) {
-              const activeItem = suggestionsRef.current.children[newIndex];
-              if (activeItem) {
-                activeItem.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                });
-              }
-            }
-          }, 50);
+          const newIndex = Math.min(prev + 5, suggestionCount - 1);
+          scrollSuggestionsToIndex(newIndex);
           return newIndex;
         });
         break;
@@ -428,17 +415,7 @@ const PopupForm = ({
         e.preventDefault();
         setActiveSuggestion((prev) => {
           const newIndex = Math.max(prev - 5, 0);
-          setTimeout(() => {
-            if (suggestionsRef.current) {
-              const activeItem = suggestionsRef.current.children[newIndex];
-              if (activeItem) {
-                activeItem.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                });
-              }
-            }
-          }, 50);
+          scrollSuggestionsToIndex(newIndex);
           return newIndex;
         });
         break;
@@ -464,46 +441,40 @@ const PopupForm = ({
     setLocation(value);
 
     if (value.length > 0) {
-      // Smart filtering logic (same as before)
-      const filtered = locationSuggestions.filter((suggestion) => {
+      const valueLower = value.toLowerCase();
+      const scoredMatches = [];
+
+      for (const suggestion of locationSuggestions) {
         const suggestionLower = suggestion.toLowerCase();
-        const valueLower = value.toLowerCase();
+        const cityName = suggestionLower.split(",")[0].trim();
+        let score = -1;
 
-        return (
-          suggestionLower.includes(valueLower) ||
-          suggestionLower.split(",")[0].trim().startsWith(valueLower)
-        );
-      });
+        if (suggestionLower === valueLower) {
+          score = 0;
+        } else if (suggestionLower.startsWith(valueLower)) {
+          score = 1;
+        } else if (cityName.startsWith(valueLower)) {
+          score = 2;
+        } else if (suggestionLower.includes(valueLower)) {
+          score = 3;
+        }
 
-      // Sort results (same as before)
-      filtered.sort((a, b) => {
-        const aLower = a.toLowerCase();
-        const bLower = b.toLowerCase();
-        const valueLower = value.toLowerCase();
+        if (score > -1) {
+          scoredMatches.push({ suggestion, score });
+        }
+      }
 
-        const aExact = aLower === valueLower;
-        const bExact = bLower === valueLower;
-        if (aExact && !bExact) return -1;
-        if (!aExact && bExact) return 1;
-
-        const aStarts = aLower.startsWith(valueLower);
-        const bStarts = bLower.startsWith(valueLower);
-        if (aStarts && !bStarts) return -1;
-        if (!aStarts && bStarts) return 1;
-
-        return a.localeCompare(b);
-      });
+      const filtered = scoredMatches
+        .sort(
+          (a, b) => a.score - b.score || a.suggestion.localeCompare(b.suggestion)
+        )
+        .slice(0, MAX_VISIBLE_SUGGESTIONS + 1)
+        .map(({ suggestion }) => suggestion);
 
       setFilteredSuggestions(filtered);
       setShowSuggestions(filtered.length > 0);
       setActiveSuggestion(-1);
-
-      // Reset scroll position when new search starts
-      setTimeout(() => {
-        if (suggestionsRef.current) {
-          suggestionsRef.current.scrollTop = 0;
-        }
-      }, 100);
+      scrollSuggestionsToIndex(0);
     } else {
       setShowSuggestions(false);
       setFilteredSuggestions([]);
@@ -708,6 +679,9 @@ const PopupForm = ({
     setIsVisible(true);
   };
 
+  const visibleSuggestions = filteredSuggestions.slice(0, MAX_VISIBLE_SUGGESTIONS);
+  const hasMoreSuggestions = filteredSuggestions.length > MAX_VISIBLE_SUGGESTIONS;
+
   return (
     <>
       {/* ── BOOKMARK TAB ── always visible on non-admin pages when popup is closed */}
@@ -851,14 +825,26 @@ const PopupForm = ({
                 height="542"
                 alt="Connecting Dots ERP Courses"
                 className={styles.popupImage}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
               />
             </div>
 
             {/* RIGHT SIDE — Form Panel */}
             <div className={styles.popupFormContainer}>
-              <div className={styles.videoBackground}></div>
+              <div className={styles.videoBackground} aria-hidden="true">
+                <img
+                  src={popupBackgroundImage}
+                  width="520"
+                  height="650"
+                  alt=""
+                  className={styles.videoBackgroundImage}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </div>
 
               {/* Enhanced lightning border effect */}
               <div className={styles.lightningBorder}>
@@ -1025,7 +1011,7 @@ const PopupForm = ({
                     filteredSuggestions.length > 0 &&
                     !isLoadingCities && (
                       <div ref={suggestionsRef} className={styles.suggestionsDropdown}>
-                        {filteredSuggestions.slice(0, 10).map((suggestion, index) => {
+                        {visibleSuggestions.map((suggestion, index) => {
                           const isInternational =
                             suggestion.includes(", US") ||
                             suggestion.includes(", UK") ||
@@ -1058,9 +1044,9 @@ const PopupForm = ({
                             </div>
                           );
                         })}
-                        {filteredSuggestions.length > 10 && (
+                        {hasMoreSuggestions && (
                           <div className={styles.suggestionMore}>
-                            +{filteredSuggestions.length - 10} more locations...
+                            Keep typing for more locations...
                           </div>
                         )}
                       </div>

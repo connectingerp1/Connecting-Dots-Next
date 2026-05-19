@@ -1,0 +1,15 @@
+
+> connecting-dots-erp@0.1.0 dev
+> partytown copylib public/~partytown && next dev
+
+Partytown lib copied to: D:\Project\Connecting-dots\frontend\public\~partytown
+   ▲ Next.js 15.5.7
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.108:3000
+   - Environments: .env.local
+   - Experiments (use with caution):
+     ✓ optimizeCss
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 2.3s

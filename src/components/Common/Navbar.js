@@ -73,6 +73,7 @@ const Header = () => {
   const router = useRouter();
   const sidebarRef = useRef(null);
   const navbarRef = useRef(null);
+  const sidebarWidthRef = useRef(0);
 
   // Set active link based on current pathname
   useEffect(() => {
@@ -272,6 +273,7 @@ const Header = () => {
     setTouchStartX(e.touches[0].clientX);
     setTouchMoveX(e.touches[0].clientX);
     if (sidebarRef.current) {
+      sidebarWidthRef.current = sidebarRef.current.offsetWidth;
       sidebarRef.current.style.transition = "none";
     }
   }, []);
@@ -303,7 +305,7 @@ const Header = () => {
       sidebarRef.current.style.transition = "";
     }
 
-    const threshold = sidebarElement.offsetWidth * 0.4;
+    const threshold = sidebarWidthRef.current * 0.4;
 
     if (deltaX > threshold) {
       closeSidebar();

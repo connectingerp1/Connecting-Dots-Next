@@ -33,6 +33,8 @@ export const AnimatedBeam = ({
     : { x1: ["10%", "110%"], x2: ["0%", "100%"], y1: ["0%", "0%"], y2: ["0%", "0%"] };
 
   React.useEffect(() => {
+    let frameId;
+
     const updatePath = () => {
       if (containerRef?.current && fromRef?.current && toRef?.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
@@ -41,7 +43,6 @@ export const AnimatedBeam = ({
 
         const svgWidth = containerRect.width;
         const svgHeight = containerRect.height;
-        setSvgDimensions({ width: svgWidth, height: svgHeight });
 
         const startX = rectA.left - containerRect.left + rectA.width / 2 + startXOffset;
         const startY = rectA.top - containerRect.top + rectA.height / 2 + startYOffset;
@@ -50,21 +51,36 @@ export const AnimatedBeam = ({
 
         const controlY = startY - curvature;
         const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
-        setPathD(d);
+        setSvgDimensions((current) =>
+          current.width === svgWidth && current.height === svgHeight
+            ? current
+            : { width: svgWidth, height: svgHeight }
+        );
+        setPathD((current) => (current === d ? current : d));
       }
     };
 
+    const schedulePathUpdate = () => {
+      if (frameId) {
+        cancelAnimationFrame(frameId);
+      }
+      frameId = requestAnimationFrame(updatePath);
+    };
+
     const resizeObserver = new ResizeObserver(() => {
-      updatePath();
+      schedulePathUpdate();
     });
 
     if (containerRef?.current) {
       resizeObserver.observe(containerRef.current);
     }
 
-    updatePath();
+    schedulePathUpdate();
 
     return () => {
+      if (frameId) {
+        cancelAnimationFrame(frameId);
+      }
       resizeObserver.disconnect();
     };
   }, [
