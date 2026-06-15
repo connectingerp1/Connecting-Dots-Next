@@ -1,0 +1,9 @@
+[
+    { "label": "Google Drive", "imageUrl": "https://res.cloudinary.com/df65lfym1/image/upload/v1781501893/drive_syvef0.webp", "top": "10%", "left": "30%" },
+    { "label": "Google Docs", "imageUrl": "https://res.cloudinary.com/df65lfym1/image/upload/v1781501893/docs_zijs29.webp", "top": "10%", "left": "70%" },
+    { "label": "Notion", "imageUrl": "https://res.cloudinary.com/df65lfym1/image/upload/v1781501894/notion_de6gtx.webp", "top": "50%", "left": "10%" },
+    { "label": "Zapier", "imageUrl": "https://res.cloudinary.com/df65lfym1/image/upload/v1781501896/zapier_bm8nmy.webp", "top": "50%", "left": "90%" },
+    { "label": "WhatsApp", "imageUrl": "https://res.cloudinary.com/df65lfym1/image/upload/v1781501895/whatsapp_tbcihf.webp", "top": "90%", "left": "30%" },
+    { "label": "Messenger", "imageUrl": "https://res.cloudinary.com/df65lfym1/image/upload/v1781501894/messagener_aaaazj.webp", "top": "90%", "left": "70%" }
+  ]
+
