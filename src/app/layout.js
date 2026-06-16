@@ -1,4 +1,4 @@
-// src/app/layout.js - With Partytown Integration (Fixed)
+// src/app/layout.js
 import { Lato, Rubik } from "next/font/google";
 import Script from "next/script";
 import { Partytown } from "@builder.io/partytown/react";
@@ -54,17 +54,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${lato.variable} ${rubik.variable}`}>
       <head>
-        {/* ✅ FIXED: Initialize dataLayer BEFORE Partytown */}
+        {/* Initialize dataLayer before analytics scripts */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];`,
           }}
         />
 
-        {/* ✅ FIXED: Added lib prop to Partytown */}
         <Partytown
           debug={false}
-          forward={["dataLayer.push", "fbq"]}
+          forward={["fbq"]}
           lib="/~partytown/"
         />
 
@@ -103,11 +102,10 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
 
-        {/* --- Partytown Scripts --- */}
-        {/* GTM - Offloaded to Web Worker */}
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
-          type="text/partytown"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
