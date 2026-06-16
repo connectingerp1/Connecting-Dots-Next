@@ -14,6 +14,10 @@ function truncateString(str, maxLength) {
     : truncated + "...";
 }
 
+function replaceCityPlaceholder(value, cityName) {
+  return typeof value === "string" ? value.replace(/\{city\}/g, cityName) : value;
+}
+
 // Strategic city name optimization
 function getOptimizedCityName(cityName) {
   const optimizations = {
@@ -114,10 +118,13 @@ export function generateDynamicMetadata(courseSlug, citySlug) {
 
   // NEW: pull meta overrides / templates from metaSEO.js
   const metaOverride = getMeta(courseSlug, citySlug, course, city) || {};
+  const overrideTitle = replaceCityPlaceholder(metaOverride.metaTitle, cityName);
+  const overrideDescription = replaceCityPlaceholder(metaOverride.metaDescription, cityName);
+
   // Use override values if present, otherwise fallback to smart generation
-  const finalTitle = metaOverride.metaTitle || getOptimalTitle(course, cityName, courseTitle);
+  const finalTitle = overrideTitle || getOptimalTitle(course, cityName, courseTitle);
   const finalDescription =
-    metaOverride.metaDescription || getOptimalDescription(course, cityName, courseTitle);
+    overrideDescription || getOptimalDescription(course, cityName, courseTitle);
 
   // Generate strategic keywords
   const keywords = [

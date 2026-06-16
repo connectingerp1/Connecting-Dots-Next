@@ -120,7 +120,7 @@ const footerSections = [
       { href: "/java-course-in-pune", text: "JAVA" },
       { href: "/mern-stack-course-in-pune", text: "MERN STACK" },
       { href: "/ui-ux-course-in-pune", text: "UI/UX DESIGN" },
-      { href: "/python-course-in-pune", text: "PYTHON" },
+      { href: "/python-with-ai-course-in-pune", text: "PYTHON" },
       { href: "/aws-course-in-pune", text: "AWS" },
       { href: "/azure-course-in-pune", text: "AZURE" },
       { href: "/devops-course-in-pune", text: "DEVOPS" },
@@ -168,7 +168,7 @@ const footerSections = [
         href: "/data-analytics-course-in-pune",
         text: "MASTERS IN DATA ANALYTICS",
       },
-      { href: "/data-science-course-in-pune", text: "MASTERS IN DATA SCIENCE" },
+      { href: "/data-science-with-ai-course-in-pune", text: "MASTERS IN DATA SCIENCE" },
       {
         href: "/business-analytics-course-in-pune",
         text: "MASTERS IN BUSINESS ANALYTICS",

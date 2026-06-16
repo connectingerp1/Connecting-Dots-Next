@@ -1,5 +1,3 @@
-// src/app/(routes)/[slug]/page.js (Updated with Curriculum component)
-
 import { notFound } from "next/navigation";
 import ClientCourseSections from "@/components/CoursesComponents/ClientCourseSections";
 import ScrollHandler from '@/components/Common/ScrollHandlerClient';
@@ -10,44 +8,60 @@ import {
 import { coursesData, citiesData } from "@/lib/masterData";
 import CityLinks from "@/components/CityLinks";
 
-// Enable ISR to keep pages fresh without full SSR on every request
-export const revalidate = 86400; // 24 hours
+export const revalidate = 86400;
 
-// Reduce TTFB by using Edge runtime and auto region placement
-// Note: Edge runtime conflicts with generateStaticParams; using default runtime
+// ✅ ADDED: alias map to resolve new URL slugs to masterData keys
+const COURSE_SLUG_ALIASES = {
+  "data-science-with-ai": "data-science",
+  "advanced-data-analytics-with-generative-ai": "data-analytics",
+  "advanced-data-analytics-azure-power-bi": "data-analytics",
+  "python-with-ai": "python",
+  "data-visualization-with-ai": "data-visualization",
+  "full-stack-with-ai": "full-stack",
+  "full-stack-developer": "full-stack",
+  "hr-courses-training-institute": "hr-training",
+  "agentic-ai": "agentic-ai",
+};
 
-// Prebuild known course-city slugs to improve TTFB for popular pages
+const PREFERRED_CITY_LINK_SLUGS = {
+  "data-science": "data-science-with-ai",
+  "python": "python-with-ai",
+  "data-visualization": "data-visualization-with-ai",
+};
+
 export async function generateStaticParams() {
   const params = [];
   for (const courseSlug of Object.keys(coursesData)) {
     for (const citySlug of Object.keys(citiesData)) {
-      params.push({ slug: `${courseSlug}-in-${citySlug}` });
+      params.push({ slug: `${courseSlug}-course-in-${citySlug}` });
     }
   }
+
+  // ✅ ADDED: pre-build aliased URLs
+  const aliasedSlugs = Object.keys(COURSE_SLUG_ALIASES);
+  for (const aliasSlug of aliasedSlugs) {
+    for (const citySlug of Object.keys(citiesData)) {
+      params.push({ slug: `${aliasSlug}-course-in-${citySlug}` });
+    }
+  }
+
   return params;
 }
 
-// ClientCourseSections is a client component that lazy-loads its parts internally
-
-// Helper function to parse the slug into course and city components
 function parseSlug(slug) {
   const lastInIndex = slug.lastIndexOf("-in-");
-  if (lastInIndex === -1) {
-    return null;
-  }
+  if (lastInIndex === -1) return null;
 
   let coursePart = slug.substring(0, lastInIndex);
   coursePart = coursePart.replace(
-    /-courses$|-course$|-training$|-developer$|-developer-course$|-developer-training$/,
+    /-courses$|-course$|-training$|-developer$|-developer-course$|-developer-training$|-classes$|-certification$/,
     ""
   );
 
   const cityPart = slug.substring(lastInIndex + 4);
-
   return { courseSlug: coursePart, citySlug: cityPart };
 }
 
-// Generate metadata dynamically for each page
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams?.slug;
@@ -59,26 +73,22 @@ export async function generateMetadata({ params }) {
 
   const parsed = parseSlug(slug);
   if (!parsed) {
-    console.warn(
-      `❌ generateMetadata: Slug "${slug}" does not match expected pattern for dynamic course pages.`
-    );
+    console.warn(`❌ generateMetadata: Slug "${slug}" does not match expected pattern.`);
     return {};
   }
 
-  const { courseSlug, citySlug } = parsed;
+  // ✅ CHANGED: resolve alias before lookup
+  const { courseSlug: rawCourseSlug, citySlug } = parsed;
+  const courseSlug = COURSE_SLUG_ALIASES[rawCourseSlug] || rawCourseSlug;
 
   if (!coursesData[courseSlug] || !citiesData[citySlug]) {
-    console.warn(
-      `❌ generateMetadata: Course "${courseSlug}" or City "${citySlug}" not found in masterData. Returning empty metadata.`
-    );
+    console.warn(`❌ generateMetadata: Course "${courseSlug}" or City "${citySlug}" not found. Returning empty metadata.`);
     return {};
   }
 
   const metadata = generateDynamicMetadata(courseSlug, citySlug);
   if (!metadata) {
-    console.warn(
-      `❌ generateMetadata: Failed to generate metadata for "${slug}".`
-    );
+    console.warn(`❌ generateMetadata: Failed to generate metadata for "${slug}".`);
     return {};
   }
 
@@ -117,10 +127,8 @@ export async function generateMetadata({ params }) {
       "course.location": metadata.enhancedMeta.courseLocation,
       "course.category": metadata.enhancedMeta.courseCategory,
       "theme-color": metadata.enhancedMeta.themeColor,
-      "msapplication-navbutton-color":
-        metadata.enhancedMeta.msApplicationNavButtonColor,
-      "apple-mobile-web-app-status-bar-style":
-        metadata.enhancedMeta.appleStatusBarStyle,
+      "msapplication-navbutton-color": metadata.enhancedMeta.msApplicationNavButtonColor,
+      "apple-mobile-web-app-status-bar-style": metadata.enhancedMeta.appleStatusBarStyle,
       "mobile-web-capable": metadata.enhancedMeta.mobileWebCapable,
       "apple-mobile-web-app-capable": metadata.enhancedMeta.appleMobileCapable,
       "apple-mobile-web-app-title": metadata.enhancedMeta.appleMobileTitle,
@@ -147,21 +155,20 @@ const CourseCityPage = async ({ params }) => {
 
   const parsed = parseSlug(slug);
   if (!parsed) {
-    console.warn(
-      `❌ CourseCityPage: Slug "${slug}" does not match course-city pattern. Returning notFound().`
-    );
+    console.warn(`❌ CourseCityPage: Slug "${slug}" does not match course-city pattern.`);
     return notFound();
   }
 
-  const { courseSlug, citySlug } = parsed;
+  // ✅ CHANGED: resolve alias before lookup
+  const { courseSlug: rawCourseSlug, citySlug } = parsed;
+  const courseSlug = COURSE_SLUG_ALIASES[rawCourseSlug] || rawCourseSlug;
+  const cityLinkCourseSlug = PREFERRED_CITY_LINK_SLUGS[rawCourseSlug] || rawCourseSlug;
 
   const course = coursesData[courseSlug];
   const city = citiesData[citySlug];
 
   if (!course || !city) {
-    console.error(
-      `❌ CourseCityPage: Course "${courseSlug}" or City "${citySlug}" not found in masterData. Returning notFound().`
-    );
+    console.error(`❌ CourseCityPage: Course "${courseSlug}" or City "${citySlug}" not found.`);
     return notFound();
   }
 
@@ -169,7 +176,8 @@ const CourseCityPage = async ({ params }) => {
 
   const processPlaceholders = (obj, cityNameToUse) => {
     if (typeof obj === "string") {
-      return obj.replace(/{city}/g, cityNameToUse);
+      // ✅ CHANGED: escaped curly braces for correct regex
+      return obj.replace(/\{city\}/g, cityNameToUse);
     }
     if (Array.isArray(obj)) {
       return obj.map((item) => processPlaceholders(item, cityNameToUse));
@@ -196,42 +204,27 @@ const CourseCityPage = async ({ params }) => {
     : null;
   const certificateData = processPlaceholders(course.certificate, city.name);
   const faqData = processPlaceholders(course.faq, city.name);
-  const relatedCoursesData = processPlaceholders(
-    course.relatedCourses,
-    city.name
-  );
+  const relatedCoursesData = processPlaceholders(course.relatedCourses, city.name);
+  const descriptionContentData = processPlaceholders(course.descriptionContent, city.name);
 
-
-  // Handle description content - check if it's multi-section (like Digital Marketing) or single section
-  const descriptionContentData = processPlaceholders(
-    course.descriptionContent,
-    city.name
-  );
-
-  // Check if this is a multi-section course (like Digital Marketing)
   const isMultiSectionCourse =
     descriptionContentData &&
     (descriptionContentData.main ||
       descriptionContentData.ppc ||
       descriptionContentData.seo);
 
-  // Determine which curriculum component to use based on data structure
   const shouldUseNewCurriculum =
     !isSapCourse && modulesData && modulesData.tabs && Array.isArray(modulesData.tabs);
   const shouldUseLegacyModules = !isSapCourse && modulesData && !shouldUseNewCurriculum;
 
-  // Generate dynamic content for the page body.
   const dynamicBodyContent = `
     <div class="course-main-content">
-
       <section class="course-summary">
         <h3>About Our ${course.fullTitle} Course</h3>
         <p>Our comprehensive ${course.title} course in ${city.name} is designed to equip you with ${course.modules.length} key modules, practical skills, and industry insights. With a duration of ${course.duration}, you'll gain expertise in areas like: ${course.modules.slice(0, 3).join(", ")}${course.modules.length > 3 ? "..." : ""}.</p>
         <p>Get ready for a successful career in roles such as ${course.jobRoles.slice(0, 2).join(" or ")}.</p>
       </section>
-
       ${renderOfficeSpecificContent(city, course.title)}
-
       <section class="career-path">
         <h3>Career Opportunities After ${course.fullTitle} Training</h3>
         <p>Upon successful completion of our ${course.title} course, you'll be prepared for diverse and rewarding career paths, including:</p>
@@ -259,46 +252,23 @@ const CourseCityPage = async ({ params }) => {
     return "";
   }
 
-
-  // Render Digital Marketing specific layout
   if (courseSlug === "digital-marketing" && isMultiSectionCourse) {
     return (
       <>
-        {/* Inject JSON-LD structured data (server-rendered) */}
         {jsonLd && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
         )}
-
-        {/* Preload header background video to improve LCP */}
         {headerData?.backgroundVideo && (
-          <link
-            rel="preload"
-            as="video"
-            href={headerData.backgroundVideo}
-            type="video/mp4"
-            fetchPriority="high"
-          />
+          <link rel="preload" as="video" href={headerData.backgroundVideo} type="video/mp4" fetchPriority="high" />
         )}
         {headerData?.backgroundPoster && (
-          <link
-            rel="preload"
-            as="image"
-            href={headerData.backgroundPoster}
-            fetchPriority="high"
-            // poster is often an image; let browser pick type
-          />
+          <link rel="preload" as="image" href={headerData.backgroundPoster} fetchPriority="high" />
         )}
-
-        {/* Client-side scroll handler for hash navigation */}
         <ScrollHandler />
-
-        {/* Render core dynamic content for the page body */}
         <div dangerouslySetInnerHTML={{ __html: dynamicBodyContent }} />
-
-        {/* Render Client Components (lazy-loaded) */}
         <ClientCourseSections
           layoutType="digital"
           headerData={headerData}
@@ -309,52 +279,32 @@ const CourseCityPage = async ({ params }) => {
           descriptionContentData={descriptionContentData}
           certificateData={certificateData}
           faqData={faqData}
-          cityLinks={<CityLinks courseSlug={courseSlug} />}
+          cityLinks={<CityLinks courseSlug={cityLinkCourseSlug} />}
           relatedCoursesData={relatedCoursesData}
           currentCityName={city.name}
           courseCategory={course.category}
           shouldUseNewCurriculum={shouldUseNewCurriculum}
           shouldUseLegacyModules={shouldUseLegacyModules}
         />
-
       </>
     );
   }
 
-  // Default layout for other courses (SAP, HR, Data Analytics, etc.)
   return (
     <>
-      {/* Inject JSON-LD structured data (server-rendered) */}
       {jsonLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-
-      {/* Preload header background video to improve LCP */}
       {headerData?.backgroundVideo && (
-        <link
-          rel="preload"
-          as="video"
-          href={headerData.backgroundVideo}
-          type="video/mp4"
-          fetchPriority="high"
-        />
+        <link rel="preload" as="video" href={headerData.backgroundVideo} type="video/mp4" fetchPriority="high" />
       )}
       {headerData?.backgroundPoster && (
-        <link
-          rel="preload"
-          as="image"
-          href={headerData.backgroundPoster}
-          fetchPriority="high"
-        />
+        <link rel="preload" as="image" href={headerData.backgroundPoster} fetchPriority="high" />
       )}
-
-      {/* Render core dynamic content for the page body */}
       <div dangerouslySetInnerHTML={{ __html: dynamicBodyContent }} />
-
-      {/* Render Client Components (lazy-loaded) */}
       <ClientCourseSections
         layoutType="default"
         headerData={headerData}
@@ -365,7 +315,7 @@ const CourseCityPage = async ({ params }) => {
         descriptionContentData={descriptionContentData}
         certificateData={certificateData}
         faqData={faqData}
-        cityLinks={<CityLinks courseSlug={courseSlug} />}
+        cityLinks={<CityLinks courseSlug={cityLinkCourseSlug} />}
         relatedCoursesData={relatedCoursesData}
         currentCityName={city.name}
         courseCategory={course.category}
