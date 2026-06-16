@@ -205,7 +205,7 @@ async redirects() {
     },
     {
       source: "/data-analytics-course-in-pune",
-      destination: "/advanced-data-analytics-azure-power-bi-course-in-pune",
+      destination: "/advanced-data-analytics-with-generative-ai-course-in-pune",
       permanent: true,
     },
     {

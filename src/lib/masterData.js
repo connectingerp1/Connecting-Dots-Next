@@ -18545,8 +18545,9 @@ export const citiesData = {
   },
 };
 coursesData["data-science-with-ai"] = coursesData["data-science"];
-coursesData["advanced-data-analytics-azure-power-bi"] = coursesData["data-analytics"];
+coursesData["advanced-data-analytics-with-generative-ai"] = coursesData["data-analytics"];
 coursesData["python-with-ai"] = coursesData["python"];
 coursesData["data-visualization-with-ai"] = coursesData["data-visualization"];
 coursesData["full-stack-with-ai"] = coursesData["full-stack-developer"] ?? coursesData["full-stack"];
+coursesData["it-course-with-ai"] = coursesData["it"];
 coursesData["hr-courses-training-institute"] = coursesData["hr-training"];

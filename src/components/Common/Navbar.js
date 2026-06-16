@@ -456,7 +456,7 @@ const Header = () => {
     >
             <div className={styles.dropdownToggleWrapper}>
         <Link
-          href="/it-course-in-pune"
+          href="/it-course-with-ai-in-pune"
           className={`${styles.navLink} ${styles.dropdownToggle} ${
             activeLink === "dropdown3" ? styles.active : ""
           }`}
@@ -466,7 +466,7 @@ const Header = () => {
               e.preventDefault();
               handleMobileDropdownToggle("dropdown3");
             } else {
-              handleNavClick("/it-course-in-pune");
+              handleNavClick("/it-course-with-ai-in-pune");
             }
           }}
           aria-expanded={
@@ -510,7 +510,7 @@ const Header = () => {
                 },
                   {
                   title: "Advanced Data Analytics (Azure & Power BI)",
-                  link: "/advanced-data-analytics-azure-power-bi-course-in-pune",
+                  link: "/advanced-data-analytics-with-generative-ai-course-in-pune",
                 },
                { title: "Generative AI", link: "/generative-ai-course-in-pune" },
                  {title :"Agentic AI" , link : "/agentic-ai-course-in-pune"},

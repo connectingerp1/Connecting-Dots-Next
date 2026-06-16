@@ -29,12 +29,12 @@ const rubik = Rubik({
 });
 
 // --- Constants ---
-const GTM_ID = "GTM-TRMNSXVG";
+const GTM_ID = "GTM-MB68QM2V";
 const FB_PIXEL_ID = "3414178115554916";
-const AHREFS_KEY = "4r3vxTcyxECWaXnhKBGH5g";
+const AHREFS_KEY = "4r3vxTcyxECWaXnhKBGH5g"; //4r3vxTcyxECWaXnhKBGH5g
 
 // Verification metadata (kept here as it's typically site-wide)
-//new ahref added 
+//new ahref added
 export const metadata = {
   verification: {
     google: "KRKFsO9AAW2a8qImif8Wj4uzzjmWGA0R6o7IZFJcmPo",
@@ -62,9 +62,9 @@ export default function RootLayout({ children }) {
         />
 
         {/* ✅ FIXED: Added lib prop to Partytown */}
-        <Partytown 
-          debug={false} 
-          forward={["dataLayer.push", "fbq"]} 
+        <Partytown
+          debug={false}
+          forward={["dataLayer.push", "fbq"]}
           lib="/~partytown/"
         />
 
@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
               })(window,document,'script','dataLayer','${GTM_ID}');
             `,
           }}
-        />  
+        />
         {/* Facebook Pixel - Offloaded to Web Worker */}
         <Script
           id="facebook-pixel"
