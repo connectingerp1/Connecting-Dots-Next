@@ -14,7 +14,7 @@ const iconMap = {
   Security: "https://res.cloudinary.com/df65lfym1/image/upload/v1777627468/business-intelligence_lcmfjw.webp",
   Analytics: "https://res.cloudinary.com/df65lfym1/image/upload/v1777627468/business-intelligence_lcmfjw.webp",
   DevOps: "https://res.cloudinary.com/df65lfym1/image/upload/v1777627592/cloud-data_kqdxuc.webp",
-  AI: "https://res.cloudinary.com/df65lfym1/image/upload/v1777628777/python-file_oh6lfg.webp",
+  AI: "https://i.imgur.com/grx2N9O.mp4",
   AWS: "https://res.cloudinary.com/df65lfym1/image/upload/v1777627592/cloud-data_kqdxuc.webp",
   Azure: "https://res.cloudinary.com/df65lfym1/image/upload/v1777627592/cloud-data_kqdxuc.webp",
 };
@@ -231,11 +231,10 @@ const generatedItRelatedCourses = [
   "Full Stack Training",
   "Data Analytics",
   "Power BI",
-  "SQL",
   "Tableau",
-  "MERN Stack",
   "UI/UX Design",
   "Generative AI",
+  "Agentic AI",
 ];
 
 const makeGeneratedCourseModulesData = (spec) => ({
@@ -8207,13 +8206,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -8224,11 +8223,17 @@ export const coursesData = {
           icon: "https://i.imgur.com/6brz8Ea.mp4",
           alt: "SALESFORCE icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
         {
           name: "Full-Stack Python",
@@ -8248,12 +8253,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -8747,13 +8752,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -8764,12 +8769,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/6brz8Ea.mp4",
           alt: "SALESFORCE icon",
         },
-        {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
-        },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -8783,17 +8788,23 @@ export const coursesData = {
           alt: "Java icon",
         },
         {
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
+        },
+        {
           name: "PowerBI",
           description: "Business intelligence with PowerBI",
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -9189,7 +9200,7 @@ export const coursesData = {
       alt: "data-analytics-certification-from-connecting-dots-erp",
       image: "/Certificate/Certificate-1.avif",
       completionText:
-        "The Masters in Data Analytics Certification at Connecting Dots ERP offers advanced training in data processing, statistical analysis, and reporting.",
+        "The Advanced Data Analytics (Azure & Power BI) Certification at Connecting Dots ERP offers advanced training in data processing, statistical analysis, and reporting.",
       description:
         "You'll learn to use tools like Python, Excel, and Power BI to extract valuable insights from data. This program is ideal for those looking to boost their careers in data analytics, preparing you for top roles in the industry.",
     },
@@ -9264,7 +9275,7 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
@@ -9281,11 +9292,17 @@ export const coursesData = {
           icon: "https://i.imgur.com/6brz8Ea.mp4",
           alt: "Salesforce icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
         {
           name: "Full-Stack Python",
@@ -9305,12 +9322,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -9795,7 +9812,7 @@ export const coursesData = {
           alt: "Tableau icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -9807,10 +9824,10 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
         {
           name: "Full-Stack Python",
@@ -9831,12 +9848,6 @@ export const coursesData = {
           alt: "Power BI icon",
         },
         {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
-        {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
           icon: "https://i.imgur.com/QxPxKeN.mp4",
@@ -9852,7 +9863,346 @@ export const coursesData = {
     publishedAt: "2025-03-01T00:00:00Z", // Used in: JSON-LD WebPage datePublished
     updatedAt: "2025-06-30T00:00:00Z", // Used in: JSON-LD WebPage dateModified
   },
+  "agentic-ai": {
+  title: "Agentic AI",
+  fullTitle: "Agentic AI & Autonomous Systems",
+  category: "it",
+  slug: "agentic-ai",
 
+  description:
+    "Master Agentic AI in {city} with our comprehensive course. Learn to build autonomous AI agents, multi-agent systems, LLM orchestration, and AI-powered workflows. Our Agentic AI training in {city} offers hands-on experience with real-world agent projects, industry-relevant curriculum, and 100% placement support to help you build a successful career in next-generation AI.",
+  metaTitle: "Agentic AI Course in {city} | Autonomous AI Training & Certification",
+  metaDescription:
+    "Master Agentic AI in {city}. Learn autonomous agents, LLM orchestration, multi-agent systems, and AI workflows. Certification, real projects & 100% placement. Launch your AI career now!",
+
+  duration: "12-16 weeks",
+  price: { min: 60000, max: 150000 },
+  modules: [
+    "AI Agents & Autonomous Systems",
+    "LLM Orchestration & Prompt Engineering",
+    "Multi-Agent Frameworks (LangChain, AutoGen)",
+    "Tool Use & Function Calling",
+    "Memory & Context Management",
+    "RAG (Retrieval Augmented Generation)",
+    "Agent Workflows & Pipelines",
+    "AI Safety & Evaluation",
+    "Production Deployment of Agents",
+  ],
+  prerequisites:
+    "Basic Python programming and familiarity with AI/ML concepts recommended",
+  certification: "Certified Agentic AI Professional",
+  jobRoles: [
+    "Agentic AI Engineer",
+    "AI Automation Specialist",
+    "LLM Engineer",
+    "AI Product Developer",
+    "Prompt Engineer",
+    "AI Solutions Architect",
+    "ML Engineer",
+    "AI Consultant",
+  ],
+
+  header: {
+    title: "Agentic AI Course in {city}",
+    subtitle:
+      "Build Autonomous AI Systems with the Best Agentic AI Training in {city}",
+    description:
+      "Connecting Dots ERP's Agentic AI course in {city} equips you with cutting-edge skills to design, build, and deploy autonomous AI agents. Learn LLM orchestration, multi-agent frameworks, tool use, memory systems, and production-grade AI pipelines that power the next generation of intelligent applications.",
+    backgroundVideo:
+      "https://res.cloudinary.com/df65lfym1/video/upload/v1778308123/it_courses_fvooho.webm",
+    features: ["Live Class", "1:1 mentorship", "Industry projects"],
+    alumni: [
+      { name: "Amdocs", logo: "https://res.cloudinary.com/df65lfym1/image/upload/v1777623550/amdocs_imxtpx.webp" },
+      { name: "Infosys", logo: "https://res.cloudinary.com/df65lfym1/image/upload/v1777623548/infosys_psvmtb.webp" },
+      { name: "Cognizant", logo: "https://res.cloudinary.com/df65lfym1/image/upload/v1777623550/cognizant_qekaos.webp" },
+      { name: "TCS", logo: "https://res.cloudinary.com/df65lfym1/image/upload/v1777623549/tcs_vf98c9.webp" },
+      { name: "IBM", logo: "https://res.cloudinary.com/df65lfym1/image/upload/v1777623549/IBM_yyj2qp.webp" },
+    ],
+    buttons: [
+      { text: "Request Call Back", courseName: "Agentic AI Program" },
+      { text: "Download Curriculum", courseName: "Book Live Demo" },
+    ],
+    form: {
+      title: "Book a FREE live class",
+      inputs: [
+        { type: "text", name: "name", placeholder: "Enter your name" },
+        { type: "email", name: "email", placeholder: "Enter your Email" },
+        { type: "location", name: "location", placeholder: "Select your location" },
+        { type: "course", name: "course", placeholder: "Select course" },
+        { type: "tel", name: "contactname", placeholder: "Enter your phone number", countryCode: "+91" },
+      ],
+      submitText: "Book Live Class",
+    },
+  },
+
+  why: {
+    title: "Why Agentic AI?",
+    cards: [
+      {
+        title: 'What is <span class="highlight-span-cards">Agentic AI?</span>',
+        content:
+          "Agentic AI refers to AI systems that can autonomously plan, reason, and take actions to achieve goals — going far beyond simple question-answering. These agents use large language models (LLMs) as a reasoning engine, combined with tools, memory, and multi-step planning to complete complex real-world tasks. The Agentic AI course in {city} trains you to build these systems from scratch.",
+      },
+      {
+        title: 'What does an <span class="highlight-span-cards">Agentic AI Engineer</span> do?',
+        content:
+          "An Agentic AI Engineer designs and builds autonomous AI pipelines that can browse the web, write and execute code, query databases, and coordinate with other agents to complete long-horizon tasks. They work with LLM frameworks, APIs, and cloud infrastructure to ship production-ready AI products.",
+        listItems: [
+          "Build and orchestrate multi-agent systems.",
+          "Integrate LLMs with external tools and APIs.",
+          "Design memory and retrieval systems for agents.",
+        ],
+      },
+      {
+        title: 'Why take <span class="highlight-span-cards">Agentic AI</span> training?',
+        content:
+          "Agentic AI is the fastest-growing segment of the AI industry. Companies are racing to build autonomous assistants, coding agents, and business automation pipelines. Our Agentic AI training in {city} prepares you for high-demand roles such as:",
+        listItems: [
+          "Agentic AI Engineer",
+          "LLM Engineer",
+          "AI Automation Specialist",
+          "AI Solutions Architect",
+        ],
+      },
+    ],
+  },
+
+  modulesData: {
+    title: "AGENTIC AI CURRICULUM",
+    globalActions: {
+      startLearning: "https://example.com/start-learning-agentic-ai",
+      downloadCurriculum: "https://example.com/download-curriculum-agentic-ai",
+    },
+    banner: {
+      title: "Build Autonomous AI Agents from Scratch",
+      subtitle:
+        "From LLM fundamentals to production multi-agent systems — become an Agentic AI expert.",
+      image:
+        "https://res.cloudinary.com/dudu879kr/image/upload/v1752485069/ITBanner_vkag1x.webp",
+      technologies: ["LangChain", "AutoGen", "OpenAI", "Python", "RAG", "LlamaIndex"],
+    },
+    tabs: [
+      {
+        modules: [
+          {
+            title: "AI & LLM Foundations",
+            duration: "2 Weeks",
+            content: [
+              "Introduction to Large Language Models (LLMs)",
+              "How transformer models work",
+              "Prompt engineering fundamentals and advanced techniques",
+              "OpenAI, Anthropic, and open-source model APIs",
+              "Token limits, context windows, and cost management",
+              "Setting up Python environment for AI development",
+            ],
+            detailedContent: [
+              "Understand how LLMs generate text and reason",
+              "Write effective prompts for complex tasks",
+              "Compare different LLM providers and choose the right one",
+              "Manage API keys, rate limits, and costs",
+              "Build simple LLM-powered apps from scratch",
+            ],
+            toolsAndTechnologies: [
+              { name: "OpenAI API", icon: "https://img.icons8.com/ios-filled/150/chatgpt.webp", alt: "OpenAI" },
+              { name: "Python", icon: "https://res.cloudinary.com/dudu879kr/image/upload/v1752208406/python_ut82h4.webp", alt: "Python" },
+              { name: "Jupyter", icon: "https://res.cloudinary.com/df65lfym1/image/upload/v1777968325/jupyter_aqbxrj.webp", alt: "Jupyter" },
+              { name: "Hugging Face", icon: "https://img.icons8.com/fluency/240/hugging-face_app.webp", alt: "Hugging Face" },
+            ],
+            actions: {
+              startLearning: "https://example.com/start-learning-agentic-ai",
+              downloadCurriculum: "https://example.com/download-curriculum-agentic-ai",
+            },
+          },
+          {
+            title: "AI Agents & Tool Use",
+            duration: "3 Weeks",
+            content: [
+              "What are AI agents and how they differ from chatbots",
+              "ReAct (Reasoning + Acting) agent pattern",
+              "Function calling and tool use with OpenAI",
+              "Building custom tools: web search, code execution, APIs",
+              "Agent loops, planning, and error recovery",
+              "Single-agent systems with LangChain Agents",
+            ],
+            detailedContent: [
+              "Implement the ReAct pattern step by step",
+              "Create tools that agents can invoke autonomously",
+              "Handle agent failures and retries gracefully",
+              "Connect agents to real APIs and external services",
+              "Build a fully functional single-agent assistant",
+            ],
+            toolsAndTechnologies: [
+              { name: "LangChain", icon: "https://img.icons8.com/color/100/chain.webp", alt: "LangChain" },
+              { name: "OpenAI Functions", icon: "https://img.icons8.com/ios-filled/150/chatgpt.webp", alt: "OpenAI" },
+              { name: "Python", icon: "https://res.cloudinary.com/dudu879kr/image/upload/v1752208406/python_ut82h4.webp", alt: "Python" },
+              { name: "Tavily Search", icon: "https://img.icons8.com/color/100/search.webp", alt: "Search" },
+            ],
+            actions: {
+              startLearning: "https://example.com/start-learning-agentic-ai",
+              downloadCurriculum: "https://example.com/download-curriculum-agentic-ai",
+            },
+          },
+          {
+            title: "RAG & Memory Systems",
+            duration: "3 Weeks",
+            content: [
+              "Retrieval Augmented Generation (RAG) architecture",
+              "Vector databases: Pinecone, Chroma, FAISS",
+              "Embedding models and semantic search",
+              "Building a RAG pipeline from scratch",
+              "Short-term and long-term memory for agents",
+              "Conversation history and context management",
+            ],
+            detailedContent: [
+              "Understand why RAG solves hallucination problems",
+              "Chunk, embed, and store documents efficiently",
+              "Query vector databases for relevant context",
+              "Give agents persistent memory across sessions",
+              "Implement episodic and semantic memory patterns",
+            ],
+            toolsAndTechnologies: [
+              { name: "LlamaIndex", icon: "https://img.icons8.com/color/100/database.webp", alt: "LlamaIndex" },
+              { name: "Chroma DB", icon: "https://img.icons8.com/color/100/data-configuration.webp", alt: "ChromaDB" },
+              { name: "FAISS", icon: "https://img.icons8.com/color/100/search.webp", alt: "FAISS" },
+              { name: "OpenAI Embeddings", icon: "https://img.icons8.com/ios-filled/150/chatgpt.webp", alt: "Embeddings" },
+            ],
+            actions: {
+              startLearning: "https://example.com/start-learning-agentic-ai",
+              downloadCurriculum: "https://example.com/download-curriculum-agentic-ai",
+            },
+          },
+          {
+            title: "Multi-Agent Systems",
+            duration: "3 Weeks",
+            content: [
+              "Multi-agent architectures and design patterns",
+              "Microsoft AutoGen framework for multi-agent workflows",
+              "Agent roles: orchestrator, executor, critic, planner",
+              "Agent-to-agent communication and task delegation",
+              "CrewAI for role-based agent collaboration",
+              "Building a multi-agent research and writing pipeline",
+            ],
+            detailedContent: [
+              "Design systems where multiple agents collaborate",
+              "Implement supervisor and worker agent patterns",
+              "Use AutoGen to coordinate agent conversations",
+              "Build a crew of agents to complete complex projects",
+              "Handle agent conflicts and consensus mechanisms",
+            ],
+            toolsAndTechnologies: [
+              { name: "AutoGen", icon: "https://img.icons8.com/color/100/artificial-intelligence.webp", alt: "AutoGen" },
+              { name: "CrewAI", icon: "https://img.icons8.com/color/100/team.webp", alt: "CrewAI" },
+              { name: "LangGraph", icon: "https://img.icons8.com/color/100/flow-chart.webp", alt: "LangGraph" },
+              { name: "Python", icon: "https://res.cloudinary.com/dudu879kr/image/upload/v1752208406/python_ut82h4.webp", alt: "Python" },
+            ],
+            actions: {
+              startLearning: "https://example.com/start-learning-agentic-ai",
+              downloadCurriculum: "https://example.com/download-curriculum-agentic-ai",
+            },
+          },
+          {
+            title: "Production Deployment & Projects",
+            duration: "3 Weeks",
+            content: [
+              "Evaluating and testing AI agents reliably",
+              "AI safety, guardrails, and output validation",
+              "Deploying agents with FastAPI and Docker",
+              "Monitoring agent behavior in production",
+              "Cost optimization for LLM-based systems",
+              "Capstone: Build and deploy a full agentic AI application",
+            ],
+            detailedContent: [
+              "Write test suites for agent correctness",
+              "Add guardrails to prevent harmful outputs",
+              "Package and deploy agents as REST APIs",
+              "Monitor token usage and agent performance",
+              "Complete a portfolio-ready agentic AI project",
+            ],
+            toolsAndTechnologies: [
+              { name: "FastAPI", icon: "https://img.icons8.com/ios-filled/100/api-settings.webp", alt: "FastAPI" },
+              { name: "Docker", icon: "https://res.cloudinary.com/df65lfym1/image/upload/v1777968326/docker_b4f1wr.webp", alt: "Docker" },
+              { name: "LangSmith", icon: "https://img.icons8.com/color/100/combo-chart.webp", alt: "LangSmith" },
+              { name: "GitHub", icon: "https://img.icons8.com/ios-filled/500/github.webp", alt: "GitHub" },
+            ],
+            actions: {
+              startLearning: "https://example.com/start-learning-agentic-ai",
+              downloadCurriculum: "https://example.com/download-curriculum-agentic-ai",
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  certificate: {
+    courseTitle: "AGENTIC AI CERTIFICATION",
+    alt: "agentic-ai-certification-from-connecting-dots-erp",
+    image: "/Certificate/Certificate-1.avif",
+    completionText:
+      "The Agentic AI Certification from Connecting Dots ERP validates your ability to design, build, and deploy autonomous AI agent systems using modern LLM frameworks and tools.",
+    description:
+      "Through hands-on projects covering RAG pipelines, multi-agent orchestration, and production deployment, you will be equipped for high-demand roles in the rapidly growing field of Agentic AI.",
+  },
+
+  descriptionContent: {
+    title: "Why Choose Connecting Dots ERP for Agentic AI Training in {city}?",
+    paragraphs: [
+      "Connecting Dots ERP offers an industry-leading Agentic AI course in {city} that goes beyond basic AI literacy to teach you how to build truly autonomous systems. Our curriculum is built around the most in-demand frameworks — LangChain, AutoGen, CrewAI, and LlamaIndex — and covers everything from LLM fundamentals to deploying production-grade agent pipelines.",
+      "Unlike general AI courses, our Agentic AI training in {city} focuses specifically on autonomous decision-making, tool use, memory management, and multi-agent collaboration — the skills companies are urgently hiring for right now. Every module includes hands-on labs, real-world project work, and code you can take directly into a professional setting.",
+      "Our expert trainers bring active industry experience building AI products, ensuring the curriculum reflects what employers actually need. With small batch sizes, personalized mentorship, and 100% placement support including resume preparation and interview coaching, we are committed to seeing every student successfully transition into an Agentic AI role.",
+    ],
+    listItem1Header: "What makes our Agentic AI training in {city} unique?",
+    listItem1: [
+      "Curriculum built around LangChain, AutoGen, CrewAI, LlamaIndex — the exact tools companies use.",
+      "Covers the full stack: LLM APIs, RAG pipelines, multi-agent systems, and production deployment.",
+      "Hands-on capstone project you can showcase in interviews.",
+      "Expert trainers with active experience building AI products.",
+      "Small batches with personalized mentorship and 1:1 support.",
+      "100% placement assistance with resume building and mock interviews.",
+    ],
+    listItemAfterIndex: 2,
+    paragraphsAfterList: [],
+  },
+
+  faq: {
+    title: "Frequently Asked Questions",
+    video: "https://i.imgur.com/I7XKkrq.mp4",
+    items: [
+      {
+        question: "What is Agentic AI and how is it different from regular AI?",
+        answer:
+          "Regular AI models respond to a single prompt. Agentic AI systems can autonomously plan multi-step tasks, use tools like web search and code execution, remember past interactions, and delegate work to other agents — completing complex goals with minimal human input.",
+      },
+      {
+        question: "Do I need prior AI experience to join this course?",
+        answer:
+          "Basic Python programming is required. Familiarity with AI concepts is helpful but not mandatory — the course starts from LLM fundamentals before moving into agent frameworks.",
+      },
+      {
+        question: "Which frameworks will I learn in this course?",
+        answer:
+          "You will get hands-on experience with LangChain, LangGraph, Microsoft AutoGen, CrewAI, LlamaIndex, OpenAI APIs, and vector databases like ChromaDB and FAISS.",
+      },
+      {
+        question: "What kind of projects will I build?",
+        answer:
+          "You will build a single-agent research assistant, a RAG-powered document Q&A system, a multi-agent content pipeline, and a fully deployed agentic application as your capstone project.",
+      },
+      {
+        question: "What job roles can I apply for after this course?",
+        answer:
+          "Graduates can pursue roles including Agentic AI Engineer, LLM Engineer, AI Automation Specialist, AI Product Developer, and AI Solutions Architect at startups, product companies, and AI consultancies.",
+      },
+    ],
+  },
+
+  relatedCourses: makeRelatedCourses(generatedItRelatedCourses),
+
+  defaultRating: 4.8,
+  defaultReviewCount: 64,
+  publishedAt: "2025-06-01T00:00:00Z",
+  updatedAt: "2026-05-01T00:00:00Z",
+},
   "full-stack": {
     // === BASIC COURSE INFO ===
     title: "Full Stack Development", // Used in: Page titles, headers, SEO
@@ -10318,13 +10668,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -10336,11 +10686,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Tableau",
           description: "Master data visualization",
@@ -10359,12 +10715,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -10845,13 +11201,13 @@ export const coursesData = {
           alt: "Tableau icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -10863,11 +11219,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -10886,12 +11248,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -11371,13 +11733,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -11389,11 +11751,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -11412,12 +11780,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -11901,13 +12269,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -11919,11 +12287,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -11942,12 +12316,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -12418,13 +12792,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -12436,11 +12810,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Tableau",
           description: "Master data visualization",
@@ -12459,12 +12839,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -12944,13 +13324,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -12962,11 +13342,17 @@ export const coursesData = {
           alt: "Tableau icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -12985,12 +13371,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -13467,13 +13853,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -13509,11 +13895,17 @@ export const coursesData = {
           alt: "Power BI icon",
         },
         {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -13858,13 +14250,13 @@ export const coursesData = {
           alt: "Generative AI icon",
         },
         {
-          name: "Masters in Data Science",
+          name: "Data Science with AI",
           description: "Become a data science expert",
           icon: "https://i.imgur.com/C0Hv62l.mp4",
           alt: "Data Science icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -13876,11 +14268,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -13899,12 +14297,12 @@ export const coursesData = {
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Power BI icon",
         },
-        {
-          name: "SQL",
-          description: "Learn SQL from experts",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
+        // {
+        //   name: "SQL",
+        //   description: "Learn SQL from experts",
+        //   icon: "https://i.imgur.com/y0zkEYb.mp4",
+        //   alt: "SQL icon",
+        // },
         {
           name: "Reactjs Framework",
           description: "Learn Reactjs from Industry Experts",
@@ -14228,19 +14626,13 @@ export const coursesData = {
       title: "Related courses",
       items: [
         {
-          name: "SQL",
-          description: "Learn SQL from scratch",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
-        {
           name: "Tableau",
           description: "Become a Tableau expert",
           icon: "https://i.imgur.com/WE4y4wK.mp4",
           alt: "Tableau icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -14252,11 +14644,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -14274,12 +14672,6 @@ export const coursesData = {
           description: "Learn AI from scratch",
           icon: "https://i.imgur.com/QHuijGO.mp4",
           alt: "Generative AI icon",
-        },
-        {
-          name: "Mern Stack",
-          description: "Learn Mern Stack from experts",
-          icon: "https://i.imgur.com/qsfkvBs.mp4",
-          alt: "Mern Stack icon",
         },
         {
           name: "Reactjs Framework",
@@ -14605,7 +14997,7 @@ export const coursesData = {
           alt: "Tableau icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -14617,11 +15009,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -14639,12 +15037,6 @@ export const coursesData = {
           description: "Learn AI from scratch",
           icon: "https://i.imgur.com/QHuijGO.mp4",
           alt: "Generative AI icon",
-        },
-        {
-          name: "Mern Stack",
-          description: "Learn Mern Stack from experts",
-          icon: "https://i.imgur.com/qsfkvBs.mp4",
-          alt: "Mern Stack icon",
         },
         {
           name: "Reactjs Framework",
@@ -14978,13 +15370,7 @@ export const coursesData = {
           alt: "Power BI icon",
         },
         {
-          name: "SQL",
-          description: "Become a SQL expert",
-          icon: "https://i.imgur.com/y0zkEYb.mp4",
-          alt: "SQL icon",
-        },
-        {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -14996,11 +15382,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -15018,12 +15410,6 @@ export const coursesData = {
           description: "Learn AI from scratch",
           icon: "https://i.imgur.com/QHuijGO.mp4",
           alt: "Generative AI icon",
-        },
-        {
-          name: "Mern Stack",
-          description: "Learn Mern Stack from experts",
-          icon: "https://i.imgur.com/qsfkvBs.mp4",
-          alt: "Mern Stack icon",
         },
         {
           name: "Reactjs Framework",
@@ -15407,7 +15793,7 @@ export const coursesData = {
           alt: "Tableau icon",
         },
         {
-          name: "Masters in Data Analytics",
+          name: "Advanced Data Analytics (Azure & Power BI)",
           description: "Master data analytics skills",
           icon: "https://i.imgur.com/y0zkEYb.mp4",
           alt: "Data Analytics icon",
@@ -15419,11 +15805,17 @@ export const coursesData = {
           alt: "Salesforce icon",
         },
         {
-          name: "UI/UX Design",
-          description: "Design stunning user interfaces",
-          icon: "https://i.imgur.com/9FN2rSu.mp4",
-          alt: "UI/UX icon",
+          name: "Agentic AI",
+          description: "Learn Agentic AI from experts",
+          icon: "https://i.imgur.com/grx2N9O.mp4",
+          alt: "agentic ai icon",
         },
+        // {
+        //   name: "UI/UX Design",
+        //   description: "Design stunning user interfaces",
+        //   icon: "https://i.imgur.com/9FN2rSu.mp4",
+        //   alt: "UI/UX icon",
+        // },
         {
           name: "Full-Stack Python",
           description: "Full-stack development with Python",
@@ -15441,12 +15833,6 @@ export const coursesData = {
           description: "Learn AI from scratch",
           icon: "https://i.imgur.com/QHuijGO.mp4",
           alt: "Generative AI icon",
-        },
-        {
-          name: "Mern Stack",
-          description: "Learn Mern Stack from experts",
-          icon: "https://i.imgur.com/qsfkvBs.mp4",
-          alt: "Mern Stack icon",
         },
         {
           name: "Reactjs Framework",
@@ -18158,3 +18544,9 @@ export const citiesData = {
     },
   },
 };
+coursesData["data-science-with-ai"] = coursesData["data-science"];
+coursesData["advanced-data-analytics-azure-power-bi"] = coursesData["data-analytics"];
+coursesData["python-with-ai"] = coursesData["python"];
+coursesData["data-visualization-with-ai"] = coursesData["data-visualization"];
+coursesData["full-stack-with-ai"] = coursesData["full-stack-developer"] ?? coursesData["full-stack"];
+coursesData["hr-courses-training-institute"] = coursesData["hr-training"];

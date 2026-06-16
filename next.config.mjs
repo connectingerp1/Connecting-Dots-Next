@@ -34,7 +34,7 @@ const nextConfig = {
         pathname: "/**",
       },
       {
-        protocol: "https", 
+        protocol: "https",
         hostname: "images.unsplash.com",
         pathname: "/**",
       },
@@ -156,15 +156,75 @@ const nextConfig = {
   },
 
   // Redirects
-  async redirects() {
-    return [
-      {
-        source: "/hr-courses-training-institute-in-pune",
-        destination: "/hr-training-course-in-pune",
-        permanent: true,
-      },
-    ];
-  },
-};
+//   async redirects() {
+//     return [
+//       {
+//         source: "/hr-courses-training-institute-in-pune",
+//         destination: "/hr-training-course-in-pune",
+//         permanent: true,
+//       },
+//       {
+//         source: "/data-science-with-ai-course-in-pune",
+//         destination: "/data-science-course-in-pune",
+//         permanent: true,
+//       },
+//       {
+//         source: "/advanced-data-analytics-azure-power-bi-course-in-pune",
+//         destination: "/data-analytics-course-in-pune",
+//         permanent: true,
+//       },
+//       {
+//         source: "/python-with-ai-course-in-pune",
+//         destination: "/python-course-in-pune",
+//         permanent: true,
+//       },
+//       {
+//         source: "/data-visualization-with-ai-course-in-pune",
+//         destination: "/data-visualization-course-in-pune",
+//         permanent: true,
+//       },
+//       {
+//         source: "/full-stack-with-ai-course-in-pune",
+//         destination: "/full-stack-developer-course-in-pune",
+//         permanent: true,
+//       },
+//     ];
+//   },
+// };
+async redirects() {
+  return [
+    {
+      source: "/hr-training-course-in-pune",
+      destination: "/hr-courses-training-institute-in-pune",
+      permanent: true,
+    },
+    {
+      source: "/data-science-course-in-pune",
+      destination: "/data-science-with-ai-course-in-pune",
+      permanent: true,
+    },
+    {
+      source: "/data-analytics-course-in-pune",
+      destination: "/advanced-data-analytics-azure-power-bi-course-in-pune",
+      permanent: true,
+    },
+    {
+      source: "/python-course-in-pune",
+      destination: "/python-with-ai-course-in-pune",
+      permanent: true,
+    },
+    {
+      source: "/data-visualization-course-in-pune",
+      destination: "/data-visualization-with-ai-course-in-pune",
+      permanent: true,
+    },
+    {
+      source: "/full-stack-developer-course-in-pune",
+      destination: "/full-stack-with-ai-course-in-pune",
+      permanent: true,
+    },
+  ];
+},
+}
 
 export default nextConfig;

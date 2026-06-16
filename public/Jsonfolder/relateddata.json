@@ -53,7 +53,7 @@
       },
       {
         "name": "SQL",
-        "description": "Learn SQL from experts",
+        "description": " from experts",
         "icon": "https://i.imgur.com/y0zkEYb.mp4",
         "alt": " SQL icon"
       },
@@ -2535,12 +2535,7 @@
         "icon": "https://i.imgur.com/6brz8Ea.mp4",
         "alt": "SALESFORCE icon"
       },
-      {
-        "name": "UI/UX Design",
-        "description": "Design stunning user interfaces",
-        "icon": "https://i.imgur.com/9FN2rSu.mp4",
-        "alt": "UI/UX icon"
-      },
+
       {
         "name": "Full-Stack Python",
         "description": "Full-stack development with Python",

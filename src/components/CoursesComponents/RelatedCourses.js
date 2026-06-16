@@ -30,20 +30,23 @@ const CoursesRelated = ({ data, currentCityName }) => {
     "Masters in Data Science": "data-science-course",
     "Master in Data Science": "data-science-course",
     "Masters in Data Analytics": "data-analytics-course",
-    "Business Analytics": "business-analytics-course",
+  
 
     // Development & Programming
     "Full-Stack Python": "python-course",
     "Full-Stack Java": "java-course",
     "Reactjs Framework": "reactjs-framework-course", // Adjusted to be more specific
     "Mern Stack": "mern-stack-course",
-    "UI/UX Design": "ui-ux-course",
+
 
     // Data Visualization & BI
     Tableau: "tableau-course",
     PowerBI: "power-bi-course",
     "Power BI": "power-bi-course",
-    SQL: "sql-course",
+
+    AgenticAi: "agentic-ai-course",
+    "Agentic AI": "agentic-ai-course",
+    "Agentic Ai": "agentic-ai-course",
 
     // CRM & Sales
     Salesforce: "salesforce-training",
@@ -84,7 +87,7 @@ const CoursesRelated = ({ data, currentCityName }) => {
     // IT & General
     "IT Course": "it-course",
     AWS: "aws-course",
-    Azure: "azure-course",
+    // Azure: "azure-course",
     DevOps: "devops-course",
     AIML: "ai-ml-course",
     "Data Visualization": "data-visualization-course",

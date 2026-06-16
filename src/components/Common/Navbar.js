@@ -338,7 +338,7 @@ const Header = () => {
               handleNavClick("/sap-course-in-pune");
             }
           }}
-          
+
           aria-expanded={
             (isMobile && mobileOpenDropdown === "dropdown2") ||
             (!isMobile && isDropdownVisible.dropdown2)
@@ -477,7 +477,7 @@ const Header = () => {
           }
           aria-haspopup="true"
         >
-          <span>IT Courses</span>
+          <span>IT Courses with AI</span>
           {!isMobile && <span className={styles.desktopDropdownArrow}></span>}
         </Link>
         {isMobile && (
@@ -503,64 +503,43 @@ const Header = () => {
           aria-labelledby="dropdownMenuButton3"
         >
           {[
-            {
-              title: "Data Science",
-              items: [
+
                 {
-                  name: "MASTERS IN DATA ANALYTICS",
-                  link: "/data-analytics-course-in-pune",
+                  title: "Data Science with AI",
+                  link: "/data-science-with-ai-course-in-pune",
                 },
-                {
-                  name: "MASTERS IN DATA SCIENCE",
-                  link: "/data-science-course-in-pune",
+                  {
+                  title: "Advanced Data Analytics (Azure & Power BI)",
+                  link: "/advanced-data-analytics-azure-power-bi-course-in-pune",
                 },
-                {
-                  name: "MASTERS IN BUSINESS ANALYTICS",
-                  link: "/business-analytics-course-in-pune",
+               { title: "Generative AI", link: "/generative-ai-course-in-pune" },
+                 {title :"Agentic AI" , link : "/agentic-ai-course-in-pune"},
+               {
+                title: "Python with AI",
+                link: "/python-with-ai-course-in-pune",
+               },
+               {
+                  title: "Data Visualization with AI",
+                  link: "/data-visualization-with-ai-course-in-pune",
                 },
-                { name: "Generative AI", link: "/generative-ai-course-in-pune" },
-              ],
-            },
-            {
-              title: "Data Visualization",
-              items: [
-                {
-                  name: "Data Visualization",
-                  link: "/data-visualization-course-in-pune",
-                },
-                { name: "Tableau", link: "/tableau-course-in-pune" },
-                { name: "Power BI", link: "/power-bi-course-in-pune" },
-                { name: "SQL", link: "/sql-course-in-pune" },
-              ],
-            },
-            {
-              title: "Full Stack Training",
-              link: "/full-stack-developer-course-in-pune",
-            },
+               {
+              title: "Full-Stack with AI",
+              link: "/full-stack-with-ai-course-in-pune",
+               },
+              { title: "Power BI", link: "/power-bi-course-in-pune" },
+             { title: "Tableau", link: "/tableau-course-in-pune" },
+
             {
               title: "JAVA",
               link: "/java-course-in-pune",
             },
-            {
-              title: "MERN Stack",
-              link: "/mern-stack-course-in-pune",
-            },
-            {
-              title: "UI/UX Design",
-              link: "/ui-ux-course-in-pune",
-            },
-            {
-              title: "Python",
-              link: "/python-course-in-pune",
-            },
+
+
             {
               title: "AWS",
               link: "/aws-course-in-pune",
             },
-            {
-              title: "Azure",
-              link: "/azure-course-in-pune",
-            },
+
             {
               title: "DevOps",
               link: "/devops-course-in-pune",
@@ -572,7 +551,8 @@ const Header = () => {
             {
               title: "Salesforce",
               link: "/salesforce-course-in-pune",
-            },
+            }
+
           ].map((submenu, index) => (
             <li key={index} className={styles.megaMenuItem}>
               {submenu.items ? (
