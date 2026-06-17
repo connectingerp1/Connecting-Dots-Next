@@ -1,13 +1,7 @@
 "use client";
 import React, { useState, useCallback } from 'react';
-import dynamic from 'next/dynamic';
-
-const CareerHeroSlide = dynamic(() => import("./HeaderCarousel1"), {
-  ssr: false,
-  loading: () => null,
-});
-
-const Btnform = dynamic(() => import('./Btnform'), { ssr: false });
+import CareerHeroSlide from "@/components/HomePage/HeaderCarousel1";
+import Btnform from './Btnform';
 
 const HeaderCarousel = () => {
   const [showForm, setShowForm] = useState(false);

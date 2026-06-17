@@ -14,7 +14,7 @@ const CareerHeroSlide = ({ onOpenForm }) => {
 
   return (
     // ✅ FIXED: Standardized carousel height matching other carousels
-    <div className="relative w-full min-h-[650px] sm:min-h-[700px] md:min-h-[750px] lg:min-h-[800px]">
+    <div className="career-hero-slide relative w-full min-h-[650px] sm:min-h-[700px] md:min-h-[750px] lg:min-h-[800px]">
       
       {/* Wave Background */}
       <div className="absolute inset-0 sm:bg-[#182E4A]">
@@ -172,21 +172,6 @@ const CareerHeroSlide = ({ onOpenForm }) => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-12px); }
-        }
-        
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-        
-        svg {
-          filter: drop-shadow(0 -5px 12px rgba(0, 0, 0, 0.06));
-        }
-      `}</style>
     </div>
   );
 };

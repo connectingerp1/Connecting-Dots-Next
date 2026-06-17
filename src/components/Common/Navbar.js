@@ -369,7 +369,7 @@ const Header = () => {
       {((isMobile && mobileOpenDropdown === "dropdown2") ||
         (!isMobile && isDropdownVisible.dropdown2)) && (
         <ul
-          className={`${styles.dropdownMenu} ${styles.show}`}
+          className={`${styles.dropdownMenu} ${styles.courseMegaMenu} ${styles.show}`}
           aria-labelledby="dropdownMenuButton2"
         >
           {[
@@ -499,7 +499,7 @@ const Header = () => {
       {((isMobile && mobileOpenDropdown === "dropdown3") ||
         (!isMobile && isDropdownVisible.dropdown3)) && (
         <ul
-          className={`${styles.dropdownMenu} ${styles.show}`}
+          className={`${styles.dropdownMenu} ${styles.courseMegaMenu} ${styles.show}`}
           aria-labelledby="dropdownMenuButton3"
         >
           {[
@@ -800,7 +800,9 @@ const Header = () => {
 
           {/* Hamburger Button */}
           <Button
-            className={styles.navbarToggler}
+            className={`${styles.navbarToggler} ${
+              isSidebarVisible ? styles.navbarTogglerOpen : ""
+            }`}
             aria-controls="basic-navbar-nav"
             aria-expanded={isSidebarVisible ? "true" : "false"}
             aria-label="Toggle navigation"

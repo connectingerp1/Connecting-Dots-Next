@@ -150,6 +150,24 @@ input:-webkit-autofill:active {
   }
 }
 
+.animate-float {
+  animation: hero-float 4s ease-in-out infinite;
+}
+
+.career-hero-slide svg {
+  filter: drop-shadow(0 -5px 12px rgba(0, 0, 0, 0.06));
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
 /* ✅ Accessibility: Screen reader only content */
 .sr-only {
   position: absolute !important;
