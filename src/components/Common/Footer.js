@@ -140,27 +140,27 @@ const footerSections = [
       { href: "/quiz", text: "QUIZ" },
     ],
   },
-  {
-    title: "DIGITAL MARKETING",
-    links: [
-      {
-        href: "/digital-marketing-course-in-pune",
-        text: "ADVANCE DIGITAL MARKETING",
-      },
-      {
-        href: "/digital-marketing-course-in-pune",
-        text: "PAY PER CLICK TRAINING",
-      },
-      {
-        href: "/digital-marketing-course-in-pune",
-        text: "SEARCH ENGINE OPTIMIZATION",
-      },
-      {
-        href: "/digital-marketing-course-in-pune",
-        text: "SOCIAL MEDIA MARKETING",
-      },
-    ],
-  },
+  // {
+  //   title: "DIGITAL MARKETING",
+  //   links: [
+  //     {
+  //       href: "/digital-marketing-course-in-pune",
+  //       text: "ADVANCE DIGITAL MARKETING",
+  //     },
+  //     {
+  //       href: "/digital-marketing-course-in-pune",
+  //       text: "PAY PER CLICK TRAINING",
+  //     },
+  //     {
+  //       href: "/digital-marketing-course-in-pune",
+  //       text: "SEARCH ENGINE OPTIMIZATION",
+  //     },
+  //     {
+  //       href: "/digital-marketing-course-in-pune",
+  //       text: "SOCIAL MEDIA MARKETING",
+  //     },
+  //   ],
+  // },
   {
     title: "DATA SCIENCE",
     links: [

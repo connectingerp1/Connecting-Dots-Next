@@ -12,49 +12,54 @@ const nextConfig = {
   },
 
   // ✅ PERFORMANCE: Optimized image configuration
-  images: {
-    formats: ["image/avif", "image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year cache for optimized images
-    remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "blog-page-panel.onrender.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "imgur.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "i.imgur.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "plus.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "img.icons8.com",
-        pathname: "/**",
-      },
-    ],
-  },
+images: {
+  formats: ["image/avif", "image/webp"],
+  deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  minimumCacheTTL: 31536000,
+  remotePatterns: [
+    {
+      protocol: "http",
+      hostname: "blog-page-panel.onrender.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "imgur.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "i.imgur.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "images.unsplash.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "plus.unsplash.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "res.cloudinary.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "img.icons8.com",
+      pathname: "/**",
+    },
+    {
+      protocol: "https",
+      hostname: "picsum.photos",
+      pathname: "/**",
+    },
+  ],
+},
 
   // ✅ PERFORMANCE: Compiler optimizations
   compiler: {
