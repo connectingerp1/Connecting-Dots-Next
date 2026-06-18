@@ -111,7 +111,7 @@ const footerSections = [
     ],
   },
   {
-    title: "IT COURSES",
+    title: "IT COURSES WITH AI",
     links: [
       {
         href: "/full-stack-with-ai-course-in-pune",

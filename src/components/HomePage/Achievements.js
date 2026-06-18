@@ -1,5 +1,8 @@
 import { MarqueeShowcase } from "./MarqueeShowcase";
 
+const achievementsBackgroundImage =
+  "https://res.cloudinary.com/df65lfym1/image/upload/v1781775393/ChatGPT_Image_Jun_18_2026_03_03_25_PM_cfhfki.webp";
+
 const topImages = [
   { id: "t1", src: "https://res.cloudinary.com/df65lfym1/image/upload/v1781760582/CDERP_2_chmbov.webp" },
   { id: "t2", src: "https://res.cloudinary.com/df65lfym1/image/upload/v1781760582/certificate_ceremony_xx7gax.webp" },
@@ -28,15 +31,11 @@ const bottomImages= [
  
 export default function Achievements() {
   return (
-    <main className="relative w-full max-w-[1800px] mx-auto overflow-hidden py-12 px-4 m-10 flex items-center rounded-lg bg-[#eef6ff] shadow-[0_28px_90px_rgba(15,79,168,0.18)]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(14,165,233,0.55),transparent_30%),radial-gradient(circle_at_86%_20%,rgba(249,115,22,0.34),transparent_26%),radial-gradient(circle_at_45%_88%,rgba(20,184,166,0.44),transparent_34%),linear-gradient(135deg,#eaf5ff_0%,#f8fbff_46%,#e8fff7_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(15,79,168,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(15,79,168,0.18)_1px,transparent_1px)] bg-[size:34px_34px] opacity-45" />
-      <div className="absolute -left-32 top-12 h-44 w-[130%] -rotate-6 bg-white/55 shadow-[0_20px_70px_rgba(255,255,255,0.55)]" />
-      <div className="absolute -right-28 bottom-10 h-44 w-[70%] rotate-6 rounded-full bg-[#0f4fa8]/18 blur-2xl" />
-      <div className="absolute left-8 top-8 h-28 w-28 rounded-full border border-white/70 bg-white/35 backdrop-blur-sm" />
-      <div className="absolute right-12 top-10 h-20 w-20 rounded-full border border-[#0f4fa8]/20 bg-[#ffba49]/35 blur-[1px]" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0f4fa8]/60 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/70 to-transparent" />
+    <main
+      className="relative w-full max-w-[1800px] mx-auto overflow-hidden py-12 px-4 m-10 flex items-center rounded-lg bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${achievementsBackgroundImage})` }}
+    >
+      <div className="absolute inset-0 bg-white/20" />
       <div className="relative z-10 w-full">
         <MarqueeShowcase topImages={topImages} bottomImages={bottomImages} speed={50} />
       </div>

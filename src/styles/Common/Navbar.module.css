@@ -227,15 +227,23 @@
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
   position: relative;
   white-space: nowrap;
   border-radius: 8px;
+  border: 1px solid rgba(15, 79, 168, 0);
+  box-sizing: border-box;
 }
 
-.navLink:hover {
+.navLink:hover,
+.dropdown:hover > .dropdownToggle {
   color: #0f4fa8;
-  background-color: #f3f7fd;
+  background-color: #f3f8ff;
+  border-color: rgba(15, 79, 168, 0.32);
+  box-shadow: 0 8px 20px rgba(15, 79, 168, 0.12);
+  transform: translateY(-1px);
 }
 
 .navLink::after {
@@ -249,7 +257,10 @@
 .navLink.active {
   color: #0f4fa8;
   background-color: #eef6ff;
-  box-shadow: inset 0 0 0 1px rgba(15, 79, 168, 0.08);
+  border-color: rgba(15, 79, 168, 0.42);
+  box-shadow:
+    0 8px 20px rgba(15, 79, 168, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
 }
 
 .navLink.active::after {
@@ -299,6 +310,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.28rem;
 }
 
 .dropdownMenu {
@@ -347,6 +359,7 @@
   position: relative;
   border-radius: 8px;
   line-height: 1.25;
+  border: 1px solid transparent;
 }
 
 .dropdownItem:last-child {
@@ -356,7 +369,9 @@
 .dropdownItem:hover {
   background-color: #f3f7fd;
   color: #0f4fa8;
+  border-color: rgba(15, 79, 168, 0.24);
   padding-left: 0.9rem;
+  box-shadow: 0 8px 18px rgba(15, 79, 168, 0.08);
 }
 
 .dropdownItem::before {
@@ -401,7 +416,8 @@
 .subMenuHeader:hover {
   background-color: #f8fbff;
   color: #0f4fa8;
-  border-color: rgba(15, 79, 168, 0.18);
+  border-color: rgba(15, 79, 168, 0.28);
+  box-shadow: 0 10px 24px rgba(15, 79, 168, 0.1);
 }
 
 .subMenuTitle {
@@ -952,6 +968,80 @@
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
+  }
+
+  .courseMegaMenu {
+    width: min(720px, calc(100vw - 2rem));
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .courseMegaMenu .megaMenuItem {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.55rem;
+    border: 1px solid rgba(15, 79, 168, 0.12);
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .courseMegaMenu .megaMenuItem:hover {
+    border-color: rgba(15, 79, 168, 0.28);
+    box-shadow: 0 16px 34px rgba(15, 79, 168, 0.12);
+    transform: translateY(-1px);
+  }
+
+  .courseMegaMenu .subMenuHeader {
+    min-height: auto;
+    padding: 0.65rem 0.7rem;
+    background: #eef6ff;
+    border-color: rgba(15, 79, 168, 0.18);
+    box-shadow: none;
+  }
+
+  .courseMegaMenu .subMenuArrow {
+    display: none;
+  }
+
+  .courseMegaMenu .dropdownSubmenu {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .courseMegaMenu .megaMenuItem:first-child .dropdownSubmenu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .courseMegaMenu .dropdownSubmenu .dropdownItem {
+    min-height: 36px;
+    padding: 0.48rem 0.58rem;
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(15, 23, 42, 0.07);
+    font-size: 0.76rem;
+  }
+
+  .courseMegaMenu .dropdownSubmenu .dropdownItem:hover {
+    background: #ffffff;
+    border-color: rgba(15, 79, 168, 0.28);
+    padding-left: 0.72rem;
   }
 
   /* Fix for submenu arrow indicators in desktop view */
