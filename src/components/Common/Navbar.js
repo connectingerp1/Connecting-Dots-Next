@@ -89,8 +89,7 @@ const Header = () => {
         pathname.includes("sql-course")
       ) {
         setActiveLink("dropdown3");
-      } else if (pathname.includes("digital-marketing")) {
-        setActiveLink("dropdown5");
+      
       } else if (
         pathname.includes("hr-training") ||
         pathname.includes("hr-course")
@@ -595,105 +594,6 @@ const Header = () => {
     </div>
   );
 
-  const renderDropdownDigitalMarketing = (isMobile = false) => (
-    <div
-      className={styles.dropdown}
-      onMouseEnter={() => handleMouseEnter("dropdown5")}
-      onMouseLeave={() => handleMouseLeave("dropdown5")}
-    >
-      <div className={styles.dropdownToggleWrapper}>
-        <Link
-          href="/digital-marketing-course-in-pune"
-          className={`${styles.navLink} ${styles.dropdownToggle} ${
-            activeLink === "dropdown5" ? styles.active : ""
-          }`}
-          id="dropdownMenuButton5"
-          onClick={(e) => {
-            if (isMobile) {
-              e.preventDefault();
-              handleMobileDropdownToggle("dropdown5");
-            } else {
-              handleNavClick("/digital-marketing-course-in-pune");
-            }
-          }}
-          aria-expanded={
-            (isMobile && mobileOpenDropdown === "dropdown5") ||
-            (!isMobile && isDropdownVisible.dropdown5)
-              ? "true"
-              : "false"
-          }
-          aria-haspopup="true"
-        >
-          <span>Digital Marketing</span>
-          {!isMobile && <span className={styles.desktopDropdownArrow}></span>}
-        </Link>
-        {isMobile && (
-          <button
-            className={styles.mobileDropdownArrow}
-            onClick={() => handleMobileDropdownToggle("dropdown5")}
-            aria-label="Toggle Digital Marketing menu"
-          >
-            <span
-              className={`${styles.arrow} ${
-                mobileOpenDropdown === "dropdown5"
-                  ? styles.arrowUp
-                  : styles.arrowDown
-              }`}
-            ></span>
-          </button>
-        )}
-      </div>
-      {((isMobile && mobileOpenDropdown === "dropdown5") ||
-        (!isMobile && isDropdownVisible.dropdown5)) && (
-        <ul
-          className={`${styles.dropdownMenu} ${styles.show}`}
-          aria-labelledby="dropdownMenuButton5"
-        >
-          {[
-            {
-              name: "Advance Digital Marketing",
-              link: "/digital-marketing-course-in-pune",
-            },
-            {
-              name: "Pay Per Click Training",
-              link: "/digital-marketing-course-in-pune#pay-per-click",
-              section: "pay-per-click",
-            },
-            {
-              name: "Search Engine Optimization",
-              link: "/digital-marketing-course-in-pune#search-engine-optimization",
-              section: "search-engine-opti",
-            },
-            {
-              name: "Social Media Marketing",
-              link: "/digital-marketing-course-in-pune#social-media-marketing",
-              section: "social-media",
-            },
-            {
-              name: "Advance Google Analytics Training",
-              link: "/digital-marketing-course-in-pune#advance-analytics",
-              section: "advance-analytics",
-            },
-          ].map((item, index) => (
-            <li key={index}>
-              <Link
-                className={styles.dropdownItem}
-                href={item.link}
-                onClick={() =>
-                  item.section
-                    ? handleNavigation(item.link.split("#")[0], item.section)
-                    : handleNavClick(item.link)
-                }
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-
   const renderDropdownHRCourses = (isMobile = false) => (
     <div
       className={styles.dropdown}
@@ -770,7 +670,7 @@ const Header = () => {
       )}
     </div>
   );
-
+  
   return (
     <>
       <Navbar
@@ -814,8 +714,8 @@ const Header = () => {
           <Nav className={styles.navbarDesktop}>
             {renderDropdownSAP()}
             {renderDropdownITCourses()}
-            {renderDropdownDigitalMarketing()}
             {renderDropdownHRCourses()}
+           
             <div className={styles.navItem}>
               <Link
                 className={`${styles.navLink} ${
@@ -827,19 +727,19 @@ const Header = () => {
                 Placements
               </Link>
             </div>
+            <div className={styles.navItem}>
+              <Link
+                className={`${styles.navLink} ${
+                  activeLink === "aboutus" ? styles.active : ""
+                }`}
+                href="/aboutus"
+                onClick={() => handleNavClick("aboutus")}
+              >
+                About us
+              </Link>
+            </div>
             {!floatingNav && (
               <>
-                <div className={styles.navItem}>
-                  <Link
-                    className={`${styles.navLink} ${
-                      activeLink === "aboutus" ? styles.active : ""
-                    }`}
-                    href="/aboutus"
-                    onClick={() => handleNavClick("aboutus")}
-                  >
-                    About us
-                  </Link>
-                </div>
                 <div className={styles.navAction}>
                   <Link href="/contactus" className={styles.ctaButton}>
                     Contact Us
@@ -897,7 +797,7 @@ const Header = () => {
             <Nav className={styles.sidebarNav}>
               {renderDropdownSAP(true)}
               {renderDropdownITCourses(true)}
-              {renderDropdownDigitalMarketing(true)}
+             
               {renderDropdownHRCourses(true)}
 
               <div className={styles.mobileQuickLinks}>

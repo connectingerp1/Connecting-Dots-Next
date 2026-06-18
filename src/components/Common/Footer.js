@@ -114,13 +114,11 @@ const footerSections = [
     title: "IT COURSES",
     links: [
       {
-        href: "/full-stack-developer-course-in-pune",
-        text: "FULL STACK TRAINING",
+        href: "/full-stack-with-ai-course-in-pune",
+        text: "FULL STACK WITH AI",
       },
       { href: "/java-course-in-pune", text: "JAVA" },
-      { href: "/mern-stack-course-in-pune", text: "MERN STACK" },
-      { href: "/ui-ux-course-in-pune", text: "UI/UX DESIGN" },
-      { href: "/python-with-ai-course-in-pune", text: "PYTHON" },
+      { href: "/python-with-ai-course-in-pune", text: "PYTHON WITH AI" },
       { href: "/aws-course-in-pune", text: "AWS" },
       { href: "/azure-course-in-pune", text: "AZURE" },
       { href: "/devops-course-in-pune", text: "DEVOPS" },
@@ -140,48 +138,25 @@ const footerSections = [
       { href: "/quiz", text: "QUIZ" },
     ],
   },
-  // {
-  //   title: "DIGITAL MARKETING",
-  //   links: [
-  //     {
-  //       href: "/digital-marketing-course-in-pune",
-  //       text: "ADVANCE DIGITAL MARKETING",
-  //     },
-  //     {
-  //       href: "/digital-marketing-course-in-pune",
-  //       text: "PAY PER CLICK TRAINING",
-  //     },
-  //     {
-  //       href: "/digital-marketing-course-in-pune",
-  //       text: "SEARCH ENGINE OPTIMIZATION",
-  //     },
-  //     {
-  //       href: "/digital-marketing-course-in-pune",
-  //       text: "SOCIAL MEDIA MARKETING",
-  //     },
-  //   ],
-  // },
+
   {
-    title: "DATA SCIENCE",
+    title: "DATA SCIENCE WITH AI",
     links: [
       {
-        href: "/data-analytics-course-in-pune",
-        text: "MASTERS IN DATA ANALYTICS",
+        href: "/advanced-data-analytics-with-generative-ai-course-in-pune",
+        text: "Advanced Data Analytics (Azure & Power BI)",
       },
-      { href: "/data-science-with-ai-course-in-pune", text: "MASTERS IN DATA SCIENCE" },
-      {
-        href: "/business-analytics-course-in-pune",
-        text: "MASTERS IN BUSINESS ANALYTICS",
-      },
+      { href: "/data-science-with-ai-course-in-pune", text: "DATA SCIENCE WITH AI" },
+      
       { href: "/generative-ai-course-in-pune", text: "Generative AI" },
     ],
   },
   {
     title: "DATA VISUALIZATION",
     links: [
+      { href: "/data-visualization-with-ai-course-in-pune", text: "Data Visualization with AI" },
       { href: "/power-bi-course-in-pune", text: "POWER BI" },
       { href: "/tableau-course-in-pune", text: "TABLEAU" },
-      { href: "/sql-course-in-pune", text: "SQL" },
     ],
   },
   {
