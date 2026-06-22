@@ -241,6 +241,27 @@ export default function OfferLetter() {
     >
       <BackgroundAnimation />
 
+      {/* Section background image (placed under content, above global background) */}
+      {/* <div
+        className="chevron-bg"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/df65lfym1/image/upload/v1781935173/ChatGPT_Image_Jun_20_2026_11_22_30_AM_czzfnr.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 0,
+          opacity: 0.9,
+          pointerEvents: "none",
+        }}
+      /> */}
+
       {/* Section heading */}
       <div className="containerCH">
         <h2>Training To Placement Approach</h2>

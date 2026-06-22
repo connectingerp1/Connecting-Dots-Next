@@ -142,9 +142,19 @@ const PlacementSection = () => {
               <p className={styles.degreeInfo}>{story.degree}</p>
 
               <div className={styles.companyInfo}>
-                <div>
-                  <p>{story.company}</p>
-                </div>
+                {/* <div
+                  className={styles.carouselBackground}
+                  aria-hidden="true"
+                  style={{
+                    backgroundImage:
+                      "url('https://res.cloudinary.com/df65lfym1/image/upload/v1781935173/ChatGPT_Image_Jun_20_2026_11_22_30_AM_czzfnr.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    opacity: 0.95,
+                    pointerEvents: "none",
+                  }}
+                ></div> */}
                 <div className={styles.logoContainer}>
                   <Image
                     src={story.logo}

@@ -211,7 +211,7 @@ export default function HeaderCarousel() {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-4 z-20 px-4 sm:bottom-6">
+      {/* <div className="absolute inset-x-0 bottom-4 z-20 px-4 sm:bottom-6">
         <div className="relative mx-auto w-full max-w-5xl rounded-2xl bg-[#0b0d1a] px-4 py-3 shadow-[0_24px_70px_rgba(15,23,42,0.45)] ring-1 ring-white/10 sm:w-[88%] sm:px-5 lg:w-[72%]">
           <span className="pointer-events-none absolute inset-x-8 -top-px h-px bg-gradient-to-r from-transparent via-violet-400/70 to-transparent" />
           <div className="grid grid-cols-3 gap-x-2 gap-y-3 lg:grid-cols-6 lg:divide-x lg:divide-white/10">
@@ -235,7 +235,7 @@ export default function HeaderCarousel() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

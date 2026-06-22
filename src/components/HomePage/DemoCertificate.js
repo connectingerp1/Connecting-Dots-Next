@@ -15,7 +15,7 @@ const Btnform = dynamic(() => import("@/components/HomePage/Btnform"), {
 const certificateData = {
   courseTitle: "SAP Training Certificate",
   alt: "sap-training-certification-from-connecting-dots-erp",
-  image: "https://res.cloudinary.com/df65lfym1/image/upload/v1777618559/Certificate_pbdvhs.webp",
+  image: "https://res.cloudinary.com/df65lfym1/image/upload/v1781938213/WhatsApp_Image_2026-06-20_at_12.10.52_PM_f8sdnw.webp",
   completionText:
     "The Connecting Dots SAP Certification Course is designed to enhance your expertise in SAP systems and set you on the path to a successful career in ERP. Our program goes beyond theoretical learning, offering hands-on practical sessions and real-world scenarios across various SAP modules.",
   description:

@@ -30,7 +30,7 @@ function PreviewCard({ image, side, className = "" }) {
         >
           <Image
             src={image.src}
-            alt={image.alt}
+            alt={"Connecting Dots Erp"}
             fill
             sizes="(min-width: 768px) 350px, 90vw"
             className="object-cover"
@@ -136,7 +136,7 @@ function MarqueeRow({
           >
             <Image
               src={image.src}
-              alt={image.alt}
+              alt={"Connecting Dots Erp"}
               fill
               sizes={`${itemWidth}px`}
               className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -185,6 +185,7 @@ export function MarqueeShowcase({
             "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         }}
       >
+       
         <div className="flex flex-col" style={{ gap: rowGap }}>
           <MarqueeRow
             images={topImages}

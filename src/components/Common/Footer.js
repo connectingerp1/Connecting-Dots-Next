@@ -1,4 +1,3 @@
-
 // Footer.js
 
 import Link from "next/link";
@@ -208,14 +207,34 @@ const Footer = () => {
 
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-5">
-          {/* Column 1: SAP S/4 HANA COURSES */}
-          <div className="lg:col-span-1">
-            <FooterClient sections={[footerSections[0]]} />
-          </div>
+          {/* Columns 1 & 2 wrapper: India dot-map sits as a background behind both */}
+          <div className="lg:col-span-2 relative grid grid-cols-1 lg:grid-cols-2">
+            {/* Background layer: India dot-map image */}
+            <div
+              className="pointer-events-none absolute inset-0 z-0 opacity-80 lg:opacity-50"
+              aria-hidden="true"
+            >
+              <Image
+                src="https://res.cloudinary.com/df65lfym1/image/upload/v1781946054/ChatGPT_Image_Jun_20_2026_02_30_00_PM_g2zifl.webp"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-contain object-center"
+                loading="lazy"
+              />
+              {/* Subtle gradient so text stays readable over the brightest part of the map */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#182e4a]/40 via-transparent to-[#182e4a]/60" />
+            </div>
 
-          {/* Column 2: IT COURSES + ABOUT */}
-          <div className="lg:col-span-1">
-            <FooterClient sections={[footerSections[1], footerSections[2]]} />
+            {/* Column 1: SAP S/4 HANA COURSES */}
+            <div className="relative z-10">
+              <FooterClient sections={[footerSections[0]]} />
+            </div>
+
+            {/* Column 2: IT COURSES + ABOUT */}
+            <div className="relative z-10">
+              <FooterClient sections={[footerSections[1], footerSections[2]]} />
+            </div>
           </div>
 
           {/* Column 3: DIGITAL MARKETING + DATA SCIENCE */}
@@ -363,3 +382,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
