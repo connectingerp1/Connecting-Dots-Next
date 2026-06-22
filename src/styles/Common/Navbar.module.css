@@ -1263,25 +1263,32 @@
     transform: translateX(0);
   }
 
+  .sapMegaMenu,
+  .itMegaMenu,
+  .hrMegaMenu {
+    position: fixed;
+    top: 86px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(8px) scale(0.98);
+  }
+
   .sapMegaMenu {
-    left: auto;
-    right: 0;
-    transform: none;
     grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
   }
 
   .itMegaMenu {
-    left: auto;
-    right: 0;
-    transform: none;
     grid-template-columns: minmax(0, 1.32fr) minmax(260px, 0.68fr);
   }
 
   .hrMegaMenu {
-    left: auto;
-    right: 0;
-    transform: none;
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sapMegaMenu.show,
+  .itMegaMenu.show,
+  .hrMegaMenu.show {
+    transform: translateX(-50%) translateY(0) scale(1);
   }
 
   .subMenuArrow::before {
