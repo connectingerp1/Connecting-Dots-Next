@@ -60,7 +60,7 @@
 }
 
 .transitioning {
-  transition: none !important;
+  transition: auto !important;
 }
 
 @keyframes floatIn {
@@ -289,6 +289,15 @@
 /* Dropdown Menus */
 .dropdown {
   position: relative;
+
+}
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -50px;
+  right: -50px;
+  height: 90px;
 }
 
 .dropdownToggleWrapper {
@@ -363,7 +372,7 @@
   background:
     linear-gradient(145deg, transparent 0 38%, rgba(76, 132, 255, 0.1) 39%, transparent 40%),
     linear-gradient(160deg, transparent 0 50%, rgba(14, 165, 233, 0.12) 51%, transparent 52%);
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /* IT Courses with AI: more items overall, so the menu runs a touch wider
@@ -1013,6 +1022,9 @@
 .sidebarNav .sapMegaMenu,
 .sidebarNav .itMegaMenu,
 .sidebarNav .hrMegaMenu {
+  pointer-events: auto;
+  position: static;
+  top: 86px;
   display: block;
   width: 100%;
   padding: 0.75rem;
@@ -1215,6 +1227,18 @@
 
 /* Responsive styles */
 @media (min-width: 992px) {
+  .hrMegaMenu {
+    position: absolute !important;
+    top: 100% !important;
+    left: auto !important;
+    right: 0 !important;
+    transform: translateY(8px) scale(0.98) !important;
+  }
+
+  .hrMegaMenu.show {
+    transform: translateY(0) scale(1) !important;
+    pointer-events: auto;
+  }
 
   .containerFluid {
     padding: 0 0.75rem;
@@ -1289,6 +1313,7 @@
   .itMegaMenu.show,
   .hrMegaMenu.show {
     transform: translateX(-50%) translateY(0) scale(1);
+    pointer-events: auto;
   }
 
   .subMenuArrow::before {
@@ -1744,4 +1769,15 @@
 
 .ctaButton:hover::before {
   left: 100%;
+}
+.sidebarNav {
+  padding: 0.75rem;
+}
+
+.sidebarNav .dropdown {
+  width: 100%;
+}
+
+.sidebarNav .dropdownToggleWrapper {
+  width: 100%;
 }
