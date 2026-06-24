@@ -1,0 +1,14 @@
+/* .backgroundAnimation {
+  background-image: url("https://res.cloudinary.com/df65lfym1/image/upload/v1782295703/ChatGPT_Image_Jun_24_2026_03_38_00_PM_lh0wil.png");
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+} 
+
+ .backgroundAnimation > * {
+  display: none;
+} */

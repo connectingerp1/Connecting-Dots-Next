@@ -5909,7 +5909,7 @@ export const citySpecificMeta = {
       description: "Learn Business Analytics Course in Matunga to build BI, Excel, Analytics, and data insights. Gain job-ready skills for analytics-driven business growth.",
     },
   },
-  "chatgpt": {
+  "generative-ai": {
     "pune": {
       title: "Generative AI Course in Pune – Master AI & Future Skills",
       description: "Learn Generative AI Course in Pune with AI tools, prompt writing, and automation. Build your career, explore freelancing opportunities, and AI job prospects.",
@@ -6671,260 +6671,7 @@ export const citySpecificMeta = {
       description: "Learn Java Course in Matunga to gain Core Java, APIs, and backend coding skills. Build your developer profile and open doors to future IT job success.",
     },
   },
-  "mern-stack": {
-    "pune": {
-      title: "MERN Stack Course in Pune | Build Future-Ready Career",
-      description: "Master MongoDB, Express, React, and Node through live projects. Enroll in the top MERN Stack Course in Pune for hands-on coding and fast career growth.",
-    },
-    "mumbai": {
-      title: "MERN Stack Course in Mumbai | Full Stack Career Path",
-      description: "Learn MERN Stack in Mumbai with real-world projects. Get skilled in full stack web development and unlock top job opportunities in tech.",
-    },
-    "delhi": {
-      title: "MERN Stack Course in Delhi | Learn Full Stack Coding",
-      description: "Become a MERN developer in Delhi! Hands-on training with MongoDB, React, Node, and Express for a strong full stack career foundation.",
-    },
-    "kolkata": {
-      title: "MERN Stack Course in Kolkata | Learn to Build Apps",
-      description: "Get industry-ready with the best MERN Stack Course in Kolkata. Master front-end and back-end coding for job-ready full stack careers.",
-    },
-    "chennai": {
-      title: "MERN Stack Course in Chennai | Code for Career Growth",
-      description: "Advance your tech career with a MERN Stack Course in Chennai. Learn Node, React, and MongoDB with live coding sessions and placement support.",
-    },
-    "bangalore": {
-      title: "MERN Stack Course in Bangalore | Full Stack Skills",
-      description: "Learn to build powerful web apps with MERN Stack in Bangalore. Gain job-ready coding skills and start your full stack developer journey today.",
-    },
-    "hyderabad": {
-      title: "MERN Stack Course in Hyderabad | Career in Web Dev",
-      description: "Become a certified MERN developer in Hyderabad. Learn React, Node, and MongoDB with practical training for high-paying job roles.",
-    },
-    "ahmedabad": {
-      title: "MERN Stack Course in Ahmedabad | Learn Full Stack Dev",
-      description: "Join the best MERN Stack Course in Ahmedabad to learn web app development using React, Node, and MongoDB with career-focused guidance.",
-    },
-    "jaipur": {
-      title: "MERN Stack Course in Jaipur | Learn Coding for Future",
-      description: "Build real-world web apps with the top MERN Stack Course in Jaipur. Hands-on projects and job-oriented training for future-ready coders.",
-    },
-    "lucknow": {
-      title: "MERN Stack Course in Lucknow | Learn Full Stack Fast",
-      description: "Enroll in the best MERN Stack Course in Lucknow. Master Node, React, and MongoDB through projects designed for career growth.",
-    },
-    "kanpur": {
-      title: "MERN Stack Course in Kanpur | Full Stack Developer Path",
-      description: "Learn full stack development in Kanpur with MongoDB, React, Node & Express. Build live projects and unlock job opportunities in tech.",
-    },
-    "nagpur": {
-      title: "MERN Stack Course in Nagpur | Build Web Apps Fast",
-      description: "Gain real-time coding experience with the MERN Stack Course in Nagpur. Learn React, Node & MongoDB to start your full stack career journey.",
-    },
-    "patna": {
-      title: "MERN Stack Course in Patna | Learn Full Stack Coding",
-      description: "Become a skilled MERN developer in Patna. Learn to build complete web apps using React, Node & MongoDB for better career opportunities.",
-    },
-    "indore": {
-      title: "MERN Stack Course in Indore | Learn Job-Ready Skills",
-      description: "Get trained in the top MERN Stack Course in Indore. Build web apps with React, Node & Express and fast-track your tech career growth.",
-    },
-    "bhopal": {
-      title: "MERN Stack Course in Bhopal | Full Stack Career Boost",
-      description: "Learn MERN Stack in Bhopal and become a full stack developer. Get real-world project training and placement-ready coding experience.",
-    },
-    "visakhapatnam": {
-      title: "MERN Stack Course in Visakhapatnam | Hands-On Learning",
-      description: "Join the best MERN Stack Course in Visakhapatnam. Master React, Node, and MongoDB through live coding projects for career success.",
-    },
-    "vadodara": {
-      title: "MERN Stack Course in Vadodara | Learn Full Stack Dev",
-      description: "Start your developer career with the top MERN Stack Course in Vadodara. Learn React, Node, Express & MongoDB through real projects.",
-    },
-    "ludhiana": {
-      title: "MERN Stack Course in Ludhiana | Build Future Skills",
-      description: "Become a job-ready full stack developer with MERN Stack Course in Ludhiana. Gain real coding skills and project-based training.",
-    },
-    "agra": {
-      title: "MERN Stack Course in Agra | Learn Full Stack Fast",
-      description: "Enroll in the MERN Stack Course in Agra to master React, Node, and MongoDB. Build projects and open new career opportunities in tech.",
-    },
-    "nashik": {
-      title: "MERN Stack Course in Nashik | Learn Web Development",
-      description: "Get hands-on with React, Node, and MongoDB in Nashik. The MERN Stack Course prepares you for full stack roles with real-time coding.",
-    },
-    "rajkot": {
-      title: "MERN Stack Course in Rajkot | Full Stack Developer Skills",
-      description: "Learn full stack development with MERN Stack Course in Rajkot. Gain hands-on experience with React, Node, and MongoDB to boost your IT career.",
-    },
-    "varanasi": {
-      title: "MERN Stack Course in Varanasi | Build Career in Tech",
-      description: "Upgrade your career with the MERN Stack Course in Varanasi. Master full stack development using React, Node & MongoDB with live projects.",
-    },
-    "kerala": {
-      title: "MERN Stack Course in Kerala | Advanced Developer Training",
-      description: "Learn modern web development with the MERN Stack Course in Kerala. Build live apps and gain job-ready skills for high-growth IT roles.",
-    },
-    "surat": {
-      title: "MERN Stack Course in Surat | Learn Full Stack Coding",
-      description: "Become a certified full stack developer with the MERN Stack Course in Surat. Get trained in React, Node, and MongoDB for top tech jobs.",
-    },
-    "dehradun": {
-      title: "MERN Stack Course in Dehradun | Web Developer Skills",
-      description: "Master full stack development with the MERN Stack Course in Dehradun. Learn React, Node, and MongoDB with real-time project training.",
-    },
-    "madurai": {
-      title: "MERN Stack Course in Madurai | Start Full Stack Career",
-      description: "Build your developer career with MERN Stack Course in Madurai. Learn React, Node, Express & MongoDB through hands-on live projects.",
-    },
-    "mysore": {
-      title: "MERN Stack Course in Mysore | Build Modern Web Apps",
-      description: "Learn full stack development with MERN Stack Course in Mysore. Gain coding expertise in React, Node, and MongoDB for better career growth.",
-    },
-    "pondicherry": {
-      title: "MERN Stack Course in Pondicherry | Learn Web Coding",
-      description: "Enroll in the MERN Stack Course in Pondicherry to master React, Node, and MongoDB. Get industry-ready with practical coding projects.",
-    },
-    "ranchi": {
-      title: "MERN Stack Course in Ranchi | Advance Your IT Career",
-      description: "Learn MERN Stack in Ranchi with real-world coding projects. Master React, Node, and MongoDB for full stack development career success.",
-    },
-    "coimbatore": {
-      title: "MERN Stack Course in Coimbatore | Learn Full Stack Fast",
-      description: "Join the top MERN Stack Course in Coimbatore. Learn React, Node, Express & MongoDB through hands-on sessions and job-ready projects.",
-    },
-    "chandigarh": {
-      title: "MERN Stack Course in Chandigarh | Build Full Stack Career",
-      description: "Master React, Node, and MongoDB with the MERN Stack Course in Chandigarh. Gain hands-on coding experience and fast-track your tech career growth.",
-    },
-    "bhubaneswar": {
-      title: "MERN Stack Course in Bhubaneswar | Full Stack Developer Path",
-      description: "Learn modern full stack web development in Bhubaneswar. The MERN Stack Course covers React, Node & MongoDB for high-demand tech careers.",
-    },
-    "tirupati": {
-      title: "MERN Stack Course in Tirupati | Learn Job-Ready Coding",
-      description: "Enroll in the MERN Stack Course in Tirupati to gain full stack skills in React, Node, and MongoDB. Build real-world projects for top IT jobs.",
-    },
-    "vizag": {
-      title: "MERN Stack Course in Vizag | Become Full Stack Developer",
-      description: "Master MERN Stack development in Vizag with React, Node, and MongoDB. Learn project-based coding for job-ready full stack skills.",
-    },
-    "trivandrum": {
-      title: "MERN Stack Course in Trivandrum | Hands-On Web Dev Skills",
-      description: "Learn MERN Stack in Trivandrum and build dynamic web applications. Gain industry-ready experience in React, Node, and MongoDB.",
-    },
-    "jalandhar": {
-      title: "MERN Stack Course in Jalandhar | Full Stack Web Training",
-      description: "Start your web development journey with the MERN Stack Course in Jalandhar. Learn React, Node, and MongoDB through hands-on coding.",
-    },
-    "mohali": {
-      title: "MERN Stack Course in Mohali | Learn Full Stack Development",
-      description: "Build job-ready full stack skills with the MERN Stack Course in Mohali. Learn React, Node, Express, and MongoDB through real-world projects.",
-    },
-    "raipur": {
-      title: "MERN Stack Course in Raipur | Future-Ready Developer Skills",
-      description: "Become a skilled full stack developer with MERN Stack Course in Raipur. Master React, Node & MongoDB to grow your tech career.",
-    },
-    "cochin": {
-      title: "MERN Stack Course in Cochin | Full Stack Web Development",
-      description: "Learn MERN Stack in Cochin and master full stack web development. Build real-world projects and boost your job opportunities in tech.",
-    },
-    "mangalore": {
-      title: "MERN Stack Course in Mangalore | Learn Full Stack Coding",
-      description: "Get trained in MERN Stack in Mangalore. Learn React, Node, and MongoDB through practical sessions for career growth in web development.",
-    },
-    "katraj": {
-      title: "MERN Stack Course in Katraj | Learn Full Stack Skills",
-      description: "Build your full stack developer career with the MERN Stack Course in Katraj. Learn React, Node, and MongoDB through practical, job-ready training.",
-    },
-    "pimpri-chinchwad": {
-      title: "MERN Stack Course in Pimpri Chinchwad | Web Dev Training",
-      description: "Learn full stack development in Pimpri Chinchwad with MERN Stack Course. Master React, Node, and MongoDB for high-growth tech careers.",
-    },
-    "shivaji-nagar": {
-      title: "MERN Stack Course in Shivaji Nagar | Learn Web Development",
-      description: "Master the MERN Stack in Shivaji Nagar and gain real-world coding skills. Learn React, Node & MongoDB for career-ready web development.",
-    },
-    "koregaon-park": {
-      title: "MERN Stack Course in Koregaon Park | Full Stack Web Skills",
-      description: "Learn full stack web development in Koregaon Park with the MERN Stack Course. Build React, Node, and MongoDB projects for job-ready skills.",
-    },
-    "viman-nagar": {
-      title: "MERN Stack Course in Viman Nagar | Build Developer Career",
-      description: "Join MERN Stack Course in Viman Nagar and master React, Node & MongoDB. Learn through live projects and grow your full stack career.",
-    },
-    "pimple-saudagar": {
-      title: "MERN Stack Course in Pimple Saudagar | Learn Coding Skills",
-      description: "Become a full stack web developer with MERN Stack Course in Pimple Saudagar. Gain practical experience in React, Node & MongoDB.",
-    },
-    "baner": {
-      title: "MERN Stack Course in Baner | Full Stack Developer Training",
-      description: "Get hands-on full stack training with MERN Stack Course in Baner. Learn React, Node, and MongoDB to build a strong tech career path.",
-    },
-    "hinjewadi": {
-      title: "MERN Stack Course in Hinjewadi | Learn Full Stack Dev",
-      description: "Boost your IT career with the MERN Stack Course in Hinjewadi. Learn React, Node & MongoDB through project-based full stack training.",
-    },
-    "wakad": {
-      title: "MERN Stack Course in Wakad | Build Future in Web Dev",
-      description: "Learn MERN Stack in Wakad with real-time coding projects. Master React, Node, and MongoDB for career opportunities in full stack roles.",
-    },
-    "kothrud": {
-      title: "MERN Stack Course in Kothrud | Learn Full Stack Development",
-      description: "Join the MERN Stack Course in Kothrud to master React, Node & MongoDB. Build career-ready skills with live coding projects.",
-    },
-    "hadapsar": {
-      title: "MERN Stack Course in Hadapsar | Job-Ready Developer Skills",
-      description: "Learn full stack development in Hadapsar with MERN Stack Course. Get hands-on experience with React, Node & MongoDB for top tech jobs.",
-    },
-    "aundh": {
-      title: "MERN Stack Course in Aundh | Learn Full Stack Fast",
-      description: "Enroll in MERN Stack Course in Aundh and learn React, Node, and MongoDB. Build live projects and prepare for full stack developer jobs.",
-    },
-    "navi-mumbai": {
-      title: "MERN Stack Course in Navi Mumbai | Learn Full Stack Dev",
-      description: "Join MERN Stack Course in Navi Mumbai to master React, Node, Express, and MongoDB. Build real-world projects and get job-ready as a full stack developer.",
-    },
-    "thane": {
-      title: "MERN Stack Course in Thane | Build Full Stack Skills",
-      description: "Learn MERN Stack Course in Thane with hands-on React, Node & MongoDB training. Gain coding confidence and prepare for in-demand web developer roles.",
-    },
-    "kalyan": {
-      title: "MERN Stack Course in Kalyan | Learn Coding for Web Dev",
-      description: "Enroll in MERN Stack Course in Kalyan to explore React, Node, and MongoDB. Build full stack apps and kickstart your career in web development.",
-    },
-    "bandra": {
-      title: "MERN Stack Course in Bandra | Learn Full Stack Development",
-      description: "Learn MERN Stack Course in Bandra and build expertise in React, Node & MongoDB. Gain practical coding skills for future-ready tech careers.",
-    },
-    "andheri": {
-      title: "MERN Stack Course in Andheri | Become a Full Stack Expert",
-      description: "Master full stack development in Andheri with MERN Stack Course. Learn React, Node & MongoDB through projects that build your developer career.",
-    },
-    "powai": {
-      title: "MERN Stack Course in Powai | Learn Advanced Web Dev",
-      description: "Join MERN Stack Course in Powai and gain job-oriented training in React, Node, and MongoDB. Build full stack web apps with hands-on experience.",
-    },
-    "worli": {
-      title: "MERN Stack Course in Worli | Learn to Code Full Stack",
-      description: "Enroll in MERN Stack Course in Worli to master React, Node, Express, and MongoDB. Build web apps and upgrade your coding career in tech.",
-    },
-    "chembur": {
-      title: "MERN Stack Course in Chembur | Build Future in Web Dev",
-      description: "Learn MERN Stack Course in Chembur and explore full stack coding with React, Node, and MongoDB. Build skills that employers in tech demand.",
-    },
-    "malad": {
-      title: "MERN Stack Course in Malad | Learn Modern Full Stack",
-      description: "Join MERN Stack Course in Malad to develop React, Node, and MongoDB skills. Learn to build real projects and prepare for developer jobs.",
-    },
-    "vile-parle": {
-      title: "MERN Stack Course in Vile Parle | Full Stack Web Dev",
-      description: "Learn MERN Stack Course in Vile Parle and get hands-on training in React, Node, and MongoDB. Build coding expertise for a bright tech future.",
-    },
-    "matunga": {
-      title: "MERN Stack Course in Matunga | Learn Web Development",
-      description: "Enroll in MERN Stack Course in Matunga and explore React, Node & MongoDB. Build strong full stack development skills for high-paying tech careers.",
-    },
-  },
+
   
   "hr-payroll": {
     "pune": {
@@ -7946,7 +7693,7 @@ export const citySpecificMeta = {
     }
   },
 
-  "it": {
+  "it-course-with-ai": {
     "pune": {
       "title": "Pune IT Course for Advanced Career Skills",
       "description": "Enhance your technical expertise in Pune with an IT Course that strengthens digital abilities, practical problem-solving, and future-ready competence."
@@ -10753,7 +10500,7 @@ export const citySpecificMeta = {
 
   "data-visualization": {
     "pune": {
-      "title": "Master Data visualization Course in Pune",
+      "title": "Master Data visualization Course in Pune hello",
       "description": "Enhance your analytical skills in Pune with a Data visualization Course that builds insights, visual storytelling, and decision-making abilities."
     },
     "mumbai": {

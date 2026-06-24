@@ -213,6 +213,7 @@ const CourseCityPage = async ({ params }) => {
       descriptionContentData.ppc ||
       descriptionContentData.seo);
 
+      
   const shouldUseNewCurriculum =
     !isSapCourse && modulesData && modulesData.tabs && Array.isArray(modulesData.tabs);
   const shouldUseLegacyModules = !isSapCourse && modulesData && !shouldUseNewCurriculum;
