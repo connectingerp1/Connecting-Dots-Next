@@ -123,7 +123,7 @@ const heroBackgroundImage =
 
 /* ---------- Component ---------- */
 
-export default function HeaderCarousel() {
+export default function CareerHeroSlide({ onOpenForm }) {
   return (
     <section
       className="relative min-h-[650px] w-full overflow-hidden bg-purple-50 bg-cover bg-[position:68%_center] bg-no-repeat sm:min-h-[700px] sm:bg-[position:62%_center] md:min-h-[750px] lg:min-h-[800px]"
@@ -178,14 +178,13 @@ export default function HeaderCarousel() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:gap-4">
-              <a
-                href="#courses"
+              <button
+                onClick={onOpenForm}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-purple-300/50 transition hover:bg-purple-700 sm:w-auto sm:px-7 sm:py-4"
               >
                 Free Consultation
                 <ArrowRight className="h-4 w-4" />
-              </a>
-              
+              </button>
             </div>
           </div>
 
