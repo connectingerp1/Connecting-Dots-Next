@@ -103,20 +103,7 @@ const OrbitBackground = ({ className }) => (
 
 /* ---------- Data ---------- */
 
-const topStats = [
-  { icon: GradCapIcon, value: "5000+", label: "Trained Students", color: "text-purple-600", bg: "bg-purple-100" },
-  { icon: BriefcaseIcon, value: "1200+", label: "Successful Placements", color: "text-orange-500", bg: "bg-orange-100" },
-  { icon: UsersIcon, value: "15+", label: "Years of Excellence", color: "text-green-600", bg: "bg-green-100" },
-];
 
-const barStats = [
-  { icon: GradCapIcon, value: "5000+", label: "Students trained", color: "text-violet-300", bg: "bg-violet-500/15" },
-  { icon: BriefcaseIcon, value: "1200+", label: "Successful placements", color: "text-orange-300", bg: "bg-orange-500/15" },
-  { icon: BookIcon, value: "35+", label: "Professional courses", color: "text-sky-300", bg: "bg-sky-500/15" },
-  { icon: StarOutline, value: "15+", label: "Years of excellence", color: "text-pink-300", bg: "bg-pink-500/15" },
-  { icon: UsersIcon, value: "40+", label: "Workshops conducted", color: "text-emerald-300", bg: "bg-emerald-500/15" },
-  { icon: StarIcon, value: "4.8/5", label: "Google rating", color: "text-amber-300", bg: "bg-amber-500/15" },
-];
 
 const heroBackgroundImage =
   "https://res.cloudinary.com/df65lfym1/image/upload/v1781782322/WhatsApp_Image_2026-06-18_at_3.51.37_PM_i4hsiu.webp";
@@ -126,11 +113,12 @@ const heroBackgroundImage =
 export default function CareerHeroSlide({ onOpenForm }) {
   return (
     <section
-      className="relative min-h-[650px] w-full overflow-hidden bg-purple-50 bg-cover bg-[position:68%_center] bg-no-repeat sm:min-h-[700px] sm:bg-[position:62%_center] md:min-h-[750px] lg:min-h-[800px]"
+      className="relative min-h-[560px] w-full overflow-hidden bg-purple-50 bg-center bg-cover bg-[position:68%_center] bg-no-repeat sm:min-h-[700px] sm:bg-[position:62%_center] md:min-h-[750px] lg:min-h-[800px]"
       style={{
         backgroundImage: `url(${heroBackgroundImage})`,
       }}
     >
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-purple-950/15 via-transparent to-transparent" />
       {/* decorative sparkles */}
       <span className="pointer-events-none absolute right-5 top-10 z-10 select-none text-xl text-purple-200 sm:right-10 sm:top-12 sm:text-2xl">✦</span>
       <span className="pointer-events-none absolute right-1/3 top-24 z-10 hidden select-none text-lg text-purple-200 sm:block">✦</span>
@@ -150,31 +138,19 @@ export default function CareerHeroSlide({ onOpenForm }) {
 
             {/* heading */}
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-gray-900 sm:mt-7 sm:text-5xl lg:text-6xl xl:text-7xl">
-              Learn, Connect,
+              Secure your 
               <br />
-              Get <span className="text-purple-600">Placed.</span>
+             <span className="text-purple-600">Dream Career</span> with
+             <br/>
+             Live Classes
             </h1>
 
             {/* sub copy */}
-            <p className="mt-5 max-w-md text-base font-medium leading-relaxed text-gray-600 sm:mt-6 sm:text-lg">
-              Industry-focused training with real-time projects and 100% placement
-              assistance.
+            <p className="mt-5 max-w-md rounded-3xl bg-white/85 px-4 py-3 text-base font-medium leading-relaxed text-gray-700 shadow-sm shadow-slate-900/5 sm:mt-6 sm:text-lg">
+              From more than 10 years,we've been passionate about providing engaging, instructor-led training that helps professionals around the world grow and succeed
             </p>
 
-            {/* top stats row */}
-            <div className="mt-7 grid max-w-xl grid-cols-1 gap-4 min-[420px]:grid-cols-2 sm:mt-9 sm:grid-cols-3 sm:gap-x-6">
-              {topStats.map((s) => (
-                <div key={s.label} className="flex items-center gap-3">
-                  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full sm:h-12 sm:w-12 ${s.bg}`}>
-                    <s.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${s.color}`} />
-                  </span>
-                  <div>
-                    <div className="text-base font-bold text-gray-900 sm:text-lg">{s.value}</div>
-                    <div className="text-xs text-gray-500">{s.label}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -210,31 +186,7 @@ export default function CareerHeroSlide({ onOpenForm }) {
         </div>
       </div>
 
-      {/* <div className="absolute inset-x-0 bottom-4 z-20 px-4 sm:bottom-6">
-        <div className="relative mx-auto w-full max-w-5xl rounded-2xl bg-[#0b0d1a] px-4 py-3 shadow-[0_24px_70px_rgba(15,23,42,0.45)] ring-1 ring-white/10 sm:w-[88%] sm:px-5 lg:w-[72%]">
-          <span className="pointer-events-none absolute inset-x-8 -top-px h-px bg-gradient-to-r from-transparent via-violet-400/70 to-transparent" />
-          <div className="grid grid-cols-3 gap-x-2 gap-y-3 lg:grid-cols-6 lg:divide-x lg:divide-white/10">
-            {barStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex items-center justify-center gap-2 px-1 text-left lg:px-3"
-              >
-                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${stat.bg}`}>
-                  <stat.icon className={`h-4 w-4 ${stat.color}`} />
-                </span>
-                <div>
-                  <div className="text-sm font-bold leading-tight text-white sm:text-base">
-                    {stat.value}
-                  </div>
-                  <div className="text-[8px] uppercase leading-tight tracking-wide text-white/50 sm:text-[9px]">
-                    {stat.label}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
+
     </section>
   );
 }

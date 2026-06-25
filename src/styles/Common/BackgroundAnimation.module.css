@@ -1,14 +1,17 @@
-/* .backgroundAnimation {
-  background-image: url("https://res.cloudinary.com/df65lfym1/image/upload/v1782295703/ChatGPT_Image_Jun_24_2026_03_38_00_PM_lh0wil.png");
-   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.backgroundAnimation {
   position: fixed;
   inset: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
   pointer-events: none;
+}
+.backgroundAnimation > * {
+  display: none; 
 } 
 
- .backgroundAnimation > * {
-  display: none;
-} */
+

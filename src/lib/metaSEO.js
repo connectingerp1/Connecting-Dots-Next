@@ -10500,7 +10500,7 @@ export const citySpecificMeta = {
 
   "data-visualization": {
     "pune": {
-      "title": "Master Data visualization Course in Pune hello",
+      "title": "Master Data visualization Course in Pune ",
       "description": "Enhance your analytical skills in Pune with a Data visualization Course that builds insights, visual storytelling, and decision-making abilities."
     },
     "mumbai": {

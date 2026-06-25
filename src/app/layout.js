@@ -12,7 +12,7 @@ import ServerPing from "@/components/ServerPing";
 
 import ConditionalAuthProvider from "@/app/conditionalprovider";
 import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
-
+import BackgroundAnimation from "@/components/Common/BackgroundAnimation"; // Import the new background animation component
 // --- Font Setup ---
 const lato = Lato({
   weight: ["400", "700"],
@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
 
         {/* Optional Server Ping */}
         {process.env.NEXT_PUBLIC_ENABLE_PING === "true" && <ServerPing />}
-
+          {/* <BackgroundAnimation />  */}
         {/* Static Components */}
         <CallAdvisorsStrip />
         <Marquee />
