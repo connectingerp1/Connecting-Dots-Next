@@ -144,13 +144,13 @@ export default function CareerHeroSlide({ onOpenForm }) {
             </div>
 
             {/* heading */}
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-gray-900 sm:mt-7 sm:text-5xl lg:text-6xl xl:text-7xl">
-              Secure your 
-              <br />
-             <span className="text-purple-600">Dream Career</span> with
-             <br/>
-             Live Classes
-            </h1>
+<h1 className="mt-6 text-3xl font-extrabold leading-[1.05] tracking-tight text-white lg:!text-gray-900 sm:mt-7 lg:text-6xl xl:text-7xl">
+  Secure your
+  <br />
+  <span className="text-purple-600">Dream Career</span> with
+  <br />
+  Live Classes
+</h1>
 
             {/* sub copy */}
             <p className="mt-5 max-w-md rounded-3xl bg-white/85 px-4 py-3 text-base font-medium leading-relaxed text-gray-700 shadow-sm shadow-slate-900/5 sm:mt-6 sm:text-lg">
