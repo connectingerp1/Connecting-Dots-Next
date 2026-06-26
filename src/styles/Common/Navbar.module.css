@@ -297,7 +297,7 @@
   top: 100%;
   left: 0;        /* was -50px */
   right: 0;       /* was -50px */
-  height: 0px;   /* was 90px — just enough to bridge the gap to the menu */
+  height: 12px;   /* was 90px — just enough to bridge the gap to the menu */
 }
 
 .dropdownToggleWrapper {
