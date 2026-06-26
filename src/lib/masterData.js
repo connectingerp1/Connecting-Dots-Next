@@ -147,23 +147,7 @@ const generatedCourseSpecs = [
       { title: "Automation and Deployment", duration: "3 weeks", content: ["CloudFormation basics", "Lambda and API Gateway", "CloudWatch monitoring", "CI/CD with AWS services", "Cost optimization"], tools: ["AWS", "DevOps"] },
     ],
   },
-  {
-    slug: "azure",
-    title: "Azure",
-    fullTitle: "Microsoft Azure Cloud Computing",
-    category: "it",
-    duration: "10-12 weeks",
-    price: { min: 35000, max: 100000 },
-    prerequisites: "Basic networking, Windows, or Linux knowledge recommended",
-    certification: "Microsoft Azure Fundamentals and Administrator Training Certificate",
-    modules: ["Azure Fundamentals", "Virtual Machines", "Storage Accounts", "Virtual Networks", "Microsoft Entra ID", "Azure Monitor"],
-    jobRoles: ["Azure Administrator", "Cloud Engineer", "Azure Support Engineer", "Solutions Associate", "DevOps Engineer"],
-    curriculum: [
-      { title: "Azure Foundation", duration: "3 weeks", content: ["Azure portal", "Subscriptions and resource groups", "Azure compute options", "Storage accounts", "Identity basics"], tools: ["Azure", "Cloud"] },
-      { title: "Administration", duration: "4 weeks", content: ["Virtual networks", "Network security groups", "Virtual machines", "Backup and recovery", "Role-based access control"], tools: ["Azure", "Security"] },
-      { title: "Operations and Deployment", duration: "3 weeks", content: ["Azure Monitor", "Log Analytics", "App Service", "Azure Functions", "Azure DevOps deployment pipelines"], tools: ["Azure", "DevOps"] },
-    ],
-  },
+
   {
     slug: "devops",
     title: "DevOps",

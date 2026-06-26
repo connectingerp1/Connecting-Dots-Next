@@ -295,9 +295,9 @@
   content: "";
   position: absolute;
   top: 100%;
-  left: -50px;
-  right: -50px;
-  height: 90px;
+  left: 0;        /* was -50px */
+  right: 0;       /* was -50px */
+  height: 0px;   /* was 90px — just enough to bridge the gap to the menu */
 }
 
 .dropdownToggleWrapper {

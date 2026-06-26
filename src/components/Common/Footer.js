@@ -119,7 +119,6 @@ const footerSections = [
       { href: "/java-course-in-pune", text: "JAVA" },
       { href: "/python-with-ai-course-in-pune", text: "PYTHON WITH AI" },
       { href: "/aws-course-in-pune", text: "AWS" },
-      { href: "/azure-course-in-pune", text: "AZURE" },
       { href: "/devops-course-in-pune", text: "DEVOPS" },
       { href: "/ai-ml-course-in-pune", text: "AIML" },
       { href: "/salesforce-course-in-pune", text: "SALESFORCE" },

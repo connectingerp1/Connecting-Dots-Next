@@ -6,7 +6,6 @@ export const metadata = {
     "SAP Course",
     "Data Science Course",
     "Power Bi Course",
-    "Digital Marketing Course",
     "HR Training Institute",
     "SAP Training Institute",
     "Python Course",

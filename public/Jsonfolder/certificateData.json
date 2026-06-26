@@ -192,14 +192,7 @@
       "completionText": " The JAVA Certification Course at Connecting Dots ERP is tailored for those looking to master the Java programming language.",
       "description": " Gain proficiency in building high-performance applications, understanding object-oriented principles, and creating scalable solutions. This certification sets you up for success in software development and enterprise-level application design."
     },
-    {
-      "pageId": "UiuxCERT",
-      "courseTitle": "UI/UX Certificate",
-      "alt": "uiux-certification-from-connecting-dots-erp",
-      "image": "/Certificate/Certificate-1.avif",
-      "completionText": " With the UI/UX Design Certification at Connecting Dots ERP, you will master the principles of user-cantered design, from wireframing to usability testing.",
-      "description": " Gain practical experience in creating visually appealing and functional user interfaces, making you a strong candidate for roles in digital design and user experience."
-    },
+
     {
       "pageId": "PythonCERT",
       "courseTitle": "Python Certificate",
@@ -232,22 +225,7 @@
       "completionText": " The Power BI Certification at Connecting Dots ERP trains you in Microsoft’s leading business intelligence tool. ",
       "description": "Learn to create dynamic dashboards, perform data analysis, and share insights with stakeholders. This certification is perfect for professionals aiming to excel in business analytics and data visualization roles."
     },
-    {
-      "pageId": "SqlCERT",
-      "courseTitle": "SQL Certificate",
-      "alt": "sql-certification-from-connecting-dots-erp",
-      "image": "/Certificate/Certificate-1.avif",
-      "completionText": " At Connecting Dots ERP the SQL Certification covers the fundamentals of database management and querying.",
-      "description": "Gain expertise in SQL commands, data manipulation, and optimization techniques. This certification will prepare you for database management roles, ensuring you can efficiently manage and retrieve data."
-    },
-    {
-      "pageId": "DgimCERT",
-      "courseTitle": "Digital Marketing Certificate",
-      "alt": "digital-marketing-certification-from-connecting-dots-erp",
-      "image": "/Certificate/Certificate-1.avif",
-      "completionText": "The Digital Marketing Certification at Connecting Dots ERP equips you with the essential skills to excel in the dynamic world of online marketing. Learn to create impactful campaigns, analyze performance metrics, and master strategies across platforms like SEO, social media, and email marketing.",
-      "description": "This certification prepares you for a amazing career in digital marketing, where creativity meets data-driven decision-making to achieve business goals effectively. "
-    },
+
     {
       "pageId": "HRCoreCERT",
       "courseTitle": "Core HR Certificate",
