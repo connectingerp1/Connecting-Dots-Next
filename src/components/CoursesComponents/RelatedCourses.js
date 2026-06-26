@@ -82,7 +82,7 @@ const CoursesRelated = ({ data, currentCityName }) => {
     "HR Generalist": "hr-generalist-course",
 
     // Digital Marketing
-    "Digital Marketing": "digital-marketing-course",
+   
 
     // IT & General
     "IT Course": "it-course",

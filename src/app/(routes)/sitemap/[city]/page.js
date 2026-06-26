@@ -375,30 +375,24 @@ function generateCityLinks(city) {
           title: "Data Science",
           courses: [
             {
-              name: "MASTERS IN DATA ANALYTICS",
-              slug: `/data-analytics-course-in-${city}`,
+              name: "Advanced Data Analytics",
+              slug: `/advanced-data-analytics-with-generative-ai-course-in-${city}`,
             },
             {
-              name: "MASTERS IN DATA SCIENCE",
-              slug: `/data-science-course-in-${city}`,
-            },
-            {
-              name: "MASTERS IN BUSINESS ANALYTICS",
-              slug: `/business-analytics-course-in-${city}`,
+              name: "Data Science with AI",
+              slug: `/data-science-with-ai-course-in-${city}`,
             },
             { name: "Generative AI", slug: `/generative-ai-course-in-${city}` },
           ],
         },
       ],
       courses: [
-        { name: "IT Course", slug: `/it-course-in-${city}` },
+        { name: "IT Course", slug: `/it-course-with-ai-in-${city}` },
         {
           name: "Full Stack Training",
-          slug: `/full-stack-developer-course-in-${city}`,
+          slug: `/full-stack-with-ai-course-in-${city}`,
         },
         { name: "JAVA", slug: `/java-course-in-${city}` },
-        { name: "MERN Stack", slug: `/mern-stack-course-in-${city}` },
-        { name: "UI/UX Design", slug: `/ui-ux-course-in-${city}` },
         { name: "Python", slug: `/python-course-in-${city}` },
         { name: "Salesforce", slug: `/salesforce-training-in-${city}` },
         { name: "AWS", slug: `/aws-course-in-${city}` },
@@ -417,35 +411,9 @@ function generateCityLinks(city) {
         },
         { name: "Tableau", slug: `/tableau-training-in-${city}` },
         { name: "Power BI", slug: `/power-bi-course-in-${city}` },
-        { name: "SQL", slug: `/sql-course-in-${city}` },
       ],
     },
-    {
-      id: "digital",
-      name: "Digital Marketing Courses",
-      courses: [
-        {
-          name: "Advance Digital Marketing",
-          slug: `/digital-marketing-course-in-${city}`,
-        },
-        {
-          name: "Pay Per Click Training",
-          slug: `/digital-marketing-course-in-${city}#pay-per-click`,
-        },
-        {
-          name: "Search Engine Optimization",
-          slug: `/digital-marketing-course-in-${city}#search-engine-optimization`,
-        },
-        {
-          name: "Social Media Marketing",
-          slug: `/digital-marketing-course-in-${city}#social-media-marketing`,
-        },
-        {
-          name: "Advance Google Analytics Training",
-          slug: `/digital-marketing-course-in-${city}#advance-analytics`,
-        },
-      ],
-    },
+
     {
       id: "hr",
       name: "HR Courses",
@@ -517,7 +485,6 @@ export async function generateMetadata({ params }) {
       `IT courses ${cityInfo.name}`,
       `HR courses ${cityInfo.name}`,
       `Data Science courses ${cityInfo.name}`,
-      `Digital Marketing courses ${cityInfo.name}`,
       `professional training ${cityInfo.name}`,
       `best training institute in ${cityInfo.name}`,
       `placement assistance ${cityInfo.name}`,
@@ -948,7 +915,7 @@ export default async function CityPage({ params }) {
         {/* IT Courses Section */}
         <div>
           <h2>IT & Software Development Courses in {cityInfo.name}</h2>
-          <Link href={`/it-course-in-${city}`}>
+          <Link href={`/it-course-with-ai-in-${city}`}>
             IT Course in {cityInfo.name} - Complete Software Development
             Training
           </Link>
@@ -959,17 +926,9 @@ export default async function CityPage({ params }) {
           <Link href={`/python-course-in-${city}`}>
             Python Course in {cityInfo.name} - Programming and Development
           </Link>
-          <Link href={`/full-stack-developer-course-in-${city}`}>
+          <Link href={`/full-stack-with-ai-course-in-${city}`}>
             Full Stack Developer Course in {cityInfo.name} - Complete Web
             Development
-          </Link>
-          <Link href={`/mern-stack-course-in-${city}`}>
-            MERN Stack Training in {cityInfo.name} - MongoDB, Express, React,
-            Node.js
-          </Link>
-          <Link href={`/ui-ux-course-in-${city}`}>
-            UI/UX Design Course in {cityInfo.name} - User Interface and
-            Experience Design
           </Link>
           <Link href={`/salesforce-training-in-${city}`}>
             Salesforce Training in {cityInfo.name} - CRM and Cloud Platform
@@ -991,17 +950,13 @@ export default async function CityPage({ params }) {
         {/* Data Science Courses Section */}
         <div>
           <h2>Data Science & Analytics Courses in {cityInfo.name}</h2>
-          <Link href={`/data-science-course-in-${city}`}>
+          <Link href={`/data-science-with-ai-course-in-${city}`}>
             Data Science Course in {cityInfo.name} - Complete Data Science
             Training
           </Link>
-          <Link href={`/data-analytics-course-in-${city}`}>
+          <Link href={`/advanced-data-analytics-with-generative-ai-course-in-${city}`}>
             Data Analytics Training in {cityInfo.name} - Business Intelligence
             and Analytics
-          </Link>
-          <Link href={`/business-analytics-course-in-${city}`}>
-            Business Analytics Course in {cityInfo.name} - Strategic Data
-            Analysis
           </Link>
           <Link href={`/generative-ai-course-in-${city}`}>
             Generative AI Course in {cityInfo.name} - Artificial Intelligence
@@ -1012,7 +967,7 @@ export default async function CityPage({ params }) {
         {/* Data Visualization Courses Section */}
         <div>
           <h2>Data Visualization Courses in {cityInfo.name}</h2>
-          <Link href={`/data-visualization-course-in-${city}`}>
+          <Link href={`/data-visualization-with-ai-course-in-${city}`}>
             Data Visualization Course in {cityInfo.name} - Complete Data Viz
             Training
           </Link>
@@ -1022,9 +977,6 @@ export default async function CityPage({ params }) {
           </Link>
           <Link href={`/power-bi-course-in-${city}`}>
             Power BI Course in {cityInfo.name} - Microsoft Business Intelligence
-          </Link>
-          <Link href={`/sql-course-in-${city}`}>
-            SQL Course in {cityInfo.name} - Database Management and Queries
           </Link>
         </div>
 

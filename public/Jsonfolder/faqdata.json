@@ -1045,35 +1045,6 @@
       ]
     }
   },
-  "dgmfaq": {
-    "DGMFAQ": {
-      "title": "Frequently Asked Questions",
-
-      "video": "https://i.imgur.com/I7XKkrq.mp4",
-      "items": [
-        {
-          "question": "How Can I Join Digital Marketing Courses in {city}?",
-          "answer": "To join a Digital Marketing Course in {city}, simply contact the institute for the admission process. You'll be guided through the application, and the course will equip you with the latest digital marketing skills to succeed in the industry."
-        },
-        {
-          "question": "What Is the Duration of the Digital Marketing Course in {city}?",
-          "answer": "The Digital Marketing Course in {city} typically lasts 3 to 6 months, depending on whether you opt for the regular or fast-track program. The duration may vary based on your learning pace and the course modules included."
-        },
-        {
-          "question": "What If I Miss a Class in the Digital Marketing Course?",
-          "answer": "If you miss a class in the Digital Marketing Course in {city}, the institute generally provides recorded sessions or makeup classes, ensuring you don't miss out on any important content."
-        },
-        {
-          "question": "Do You Provide 100% Job Placement After Digital Marketing Training in {city}?",
-          "answer": "Yes, most Digital Marketing Training Institutes in {city} offer placement assistance to help you secure a job after course completion. They have tie-ups with leading companies and provide career guidance and interview preparation."
-        },
-        {
-          "question": "What Is the Average Salary Package After Completing a Digital Marketing Course in {city}?",
-          "answer": "The average salary package after completing a Digital Marketing Course in {city} typically ranges from ₹3 to ₹6 lakh per annum, depending on your skills, experience, and the specific role in digital marketing."
-        }
-      ]
-    }
-  },
   "sapfaq": {
     "SAPFAQ": {
       "title": "Frequently Asked Questions",

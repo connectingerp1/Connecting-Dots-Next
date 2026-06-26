@@ -250,17 +250,17 @@ const Footer = () => {
           {/* Column 5: CONTACT US */}
           <div className="lg:col-span-1">
             <div className="mb-2.5">
-              <div className="bg-white/5 rounded px-4 py-2 h-full">
-                <h3 className="text-sm font-semibold uppercase relative pb-2.5 mb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#3498db]">
+              <div className="bg-white/5 rounded px-3 py-1.5 h-full">
+                <h3 className="text-xs font-semibold uppercase relative pb-2 mb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#3498db]">
                   CONTACT US
                 </h3>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-3">
                   {/* Pune Office */}
-                  <div className="pb-4 border-b border-dashed border-white/10">
-                    <div className="flex items-start gap-2.5 mb-2.5">
+                  <div className="pb-3 border-b border-dashed border-white/10">
+                    <div className="flex items-start gap-2 mb-1.5">
                       <Icon
                         path={ICONS.map}
-                        className="text-[#3498db] text-lg min-w-[18px] mt-1"
+                        className="text-[#3498db] text-base min-w-[16px] mt-0.5"
                       />
                       <div>
                         <a
@@ -268,37 +268,37 @@ const Footer = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Open Pune Office location in Google Maps"
-                          className="text-base font-semibold text-[#5dade2] m-0 mb-1.5 block text-decoration-none"
+                          className="text-sm font-semibold text-[#5dade2] m-0 mb-1 block text-decoration-none"
                         >
                           Pune Office
                         </a>
-                        <p className="m-0 text-sm leading-normal">
+                        <p className="m-0 text-xs leading-tight">
                           1st Floor, 101, Police, Wireless Colony, Vishal Nagar,
                           Pimple Nilakh, Pune, Pimpri-Chinchwad, Maharashtra
                           411027
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="flex items-center gap-2 mb-1.5">
                       <Icon
                         path={ICONS.phone}
-                        className="text-[#3498db] text-lg min-w-[18px]"
+                        className="text-[#3498db] text-base min-w-[16px]"
                       />
                       <a
                         href="tel:+919004002941"
-                        className="text-[#ecf0f1] no-underline text-sm transition-colors hover:text-[#3498db]"
+                        className="text-[#ecf0f1] no-underline text-xs transition-colors hover:text-[#3498db]"
                       >
                         +91 9004002941
                       </a>
                     </div>
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center gap-2">
                       <Icon
                         path={ICONS.phone}
-                        className="text-[#3498db] text-lg min-w-[18px]"
+                        className="text-[#3498db] text-base min-w-[16px]"
                       />
                       <a
                         href="tel:+919004002958"
-                        className="text-[#ecf0f1] no-underline text-sm transition-colors hover:text-[#3498db]"
+                        className="text-[#ecf0f1] no-underline text-xs transition-colors hover:text-[#3498db]"
                       >
                         +91 9004002958
                       </a>
@@ -306,11 +306,11 @@ const Footer = () => {
                   </div>
 
                   {/* Mumbai Office */}
-                  <div className="pb-4 border-b border-dashed border-white/10 last:border-b-0">
-                    <div className="flex items-start gap-2.5 mb-2.5">
+                  <div className="pb-3 border-b border-dashed border-white/10 last:border-b-0">
+                    <div className="flex items-start gap-2 mb-1.5">
                       <Icon
                         path={ICONS.map}
-                        className="text-[#3498db] text-lg min-w-[18px] mt-1"
+                        className="text-[#3498db] text-base min-w-[16px] mt-0.5"
                       />
                       <div>
                         <a
@@ -318,49 +318,87 @@ const Footer = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Open Mumbai Office 1 location in Google Maps"
-                          className="text-base font-semibold text-[#5dade2] m-0 mb-1.5 block text-decoration-none"
+                          className="text-sm font-semibold text-[#5dade2] m-0 mb-0.5 block text-decoration-none"
                         >
                           Mumbai Office 1
                         </a>
-                          <p className="m-0 text-sm leading-normal">
+                          <p className="m-0 text-xs leading-tight">
                           Paradise Tower, next to MCDonalds, Thane West, Thane,
                           Maharashtra 400601
                         </p>
                         <a
                         href="tel:+919004001938"
-                        className="text-[#ecf0f1] no-underline text-sm transition-colors hover:text-[#3498db]"
+                        className="text-[#ecf0f1] no-underline text-xs transition-colors hover:text-[#3498db] inline-block mt-1"
                       >
                         +91 9004001938
                       </a>
 
-                      <div className="my-3 border-b border-dashed border-white/10"></div>
+                      <div className="my-2 border-b border-dashed border-white/10"></div>
 
                       <a
                           href="https://maps.app.goo.gl/i7W3baVVS1mDLmTJ9"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Open Mumbai Office 2 location in Google Maps"
-                          className="text-base font-semibold text-[#5dade2] m-0 mb-1.5 block text-decoration-none"
+                          className="text-sm font-semibold text-[#5dade2] m-0 mb-0.5 block text-decoration-none"
                         >
                           Mumbai Office 2
                         </a>
-                        <p className="m-0 text-sm leading-normal mt-2">
+                        <p className="m-0 text-xs leading-tight mt-1">
                           4th Floor, Ram Niwas, B-404, Gokhale Rd, near
                           McDonald's, Dada Patil Wadi, Naupada, Thane West, Thane,
                           Maharashtra 400602
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center gap-2">
                       <Icon
                         path={ICONS.phone}
-                        className="text-[#3498db] text-lg min-w-[18px]"
+                        className="text-[#3498db] text-base min-w-[16px]"
                       />
                       <a
                         href="tel:+919004005382"
-                        className="text-[#ecf0f1] no-underline text-sm transition-colors hover:text-[#3498db]"
+                        className="text-[#ecf0f1] no-underline text-xs transition-colors hover:text-[#3498db]"
                       >
                         +91 9004005382
+                      </a>
+                    </div>
+                    
+                  </div>
+
+                  {/* Raipur Office */}
+                  <div className="pb-3 border-b border-dashed border-white/10 last:border-b-0">
+                    <div className="flex items-start gap-2 mb-1.5">
+                      <Icon
+                        path={ICONS.map}
+                        className="text-[#3498db] text-base min-w-[16px] mt-0.5"
+                      />
+                      <div>
+                        <a
+                          href="https://www.google.com/maps/place/SAP+Training+Institute+%7C+SAP+Course+In+Raipur+%7C+Software+Testing+%7C+Data+Science+%7C+HR+Courses+in+Raipur+Connecting+Dots+ERP/@21.2188864,81.6051325,14z/data=!4m6!3m5!1s0x3a28dd59226d79f7:0xf4263e6f1707c059!8m2!3d21.2373024!4d81.653947!16s%2Fg%2F11rc3sgv_p?entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Open Raipur Office location in Google Maps"
+                          className="text-sm font-semibold text-[#5dade2] m-0 mb-1 block text-decoration-none"
+                        >
+                          Raipur Office
+                        </a>
+                        <p className="m-0 text-xs leading-tight">
+                          G-54, New Panchsheel Nagar, Civil Lines, Raipur,
+                          Chhattisgarh 492001
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon
+                        path={ICONS.phone}
+                        className="text-[#3498db] text-base min-w-[16px]"
+                      />
+                      <a
+                        href="tel:+919004008313"
+                        className="text-[#ecf0f1] no-underline text-xs transition-colors hover:text-[#3498db]"
+                      >
+                        +91 9004008313
                       </a>
                     </div>
                   </div>

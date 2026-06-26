@@ -1,6 +1,6 @@
 
 "use client";
-
+import Image from "next/image";
 /* ---------- Inline SVG icons (no extra deps needed) ---------- */
 
 const StarIcon = ({ className }) => (
@@ -112,12 +112,19 @@ const heroBackgroundImage =
 
 export default function CareerHeroSlide({ onOpenForm }) {
   return (
-    <section
-      className="relative min-h-[560px] w-full overflow-hidden bg-purple-50 bg-center bg-cover bg-[position:68%_center] bg-no-repeat sm:min-h-[700px] sm:bg-[position:62%_center] md:min-h-[750px] lg:min-h-[800px]"
-      style={{
-        backgroundImage: `url(${heroBackgroundImage})`,
-      }}
-    >
+<section className="relative min-h-[560px] w-full overflow-hidden bg-purple-50 sm:min-h-[700px] md:min-h-[750px] lg:min-h-[800px]">
+  <div className="absolute inset-0 ">
+    <Image
+      src={heroBackgroundImage}
+      alt="Connecting Dots ERP building"
+      fill
+      priority
+      fetchPriority="high"
+      sizes="100vw"
+      className="-z-0 object-cover"
+    />
+  </div>
+    
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-purple-950/15 via-transparent to-transparent" />
       {/* decorative sparkles */}
       <span className="pointer-events-none absolute right-5 top-10 z-10 select-none text-xl text-purple-200 sm:right-10 sm:top-12 sm:text-2xl">✦</span>
@@ -172,16 +179,6 @@ export default function CareerHeroSlide({ onOpenForm }) {
             {/* soft radial glow behind building */}
             <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-purple-300/30 blur-3xl" />
 
-            {/* <Image
-              src=""
-              alt="Connecting Dots ERP building"
-              width={983}
-              height={802}
-              priority
-              // mix-blend-multiply dissolves any residual light halo into the lavender bg
-              style={{ mixBlendMode: "multiply" }}
-              className="relative ml-auto w-full max-w-3xl object-contain"
-            /> */}
           </div>
         </div>
       </div>

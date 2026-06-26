@@ -76,13 +76,13 @@ const cities = [
 
 const courses = [
   "sap-course-in",
-  "it-course-in",
-  "data-visualization-course-in",
-  "data-science-course-in",
-  "data-analytics-course-in",
+  "it-course-with-ai-in",
+  "data-visualization-with-ai-course-in",
+  "data-science-with-ai-course-in",
+  "advanced-data-analytics-with-generative-ai-course-in",
   "business-analytics-course-in",
   "generative-ai-course-in",
-  "full-stack-developer-course-in",
+  "full-stack-with-ai-course-in-pune",
   "java-course-in",
   "mern-stack-course-in",
   "python-course-in",

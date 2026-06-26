@@ -161,41 +161,6 @@ images: {
   },
 }
 
-  // Redirects
-//   async redirects() {
-//     return [
-//       {
-//         source: "/hr-courses-training-institute-in-pune",
-//         destination: "/hr-training-course-in-pune",
-//         permanent: true,
-//       },
-//       {
-//         source: "/data-science-course-in-:city",
-//         destination: "/data-science-with-ai-course-in-:city",
-//         permanent: true,
-//       },
-//       {
-//         source: "/advanced-data-analytics-azure-power-bi-course-in-pune",
-//         destination: "/data-analytics-course-in-pune",
-//         permanent: true,
-//       },
-//       {
-//         source: "/python-course-in-:city",
-//         destination: "/python-with-ai-course-in-:city",
-//         permanent: true,
-//       },
-//       {
-//         source: "/data-visualization-course-in-:city",
-//         destination: "/data-visualization-with-ai-course-in-:city",
-//         permanent: true,
-//       },
-//       {
-//         source: "/full-stack-with-ai-course-in-pune",
-//         destination: "/full-stack-developer-course-in-pune",
-//         permanent: true,
-//       },
-//     ];
-//   },
-// };
+
 
 export default nextConfig;

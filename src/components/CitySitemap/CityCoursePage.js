@@ -52,48 +52,37 @@ const getCourseCategories = (city) => [
       {
         title: "Data Science",
         courses: [
-          { name: "MASTERS IN DATA ANALYTICS", slug: `/data-analytics-course-in-${city}` },
-          { name: "MASTERS IN DATA SCIENCE", slug: `/data-science-course-in-${city}` },
-          { name: "MASTERS IN BUSINESS ANALYTICS", slug: `/business-analytics-course-in-${city}` },
+          { name: "Advanced Data Analytics", slug: `/data-analytics-with-generative-ai-in-${city}` },
+          { name: "Data Science with AI", slug: `/data-science-with-ai-in-${city}` },
           { name: "Generative AI", slug: `/generative-ai-course-in-${city}` },
         ],
       },
     ],
     courses: [
-      { name: "IT Course", slug: `/it-course-in-${city}` },
-      { name: "Full Stack Training", slug: `/full-stack-developer-course-in-${city}` },
+      { name: "IT Course with AI", slug: `/it-course-with-ai-in-${city}` },
+      { name: "Full Stack with AI", slug: `/full-stack-with-ai-in-${city}` },
       { name: "JAVA", slug: `/java-course-in-${city}` },
-      { name: "MERN Stack", slug: `/mern-stack-course-in-${city}` },
-      { name: "UI/UX Design", slug: `/ui-ux-course-in-${city}` },
       { name: "Python", slug: `/python-course-in-${city}` },
       { name: "Salesforce", slug: `/salesforce-training-in-${city}` },
       { name: "AWS", slug: `/aws-course-in-${city}` },
       { name: "Azure", slug: `/azure-course-in-${city}` },
       { name: "DevOps", slug: `/devops-course-in-${city}` },
       { name: "AIML", slug: `/ai-ml-course-in-${city}` },
-    ],
-  },
-  {
-    id: "data-viz",
-    name: "Data Visualization Courses",
-    courses: [
-      { name: "Data Visualization Course", slug: `/data-visualization-course-in-${city}` },
+      { name: "Data Visualization with AI", slug: `/data-visualization-with-ai-in-${city}` },
       { name: "Tableau", slug: `/tableau-training-in-${city}` },
       { name: "Power BI", slug: `/power-bi-course-in-${city}` },
-      { name: "SQL", slug: `/sql-course-in-${city}` },
     ],
   },
-  {
-    id: "digital",
-    name: "Digital Marketing Courses",
-    courses: [
-      { name: "Advance Digital Marketing", slug: `/digital-marketing-course-in-${city}` },
-      { name: "Pay Per Click Training", slug: `/digital-marketing-course-in-${city}#pay-per-click` },
-      { name: "Search Engine Optimization", slug: `/digital-marketing-course-in-${city}#search-engine-optimization` },
-      { name: "Social Media Marketing", slug: `/digital-marketing-course-in-${city}#social-media-marketing` },
-      { name: "Advance Google Analytics Training", slug: `/digital-marketing-course-in-${city}#advance-analytics` },
-    ],
-  },
+  // {
+  //   id: "data-viz",
+  //   name: "Data Visualization Courses",
+  //   courses: [
+  //     { name: "Data Visualization Course", slug: `/data-visualization-course-in-${city}` },
+  //     { name: "Tableau", slug: `/tableau-training-in-${city}` },
+  //     { name: "Power BI", slug: `/power-bi-course-in-${city}` },
+
+  //   ],
+  // },
   {
     id: "hr",
     name: "HR Courses",

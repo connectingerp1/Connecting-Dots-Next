@@ -77,7 +77,6 @@ export default function TermsAndConditions() {
                     IT Courses (Full Stack Training, Java, MERN Stack, UI/UX
                     Design, Python, Salesforce)
                   </li>
-                  <li>Digital Marketing Courses</li>
                   <li>Data Science Courses</li>
                   <li>Data Visualization Courses</li>
                   <li>HR Courses</li>

@@ -18,7 +18,6 @@ const COURSE_SLUG_ALIASES = {
   "python-with-ai": "python",
   "data-visualization-with-ai": "data-visualization",
   "full-stack-with-ai": "full-stack",
-  "full-stack-developer": "full-stack",
   "hr-courses-training-institute": "hr-training",
   "agentic-ai": "agentic-ai",
 };

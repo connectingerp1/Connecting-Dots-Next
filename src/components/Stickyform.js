@@ -222,90 +222,52 @@ function Stickyform() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Effect to handle resize and scroll events
+  // Effect to handle resize and footer visibility using IntersectionObserver
   useEffect(() => {
-    // Check if current path is in the hiddenPaths list
-    // This check now uses the pathname value obtained from the hook above
     const shouldHideBasedOnPath = hiddenPaths.some(path => pathname?.startsWith(path));
-
-    // Function to check if any part of the footer is visible
-    const checkFooterVisibility = () => {
-      if (!footerRef.current) return;
-
-      const rect = footerRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // If ANY part of the footer is visible in the viewport, hide the form
-      if (rect.top < windowHeight && rect.bottom >= 0) {
-        setIsFormVisible(false);
-      } else {
-        // Footer is not in viewport at all
-        // Only show the form if it's NOT a hidden path
-        setIsFormVisible(!shouldHideBasedOnPath);
-      }
-    };
 
     const handleResize = () => {
       const isMobile = window.innerWidth <= 768;
       setIsMobileView(isMobile);
 
-      // On resize, check footer visibility if not on a hidden path
-      // Mobile view should always hide the form, as per original logic
-      if (!isMobile && !shouldHideBasedOnPath) {
-        checkFooterVisibility();
+      if (isMobile || shouldHideBasedOnPath) {
+        setIsFormVisible(false);
+      }
+    };
+
+    const observerCallback = ([entry]) => {
+      if (!entry) return;
+      if (entry.isIntersecting) {
+        setIsFormVisible(false);
       } else {
-        setIsFormVisible(false); // Hide on mobile or hidden paths
+        setIsFormVisible(!shouldHideBasedOnPath);
       }
     };
 
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          // Only check scroll if not on mobile and not on a hidden path
-          if (!isMobileView && !shouldHideBasedOnPath) {
-            checkFooterVisibility();
+    const observer =
+      footerRef.current && !shouldHideBasedOnPath
+        ? new IntersectionObserver(observerCallback, { root: null, threshold: 0 })
+        : null;
 
-            // Extra check for when scrolled to bottom of page
-            const isAtBottom =
-              window.innerHeight + window.scrollY >=
-              document.documentElement.scrollHeight - 20; // 20px buffer
-
-            if (isAtBottom) {
-              setIsFormVisible(false);
-            }
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    // Initial setup when the component mounts or pathname changes
-    // We need to determine the initial visibility state
-    const initialIsMobile = window.innerWidth <= 768;
-    setIsMobileView(initialIsMobile);
-
-    if (shouldHideBasedOnPath || initialIsMobile) {
-       setIsFormVisible(false);
-    } else {
-       // If not a hidden path and not mobile, check footer visibility initially
-       checkFooterVisibility();
+    if (observer && footerRef.current) {
+      observer.observe(footerRef.current);
     }
 
+    const initialIsMobile = window.innerWidth <= 768;
+    setIsMobileView(initialIsMobile);
+    if (initialIsMobile || shouldHideBasedOnPath) {
+      setIsFormVisible(false);
+    } else if (!observer) {
+      setIsFormVisible(true);
+    }
 
-    // Add event listeners
-    // Listeners should only be added if the component should potentially show the form
-    // We can add listeners and the handlers will check the states (isMobileView, shouldHideBasedOnPath)
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize, { passive: true });
 
-    // Cleanup function to remove event listeners
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
+      if (observer) observer.disconnect();
     };
-  }, [isMobileView, pathname]); // pathname is needed so admin/course page changes update visibility.
+  }, [pathname]);
 
 
   // --- Conditional Return (MUST BE AFTER ALL HOOKS) ---

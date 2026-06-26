@@ -19,11 +19,6 @@ const courseOptions = {
   "Data Visualization": [
     "Tableau", "Power BI", "SQL"
   ],
-  "Digital Marketing": [
-    "Advance Digital Marketing", "Pay Per Click Training",
-    "Search Engine Optimization", "Social Media Marketing",
-    "Advance Google Analytics Training"
-  ],
   "HR Courses": [
     "HR Training", "Core HR", "HR Payroll",
     "HR Management", "HR Generalist", "HR Analytics"

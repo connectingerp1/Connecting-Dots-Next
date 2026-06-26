@@ -31,7 +31,7 @@ export default function ITCourses() {
 
   const hrefFor = (course) => {
     if (course.slug === "full-stack") {
-      return "/full-stack-developer-course-in-pune";
+      return "/full-stack-with-ai-course-in-pune";
     }
 
     return `/${course.slug}-course-in-pune`;

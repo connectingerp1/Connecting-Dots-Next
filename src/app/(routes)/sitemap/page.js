@@ -13,7 +13,6 @@ export const metadata = {
     "city courses",
     "SAP training",
     "IT courses",
-    "Digital Marketing courses",
     "Data Science courses",
     "HR courses",
     "courses in Pune",
@@ -191,7 +190,7 @@ const jsonLd = {
             "@type": "ListItem",
             position: 2,
             name: "IT Courses in Mumbai",
-            url: "https://connectingdotserp.com/it-course-in-mumbai",
+            url: "https://connectingdotserp.com/it-course-with-ai-in-mumbai",
           },
           {
             "@type": "ListItem",
@@ -203,13 +202,7 @@ const jsonLd = {
             "@type": "ListItem",
             position: 4,
             name: "Data Science Courses in Bangalore",
-            url: "https://connectingdotserp.com/data-science-course-in-bangalore",
-          },
-          {
-            "@type": "ListItem",
-            position: 5,
-            name: "Digital Marketing Courses in Chennai",
-            url: "https://connectingdotserp.com/digital-marketing-course-in-chennai",
+            url: "https://connectingdotserp.com/bangalore",
           },
         ],
       },
@@ -327,7 +320,6 @@ export default function SitemapPage() {
         <h2>IT & Software Development Courses</h2>
         <h2>HR Training Programs Across India</h2>
         <h2>Data Science & Analytics Courses</h2>
-        <h2>Digital Marketing Training by Location</h2>
         <h2>Business Analytics Courses</h2>
         <h2>Professional Certification Programs</h2>
         <h2>Courses in Major Indian Cities</h2>
